@@ -1,5 +1,6 @@
 ---
 title: "pmsisoft-support"
+lang: fr
 listing:
   contents: posts
   sort: "date desc"

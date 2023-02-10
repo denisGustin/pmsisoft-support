@@ -2,8 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
+      "/posts/mco_simulation_ghm/index.html",
+      "/posts/mco_ecran_filtre/index.html",
+      "/posts/type_filtre/index.html",
+      "/posts/ecran_layout/index.html"
     ]
   }
 ]

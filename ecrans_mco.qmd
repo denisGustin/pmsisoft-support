@@ -1,0 +1,181 @@
+---
+title: "Ecrans MCO"
+lang: fr
+page-layout: full
+---
+
+## Introduction  
+
+:::: {.columns}
+
+::: {.column width="23%"}
+
+![](images/menu_mco.png)
+
+:::
+
+::: {.column width="2%"}
+
+:::
+
+::: {.column width="75%"}
+
+Les écrans sont accessibles via les menus suivants :  
+
+**Bases MCO** : les différents types de données PMSI brutes, enrichies de variables calculées ou rapatriées des référentiels PMSI.  
+
+**Analyses MCO** : case-mix, graphiques et algorithmes d'analyses PMSI MCO.  
+
+**T2A MCO** : valorisation T2A, case-mix GHS, suppléments.  
+
+**Requêtes MCO** : requêteur métier PMSI MCO, bibliothèque de requêtes MCO "toute faites". *A venir (mi-février 2023)*
+
+**Simulation GHM** : classification en GHM/GHS et valorisation T2A à partir d'une grille minimale de codage séjour. Documentation
+
+**Rapports MCO** : rapports d'activité et d'analyse PMSI MCO téléchargeables en PDF avec données des tableaux et graphiques exportables (csv). *A venir (mi-février 2023)*
+
+**Référentiels MCO** : référentiels PMSI enrichis à partir du package de données [refpmsi](https://denisgustin.github.io/refpmsi/index.html)
+
+Ces écrans se présentent tous de la même façon : [explications](posts/ecran_layout/)  
+
+:::
+::::
+
+## Menu "Bases MCO"
+
+Ce menu comprend 6 sous-menus avec 1 écran par sous-menu.  
+
+![](images/menu_mco_bases_mco.png)
+
+### Liste des écrans  
+
+**"Base des RUM"**  
+Liste des RUM avec remontée aux informations de chaque RUM. [Documentation](posts/mco_ecran_base_rum/)
+
+**"Base des séjours**  
+Liste des séjours (RSS) avec remontée aux informations de chaque RUM du séjour.  
+
+**"Base des codes CIM"**
+Liste des codes CIM-10 codés avec remontée aux informations du RUM du code. 
+
+**"Base des actes CCAM"**
+Liste des actes CCAM codés avec remontée aux informations du RUM de l'acte.  
+
+**"Base VID-HOSP"**  
+Liste des VID-HOSP
+
+**"Base FICIUM"**  
+Liste des unités médicales (UM) avec informations enrichies issues du FICIUM.  
+
+
+## Menu "Analyses MCO" 
+
+Ce menu comprend 5 sous-menus avec le plus souvent plusieurs écrans par sous-menu.  
+
+:::: {.columns}
+
+::: {.column width="23%"}
+
+![](images/menu_mco_analyses_mco.png)
+
+:::
+
+::: {.column width="2%"}
+
+:::
+
+::: {.column width="75%"}
+
+Sous-menu **Analyses CIM**  
+
+![](images/menu_mco_analyses_cim.png)
+
+Sous-menu **Analyses CMA**  
+
+![](images/menu_mco_analyses_cma.png)
+
+Sous-menu **Analyses CCAM**  
+
+![](images/menu_mco_analyses_ccam.png)
+
+Sous-menu **Analyses GHM**  
+
+![](images/menu_mco_analyses_ghm.png)
+
+Sous-menu **Analyses code retour**  
+
+![](images/menu_mco_analyses_code_retour.png)
+
+:::
+::::
+
+### Liste des écrans  
+
+**Case-mix code CIM**  
+Liste des codes CIM-10 codés au moins une fois avec remontée aux RUM concernés.
+
+**Case-mix chapitre CIM**  
+Liste des chapitres CIM-10 représentés par au moins un codage CIM avec remontée aux RUM concernés.
+
+**Case-mix groupe CIM**  
+Liste des groupes CIM-10 représentés par au moins un codage CIM avec remontée aux RUM concernés.
+
+**Case-mix DP**  
+Liste des Diagnostics Principaux codés au moins une fois avec remontée aux RUM concernés.
+
+**Case-mix CMA**  
+Liste des CMA codées au moins une fois avec remontée aux RUM concernés.
+
+**Proposition CMA**  
+Algorithme de type force brute pour séjours niveau 1, 2 et 3 sur la base des codages CMA de leur racine GHM.  
+
+**Case-mix CCAM**  
+Liste des actes CCAM codés au moins une fois avec remontée aux RUM concernés.
+
+**Case-mix GHM**  
+Liste des GHM représentés par au moins un RUM avec remontée aux RUM concernés.
+
+**Case-mix CMD**  
+Liste des CMD représentées par au moins un RUM avec remontée aux RUM concernés.
+
+**Case-mix GA**  
+Liste des Groupe d'Activité représentés par au moins un RUM avec remontée aux RUM concernés.
+
+**Case-mix GP**  
+Liste des Groupes de Planification représentés par au moins un RUM avec remontée aux RUM concernés.
+
+**Case-mix DA**  
+Liste des Domaines d'Activité représentés par au moins un RUM avec remontée aux RUM concernés.
+
+**Case-mix code retour**  
+Liste des codes retours représentés par au moins un RUM avec remontée aux RUM concernés.
+
+## Menu "Requêtes MCO"  
+
+Accès au requêteur métier PMSI MCO et à la bibliothèque de requêtes PMSI MCO "toutes faites".  
+
+## Menu "T2A MCO"  
+
+Ecrans d'analyses de l'activité en terme de recettes T2A (GHS, T2A, suppléments).  
+
+## Menu "Simulation GHM"  
+
+Accès au module autonome de simulation de classification en GHM et GHS. [Documentation](posts/mco_simulation_ghm)
+
+## Menu "Rapports MCO"  
+
+Accès à une bibliothèque de rapports filtrables d'activité et d'analyses PMSI MCO en pdf avec récupération en csv des données brutes des tableaux et graphiques des rapports.  
+
+Accès aux rapports personnalisés de l'établissement.  
+
+## Menu "Référentiels MCO"  
+
+![](images/menu_mco_referentiels_mco.png)
+
+## Menu "Fichiers MCO"  
+
+Gestion des imports de données PMSI (import, suppression, verrouilage, suivi).  
+
+## Menu "Mon compte" 
+
+Paramétrages PMSISoft, gestion mot de passe, informations de compte.  

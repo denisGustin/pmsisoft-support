@@ -1,0 +1,110 @@
+---
+title: "Accès PMSISoft MCO"
+lang: fr
+page-layout: full
+---
+
+```{r}
+#| echo: false
+
+gen_fn <- function(n, id) {
+  # n is number of footnote
+  # id is a unique id for that footnote
+  paste0('<a href="#',id, '" class="footnote-ref" role="doc-noteref" aria-expanded="false"><sup>', n, '</sup></a>')
+}
+```
+
+## Accès Standard 
+
+:::: {.columns}
+
+::: {.column width="49%"}
+**Caractéristiques**
+
+- Accès proposé à tout établissement de santé sanitaire MCO `r gen_fn(7, "fn7")`
+- Gratuit, sans limite de durée
+- Accès en ligne en HDS
+- Multi-accès, multi-finess, multi-champs PMSI
+- Accès DIM sous la responsabilité du médecin DIM de l'établissement
+- Accès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)
+- Support : blog documentaire
+- Accès sous 48 heures sur demande du médecin DIM de l'établissement
+
+[Demander un accès PMSISoft Standard](https://www.lespmsi.com/contact-pmsisoft/)
+:::
+
+::: {.column width="2%"}
+
+:::
+
+::: {.column width="49%"}
+**Principales fonctionnalités**
+
+- Données PMSI MCO retraitées `r gen_fn(1, "fn1")`
+- Bases d'activité avec zoom aux rum `r gen_fn(2, "fn2")`
+- Case-mix et analyses `r gen_fn(2, "fn2")`, `r gen_fn(3, "fn3")`
+- Filtres UM, hospitalisation, autorisation, périodes et classification GHM (CMD, C-K-M-Z, racines GHM, GHM, niveau, GA, GP, DA)
+- Bibliothèque de requêtes PMSI MCO
+- Rapports d'activité PMSI MCO basiques, téléchargeables en pdf
+- Exports (formats JSON ou csv)
+- Référentiels PMSI à jour
+- Historique depuis 2019
+:::
+::::
+
+## Accès Professionnel
+
+:::: {.columns}
+
+::: {.column width="49%"}
+**Caractéristiques**
+
+- Accès proposé à  tout établissement de santé sanitaire MCO
+- Accès en ligne en HDS
+- Multi-accès, multi-finess, multi-champs PMSI
+- Accès DIM sous la responsabilité du médecin DIM de l'établissement
+- Accès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)
+- Support par email et téléphone  
+- Séance de formation en ligne (option)
+- Tarif annuel unique tout compris par établissement selon le périmètre de l'établissement
+:::
+
+::: {.column width="2%"}
+
+:::
+
+::: {.column width="49%"}
+**Principales fonctionnalités**
+
+- Toutes les fonctionnalités de l'accès Standard
+- Données PMSI MCO enrichies `r gen_fn(5, "fn5")`
+- Accès aux listes de rum, de séjours et de codage pour tous les casemix, requêtes et analyses
+- Filtres dédiés (famille de code, thésaurus, anesthésie, ...)
+- Accès aux calculs avancés dans les casemix et analyses
+- Requêteur métier PMSI MCO `r gen_fn(4, "fn4")`
+- Simulateur de classification des séjours MCO en GHM/GHS et valorisation T2A `r gen_fn(6, "fn6")`
+- Rapports avancés en pdf avec accès aux données des tableaux et graphiques des rapports en csv et JSON
+- Rapports personnalisés à l'établissement
+:::
+::::
+
+## Hébergement de Santé Certifié  
+
+PMSISoft est hébergé au [MIPIH](https://www.mipih.fr/hebergement-infogerance), hébergeur français certifié HDS et intègre les protocoles et dispostifs afférents (données PMSI cryptées, DMZ, authentification forte avec SMS, log accès, https, cryptage renforcé et irréversible des mots de passes, politique de rappel, gestion des accès par médecin DIM, monitoring, ....).  
+
+```{=html}
+<footer>
+  <h6><b>Notes</b></h6>
+  <font size="3">
+  <ol  style="padding-left: 1rem;">
+    <li id="fn1">gestion des valeurs manquantes, "nettoyage" des 0 à gauche, ....</li>
+    <li id="fn2">avec les seules variables des formats PMSI MCO. Accès aux variables calculées ou enrichies dans l'accès Professionnel</li>
+    <li id="fn3">versions simplifiées par rapport aux versions de l'accès Professionnel</li>
+    <li id="fn4">requêtes en langage naturel </li>
+    <li id="fn5">libellés, variables calculées (DP et DR séjour, nombre de journées rum et séjour par rum, ...), variables complémentaires (mode d'entrée séjour, année PMSI du séjour, CMA, ...)</li>
+    <li id="fn6">accès dédié possible pour ce seul simulateur GHM</li>
+    <li id="fn7">nous nous réservons le droit de ne pas donner suite à la demande d'un établissement, sans explication.</li>
+  </ol>
+  </font>
+</footer>
+```

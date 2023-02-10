@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.189">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="denis G">
+<meta name="description" content="Filtres de type liste, code et numérique">
+
+<title>Documentation PMSISoft - Les types de filtres</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer"
+  }
+}</script>
+
+
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Documentation PMSISoft</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-mco" role="button" data-bs-toggle="dropdown" aria-expanded="false">MCO</a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-mco">    
+        <li>
+    <a class="dropdown-item" href="../../ecrans_mco.html">
+ <span class="dropdown-text">Ecrans MCO</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ssr" role="button" data-bs-toggle="dropdown" aria-expanded="false">SSR</a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-ssr">    
+        <li>
+    <a class="dropdown-item" href="../../ecrans_ssr.html">
+ <span class="dropdown-text">Ecrans SSR</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-psy" role="button" data-bs-toggle="dropdown" aria-expanded="false">PSY</a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-psy">    
+        <li>
+    <a class="dropdown-item" href="../../ecrans_psy.html">
+ <span class="dropdown-text">Ecrans PSY</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-accès" role="button" data-bs-toggle="dropdown" aria-expanded="false">Accès</a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-accès">    
+        <li>
+    <a class="dropdown-item" href="../../acces_pmsisoft_mco.html">
+ <span class="dropdown-text">PMSISoft MCO</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../acces_pmsisoft_ssr.html">
+ <span class="dropdown-text">PMSISoft SSR</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../acces_pmsisoft_psy.html">
+ <span class="dropdown-text">PMSISoft PSY</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.lespmsi.com/a-propos-2">Contact</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/denisGustin/pmsisoft-support"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#filtres-de-type-liste" id="toc-filtres-de-type-liste" class="nav-link" data-scroll-target="#filtres-de-type-liste">Filtres de type liste</a>
+  <ul class="collapse">
+  <li><a href="#définition" id="toc-définition" class="nav-link" data-scroll-target="#définition">Définition</a></li>
+  <li><a href="#exemples" id="toc-exemples" class="nav-link" data-scroll-target="#exemples">Exemples</a></li>
+  </ul></li>
+  <li><a href="#filtres-de-type-code" id="toc-filtres-de-type-code" class="nav-link" data-scroll-target="#filtres-de-type-code">Filtres de type code</a>
+  <ul class="collapse">
+  <li><a href="#définition-1" id="toc-définition-1" class="nav-link" data-scroll-target="#définition-1">Définition</a></li>
+  <li><a href="#exemples-1" id="toc-exemples-1" class="nav-link" data-scroll-target="#exemples-1">Exemples</a></li>
+  </ul></li>
+  <li><a href="#filtres-de-type-intervalle" id="toc-filtres-de-type-intervalle" class="nav-link" data-scroll-target="#filtres-de-type-intervalle">Filtres de type intervalle</a>
+  <ul class="collapse">
+  <li><a href="#définition-2" id="toc-définition-2" class="nav-link" data-scroll-target="#définition-2">Définition</a></li>
+  <li><a href="#exemples-2" id="toc-exemples-2" class="nav-link" data-scroll-target="#exemples-2">Exemples</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content column-page-right" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Les types de filtres</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Ecran</div>
+    <div class="quarto-category">Filtre</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    <p>Filtres de type liste, code et numérique</p>
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Auteur·rice</div>
+    <div class="quarto-title-meta-contents">
+             <p>denis G </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Date de publication</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">10 janvier 2023</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>3 types de filtres sont disponibles dans les écrans PMSISoft :</p>
+<ul>
+<li>filtres de type <strong>liste</strong></li>
+<li>filtres de type <strong>code</strong></li>
+<li>filtres de type <strong>intervalle</strong></li>
+</ul>
+<p>A la première ouverture d’un écran, tous les filtres de l’écran sont inactifs.</p>
+<p>Un filtre devient actif si l’utilisateur sélectionne au mois un item (pour les filtres de type liste) ou entre une saisie valide (filtres de type code et de type intervalle).</p>
+<p>Un filtre redevient inactif si sa sélection est annulée.</p>
+<p>Les filtres actifs sont pris en compte en cliquant sur le bouton “Filtrer” situé en haut à droite des écrans.<br>
+La prise en compte d’un filtre actif signifie que les données PMSI du tableau ou du graphique de l’écran sont filtrées en tenant compte du filtre actif.</p>
+<p>Voir la documentation de chaque écran pour les explications détaillées sur la prise en compte des filtres dans l’analyse de l’écran.</p>
+</section>
+<section id="filtres-de-type-liste" class="level2">
+<h2 class="anchored" data-anchor-id="filtres-de-type-liste">Filtres de type liste</h2>
+<section id="définition" class="level3">
+<h3 class="anchored" data-anchor-id="définition">Définition</h3>
+<p>Les filtres de type liste permettent de sélectionner un ou plusieurs items au sein d’une liste <u>finie</u> d’items (mois, UM, types d’hospitalisation, GHM, CMD, GME, types d’intervenant CSARR, etc…)</p>
+<p>Les listes sont définies à priori (liste des mois, liste des types d’hospitalisation, …) ou issues des données PMSI de l’établissement (liste des UM de l’établissement, liste des GHM représentés dans l’établissement, …).</p>
+<p>Les listes de codes sont très généralement enrichies avec les libellés PMSI correspondant aux codes.<br>
+Exemples : libellés GHM pour les codes GHM, intitulés des types d’intervenants correspondant aux codes intervenants CSARR</p>
+<p>Les listes sont multi-choix <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p>La sélection du ou des items peut toujours s’effectuer, item par item, en cliquant sur l’item : une coche s’affiche alors en face de chaque item sélectionné.</p>
+<p>Pour désactiver une sélection, il suffit de décocher la ligne de l’item concerné.</p>
+<p>Une sélection activée reste active tant que l’utilisateur ne la désactive pas, y compris si l’utilisateur sort de l’écran et y revient.</p>
+<p>Quand la liste des items est importante, 2 aides à la sélection s’affichent en tête de la liste :</p>
+<ul>
+<li><code>Sélect tous</code> = sélection de tous les items de la liste</li>
+<li><code>Réinit</code> = désélection de tous les items de la liste</li>
+</ul>
+<p>Pour les filtres pour lesquels cela a du sens, (voir exemple illustré ci-dessous), il est aussi possible de réaliser une sélection d’items à partir de mots clés.</p>
+<p>L’initulé du filtre est affiché par défaut à l’ouverture de l’écran.</p>
+</section>
+<section id="exemples" class="level3">
+<h3 class="anchored" data-anchor-id="exemples">Exemples</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_liste_mois.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:23%;">
+<p><img src="filtre_liste_mois_selected.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:46%;">
+<p>Un exemple classique : le filtre des mois</p>
+<p>La 1ere image correspond au filtre qui vient juste d’être appelé : aucun mois n’est sélectionné</p>
+<p>La 2eme image correspond au filtre après sélection manuelle des mois de janvier et février.</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_liste_mois_all_selected.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:23%;">
+<p><img src="filtre_liste_mois_all_deselected.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:46%;">
+<p>Filtre des mois (suite)</p>
+<p>La 1ere image correspond au filtre après sélection de tous les mois après avoir cliqué sur <code>Sélect tous</code></p>
+<p>La 2eme image correspond au filtre entièrement désélectionné après avoir cliqué sur <code>Réinit</code></p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><img src="filtre_mco_ghm.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:33%;">
+<p><img src="filtre_mco_ghm_genou.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:26%;">
+<p>Filtre GHM</p>
+<p>La 1ere image correspond au filtre qui vient juste d’être appelé</p>
+<p>La 2eme image correspond au filtre après avoir saisi “genou” : seuls les GHM avec le mot “genou” dans leur intitulé sont affichés</p>
+</div>
+</div>
+</section>
+</section>
+<section id="filtres-de-type-code" class="level2">
+<h2 class="anchored" data-anchor-id="filtres-de-type-code">Filtres de type code</h2>
+<section id="définition-1" class="level3">
+<h3 class="anchored" data-anchor-id="définition-1">Définition</h3>
+<p>Les filtres de type code permettent de rechercher la présence d’un code ou d’une liste de codes.</p>
+<p>Exemples classiques : filtre “CIM-10” pour repérer la présence d’un codage CIM-10 dans des RUM ou des séjours (voir ci-dessous), filtre “NAS”</p>
+<p>La recherche devient effective à partir de 2 positions saisies (voir illustration ci-dessous).</p>
+<p>Un code saisi reste actif tant que l’utilisateur ne le supprime par dans le filtre, y compris si l’utilisateur sort de l’écran et y revient.<br>
+L’initulé du filtre est affiché par défaut à l’ouverture de l’écran.</p>
+<p>Dans les requêteurs métier, des options plus sophistiquées existent pour ce type de filtre (exemple : exclusion du code saisi)</p>
+</section>
+<section id="exemples-1" class="level3">
+<h3 class="anchored" data-anchor-id="exemples-1">Exemples</h3>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p><img src="filtre_code_cim.png" class="img-fluid"></p>
+<p><img src="filtre_mco_cim_E43.png" class="img-fluid"></p>
+<p><img src="filtre_code_cim_selected.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:73%;">
+<p>Filtre “CIM-10” permettant de repérer la présence d’un codage CIM-10</p>
+<p>La 1ere image correspond au filtre qui vient juste d’être appelé.</p>
+<p>La 2eme image correspond au filtre avec la saisie du code E43 “Malnutrition protéino-énergétique grave, sans précision” : sélection de toutes les lignes de la base de l’écran avec au moins 1 codage E43, indépendamment de sa position de codage.</p>
+<p>La 3eme image correspondant au filtre avec la saisie d’un codage sur 2 positions : sélection de toutes les lignes de la base de l’écran avec au moins 1 codage CIM commençant par E4 (donc E40 ou E41 ou E42 ou E43 ou E44 ou E440 ou E441 ou E45 ou E46), indépendamment de sa position de codage.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="filtres-de-type-intervalle" class="level2">
+<h2 class="anchored" data-anchor-id="filtres-de-type-intervalle">Filtres de type intervalle</h2>
+<section id="définition-2" class="level3">
+<h3 class="anchored" data-anchor-id="définition-2">Définition</h3>
+<p>Les filtres de type intervalle permettent de sélectionner un intervalle <u>entier</u> de valeurs entières.</p>
+<p>On distingue 4 intervalles possibles :</p>
+<ul>
+<li>un unique entier = sélection de la variable concernée avec exactement la valeur saisie <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
+<li>un intervalle fermé avec une borne inférieure et une borne supérieure, séparée par une virgule = sélection de la variable concernée avec une valeur comprise entre la borne inférieure et la borne supérieure<br>
+</li>
+<li>un intervalle semi-ouvert avec seulement une borne inférieure et le séparateur virgule = sélection de la variable concernée avec une valeur supérieure ou égale à la borne inférieure<br>
+</li>
+<li>un intervalle semi-ouvert avec seulement le séparateur virgule et une borne supérieure = sélection de la variable concernée avec une valeur inférieure ou égale à la borne supérieure</li>
+</ul>
+<p>Exemple classique : le nombre de RUM par séjour (voir exemple ci-dessous)</p>
+<p>Un intervalle saisi reste actif tant que l’utilisateur ne le supprime par dans le filtre, y compris si l’utilisateur sort de l’écran et y revient.</p>
+<p>L’initulé du filtre est affiché par défaut à l’ouverture de l’écran.</p>
+</section>
+<section id="exemples-2" class="level3">
+<h3 class="anchored" data-anchor-id="exemples-2">Exemples</h3>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p><img src="filtre_numerique.png" class="img-fluid"></p>
+<p><img src="filtre_numerique_selected1.png" class="img-fluid"></p>
+<p><img src="filtre_numerique_selected2.png" class="img-fluid"></p>
+<p><img src="filtre_numerique_selected3.png" class="img-fluid"></p>
+<p><img src="filtre_numerique_selected4.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:73%;">
+<p>Filtre “Nombre de RUM par séjour” permettant de sélectionner les séjours en fonction de leur nombre de RUM</p>
+<p>La 1ere image correspond au filtre qui vient juste d’être appelé.</p>
+<p>La 2eme image correspond au filtre avec la valeur 1 : sélection des séjours avec 1 et uniquement 1 RUM.</p>
+<p>La 3eme image correspond au filtre avec l’intervalle 2,3 : sélection des séjours avec un nombre de RUM compris entre 2 et 3.</p>
+<p>La 4eme image correspond au filtre avec l’intervalle 2, : sélection des séjours avec au moins 2 RUM.</p>
+<p>La 5eme image correspond au filtre avec l’intervalle ,3 : sélection des séjours avec au plus 3 RUM.</p>
+</div>
+</div>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notes de bas de page</h2>
+
+<ol>
+<li id="fn1"><p>seule exception, le filtre des années qui est mono-choix.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>il s’agit en fait d’un raccourci pour l’intervalle de type “n,n”<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Blog codé avec <a href="https://quarto.org/">Quarto</a></div>   
+    <div class="nav-footer-right">© Copyright 2022-2023, <a href="https://www.lespmsi.com/a-propos-2">DATAMIS</a></div>
+  </div>
+</footer>
+
+
+
+</body></html>

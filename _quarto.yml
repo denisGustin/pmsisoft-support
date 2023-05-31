@@ -12,9 +12,11 @@ website:
           - href: "acces_pmsisoft_mco.qmd"
             text: "PMSISoft MCO"
           - href: "acces_pmsisoft_ssr.qmd"
-            text: "PMSISoft SSR"
+            text: "PMSISoft SMR"
           - href: "acces_pmsisoft_psy.qmd"
             text: "PMSISoft PSY"
+          - href: "acces_pmsisoft_had.qmd"
+            text: "PMSISoft HAD"
       - text: "Contact"
         href: https://www.lespmsi.com/a-propos-2
       - icon: github
@@ -24,10 +26,10 @@ website:
         menu:
           - href: "ecrans_mco.qmd"
             text: "Ecrans MCO"
-      - text: "SSR"
+      - text: "SMR"
         menu:
           - href: "ecrans_ssr.qmd"
-            text: "Ecrans SSR"
+            text: "Ecrans SMR"
       - text: "PSY"
         menu:
           - href: "ecrans_psy.qmd"

@@ -8,8 +8,6 @@ page-layout: full
 #| echo: false
 
 gen_fn <- function(n, id) {
-  # n is number of footnote
-  # id is a unique id for that footnote
   paste0('<a href="#',id, '" class="footnote-ref" role="doc-noteref" aria-expanded="false"><sup>', n, '</sup></a>')
 }
 ```
@@ -38,10 +36,10 @@ gen_fn <- function(n, id) {
 :::
 
 ::: {.column width="49%"}
-**Principales fonctionnalités**
+**Fonctionnalités**
 
 - Données PMSI PSY retraitées `r gen_fn(1, "fn1")`
-- Bases d'activité avec zoom aux rps et raa `r gen_fn(2, "fn2")`
+- Bases d'activité rps, raa avec zoom aux items `r gen_fn(2, "fn2")`
 - Case-mix et analyses `r gen_fn(2, "fn2")`, `r gen_fn(3, "fn3")`
 - Filtres UM, périodes, forme d'activité, mode légal de soins, grille EDGARX, lieu de l'acte, catégorie professionnelle de l'intervenant, ...
 - Bibliothèque de requêtes PMSI PSY
@@ -59,12 +57,13 @@ gen_fn <- function(n, id) {
 ::: {.column width="49%"}
 **Caractéristiques**
 
-- Accès proposé à  tout établissement de santé sanitaire PSY
+- Accès proposé à  tout établissement de santé sanitaire PSY `r gen_fn(6, "fn6")`
 - Accès en ligne en HDS
 - Multi-accès, multi-finess, multi-champs PMSI
 - Accès DIM sous la responsabilité du médecin DIM de l'établissement
 - Accès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)
-- Support par email et téléphone  
+- Support fonctionnel et PMSI par email et téléphone  
+- Mise à disposition de scripts R PMSI  
 - Séance de formation en ligne (option)
 - Tarif annuel unique tout compris par établissement selon le périmètre de l'établissement
 :::
@@ -74,7 +73,7 @@ gen_fn <- function(n, id) {
 :::
 
 ::: {.column width="49%"}
-**Principales fonctionnalités**
+**Fonctionnalités**
 
 - Toutes les fonctionnalités de l'accès Standard
 - Données PMSI PSY enrichies`r gen_fn(5, "fn5")`

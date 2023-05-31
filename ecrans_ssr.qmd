@@ -1,5 +1,5 @@
 ---
-title: "Ecrans SSR"
+title: "Ecrans SMR"
 lang: fr
 page-layout: full
 ---

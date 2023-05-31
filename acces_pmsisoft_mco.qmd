@@ -8,8 +8,6 @@ page-layout: full
 #| echo: false
 
 gen_fn <- function(n, id) {
-  # n is number of footnote
-  # id is a unique id for that footnote
   paste0('<a href="#',id, '" class="footnote-ref" role="doc-noteref" aria-expanded="false"><sup>', n, '</sup></a>')
 }
 ```
@@ -38,10 +36,10 @@ gen_fn <- function(n, id) {
 :::
 
 ::: {.column width="49%"}
-**Principales fonctionnalités**
+**Fonctionnalités**
 
 - Données PMSI MCO retraitées `r gen_fn(1, "fn1")`
-- Bases d'activité avec zoom aux rum `r gen_fn(2, "fn2")`
+- Bases d'activité rum, ss, fichcomp, ficium, vidhosp, anohosp, rsa avec zoom aux items`r gen_fn(2, "fn2")`
 - Case-mix et analyses `r gen_fn(2, "fn2")`, `r gen_fn(3, "fn3")`
 - Filtres UM, hospitalisation, autorisation, périodes et classification GHM (CMD, C-K-M-Z, racines GHM, GHM, niveau, GA, GP, DA)
 - Bibliothèque de requêtes PMSI MCO
@@ -59,12 +57,13 @@ gen_fn <- function(n, id) {
 ::: {.column width="49%"}
 **Caractéristiques**
 
-- Accès proposé à  tout établissement de santé sanitaire MCO
+- Accès proposé à  tout établissement de santé sanitaire MCO `r gen_fn(6, "fn6")`
 - Accès en ligne en HDS
 - Multi-accès, multi-finess, multi-champs PMSI
 - Accès DIM sous la responsabilité du médecin DIM de l'établissement
 - Accès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)
-- Support par email et téléphone  
+- Support fonctionnel et métier PMSI par email et téléphone  
+- Mise à disposition de scripts R PMSI  
 - Séance de formation en ligne (option)
 - Tarif annuel unique tout compris par établissement selon le périmètre de l'établissement
 :::
@@ -74,7 +73,7 @@ gen_fn <- function(n, id) {
 :::
 
 ::: {.column width="49%"}
-**Principales fonctionnalités**
+**Fonctionnalités**
 
 - Toutes les fonctionnalités de l'accès Standard
 - Données PMSI MCO enrichies `r gen_fn(5, "fn5")`
@@ -83,6 +82,7 @@ gen_fn <- function(n, id) {
 - Accès aux calculs avancés dans les casemix et analyses
 - Requêteur métier PMSI MCO `r gen_fn(4, "fn4")`
 - Simulateur de classification des séjours MCO en GHM/GHS et valorisation T2A `r gen_fn(6, "fn6")`
+- Simulateur de campagne tarifaire (depuis 2022)  
 - Rapports avancés en pdf avec accès aux données des tableaux et graphiques des rapports en csv et JSON
 - Rapports personnalisés à l'établissement
 :::

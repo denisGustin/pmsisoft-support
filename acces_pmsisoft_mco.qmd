@@ -39,7 +39,7 @@ gen_fn <- function(n, id) {
 **Fonctionnalités**
 
 - Données PMSI MCO retraitées `r gen_fn(1, "fn1")`
-- Bases d'activité rum, ss, fichcomp, ficium, vidhosp, anohosp, rsa avec zoom aux items`r gen_fn(2, "fn2")`
+- Bases d'activité rum, ss, fichcomp (dmi, ucd, ...), ficium, vidhosp, anohosp, rsa, ace avec zoom aux items`r gen_fn(2, "fn2")`
 - Case-mix et analyses `r gen_fn(2, "fn2")`, `r gen_fn(3, "fn3")`
 - Filtres UM, hospitalisation, autorisation, périodes et classification GHM (CMD, C-K-M-Z, racines GHM, GHM, niveau, GA, GP, DA)
 - Bibliothèque de requêtes PMSI MCO

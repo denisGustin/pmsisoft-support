@@ -36,7 +36,9 @@ Toutes les analyses ne concernent que les séjours [terminés]{.underline} (HC o
 
 Historique depuis 2019.  
 
-**Chemin de l'écran : Analyse SMR > Mentions**  
+## Chemin de l'écran  
+
+**Analyse SMR > Mentions**  
 
 ## Filtres  
 
@@ -403,11 +405,9 @@ Parmi ces 5 types d'intervenants, 4 sont pris en compte dans le calcul des prati
 Le seuil minimal de pratiques thérapeutiques en mention "Locomoteur" étant fixé à 3, le séjour est indiqué avec un seuil OK (vert).  
 Le nombre de journées de présence en jour ouvré pour lesquelles le nombre minimal de séquences de traitement attendu en mention "Locomoteur" (à savoir "deux séquences de traitement dont au moins une séquence de soins individualisés") est 26, soit 54,17% des jours de présence en jour ouvré du séjour.  
 
-## Accès  
+## Demande d'accès Standard  
 
-Accès Professionnel SMR.  
-
-Pour plus d'informations ou une démonstration, nous [contacter](https://www.lespmsi.com/a-propos-2/#Formulaire_de_contact)  
+Pour demander un accès Standard à PMSISoft SSR pour votre établissement, nous [contacter](https://www.lespmsi.com/a-propos-2/#Formulaire_de_contact) (en sélectionnant l'option "Demande accès PMSISoft Standard")
 
 [^1]: la mention "Pédiatrie" est attribuée à tous séjours HC ou semaine HP d'un patient de moins de 18 ans  
 [^2]: le cas particulier de la pratique thérapeutique "Education thérapeutique" est repérée par au moins 1 codage CSARR du sous-chapitre CSARR 10.01 "Actes d'éducation, dans le cadre d'un programme d'éducation thérapeutique"  

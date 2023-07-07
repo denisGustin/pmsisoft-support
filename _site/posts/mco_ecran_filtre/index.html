@@ -90,11 +90,15 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ssr" role="button" data-bs-toggle="dropdown" aria-expanded="false">SSR</a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-ssr">    
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-smr" role="button" data-bs-toggle="dropdown" aria-expanded="false">SMR</a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-smr">    
         <li>
     <a class="dropdown-item" href="../../ecrans_ssr.html">
- <span class="dropdown-text">Ecrans SSR</span></a>
+ <span class="dropdown-text">Ecrans SMR</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../liste_analyse_smr.html">
+ <span class="dropdown-text">Analyses SMR</span></a>
   </li>  
     </ul>
   </li>
@@ -118,11 +122,15 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="../../acces_pmsisoft_ssr.html">
- <span class="dropdown-text">PMSISoft SSR</span></a>
+ <span class="dropdown-text">PMSISoft SMR</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../acces_pmsisoft_psy.html">
  <span class="dropdown-text">PMSISoft PSY</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../acces_pmsisoft_had.html">
+ <span class="dropdown-text">PMSISoft HAD</span></a>
   </li>  
     </ul>
   </li>
@@ -214,12 +222,15 @@ ul.task-list li input[type="checkbox"] {
 <p>Chaque filtre est décrit par :</p>
 <ul>
 <li>son <a href="../type_filtre">type</a></li>
-<li>son fonctionnement par rapport aux tableaux ou graphiques dans les écrans MCO (RUM, séjours, actes CCAM, codes CIM)</li>
-<li>diverses remarques</li>
+<li>ses valeurs<br>
+</li>
+<li>son fonctionnement par rapport aux principaux items (RUM, séjours, actes CCAM, codage CIM, DMI, UCD, patient, entrée ACE, factures) sélectionnés dans les écrans MCO (tableaux, graphiques, exports csv, JSON ou .rds)<br>
+</li>
+<li>autres informations</li>
 </ul>
-<p>Pour des raisons d’affichage, certains filtres sont accessibles dans un méta-filtre.<br>
-Exemple : tous les filtres de classification GHM dans le méta-filtre “Classification séjour”</p>
-<p>Les filtres MCO spécifiques à un écran sont décrits dans la documentation de l’écran concerné.</p>
+<p>Pour des raisons d’affichage, certains filtres sont accessibles via un méta-filtre.<br>
+Exemple : tous les filtres de classification des séjours (filtre “CMD”, filtre “sous_CMD”, filtre “GHM”, …) sont accessibles via le méta-filtre “Classification séjour”</p>
+<p>Les filtres MCO ou les usages d’un filtre MCO spécifiques à un écran sont décrits dans la documentation de l’écran concerné.</p>
 </section>
 <section id="filtre-année" class="level2">
 <h2 class="anchored" data-anchor-id="filtre-année">Filtre “Année”</h2>
@@ -231,10 +242,17 @@ Exemple : tous les filtres de classification GHM dans le méta-filtre “Classif
 </div><div class="column" style="width:78%;">
 <p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
 <p>Valeurs : 2019 à 2023</p>
-<p>Tableau de RUM : sélection des RUM avec la date de sortie de l’UM du RUM dans l’année sélectionnée</p>
-<p>Tableau de séjours : sélection des séjours avec la date de sortie du séjour (= la date de sortie du dernier RUM du séjour) dans l’année sélectionnée</p>
-<p>Tableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM avec la date de sortie de l’UM du RUM dans l’année sélectionnée</p>
-<p>Filtre présent dans tous les écrans en 1ere position de la 1ere ligne de filtres.</p>
+<p>Fonctionnement :<br>
+Avec les RUM = sélection des RUM avec la date de sortie du RUM dans l’année sélectionnée<br>
+Avec les séjours = sélection des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans l’année sélectionnée<br>
+Avec les actes CCAM = sélection des actes CCAM des RUM avec la date de sortie du RUM dans l’année sélectionnée<br>
+Avec les codages CIM = sélection des codages CIM des RUM avec la date de sortie du RUM dans l’année sélectionnée<br>
+Avec les DMI = sélection des DMI des FICHCOMP DMI avec une année d’import correspondant à l’année sélectionnée<br>
+Avec les UCD = sélection des UCD des FICHCOMP LES et MED AP-AC avec une année d’import correspondant à l’année sélectionnée<br>
+Avec les ACE = sélection des ACE des RSAF-ACE avec une année d’import correspondant à l’année sélectionnée</p>
+<p>Autres informations :<br>
+Filtre présent dans tous les écrans en 1ere position de la 1ere ligne de filtres.<br>
+Filtre disponible en accès Standard.</p>
 </div>
 </div>
 </section>
@@ -248,10 +266,17 @@ Exemple : tous les filtres de classification GHM dans le méta-filtre “Classif
 </div><div class="column" style="width:78%;">
 <p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
 <p>Valeurs : les 12 mois</p>
-<p>Tableau de RUM : sélection des RUM avec la date de sortie de l’UM du RUM comprise dans un mois sélectionné</p>
-<p>Tableau de séjours : sélection des séjours avec la de date de sortie du séjour (= la date de sortie du dernier RUM du séjour) comprise dans un mois sélectionné</p>
-<p>Tableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM avec la date de sortie de l’UM du RUM comprise dans un mois sélectionné</p>
-<p>Filtre présent dans tous les écrans en 2eme position de la 1ere ligne de filtres.</p>
+<p>Fonctionnement :<br>
+Avec les RUM = sélection des RUM avec la date de sortie du RUM dans le ou les mois sélectionné(s)<br>
+Avec les séjours = sélection des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans le ou les mois sélectionnés<br>
+Avec les actes CCAM = sélection des actes CCAM des RUM avec la date de sortie du RUM dans le ou les mois sélectionné(s)<br>
+Avec les codages CIM = sélection des codages CIM des RUM avec la date de sortie du RUM dans le ou les mois sélectionné(s)<br>
+Avec les DMI = sélection des DMI des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans le ou les mois sélectionnés<br>
+Avec les UCD = sélection des UCD des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans le ou les mois sélectionnés<br>
+Avec les ACE = sélection des ACE dont la date du type ACE (A,B,C,L,M,H,P) dans le ou les mois sélectionnés</p>
+<p>Autres informations :<br>
+Filtre présent dans tous les écrans en 2eme position de la 1ere ligne de filtres.<br>
+Filtre disponible en accès Standard</p>
 </div>
 </div>
 </section>
@@ -265,10 +290,9 @@ Exemple : tous les filtres de classification GHM dans le méta-filtre “Classif
 </div><div class="column" style="width:78%;">
 <p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
 <p>Valeurs : codes des UM représentées par au moins 1 RUM dans les imports PMSI de l’établissement.</p>
-<p>Tableau de RUM : sélection des RUM avec une UM sélectionnée</p>
-<p>Tableau de séjours : sélection des séjours avec au moins 1 RUM relevant d’une UM sélectionnée</p>
-<p>Tableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM relevant d’une UM sélectionnée</p>
-<p>Filtre présent dans tous les écrans en 3eme position de la 1ere ligne de filtres.</p>
+<p>Autres informations :<br>
+Filtre présent dans tous les écrans en 3eme position de la 1ere ligne de filtres.<br>
+Filtre disponible en accès Standard</p>
 </div>
 </div>
 </section>
@@ -285,12 +309,11 @@ Exemple : tous les filtres de classification GHM dans le méta-filtre “Classif
 
 </div><div class="column" style="width:56%;">
 <p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
-<p>Valeurs : codes des autorisations représentées au moins 1 fois dans les fichiers FICIUM de l’établissement.<br>
-Filtre actif si FICIUM de l’année sélectionnée est importé.</p>
-<p>Tableau de RUM : sélection des RUM relevant d’une UM avec une autorisation sélectionnée</p>
-<p>Tableau de séjours : sélection des séjours avec au moins 1 RUM dont l’UM est avec une autorisation sélectionnée</p>
-<p>Tableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM dont l’UM est avec une autorisation sélectionnée</p>
-<p>Filtre affiché dans le méta-filtre “Type d’UM”</p>
+<p>Valeurs : codes des autorisations représentées au moins 1 fois dans les fichiers FICIUM de l’établissement.</p>
+<p>Autres informations :<br>
+Filtre affiché dans le méta-filtre “Type d’UM”<br>
+Filtre actif si le FICIUM de l’année sélectionnée a été importé<br>
+Filtre disponible en accès Standard</p>
 </div>
 </div>
 </section>
@@ -307,12 +330,11 @@ Filtre actif si FICIUM de l’année sélectionnée est importé.</p>
 
 </div><div class="column" style="width:56%;">
 <p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
-<p>Valeurs : les modes d’hospitalisation possibles en MCO.<br>
-Filtre actif si FICIUM de l’année sélectionnée est importé.</p>
-<p>Tableau de RUM : sélection des RUM dans une UM avec un mode d’hospitalisation sélectionné</p>
-<p>Tableau de séjours : sélection des séjours avec au moins 1 RUM dont l’UM a un mode d’hospitalisation sélectionné</p>
-<p>Tableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM dont l’UM a un mode d’hospitalisation sélectionné.</p>
-<p>Filtre affiché dans le méta-filtre “Type d’UM”</p>
+<p>Valeurs : les modes d’hospitalisation possibles en MCO.</p>
+<p>Autres informations :<br>
+Filtre affiché dans le méta-filtre “Type d’UM”<br>
+Filtre actif si le FICIUM de l’année sélectionnée a été importé<br>
+Filtre disponible en accès Standard</p>
 </div>
 </div>
 </section>
@@ -325,10 +347,9 @@ Filtre actif si FICIUM de l’année sélectionnée est importé.</p>
 
 </div><div class="column" style="width:56%;">
 <p>Type de filtre : <a href="../type_filtre/#filtre-code">code</a>.</p>
-<p>Valeurs : saisie libre</p>
-<p>Tableau de RUM : sélection des RUM avec le NAS saisi</p>
-<p>Tableau de séjours : sélection des séjours avec le NAS saisi</p>
-<p>Tableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM avec le NAS saisi</p>
+<p>Valeurs : saisie libre d’une suite alphanumérique</p>
+<p>Autres informations :<br>
+Filtre disponible uniquement en accès Professionnel</p>
 </div>
 </div>
 </section>
@@ -346,10 +367,9 @@ Filtre actif si FICIUM de l’année sélectionnée est importé.</p>
 </div><div class="column" style="width:56%;">
 <p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
 <p>Valeurs : codes + libellés CMD des CMD représentées par au moins 1 RUM dans les imports PMSI de l’établissement.</p>
-<p>Tableau de RUM : sélection des RUM classés dans une CMD sélectionnée</p>
-<p>Tableau de séjours : sélection des séjours classés dans une CMD sélectionnée</p>
-<p>Tableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM classés dans une CMD sélectionnée</p>
-<p>Filtre affiché dans le méta-filtre “Classification séjour”</p>
+<p>Autres informations :<br>
+Filtre affiché en 1ere position du méta-filtre “Classification séjour”<br>
+Filtre disponible en accès Standard</p>
 </div>
 </div>
 </section>
@@ -367,10 +387,9 @@ Filtre actif si FICIUM de l’année sélectionnée est importé.</p>
 </div><div class="column" style="width:56%;">
 <p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
 <p>Valeurs : codes + libellés des sous-CMD représentées par au moins 1 RUM dans les imports PMSI de l’établissement</p>
-<p>Tableau de RUM : sélection des RUM classés dans une sous-CMD sélectionnée</p>
-<p>Tableau de séjours : sélection des séjours classés dans une sous-CMD sélectionnée</p>
-<p>Tableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM classés dans une sous-CMD sélectionnée</p>
-<p>Filtre affiché dans le méta-filtre “Classification séjour”</p>
+<p>Autres informations :<br>
+Filtre affiché en 2ème position du méta-filtre “Classification séjour”<br>
+Filtre disponible en accès Professionnel</p>
 </div>
 </div>
 </section>
@@ -388,10 +407,9 @@ Filtre actif si FICIUM de l’année sélectionnée est importé.</p>
 </div><div class="column" style="width:56%;">
 <p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
 <p>Valeurs : C, M, K, Z</p>
-<p>Tableau de RUM : sélection des RUM classés avec un des codes (C,M,K,Z) sélectionné</p>
-<p>Tableau de séjours : sélection des séjours classés avec un des codes (C,M,K,Z) sélectionné</p>
-<p>Tableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM classés avec un des codes (C,M,K,Z) sélectionné</p>
-<p>Filtre affiché dans le méta-filtre “Classification séjour”</p>
+<p>Autres informations :<br>
+Filtre affiché en 3ème position du méta-filtre “Classification séjour”<br>
+Filtre disponible en accès Professionnel</p>
 </div>
 </div>
 </section>
@@ -408,11 +426,10 @@ Filtre actif si FICIUM de l’année sélectionnée est importé.</p>
 
 </div><div class="column" style="width:56%;">
 <p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
-<p>Valeurs : codes + libellés des GHM représentés par au moins 1 RUM dans les imports PMSI de l’établissement</p>
-<p>Tableau de RUM : sélection des RUM classés dans un GHM sélectionné</p>
-<p>Tableau de séjours : sélection des séjours classés dans un GHM sélectionné</p>
-<p>Tableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM classés dans un GHM sélectionné</p>
-<p>Filtre affiché dans le méta-filtre “Classification séjour”</p>
+<p>Valeurs : codes + libellés des GHM des GHM représentés par au moins 1 RUM dans les imports PMSI de l’établissement<br>
+Autres informations :<br>
+Filtre affiché dans le méta-filtre “Classification séjour”<br>
+Filtre disponible en accès Professionnel</p>
 </div>
 </div>
 </section>
@@ -430,10 +447,9 @@ Filtre actif si FICIUM de l’année sélectionnée est importé.</p>
 </div><div class="column" style="width:56%;">
 <p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
 <p>Valeurs : 1, 2, 3, 4, J, T, Z, E, A, B, C, D</p>
-<p>Tableau de RUM : sélection des RUM classés avec un code de sévérité/durée sélectionné</p>
-<p>Tableau de séjours : sélection des séjours classés avec un code de sévérité/durée sélectionné</p>
-<p>Tableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM classés avec un code de sévérité/durée sélectionné</p>
-<p>Filtre affiché dans le méta-filtre “Classification séjour”</p>
+<p>Autres informations :<br>
+Filtre affiché dans le méta-filtre “Classification séjour”<br>
+Filtre disponible en accès Professionnel</p>
 </div>
 </div>
 </section>
@@ -447,10 +463,9 @@ Filtre actif si FICIUM de l’année sélectionnée est importé.</p>
 </div><div class="column" style="width:78%;">
 <p>Type de filtre : <a href="../type_filtre/#filtre-intervalle">intervalle</a>.</p>
 <p>Valeurs : saisie numérique</p>
-<p>Tableau de RUM : sélection des RUM des séjours avec un nombre de RUM dans l’intervalle numérique sélectionné</p>
-<p>Tableau de séjours : sélection des séjours avec un nombre de RUM dans l’intervalle numérique sélectionné</p>
-<p>Tableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM des séjours avec un nombre de RUM dans l’intervalle numérique sélectionné</p>
-<p>Filtre affiché dans le méta-filtre “Type de RUM”</p>
+<p>Autres informations :<br>
+Filtre affiché dans le méta-filtre “Type de RUM”<br>
+Filtre disponible en accès Professionnel</p>
 </div>
 </div>
 

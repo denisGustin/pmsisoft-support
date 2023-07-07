@@ -229,7 +229,7 @@ ul.task-list li input[type="checkbox"] {
 <li>autres informations</li>
 </ul>
 <p>Pour des raisons d’affichage, certains filtres sont accessibles via un méta-filtre.<br>
-Exemple : tous les filtres de classification des séjours (filtre “CMD”, filtre “sous_CMD”, filtre “GHM”, …) sont accessibles via le méta-filtre “Classification séjour”</p>
+<em>Exemple : tous les filtres de classification des séjours (filtre “CMD”, filtre “sous_CMD”, filtre “GHM”, …) sont accessibles via le méta-filtre “Classification séjour”</em></p>
 <p>Les filtres MCO ou les usages d’un filtre MCO spécifiques à un écran sont décrits dans la documentation de l’écran concerné.</p>
 </section>
 <section id="filtre-année" class="level2">
@@ -247,9 +247,9 @@ Avec les RUM = sélection des RUM avec la date de sortie du RUM dans l’année 
 Avec les séjours = sélection des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans l’année sélectionnée<br>
 Avec les actes CCAM = sélection des actes CCAM des RUM avec la date de sortie du RUM dans l’année sélectionnée<br>
 Avec les codages CIM = sélection des codages CIM des RUM avec la date de sortie du RUM dans l’année sélectionnée<br>
-Avec les DMI = sélection des DMI des FICHCOMP DMI avec une année d’import correspondant à l’année sélectionnée<br>
-Avec les UCD = sélection des UCD des FICHCOMP LES et MED AP-AC avec une année d’import correspondant à l’année sélectionnée<br>
-Avec les ACE = sélection des ACE des RSAF-ACE avec une année d’import correspondant à l’année sélectionnée</p>
+Avec les DMI = sélection des DMI du FICHCOMP DMI avec l’année d’import correspondant à l’année sélectionnée<br>
+Avec les UCD = sélection des UCD du FICHCOMP LES et du FICHCOMP MED AP-AC avec l’année d’import correspondant à l’année sélectionnée<br>
+Avec les ACE = sélection des ACE du RSAF-ACE avec l’année d’import correspondant à l’année sélectionnée</p>
 <p>Autres informations :<br>
 Filtre présent dans tous les écrans en 1ere position de la 1ere ligne de filtres.<br>
 Filtre disponible en accès Standard.</p>
@@ -268,12 +268,12 @@ Filtre disponible en accès Standard.</p>
 <p>Valeurs : les 12 mois</p>
 <p>Fonctionnement :<br>
 Avec les RUM = sélection des RUM avec la date de sortie du RUM dans le ou les mois sélectionné(s)<br>
-Avec les séjours = sélection des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans le ou les mois sélectionnés<br>
+Avec les séjours = sélection des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans le ou les mois sélectionné(s)<br>
 Avec les actes CCAM = sélection des actes CCAM des RUM avec la date de sortie du RUM dans le ou les mois sélectionné(s)<br>
 Avec les codages CIM = sélection des codages CIM des RUM avec la date de sortie du RUM dans le ou les mois sélectionné(s)<br>
-Avec les DMI = sélection des DMI des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans le ou les mois sélectionnés<br>
-Avec les UCD = sélection des UCD des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans le ou les mois sélectionnés<br>
-Avec les ACE = sélection des ACE dont la date du type ACE (A,B,C,L,M,H,P) dans le ou les mois sélectionnés</p>
+Avec les DMI = sélection des DMI des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans le ou les mois sélectionné(s)<br>
+Avec les UCD = sélection des UCD des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans le ou les mois sélectionné(s)<br>
+Avec les ACE = sélection des ACE dont la date du type ACE (A,B,C,L,M,H,P) dans le ou les mois sélectionné(s)</p>
 <p>Autres informations :<br>
 Filtre présent dans tous les écrans en 2eme position de la 1ere ligne de filtres.<br>
 Filtre disponible en accès Standard</p>
@@ -312,7 +312,7 @@ Filtre disponible en accès Standard</p>
 <p>Valeurs : codes des autorisations représentées au moins 1 fois dans les fichiers FICIUM de l’établissement.</p>
 <p>Autres informations :<br>
 Filtre affiché dans le méta-filtre “Type d’UM”<br>
-Filtre actif si le FICIUM de l’année sélectionnée a été importé<br>
+Filtre actif si au moins un FICIUM a été importé<br>
 Filtre disponible en accès Standard</p>
 </div>
 </div>
@@ -333,7 +333,7 @@ Filtre disponible en accès Standard</p>
 <p>Valeurs : les modes d’hospitalisation possibles en MCO.</p>
 <p>Autres informations :<br>
 Filtre affiché dans le méta-filtre “Type d’UM”<br>
-Filtre actif si le FICIUM de l’année sélectionnée a été importé<br>
+Filtre actif si au moins un FICIUM a été importé<br>
 Filtre disponible en accès Standard</p>
 </div>
 </div>
@@ -426,8 +426,8 @@ Filtre disponible en accès Professionnel</p>
 
 </div><div class="column" style="width:56%;">
 <p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
-<p>Valeurs : codes + libellés des GHM des GHM représentés par au moins 1 RUM dans les imports PMSI de l’établissement<br>
-Autres informations :<br>
+<p>Valeurs : codes + libellés des GHM des GHM représentés par au moins 1 RUM dans les imports PMSI de l’établissement</p>
+<p>Autres informations :<br>
 Filtre affiché dans le méta-filtre “Classification séjour”<br>
 Filtre disponible en accès Professionnel</p>
 </div>

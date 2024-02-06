@@ -2,6 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/smr_gme_comparaison/index.html",
+      "/posts/mco_ecran_cardiologie/index.html",
+      "/posts/ssr_ecran_mention/index.html",
       "/posts/mco_simulation_ghm/index.html",
       "/posts/mco_ecran_filtre/index.html",
       "/posts/type_filtre/index.html",

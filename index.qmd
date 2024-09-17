@@ -5,19 +5,21 @@ listing:
   contents: posts/**/*.qmd
   sort: "date desc"
   type: default
+  date-format: full
   categories: true
-  
-  # sort-ui: true
-  # filter-ui: true
-  fields: [date, title, description, categories]
+  sort-ui: false
+  filter-ui: false
+  fields: [date, title, categories]
   feed: true
 page-layout: full
 title-block-banner: false
+toc: false
 ---
 
 ::: {.callout-note icon=false}
-
 ## Recevoir les posts documentaires PMSISoft par email
 [Cliquer ici](https://www.lespmsi.com/a-propos-2/#Formulaire_de_contact) en sélectionnant l'option "Recevoir les posts documentaires PMSISoft".  
 :::
-  
+
+## Liste des posts PMSISoft  
+

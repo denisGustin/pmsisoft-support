@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Documentation PMSISoft</title>
+<link>https://www.pmsisoft.com/documentation_smr.html</link>
+<atom:link href="https://www.pmsisoft.com/documentation_smr.xml" rel="self" type="application/rss+xml"/>
+<description>Documentation et support du logiciel PMSISoft, analyse PMSI MCO, SMR, PSY et HAD</description>
+<generator>quarto-1.4.551</generator>
+<lastBuildDate>Tue, 30 Jan 2024 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Simulation recettes activité SMR</title>
+  <dc:creator>denis G</dc:creator>
+  <link>https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Depuis le 1er janvier 2024, les établissements SMR voient leur activité classée via le modèle cible de la réforme de financement du SMR.</p>
+<p>Afin d’aider ces établissements à comprendre et simuler leurs recettes d’activité, nous avons développé un simulateur de comparaison de recettes d’activité par séjour et journée de présence en hospitalisation complète.</p>
+<p>Pour un groupe nosologique et une plage de journées de présence donnés, l’utilisateur choisit la position qu’il souhaite comparer (groupe de réadaptation, groupe de lourdeur ou sévérité) et filtre les 2 autres positions : le simulateur calcule alors, sur la base des règles de classification GME-GMT 2024 et des tarifs ex-DGF ou ex-OQN, les recettes d’activité cumulée du séjour et les recettes d’activité par journée de présence pour chacun des GMT sélectionnés.</p>
+<p>Les résultats sont présentés sous 3 formats : graphiques, tableau, exports (csv, json, png).</p>
+<p>La manipulation et l’exploitation des résultats du simulateur supposent la connaissance des principales règles de classification des séjours en PMSI SMR.</p>
+</section>
+<section id="fonctionnalités" class="level2">
+<h2 class="anchored" data-anchor-id="fonctionnalités">Fonctionnalités</h2>
+<ul>
+<li>Classification en GME et GMT, à partir d’une grille minimale optimisée de saisie d’un séjour virtuel, selon la classification 2024 <sup>1</sup><br>
+</li>
+<li>Calcul des recettes d’activité cumulées du séjour pour chaque GMT sélectionné<br>
+</li>
+<li>Calcul des recettes d’activité par journée de présence pour chaque GMT sélectionné<br>
+</li>
+<li>Tarifs ex-DGF ou ex-OQN selon l’établissement<br>
+</li>
+<li>Choix de la plage de journées de présence entre 0 JP et 300 JP<br>
+</li>
+<li>Graphique des recettes d’activité cumulée pour chaque GMT sélectionné<br>
+</li>
+<li>Graphique des recettes d’activité par journée de présence pour chaque GMT sélectionné<br>
+</li>
+<li>Tableau des recettes d’activité par journée pour chaque GMT sélectionné<br>
+</li>
+<li>Dans le tableau des recettes d’activité, identification via un code couleur des différentes zones forfaitaires et des journées post 90 JP<br>
+</li>
+<li>Dans le tableau, typage des plages de JP (bb_inf, tzf1, tzf2, tzf3, bh_supp_tzf31, bh_supp_tzf3, post_90_jp)<br>
+</li>
+<li>Assistance à la saisie en GN, GR, et GL<br>
+</li>
+<li>Export png des graphiques<br>
+</li>
+<li>Export csv du tableau des recettes d’activité par journée<br>
+</li>
+<li>Export JSON du tableau des recettes d’activité par journée<br>
+</li>
+<li>Gestion des erreurs de saisie<br>
+</li>
+<li>Hébergement en Hébergement de Santé Certifié (HDS) au <a href="https://www.mipih.fr/hebergement-infogerance" target="_blank">MIPIH</a></li>
+</ul>
+</section>
+<section id="simulateur-de-recettes-dactivités-hc" class="level2">
+<h2 class="anchored" data-anchor-id="simulateur-de-recettes-dactivités-hc">Simulateur de recettes d’activités HC</h2>
+<section id="créer-une-simulation2" class="level3">
+<h3 class="anchored" data-anchor-id="créer-une-simulation2">Créer une simulation<sup>2</sup></h3>
+<section id="au-départ" class="level4">
+<h4 class="anchored" data-anchor-id="au-départ">Au départ</h4>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_vide.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p>A l’ouverture de l’écran, aucun GN n’est sélectionné.</p>
+<p>La première étape va donc consister à sélectionner le GN sur lequel on souhaite travailler.</p>
+</div>
+</div>
+</section>
+<section id="choix-du-gn" class="level4">
+<h4 class="anchored" data-anchor-id="choix-du-gn">Choix du GN</h4>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_choix_gn.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p>Dans le filtre GN, on sélectionne un GN soit directement, soit via l’assistant en saisissant directement le code GN.</p>
+</div>
+</div>
+</section>
+<section id="filtres-gr-gl-et-sévérité" class="level4">
+<h4 class="anchored" data-anchor-id="filtres-gr-gl-et-sévérité">Filtres GR, GL et sévérité</h4>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_0841_filtre_gr.png" class="img-fluid"></p>
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_0841_filtre_gl.png" class="img-fluid"> <img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_0841_filtre_severite.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p>Une fois le filtre GN sélectionné (ici 0841), on sélectionne 2 parmi les 3 filtres GR code (groupe de réadaptation), GL code (groupe de lourdeur) ou sévérité.</p>
+</div>
+</div>
+</section>
+<section id="filtrage-gr-gl-sévérité" class="level4">
+<h4 class="anchored" data-anchor-id="filtrage-gr-gl-sévérité">Filtrage (GR, GL, sévérité)</h4>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_0841SX1_filtre.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p>Une fois, le GN sélectionné, parmi les 3 filtres GR code, Gl code et sévérité, <strong>on laisse vierge le filtre sur lequel on souhaite comparer les GME-GMT et on sélectionne la valeur voulue pour chacun des 2 autres filtres.</strong></p>
+<p>Ici, par exemple, après avoir sélectionné le GN 0841, on souhaite comparer les recettes d’activité des différents GME 0841Sx1 (donc 0841S<strong>A</strong>1, 0841S<strong>B</strong>1 et 0841S<strong>C</strong>1). On a donc sélectionné le GR code à S et la sévérité à 1 et on a laissé vierge le GL code.</p>
+<p>On n’a pas modifié la plage de journées de présence de 1 JP à 50 JP, mais on aurait pu la modifier.</p>
+<p>On clique sur le bouton “Filtrer” pour lancer les calculs.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="résultats-de-simulation" class="level3">
+<h3 class="anchored" data-anchor-id="résultats-de-simulation">Résultats de simulation</h3>
+<section id="simulation-sur-le-gl-code-0841sx1" class="level4">
+<h4 class="anchored" data-anchor-id="simulation-sur-le-gl-code-0841sx1">Simulation sur le GL code : 0841Sx1</h4>
+<p>Il s’agit de la simulation paramétrée ci-dessus.</p>
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_0841Sx1.png" class="img-fluid"></p>
+<p>Le tableau de la simulation 0841Sx1 avec une plage de 86 à 100 JP</p>
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_0841SX1_post_90.png" class="img-fluid"></p>
+</section>
+<section id="simulation-sur-le-gr-code-0127xc1" class="level4">
+<h4 class="anchored" data-anchor-id="simulation-sur-le-gr-code-0127xc1">Simulation sur le GR code : 0127xC1</h4>
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_0127XC1.png" class="img-fluid"></p>
+</section>
+<section id="simulation-sur-la-sévérité-10uax" class="level4">
+<h4 class="anchored" data-anchor-id="simulation-sur-la-sévérité-10uax">Simulation sur la sévérité : 10UAx</h4>
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_10UAX.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="exports" class="level3">
+<h3 class="anchored" data-anchor-id="exports">Exports</h3>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_download.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p>En dessous du tableau, 3 lignes de liens permettent d’exporter les résulats :<br>
+# le tableau au format JSON ou csv<br>
+# le graphique des recettes d’activité cumulées au format png<br>
+# le graphique des recettes d’activité par JP au format png</p>
+</div>
+</div>
+</section>
+</section>
+<section id="pour-aller-plus-loin" class="level2">
+<h2 class="anchored" data-anchor-id="pour-aller-plus-loin">Pour aller plus loin</h2>
+<p>A chaque GME est associé son GMT et éventuellement le GMT hebdomadaire associé au GMT.<br>
+Pour le cas particulier du GN 2303 de SP, on force le GMT correspondant au GME hors lit ou unité SP</p>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_0127XXX.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p>Le choix initial d’un groupe nosologique met à jour automatiquement les valeurs éligibles en GR code, GL code et sévérité.</p>
+<p>Ici, par exemple, le choix du GN 0127 n’autorise que le choix d’un GL code à B ou C.</p>
+</div>
+</div>
+<p>La palette de couleur est un extrait de 3 couleurs de la très classique et optimisée <a href="https://siegal.bio.nyu.edu/color-palette/" target="_blank">palette Okabe &amp; Ito</a><br>
+Le bleu est pour la valeur la plus basse de la comparaison (exemple : sévérité 1, groupe de lourdeur A), l’orange est pour la valeur intermédiaire ou la plus haute s’il n’y a que 2 alternatives et le vert est pour la valeur la plus haute s’il y a 3 alternatives.</p>
+</section>
+<section id="accès" class="level2">
+<h2 class="anchored" data-anchor-id="accès">Accès</h2>
+<p>L’écran est accessible dans <strong>PMSISoft Standard SMR, gratuit, illimité dans le temps, ouvert à tout établissement SMR.</strong></p>
+<p>Chemin PMSISoft : Référentiels SMR &gt; GME HC Comparaison</p>
+<p>Pour demander un accès, nous <a href="https://www.lespmsi.com/a-propos-2/#Formulaire_de_contact">contacter</a> (en sélectionnant l’objet “Demande accès PMSISoft Standard” et en précisant à minima “Simulateur SMR” dans le message)</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Notes de bas de page</h2>
+
+<ol>
+<li id="fn1"><p>la grille minimale pour classer est composée de 5 variables : groupe nosologie, groupe de réadaptation, groupe de loudeur, sévérité, plage de journées de présence↩︎</p></li>
+<li id="fn2"><p>les exemples de simulations sont calculés avec les tarifs ex-DGF↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>SMR</category>
+  <category>Recette activité SMR</category>
+  <guid>https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/</guid>
+  <pubDate>Tue, 30 Jan 2024 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Ecran Mention SMR</title>
+  <dc:creator>denis GUS</dc:creator>
+  <link>https://www.pmsisoft.com/posts/smr/smr_ecran_mention/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Le décret <a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000044947234#:~:text=Objet%20%3A%20conditions%20techniques%20de%20fonctionnement,soins%20m%C3%A9dicaux%20et%20de%20r%C3%A9adaptation." target="_blank">n°2022-25 du 11 janvier 2022 relatif aux conditions techniques de fonctionnement de l’activité de SMR</a>, complété par l’instruction DGOS <a href="https://www.lareunion.ars.sante.fr/system/files/2023-01/Instruction%20DGOS%20n%C2%B0210%20du%2028-09-2022%20AS%20n%C2%B05.pdf" target="_blank">N°DGOS/R4/2022/210 du 28 septembre 2022 relative à la mise en oeuvre de la réforme des autorisations d’activité des soins médicaux et de réadaptation</a> définissent les pré-requis et conditions des futures mentions SMR.</p>
+<p>Une partie importante de ces caractéristiques peut être raisonnablement traduite en PMSI SMR afin de permettre aux établissements d’analyser et de travailler sur la <strong>cohérence à minima</strong> de leurs pratiques de soins, vues du PMSI SMR, avec les exigences des mentions SMR qui leur sont octroyées.</p>
+<p>L’attribution des mentions SMR à chaque séjour HC terminé et chaque semaine HP dans PMSISoft est cohérente avec les codes des autorisations actuelles. <sup>1</sup></p>
+<p>Ainsi, à chaque mention SMR sont associées :</p>
+<ul>
+<li><p>des <strong>pratiques thérapeutiques</strong> avec un nombre minimum de pratiques thérapeutiques à proposer à chaque patient, selon son état clinique, parmi une liste fermée de pratiques thérapeutiques spécifique à chaque mention.<br>
+<u>Traduction d’une pratique thérapeutique dans PMSISoft</u> : réalisation, au cours du séjour terminé du patient en HC ou au cours d’une semaine en HP, d’au moins 1 acte CSARR par un professionnel (identifié via la variable Type intervenant) correspondant à la pratique thérapeutique. <sup>2</sup><br>
+Puis, pour chaque séjour terminé en HC ou chaque semaine en HP, comparaison au seuil minimal de pratiques thérapeutiques attendues pour la mention du séjour HC ou de la semaine HP.</p></li>
+<li><p>des <strong>séquences de traitement</strong> à dispenser, chaque jour ouvré, à chaque patient, selon son état clinique.<br>
+Séquences de traitement possibles : indifférentées, individualisées, collectives, masso-kinésithérapie.<br>
+<u>Traduction d’une séquence de traitement dans PMSISoft</u> : pour chaque séjour terminé en HC ou pour chaque semaine en HP, pour chaque jour ouvré, repérage d’au moins une réalisation d’un acte CSARR correspondant aux séquences de traitement possibles.<br>
+Puis, pour chaque jour ouvré, comparaison du panier de séquences de traitement minimal attendu pour la mention du séjour en HC ou de la semaine en HP.</p></li>
+</ul>
+<p>3 axes d’analyses :<br>
+- <strong>Case-mix “Mention + Type d’hospitalisation”</strong> = analyse pour chaque couple “Mention + type d’hospitalisation”<br>
+- <strong>Case-mix “Mention + Intervenant”</strong> = analyse pour chaque couple “Mention + configuration de type d’intervenant réellement rencontrée”<br>
+- <strong>“Séjours et mention”</strong> = analyse, pour chaque séjour, avec possibilité de remonter aux informations détaillées des séjours</p>
+<p>Toutes les analyses ne concernent que les séjours <u>terminés</u> (HC ou HP) hors erreur de classification (CM 90) dans le périmètre sélectionné par les filtres.</p>
+<p>Historique depuis 2019.</p>
+</section>
+<section id="chemin-de-lécran" class="level2">
+<h2 class="anchored" data-anchor-id="chemin-de-lécran">Chemin de l’écran</h2>
+<p><strong>Analyse SMR &gt; Mentions</strong></p>
+</section>
+<section id="filtres" class="level2">
+<h2 class="anchored" data-anchor-id="filtres">Filtres</h2>
+<ul>
+<li>Année PMSI<br>
+</li>
+<li>Mois PMSI<br>
+</li>
+<li>UM<br>
+</li>
+<li>Autorisations de l’établissement<br>
+</li>
+<li>Type d’hospitalisation<br>
+</li>
+<li>Classification des séjours et RHS (CM, GN, GR, GL, GME, sévérité)</li>
+</ul>
+</section>
+<section id="case-mix-mention-type-dhospitalisation" class="level2">
+<h2 class="anchored" data-anchor-id="case-mix-mention-type-dhospitalisation">Case-mix “Mention + Type d’hospitalisation”</h2>
+<p>Le case-mix comprend 15 colonnes, correspondant à l’identification des couples “Mention + type hospitalisation” (2 premières colonnes) et à 13 analyses détaillées dans leur ordre de gauche à droite ci-dessous.</p>
+<p>Les analyses sont regroupées par famille cohérente.</p>
+<p>Export csv et JSON des informations du casemix via les liens <code>Télécharger</code></p>
+<section id="couple-mentiontype-hospitalisation" class="level3">
+<h3 class="anchored" data-anchor-id="couple-mentiontype-hospitalisation">Couple mention+type hospitalisation</h3>
+<div class="columns">
+<div class="column" style="width:28%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_type_hospitalisation_liste_mention.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:70%;">
+<p>Chaque couple “Mention + type hospitalisation” rencontré via au moins 1 séjour terminé dans le périmètre sélectionné est affiché.</p>
+<p>Chaque mention (tout type d’hospitalisation confondu) fait l’objet une ligne d’analyse consolidée, identifiée par l’intitulé “total mention”.</p>
+<p>La première ligne “etablissement” est la ligne d’analyse consolidée au niveau de l’établissement. <sup>3</sup></p>
+</div>
+</div>
+</section>
+<section id="séjour" class="level3">
+<h3 class="anchored" data-anchor-id="séjour">Séjour</h3>
+<div class="columns">
+<div class="column" style="width:38%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_type_hospitalisation_colonne_sejour.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:60%;">
+<p>Nombre de séjours terminés correspondant à la ligne analysée (établissement, couple “Mention + type hospitalisation”, mention).</p>
+</div>
+</div>
+</section>
+<section id="jour-ouvré-venue" class="level3">
+<h3 class="anchored" data-anchor-id="jour-ouvré-venue">Jour ouvré-venue</h3>
+<div class="columns">
+<div class="column" style="width:38%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_type_hospitalisation_jour_ouvre.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:60%;">
+<p>n = nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) pour la ligne analysée</p>
+<p>n csarr = nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) avec au moins 1 acte CSARR réalisé pour la ligne analysée</p>
+<p>% csarr = ratio n csarr / n</p>
+<p>0_csarr = nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) avec aucun acte CSARR réalisé pour la ligne analysée</p>
+</div>
+</div>
+</section>
+<section id="réalisation-csarr" class="level3">
+<h3 class="anchored" data-anchor-id="réalisation-csarr">Réalisation CSARR</h3>
+<div class="columns">
+<div class="column" style="width:28%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_type_hospitalisation_realisation.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:70%;">
+<p>n = nombre total de réalisations d’acte CSARR réalisés dans les JP en jour ouvré (HC) ou dans les venues en jour ouvré (HP)</p>
+<p>mean = moyenne de réalisations des actes CSARR par JP en jour ouvré (HC) ou par venue en jour ouvré (HP)</p>
+</div>
+</div>
+</section>
+<section id="intervenant" class="level3">
+<h3 class="anchored" data-anchor-id="intervenant">Intervenant</h3>
+<div class="columns">
+<div class="column" style="width:28%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_type_hospitalisation_intervenant.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:70%;">
+<p>mean = moyenne, pour les séjours de la ligne analysée, du nombre de type d’intervenant différent ayant réalisé au moins 1 acte CSARR dans un jour ouvré</p>
+<p>On peut traduire ce calcul par la phrase “Chaque jour ouvré des séjours relevant du couple”Mention + type hospitalisation” de la ligne analysée a eu <code>mean</code> type d’intervenant différent en moyenne.”</p>
+</div>
+</div>
+</section>
+<section id="pratique-thérapeutique" class="level3">
+<h3 class="anchored" data-anchor-id="pratique-thérapeutique">Pratique thérapeutique</h3>
+<div class="columns">
+<div class="column" style="width:38%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_type_hospitalisation_pratique_therapeutique.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:60%;">
+<p>mean = moyenne, pour les séjours de la ligne analysée, du nombre de pratiques thérapeutiques (vues du PMSI - voir Introduction) de la mention de la ligne</p>
+<p>séjour &gt; seuil = nombre de séjours avec un nombre de pratiques thérapeutiques de la mention de la ligne &gt; au nombre <u>minimal</u> attendu de pratiques thérapeutiques de la mention de la ligne</p>
+<p>% séjour &gt; seuil = ratio du nombre de séjours “séjour &gt; seuil” par rapport au nombre de séjours de la ligne analysée</p>
+</div>
+</div>
+</section>
+<section id="séquence-de-traitement" class="level3">
+<h3 class="anchored" data-anchor-id="séquence-de-traitement">Séquence de traitement</h3>
+<div class="columns">
+<div class="column" style="width:28%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_type_hospitalisation_sequence_traitement.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:70%;">
+<p>n = nombre de JP en jour ouvré (HC) ou de venues en jour ouvré (HP) pour lesquelles le panier de séquences de traitement réalisées est &gt; au minimum attendu, par jour ouvré, pour le panier de séquences de traitement de la mention de la ligne</p>
+<p>% = ratio entre le nombre de la colonne précédente et le nombre de JP en jour ouvré (HC) ou de venues en jour ouvré (HP) de la ligne analysée</p>
+</div>
+</div>
+</section>
+</section>
+<section id="case-mix-mention-intervenant" class="level2">
+<h2 class="anchored" data-anchor-id="case-mix-mention-intervenant">Case-mix “Mention + Intervenant”</h2>
+<p>Le case-mix comprend 16 colonnes, correspondant à l’identification des couples “Mention + intervenant” (2 premières colonnes) et 14 analyses détaillées dans leur ordre de gauche à droite ci-dessous.</p>
+<p>Pour chaque mention, PMSISoft identifie toutes les configurations de types d’intervenant rencontrées <sup>4</sup> dans les séjours terminés où une configuration de types d’intervenant = une liste unique des différents types d’intervenants ayant codé au moins 1 fois un acte CSARR dans le séjour, à l’exclusion de tous les autres types d’intervenant.<br>
+Exemple : “Locomoteur + (mk, ergo, psychologue)” = l’ensemble des séjours terminés de la mention “Locomoteur” où seuls les 3 types d’intervenant (mk, ergo, psychologue) sont intervenus à l’exclusion de tous les autres types d’intervenant.</p>
+<p>Chaque couple “mention + type d’intervenant” rencontré est affiché.</p>
+<p>La première ligne “etablissement” est la ligne d’analyse consolidée au niveau de l’établissement.</p>
+<p>Les analyses sont regroupées par famille cohérente.</p>
+<p>Export csv et JSON des informations du casemix via les liens <code>Télécharger</code></p>
+<p>Remarque : ce casemix est aussi intéressant, indépendamment du sujet des mentions SMR, pour analyser toutes les configurations rencontrées d’intervenants par séjour dans l’établissement.</p>
+<section id="couple-mentionintervenant" class="level3">
+<h3 class="anchored" data-anchor-id="couple-mentionintervenant">Couple mention+intervenant</h3>
+<div class="columns">
+<div class="column" style="width:38%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_intervenant_liste_mention.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:60%;">
+<p>n = nombre de types d’intervenants concernés par le couple de la ligne analysée.</p>
+</div>
+</div>
+</section>
+<section id="séjour-1" class="level3">
+<h3 class="anchored" data-anchor-id="séjour-1">Séjour</h3>
+<div class="columns">
+<div class="column" style="width:28%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_intervenant_sejour.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:70%;">
+<p>n = nombre de séjours avec la configuration “Mention + types d’intervenant” de la ligne</p>
+<p>% = ratio entre la colonne précédente et le nombre de séjours <u>de la mention de la ligne</u></p>
+</div>
+</div>
+</section>
+<section id="jour-ouvré-venue-1" class="level3">
+<h3 class="anchored" data-anchor-id="jour-ouvré-venue-1">Jour ouvré-venue</h3>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_intervenant_jour_ouvre.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:50%;">
+<p>n = nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) pour la ligne analysée</p>
+<p>% = ratio entre la colonne précédente et le nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) <u>de la mention de la ligne</u></p>
+<p>n csarr = nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) avec au moins 1 acte CSARR réalisé pour la ligne analysée</p>
+<p>% csarr = ratio n csarr / n</p>
+<p>0_csarr = nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) avec aucun acte CSARR réalisé pour la ligne analysée</p>
+</div>
+</div>
+</section>
+<section id="réalisation-csarr-1" class="level3">
+<h3 class="anchored" data-anchor-id="réalisation-csarr-1">Réalisation CSARR</h3>
+<div class="columns">
+<div class="column" style="width:38%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_intervenant_realisation.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:60%;">
+<p>n = nombre total de réalisations d’acte CSARR réalisées dans les JP en jour ouvré (HC) ou dans les venues en jour ouvré (HP)</p>
+<p>% = ratio entre la colonne précédente et le nombre de réalisations CSARR des journées de présence en jour ouvré (en HC) ou des venues en jour ouvré (en HP) <u>de la mention de la ligne</u></p>
+<p>mean = moyenne des réalisations des actes CSARR par JP en jour ouvré (HC) ou par venue en jour ouvré (HP)</p>
+</div>
+</div>
+</section>
+<section id="pratique-thérapeutique-1" class="level3">
+<h3 class="anchored" data-anchor-id="pratique-thérapeutique-1">Pratique thérapeutique</h3>
+<div class="columns">
+<div class="column" style="width:18%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_intervenant_pratique_therapeutique.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:80%;">
+<p>seuil = le nombre de types d’intervenant de la ligne éligibles aux pratiques thérapeutiques de la mention de la ligne est &lt; au seuil minimal de pratiques thérapeutiques attendues pour la mention (pastille orange) ou &gt;= à ce seuil minimal (pastille verte)</p>
+<p>Remarque : le nombre de types d’intervenant éligibles aux pratiques thérapeutiques de la mention peut être différent du nombre total de types d’intervenant total (cf intervenant non éligible)</p>
+</div>
+</div>
+</section>
+<section id="séquence-de-traitement-1" class="level3">
+<h3 class="anchored" data-anchor-id="séquence-de-traitement-1">Séquence de traitement</h3>
+<div class="columns">
+<div class="column" style="width:28%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_intervenant_sequence_traitement.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:70%;">
+<p>n = nombre de JP en jour ouvré (HC) ou de venues en jour ouvré (HP) pour lesquelles le panier de séquences de traitement réalisées est &gt; au minimum attendu, par jour ouvré, pour le panier de séquences de traitement de la mention de la ligne</p>
+<p>% = ratio entre le nombre de la colonne précédente et le nombre de JP en jour ouvré (HC) ou de venues en jour ouvré (HP) de la ligne analysée</p>
+</div>
+</div>
+</section>
+</section>
+<section id="séjour-et-mention" class="level2">
+<h2 class="anchored" data-anchor-id="séjour-et-mention">Séjour et mention</h2>
+<p>Chaque séjour terminé du périmètre sélectionné est analysé avec les calculs des 2 casemix de l’écran.</p>
+<p>Chaque séjour est identifié par son nas (1ere colonne). En sélectionnant une ligne (donc un séjour), accès automatique à la liste des RHS du séjour et aux informations détaillées du séjour.</p>
+<p>Export csv et JSON de la liste des séjours via les liens <code>Télécharger</code></p>
+<p>Prenons un exemple fictif pour illustrer :</p>
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_sejour_exemple.png" class="img-fluid"></p>
+<p>Ce séjour HC relève de la mention “Locomoteur”.<br>
+Ce séjour a 48 journées de présence (au sens PMSI SMR) en jour ouvré, dont 46 avec au moins 1 acte CSARR réalisé (ce qui représente 95,83% des jours de présence en jour ouvré) et 2 avec 0 acte CSARR codé.<br>
+Ce séjour a 104 réalisations CSARR cumulées en jour ouvré, ce qui correspond à une moyenne de réalisations CSARR par jour ouvré de 2,17<br>
+5 types d’intervenants différents (mk, ergo, apa, diet, psychologue) ont réalisés au moins 1 acte CSARR dans ce séjour.<br>
+Parmi ces 5 types d’intervenants, 4 sont pris en compte dans le calcul des pratiques thérapeutiques en “Locomoteur” (mk, ergo,apa,psychologue).<br>
+Le seuil minimal de pratiques thérapeutiques en mention “Locomoteur” étant fixé à 3, le séjour est indiqué avec un seuil OK (vert).<br>
+Le nombre de journées de présence en jour ouvré pour lesquelles le nombre minimal de séquences de traitement attendu en mention “Locomoteur” (à savoir “deux séquences de traitement dont au moins une séquence de soins individualisés”) est 26, soit 54,17% des jours de présence en jour ouvré du séjour.</p>
+</section>
+<section id="demande-daccès-standard" class="level2">
+<h2 class="anchored" data-anchor-id="demande-daccès-standard">Demande d’accès Standard</h2>
+<p>Pour demander un accès Standard à PMSISoft SSR pour votre établissement, nous <a href="https://www.lespmsi.com/a-propos-2/#Formulaire_de_contact">contacter</a> (en sélectionnant l’option “Demande accès PMSISoft Standard”)</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Notes de bas de page</h2>
+
+<ol>
+<li id="fn1"><p>la mention “Pédiatrie” est attribuée à tous séjours HC ou semaine HP d’un patient de moins de 18 ans↩︎</p></li>
+<li id="fn2"><p>le cas particulier de la pratique thérapeutique “Education thérapeutique” est repérée par au moins 1 codage CSARR du sous-chapitre CSARR 10.01 “Actes d’éducation, dans le cadre d’un programme d’éducation thérapeutique”↩︎</p></li>
+<li id="fn3"><p>l’analyse de la ligne “etablissement” est dédoublonnée (exemple : un séjour HP avec 2 mentions représentées ne compte que pour un dans l’analyse “etablissement”). Le nombre de séjours de la ligne “etablissement” correspond donc au nombre de séjours terminés hors CM 90 de la sélection.↩︎</p></li>
+<li id="fn4"><p>le cas particulier de la pratique thérapeutique “Education thérapeutique” est repérée par au moins 1 codage CSARR du sous-chapitre CSARR 10.01 “Actes d’éducation, dans le cadre d’un programme d’éducation thérapeutique”↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>SMR</category>
+  <category>Ecran</category>
+  <guid>https://www.pmsisoft.com/posts/smr/smr_ecran_mention/</guid>
+  <pubDate>Mon, 15 May 2023 22:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

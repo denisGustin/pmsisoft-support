@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Documentation PMSISoft</title>
+<link>https://www.pmsisoft.com/documentation_mco.html</link>
+<atom:link href="https://www.pmsisoft.com/documentation_mco.xml" rel="self" type="application/rss+xml"/>
+<description>Documentation et support du logiciel PMSISoft, analyse PMSI MCO, SMR, PSY et HAD</description>
+<generator>quarto-1.4.551</generator>
+<lastBuildDate>Sun, 25 Jun 2023 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Ecran Cancérologie</title>
+  <dc:creator>denis G</dc:creator>
+  <link>https://www.pmsisoft.com/posts/mco/mco_ecran_cardiologie/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Depuis le 1er juin 2023 est entré en vigueur un nouveau dispositif d’autorisation de l’activité de soins de traitement du cancer, basé sur une logique de seuils minimaux d’activité, de gradation (mention A, B ou C) et de traitement curatif des traitements et pathologies cancéreuses.</p>
+<p>Pour chacune des chirurgies oncologiques (mammaire, thoracique, sphère oto-rhino-laryngée, cervico-faciale et maxillofaciale, urologique, digestive et viscérale, gynécologique), un algorithme est proposé pour déterminer si une hospitalisation est retenue ou pas pour la mesure d’activité soumise à seuil de la chirurgie oncologique concernée.<br>
+Ces algorithmes sont des arbres de décisions avec des noeuds constitués de variables PMSI du type “codage PMSI présent parmi une liste de codage”. Source <a href="https://www.lespmsi.com/2023/MESURE-DES-ACTIVITES-CANCER-SOUMISES-A-SEUILS_2022_Vdef.pdf" target="_blank">“NOTICE TECHNIQUE POUR LA MESURE DES ACTIVITÉS SOUMISES À SEUILS” (INCa)</a></p>
+<p>Pour les activités de radiothérapie externe et de de traitements médicamenteux systémiques du cancer chez l’adulte (TMSC), elles aussi soumise à seuil : analyses dans PMSISoft mises en ligne courant juillet 2023.</p>
+<p>Historique depuis 2019.</p>
+</section>
+<section id="chemin-de-lécran" class="level2">
+<h2 class="anchored" data-anchor-id="chemin-de-lécran">Chemin de l’écran</h2>
+<p>Analyses MCO &gt; Cancérologie</p>
+</section>
+<section id="filtres" class="level2">
+<h2 class="anchored" data-anchor-id="filtres">Filtres</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_cardiologie/mco_cardiologie_chirurgie_oncologie_filtre.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p>Liste des filtres :<br>
+- Année<br>
+- Mois<br>
+- UM<br>
+- Autorisation<br>
+- Mode d’hospitalisation<br>
+- NAS<br>
+- Classification des séjours (CMD, sous-CMD, CMKZ, GMHM, sévérité-durée)</p>
+<p><a href="../mco_ecran_filtre">Explication de chaque filtre MCO</a>.</p>
+</div>
+</div>
+</section>
+<section id="case-mix-chirurgie-oncologique-inca-2023" class="level2">
+<h2 class="anchored" data-anchor-id="case-mix-chirurgie-oncologique-inca-2023">Case-mix “Chirurgie oncologique INCa 2023”</h2>
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_cardiologie/mco_cardiologie_casemix_chirurgie_oncologie.png" class="img-fluid"> <font size="2"><em>(les nombres affichés dans ce case-mix, produits manuellement, sont sans signification, uniquement à visée illustrative)</em></font></p>
+<p>Le case-mix comprend 13 lignes correspondant aux 12 chirurgies oncologiques du cahier des charges et à une ligne <code>0_cancer</code> regroupant toutes les hospitalisations ne relevant d’aucune des 12 chirurgies oncologiques.</p>
+<p>La correspondance entre les intitulés normalisées des chirurgies et les intitulés du cahier des charges est transparente.<br>
+<em>Exemples : <code>digestif_visceral</code> est pour “Chirurgie oncologique digestive et viscérale (mentions A1-B1)”, <code>oesophage</code> est pour “Chirurgie oncologique de l’œsophage ou de la jonction œsophagienne”, etc… </em></p>
+<p>Les variables “Séjour” :<br>
+<strong>n</strong> = nombre de séjours <sup>1</sup> repérés par l’algorithme pour la chirurgie de la ligne<br>
+<strong>%</strong> = part des séjours avec la chirurgie de la ligne par rapport à l’ensemble des séjours<br>
+<strong>dms</strong> = durée moyenne de séjour (au sens PMSI : date fin séjour - date début séjour) des séjours de la ligne</p>
+<p>Les variables “Patient” :<br>
+<strong>age</strong> = moyenne des âges en entrée de séjour des séjours de la ligne<br>
+<strong>% H</strong> = part des séjours de la ligne avec sexe = 1</p>
+<p>Variable “Seuil” :<br>
+Les seuils annuels nb_jp_sej en nombre de séjours par chirurgie oncologique</p>
+<p>Export csv et JSON des informations du casemix via les liens <code>Télécharger casemix (format JSON)</code> et <code>Télécharger casemix (format CSV)</code></p>
+</section>
+<section id="accès-professionnel" class="level2">
+<h2 class="anchored" data-anchor-id="accès-professionnel">Accès Professionnel</h2>
+<p>Fonctionnalités uniquement dans l’accès Professionnel :<br>
+- Filtres NAS, sous-CMD, CMKZ, GHM, Sévérité-Durée<br>
+- Variables <strong>dms</strong> dans le case-mix<br>
+- Accès aux listes des séjours de chaque ligne du case-mix<br>
+- Export csv et JSON de la liste des séjours sélectionnés avec des variables caractérisant les séjours (<code>nas</code>, <code>dp_sej</code>, <code>annee_sortie_sej</code>, …) et les variables calculés par PMSISoft permettant la production du case-mix (<code>chirurgie_A1_B1</code> = variable logique indiquant si le séjour relève de la chirurgie oncologique digestive et viscérale, <code>chirurgie_B1_oesophage</code> = variable logique indiquant si le séjour relève de la chirurgie oncologique de l’œsophage ou de la jonction œsophagienne, …). Via les liens <code>Télécharger séjours (format JSON)</code> et <code>Télécharger séjours (format CSV)</code></p>
+</section>
+<section id="demande-daccès-standard" class="level2">
+<h2 class="anchored" data-anchor-id="demande-daccès-standard">Demande d’accès Standard</h2>
+<p>Pour demander un accès Standard à PMSISoft MCO pour votre établissement, nous <a href="https://www.lespmsi.com/a-propos-2/#Formulaire_de_contact">contacter</a> (en sélectionnant l’option “Demande accès PMSISoft Standard”)</p>
+</section>
+<section id="pour-aller-plus-loin" class="level2">
+<h2 class="anchored" data-anchor-id="pour-aller-plus-loin">Pour aller plus loin</h2>
+<ul>
+<li>article “”<br>
+</li>
+<li>code R</li>
+</ul>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Notes de bas de page</h2>
+
+<ol>
+<li id="fn1"><p>sous-entendu “nombre de séjours du périmètre des séjours sélectionnés via les filtres”.<br>
+Remarque valable pour toutes les variables du case-mix↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>MCO</category>
+  <category>Ecran</category>
+  <category>Cancérologie</category>
+  <guid>https://www.pmsisoft.com/posts/mco/mco_ecran_cardiologie/</guid>
+  <pubDate>Sun, 25 Jun 2023 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Simulateur GHM</title>
+  <dc:creator>denis G</dc:creator>
+  <link>https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Sur la base de la documentation officielle (<a href="https://www.atih.sante.fr/manuel-des-ghm-version-definitive-2022" target="_blank">manuels des GHM</a>, listes codes, référentiels PMSI), nous avons développé un algorithme permettant, à partir d’une grille minimale optimisée de saisie d’un séjour virtuel, d’<strong>expliciter les différentes étapes et caractéristiques de la classification en GHM et GHS et de la valorisation T2A d’un séjour MCO</strong>.</p>
+<p>Le simulateur GHM de PMSISoft s’adresse en priorité aux professionnels du PMSI intéressés par comprendre et visualiser les étapes de la classification en GHM et la valorisation T2A de séjours MCO dans toute leurs dimensions.</p>
+<p>Son utilisation suppose la connaissance des principaux mécanismes et règles de classifications des séjours en PMSI MCO.</p>
+</section>
+<section id="fonctionnalités" class="level2">
+<h2 class="anchored" data-anchor-id="fonctionnalités">Fonctionnalités</h2>
+<ul>
+<li>Classification en GHM, GHS et calcul valorisation T2A à partir d’une grille minimale optimisée de saisie d’un séjour virtuel <sup>1</sup>, <sup>2</sup><br>
+</li>
+<li>Pré-remplissage optimisée des variables <sup>3</sup></li>
+<li>Assistance à la saisie des codes CIM-10 et acte CCAM<br>
+</li>
+<li>Contrôles de saisie dans les bornes et valeurs autorisés<br>
+</li>
+<li>Affichage en temps réel des CMA des DAS</li>
+<li>Affichage en temps réel du caractère opératoire des actes CCAM<br>
+</li>
+<li>Calcul du niveau de sévérité du séjour par étapes (voir illustration ci-dessous) juqu’à la classification finale de la sévérité<br>
+</li>
+<li>Repérage des exclusions DP, DR, racine GHM de chaque CMA<br>
+</li>
+<li>Indication des listes en D et en A des codages CIM et actes CCAM<br>
+</li>
+<li>Suppression des informations d’une simulation en un clic<br>
+</li>
+<li>Rapatriement automatique des informations d’un séjour réel déjà importé via son NAS</li>
+<li>Archivage possible des simulations<br>
+</li>
+<li>Export PDF d’une simulation. <a href="simulation_08C492.pdf" target="_blank">Exemple</a></li>
+<li>Export csv ou JSON de toutes les simulations archivées<br>
+</li>
+<li>Choix tarif DGF ou OQN</li>
+<li>Annualisé à partir de l’année PMSI MCO 2022<br>
+</li>
+<li>Hébergement en Hébergement de Santé Certifié (HDS) au <a href="https://www.mipih.fr/hebergement-infogerance" target="_blank">MIPIH</a></li>
+</ul>
+</section>
+<section id="simulation" class="level2">
+<h2 class="anchored" data-anchor-id="simulation">Simulation</h2>
+<section id="grille-de-saisie" class="level3">
+<h3 class="anchored" data-anchor-id="grille-de-saisie">Grille de saisie</h3>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_vierge.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p><strong>Grille de saisie vierge</strong></p>
+<p>Par défaut :<br>
+- année PMSI MCO en cours<br>
+- durée de séjour (DS) <sup>4</sup> = 0<br>
+- pas de séance<br>
+- autorisation UM différente de 08, 19 et 21 <sup>5</sup><br>
+- mode de sortie différent de décès (code 9)<br>
+- destination différente de “vers une unité de MCO” (code 1)<br>
+- pas de lit dédié<br>
+- pas d’anesthésie générale</p>
+<p>Pour revenir à la grille de saisie, on clique sur le bouton <code>Reset</code></p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_aide_saisie_dp.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p><strong>Saisie DP et DR</strong></p>
+<p>A partir d’une position, tous les codes CIM-10 correspondant sont proposés.</p>
+<p>Seuls les codes CIM-10 autorisés en DP ou DR sont proposés dans chacun des filtres DP et DR.</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_aide_saisie_das.png" class="img-fluid"></p>
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_aide_saisie_das2.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p><strong>Saisie DAS</strong></p>
+<p>Seuls les codes CIM-10 autorisés en DAS sont proposés.</p>
+<p>Quand un DAS est une CMA, le niveau de CMA est indiqué.</p>
+<p>Quand un DAS a été sélectionné, il n’est plus proposé.</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_aide_saisie_ccam.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p><strong>Saisie CCAM</strong></p>
+<p>Proposition des actes CCAM à partir de la saisie des premières positions.</p>
+<p>Les actes CCAM opératoires sont identifiés par le suffixe “/0”</p>
+<p>Quand un acte CCAM a été sélectionné, il n’est plus proposé.</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_grille_08C492.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p><strong>Bouton “Grouper”</strong></p>
+<p>Quand la grille est saisie, on clique sur le bouton “Grouper” situé en haut à droite</p>
+<p>Le bouton “Grouper” ne devient cliquable et actif que si les 3 variables minimales (DS, DP séjour et âge) ont une saisie valide.</p>
+<p>Ici la grille du séjour virtuel à classer est :<br>
+- âge = 80 ans<br>
+- DS = 3<br>
+- DP = S7200<br>
+- DAS = (E440, I10)<br>
+- CCAM = (NBCA010/0, NEQK010/0)<br>
+- anesthésie générale = “Oui” <sup>6</sup></p>
+</div>
+</div>
+</section>
+<section id="résultats-de-simulation" class="level3">
+<h3 class="anchored" data-anchor-id="résultats-de-simulation">Résultats de simulation</h3>
+<p>Les résultats d’une simulation se présentent en 4 parties :<br>
+- les <strong>résutats de groupage</strong><br>
+- le rappel du <strong>codage adminsitratif</strong><br>
+- un tableau du <strong>codage CIM-10</strong><br>
+- un tableau du <strong>codage CCAM</strong></p>
+<p><strong>Résultats du groupage</strong></p>
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_grille_08C492_groupage.png" class="img-fluid"></p>
+<p><strong>GHM</strong><br>
+Code et libellé</p>
+<p><strong>Calcul sévérité</strong><br>
+Calcul après classification dans une racine de GHM éligible aux niveaux de sévérité et avec une DS autorisant une classification en niveau de sévérité.</p>
+<p>4 étapes successives calculées jusqu’à l’identification de la sévérité du GHM :</p>
+<p><code>severite_cma</code> = sévérité issue du codage des DAS CMA (= la sévérité maximale rencontrée)</p>
+<p><code>severite_post_dp_dr_racine</code> = pour chaque CMA, exclusion par DP, DR ou racine de GHM. On retient la sévérité maximale non exclue</p>
+<p><code>severite_post_dp_dr_racine_age</code> = prise en compte de l’effet âge s’il y a lieu, fonction de la racine GHM</p>
+<p><code>severite_post_dp_dr_racine_age_duree</code> = prise en compte de la durée de séjour. C’est la sévérité finale.<br>
+Dans notre exemple, c’est cette étape qui fait passer la sévérité de 3 à 2 (car DS = 3)</p>
+<p><strong>GHS</strong><br>
+Code et informations liées (valeur forfait, borne basse, borne haut, exb et exh)<br>
+Tient compte du paramétrage DGF ou OQN</p>
+<p><strong>T2A</strong><br>
+Valorisation T2A du séjour virtuel<br>
+Valorisation T2a par JP <sup>7</sup><br>
+Part de la valorisation EXB<br>
+Part de la Valorisation EXH</p>
+<p><strong>Codage CIM-10</strong></p>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_grille_08C492_codage_cim.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:33%;">
+<p><strong>Codage CIM-10</strong></p>
+<p>Dans un tableau, tous les codages CIM-10.</p>
+<p>Pour les DP et DR, indication du ou des CMD vers laquelle (lesquelles) oriente le DP et le DR et les listes en D associées</p>
+<p>Pour chaque DAS CMA, indication, via des variables logiques, de son exclusion par le DR, le DR ou la racine GHM + indication numéro des listes exclusions associées à la CMA</p>
+</div>
+</div>
+<p><strong>Codage CCAM</strong></p>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_grille_08C492_codage_ccam.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:33%;">
+<p><strong>Codage CCAM</strong></p>
+<p>Dans un tableau, tous les actes CCAM.</p>
+<p>Pour chaque acte opératoire, indication des listes en A associées</p>
+</div>
+</div>
+<p><strong>Codage administratif</strong></p>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_grille_08C492_administratif.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:33%;">
+<p><strong>Codage administratif</strong></p>
+<p>Rappel des codages administratifs de la grille de saisie du séjour virtuel.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="archivage" class="level2">
+<h2 class="anchored" data-anchor-id="archivage">Archivage</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_grille_08C492_enregistrement.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p>On a cliqué sur le bouton <strong>“Enregistrement”</strong> : une pop-up est apparue demandant la saisie d’un code ou d’un initulé pour archiver la simuation.</p>
+<p>Ici on saisie le code “id_001”</p>
+<p><u>Règle</u> : si une simulation archivée a déjà ce code, elle sera remplacée par la nouvelle simulation archivée.</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_grille_08C492_archive.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p><strong>Ecran “Simulations archivées”</strong></p>
+<p>Liste des simulations archivées avec le rappel de ses principales informations.</p>
+<p><u>Règle</u> : une simulation archivée est rattachée à l’utilisateur qui l’a créée.</p>
+</div>
+</div>
+</section>
+<section id="accès" class="level2">
+<h2 class="anchored" data-anchor-id="accès">Accès</h2>
+<p>Le simulateur GHM PMSISoft est accessible dans l’accès Professionnel MCO.</p>
+<p>Il peut être proposé en accès dédié pour des établissements ou des sociétés intéressés uniquement par le simulateur GHM de PMSISoft.</p>
+<p>Pour plus d’informations ou une démonstration, nous <a href="https://www.lespmsi.com/a-propos-2/#Formulaire_de_contact">contacter</a> (en sélectionnant l’objet “Simulateur GHM de PMSISoft”)</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Notes de bas de page</h2>
+
+<ol>
+<li id="fn1"><p>la grille minimale pour classer est composée de 3 variables : durée de séjour (0 jour PMSI par défaut), l’âge et un DP séjour↩︎</p></li>
+<li id="fn2"><p>CMD non disponibles : CMD 14 et CMD 15↩︎</p></li>
+<li id="fn3"><p>exemple variable “Mode de décès” = “non_9” (non décès)↩︎</p></li>
+<li id="fn4"><p>durée au sens PMSI = date sortie - date entrée↩︎</p></li>
+<li id="fn5"><p>08 = “Soins et accompagnement des malades en phase terminale (unité de soins palliatifs)”, 19 = “Unité d’addictologie de recours et de référence” et 21 = “Hémodialyse en centre pour adulte”↩︎</p></li>
+<li id="fn6"><p>traduction codage PMSI = au moins 1 acte CCAM avec activité 4↩︎</p></li>
+<li id="fn7"><p>valorisation T2A / nombre de JP si DS &gt; 0 et valorisation T2A si DS = 0↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>MCO</category>
+  <category>Ecran</category>
+  <guid>https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/</guid>
+  <pubDate>Tue, 07 Feb 2023 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Filtres des écrans MCO</title>
+  <dc:creator>denis G</dc:creator>
+  <link>https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Présentation des filtres communs à la plupart des écrans MCO.</p>
+<p>Chaque filtre est décrit par :</p>
+<ul>
+<li>son <a href="../type_filtre">type</a></li>
+<li>ses valeurs<br>
+</li>
+<li>son fonctionnement par rapport aux principaux items (RUM, séjours, actes CCAM, codage CIM, DMI, UCD, patient, entrée ACE, factures) sélectionnés dans les écrans MCO (tableaux, graphiques, exports csv, JSON ou .rds)<br>
+</li>
+<li>autres informations</li>
+</ul>
+<p>Pour des raisons d’affichage, certains filtres sont accessibles via un méta-filtre.<br>
+<em>Exemple : tous les filtres de classification des séjours (filtre “CMD”, filtre “sous_CMD”, filtre “GHM”, …) sont accessibles via le méta-filtre “Classification séjour”</em></p>
+<p>Les filtres MCO ou les usages d’un filtre MCO spécifiques à un écran sont décrits dans la documentation de l’écran concerné.</p>
+</section>
+<section id="filtre-année" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-année">Filtre “Année”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_year.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:78%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
+<p>Valeurs : 2019 à 2023</p>
+<p>Fonctionnement :<br>
+Avec les RUM = sélection des RUM avec la date de sortie du RUM dans l’année sélectionnée<br>
+Avec les séjours = sélection des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans l’année sélectionnée<br>
+Avec les actes CCAM = sélection des actes CCAM des RUM avec la date de sortie du RUM dans l’année sélectionnée<br>
+Avec les codages CIM = sélection des codages CIM des RUM avec la date de sortie du RUM dans l’année sélectionnée<br>
+Avec les DMI = sélection des DMI du FICHCOMP DMI avec l’année d’import correspondant à l’année sélectionnée<br>
+Avec les UCD = sélection des UCD du FICHCOMP LES et du FICHCOMP MED AP-AC avec l’année d’import correspondant à l’année sélectionnée<br>
+Avec les ACE = sélection des ACE du RSAF-ACE avec l’année d’import correspondant à l’année sélectionnée</p>
+<p>Autres informations :<br>
+Filtre présent dans tous les écrans en 1ere position de la 1ere ligne de filtres.<br>
+Filtre disponible en accès Standard.</p>
+</div>
+</div>
+</section>
+<section id="filtre-mois" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-mois">Filtre “Mois”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_mois.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:78%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
+<p>Valeurs : les 12 mois</p>
+<p>Fonctionnement :<br>
+Avec les RUM = sélection des RUM avec la date de sortie du RUM dans le ou les mois sélectionné(s)<br>
+Avec les séjours = sélection des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans le ou les mois sélectionné(s)<br>
+Avec les actes CCAM = sélection des actes CCAM des RUM avec la date de sortie du RUM dans le ou les mois sélectionné(s)<br>
+Avec les codages CIM = sélection des codages CIM des RUM avec la date de sortie du RUM dans le ou les mois sélectionné(s)<br>
+Avec les DMI = sélection des DMI des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans le ou les mois sélectionné(s)<br>
+Avec les UCD = sélection des UCD des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans le ou les mois sélectionné(s)<br>
+Avec les ACE = sélection des ACE dont la date du type ACE (A,B,C,L,M,H,P) dans le ou les mois sélectionné(s)</p>
+<p>Autres informations :<br>
+Filtre présent dans tous les écrans en 2eme position de la 1ere ligne de filtres.<br>
+Filtre disponible en accès Standard</p>
+</div>
+</div>
+</section>
+<section id="filtre-um" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-um">Filtre “UM”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_um.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:78%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
+<p>Valeurs : codes des UM représentées par au moins 1 RUM dans les imports PMSI de l’établissement.</p>
+<p>Autres informations :<br>
+Filtre présent dans tous les écrans en 3eme position de la 1ere ligne de filtres.<br>
+Filtre disponible en accès Standard</p>
+</div>
+</div>
+</section>
+<section id="filtre-autorisation" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-autorisation">Filtre “Autorisation”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_type_um.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_autorisation.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:56%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
+<p>Valeurs : codes des autorisations représentées au moins 1 fois dans les fichiers FICIUM de l’établissement.</p>
+<p>Autres informations :<br>
+Filtre affiché dans le méta-filtre “Type d’UM”<br>
+Filtre actif si au moins un FICIUM a été importé<br>
+Filtre disponible en accès Standard</p>
+</div>
+</div>
+</section>
+<section id="filtre-mode-dhospitalisation" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-mode-dhospitalisation">Filtre “Mode d’hospitalisation”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_type_um.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_mode_hospitalisation.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:56%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
+<p>Valeurs : les modes d’hospitalisation possibles en MCO.</p>
+<p>Autres informations :<br>
+Filtre affiché dans le méta-filtre “Type d’UM”<br>
+Filtre actif si au moins un FICIUM a été importé<br>
+Filtre disponible en accès Standard</p>
+</div>
+</div>
+</section>
+<section id="filtre-nas" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-nas">Filtre “NAS”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_nas.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:56%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-code">code</a>.</p>
+<p>Valeurs : saisie libre d’une suite alphanumérique</p>
+<p>Autres informations :<br>
+Filtre disponible uniquement en accès Professionnel</p>
+</div>
+</div>
+</section>
+<section id="filtre-cmd" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-cmd">Filtre “CMD”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_classification_sejour.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_cmd.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:56%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
+<p>Valeurs : codes + libellés CMD des CMD représentées par au moins 1 RUM dans les imports PMSI de l’établissement.</p>
+<p>Autres informations :<br>
+Filtre affiché en 1ere position du méta-filtre “Classification séjour”<br>
+Filtre disponible en accès Standard</p>
+</div>
+</div>
+</section>
+<section id="filtre-sous_cmd" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-sous_cmd">Filtre “Sous_CMD”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_classification_sejour.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_sous_cmd.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:56%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
+<p>Valeurs : codes + libellés des sous-CMD représentées par au moins 1 RUM dans les imports PMSI de l’établissement</p>
+<p>Autres informations :<br>
+Filtre affiché en 2ème position du méta-filtre “Classification séjour”<br>
+Filtre disponible en accès Professionnel</p>
+</div>
+</div>
+</section>
+<section id="filtre-cmkz" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-cmkz">Filtre “CMKZ”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_classification_sejour.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_cmkz.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:56%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
+<p>Valeurs : C, M, K, Z</p>
+<p>Autres informations :<br>
+Filtre affiché en 3ème position du méta-filtre “Classification séjour”<br>
+Filtre disponible en accès Professionnel</p>
+</div>
+</div>
+</section>
+<section id="filtre-ghm" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-ghm">Filtre “GHM”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_classification_sejour.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_ghm.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:56%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
+<p>Valeurs : codes + libellés des GHM des GHM représentés par au moins 1 RUM dans les imports PMSI de l’établissement</p>
+<p>Autres informations :<br>
+Filtre affiché dans le méta-filtre “Classification séjour”<br>
+Filtre disponible en accès Professionnel</p>
+</div>
+</div>
+</section>
+<section id="filtre-sévérité-durée" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-sévérité-durée">Filtre “Sévérité-Durée”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_classification_sejour.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_severite_duree.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:56%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
+<p>Valeurs : 1, 2, 3, 4, J, T, Z, E, A, B, C, D</p>
+<p>Autres informations :<br>
+Filtre affiché dans le méta-filtre “Classification séjour”<br>
+Filtre disponible en accès Professionnel</p>
+</div>
+</div>
+</section>
+<section id="filtre-nombre-rum-par-séjour" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-nombre-rum-par-séjour">Filtre “Nombre RUM par séjour”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_type_rum.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:78%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-intervalle">intervalle</a>.</p>
+<p>Valeurs : saisie numérique</p>
+<p>Autres informations :<br>
+Filtre affiché dans le méta-filtre “Type de RUM”<br>
+Filtre disponible en accès Professionnel</p>
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>MCO</category>
+  <category>Ecran</category>
+  <category>Filtre</category>
+  <guid>https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/</guid>
+  <pubDate>Mon, 09 Jan 2023 23:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

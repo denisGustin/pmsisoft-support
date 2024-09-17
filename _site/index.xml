@@ -1,0 +1,1452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Documentation PMSISoft</title>
+<link>https://www.pmsisoft.com/</link>
+<atom:link href="https://www.pmsisoft.com/index.xml" rel="self" type="application/rss+xml"/>
+<description>Documentation et support du logiciel PMSISoft, analyse PMSI MCO, SMR, PSY et HAD</description>
+<generator>quarto-1.4.551</generator>
+<lastBuildDate>Sun, 09 Jun 2024 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Filtrage PSY</title>
+  <dc:creator>denis G</dc:creator>
+  <link>https://www.pmsisoft.com/posts/psy/psy_filtrage/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Le filtrage dans les écrans PMSISoft PSY comprend de 2 types de filtrage :</p>
+<ul>
+<li><strong>filtrage de périmètre</strong>, via une première ligne de filtres, permettant de filtrer sur les finess géographique, les années, les mois, les UM, les formes d’activité, les numéros de secteur ou des dispostif intersectoriel, les modes légaux de soins et, spécifiquement en ambulatoire, les natures, lieux, modalités de réalisation des actes et les catégories professionnelles de l’intervenant</li>
+</ul>
+<p>Le filtrage de périmètre est disponible en accès Standard.</p>
+<ul>
+<li><strong>filtrage par variable</strong>, via une seconde ligne de filtres, permettant de composer des requêtes à partir d’une sélection de variables propres à chaque écran, une série de verbes et le paramétrage éventuel de valeurs.</li>
+</ul>
+<p>Le filtrage par variable est disponible en accès Professionnel.</p>
+<p>En hospitalisation (complète ou à temps partiel), on a les 2 lignes de filtrages suivantes :</p>
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_psy_hospitalisation_perimetre_variable_all.png" class="img-fluid"></p>
+<p>En ambulatoire, on a les 2 lignes de filtrages suivantes :</p>
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_psy_ambulatoire_perimetre_variable_all.png" class="img-fluid"></p>
+<p>Quand au moins un filtrage a été sélectionné, le bouton <code>Filtrer</code> devient rouge</p>
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_psy_hospitalisation_perimetre_variable_all_actif.png" class="img-fluid"></p>
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_psy_ambulatoire_perimetre_variable_all_actif.png" class="img-fluid"></p>
+<p>Quand on clique sur le bouton <code>Reset</code>, tous les filtrages sont supprimés et l’écran revient dans son état par défaut.</p>
+</section>
+<section id="filtrage-en-hospitalisation" class="level2">
+<h2 class="anchored" data-anchor-id="filtrage-en-hospitalisation">Filtrage en hospitalisation</h2>
+<section id="sec-finess_geographique" class="level3">
+<h3 class="anchored" data-anchor-id="sec-finess_geographique">FINESS géographique</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_finess_geographique.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Par défaut, le filtre n’est pas actif : tous les FINESS géographique sont sélectionnés</p>
+<p>Possibilité de sélectionner un ou plusieurs FINESS géographiques</p>
+</div>
+</div>
+</section>
+<section id="sec-annee" class="level3">
+<h3 class="anchored" data-anchor-id="sec-annee">Année</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_year.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Par défaut, l’année en cours est sélectionnée</p>
+<p>Années disponibles : de 2020 à 2024</p>
+</div>
+</div>
+</section>
+<section id="sec-mois" class="level3">
+<h3 class="anchored" data-anchor-id="sec-mois">Mois</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_month.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Par défaut, le filtre n’est pas actif : tous les mois sont sélectionnés</p>
+<p>Possibilité de sélectionner plusieurs mois</p>
+</div>
+</div>
+</section>
+<section id="sec-um" class="level3">
+<h3 class="anchored" data-anchor-id="sec-um">UM</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_um_selected.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Par défaut, le filtre n’est pas actif : toutes les UM sont sélectionnées</p>
+<p>Possibilité de sélectionner plusieurs UM</p>
+<p>En accès Professionnel, possibilité d’importer une correspondance <code>no_um-um_libelle</code> permettant d’associer un libellé à chaque UM</p>
+</div>
+</div>
+</section>
+<section id="sec-forme_activite" class="level3">
+<h3 class="anchored" data-anchor-id="sec-forme_activite">Forme d’activité</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_psy_hospitalisation_perimetre_type_um_fa.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Accessible dans le méta-filtre de périmètre <code>Type UM</code></p>
+<p>Par défaut, le filtre n’est pas actif : toutes les formes d’activité sont sélectionnées</p>
+<p>Possibilité de sélectionner plusieurs formes d’activité</p>
+<p>Affichage des libellés associés aux codes des formes d’activité</p>
+</div>
+</div>
+</section>
+<section id="sec-no_secteur" class="level3">
+<h3 class="anchored" data-anchor-id="sec-no_secteur">No secteur</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_psy_hospitalisation_perimetre_type_um_no_secteur.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Accessible dans le méta-filtre de périmètre <code>Type UM</code></p>
+<p>Par défaut, le filtre n’est pas actif : tous les numéros de secteur ou de dispositif intersectoriel sont sélectionnés</p>
+<p>Possibilité de sélectionner plusieurs formes numéros de secteur</p>
+<p>Affichage des libellés associés aux numéros de secteur ou de dispositif intersectoriel</p>
+</div>
+</div>
+</section>
+<section id="sec-mode_legal_soins" class="level3">
+<h3 class="anchored" data-anchor-id="sec-mode_legal_soins">Mode légal de soins</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_psy_hospitalisation_perimetre_type_um_mode_legal_soins.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Accessible dans le méta-filtre de périmètre <code>Type UM</code></p>
+<p>Par défaut, le filtre n’est pas actif : tous les modes légaux de soins sont sélectionnés</p>
+<p>Possibilité de sélectionner plusieurs modes légaux de soins</p>
+<p>Affichage des libellés associés aux modes légaux de soins</p>
+</div>
+</div>
+</section>
+<section id="filtrage-par-variable" class="level3">
+<h3 class="anchored" data-anchor-id="filtrage-par-variable">Filtrage par variable</h3>
+<p>Un filtrage par variable comprend 3 informations : la variable choisie, le verbe à appliquer à la variable et une expression.</p>
+<p>Avec ces 3 informations, on compose une “phrase” (sujet + verbe + complément) correspondant au filtrage voulu.</p>
+<p>Prenons l’exemple de l’écran “Base des RPS” et considérons la sélection des RPS avec le DP dans la famille F32 “Episodes dépressifs”</p>
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_psy_hospitalisation_variable_dp_debute_F32.png" class="img-fluid"></p>
+<p>On a donc sélectionné la variable <code>dp</code>, on a ensuite appliqué le verbe <code>Débute par</code> puis on a codé l’expression <code>F32</code>. En cliquant sur le bouton <code>Filtrer</code>, PMSISoft PSY sélectionne donc les RPS avec un DP dont le code CIM-10 débute par F32.</p>
+<p>Il est possible d’enrichir ce filtrage en ajoutant une seconde “phrase” liée à la première soit avec l’opérateur <code>ET</code></p>
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_psy_hospitalisation_variable_dp_debute_F32_and_nb_da_supp_2.png" class="img-fluid"></p>
+<p>Dans cet exemple, on a sélectionné l’opérateur <code>ET</code> et ajouté la condition que le nombre de DA du RPS doit être supérieur ou égal à 2.</p>
+<p>Soit avec l’opérateur <code>OU</code></p>
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_psy_hospitalisation_variable_dp_debute_F32_or_dp_debute_F33.png" class="img-fluid"><br>
+Dans cet exemple, on a sélectionné l’opérateur <code>OU</code> et ajouté la condition que le DP du RPS peut débuter aussi par F33 “Trouble dépressif récurrent”.</p>
+<p><strong>Choix des variables :</strong></p>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_psy_hospitalisation_variable_variable.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>La liste des variables est fonction de l’écran. Ici on a les variables de l’écran “Base des RPS”</p>
+<p>Les variables sont regroupées par famille cohérente. Ici “Séjour”, “Séquence” et “Patient”</p>
+<p>Les variables sont nommées de manière standardisée.</p>
+<p>Une variable relève d’un type parmi les 3 types : character, numérique, logique</p>
+<p>A chaque type de variable correspond automatiquement une liste de verbes possibles.</p>
+</div>
+</div>
+<p><strong>Choix des verbes de type character</strong></p>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_variable_verbe_character.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Quand une variable de type character est sélectionnée, PMSISoft affiche la liste des 8 verbes possibles associés à une telle variable.</p>
+<p>Après la sélection du verbe, l’utilisateur saisie dans le champ <code>Expression</code> la chaîne de caractères voulue.</p>
+</div>
+</div>
+<p><strong>Choix des verbes de type numérique</strong></p>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_variable_verbe_numeric.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Quand une variable de type numérique est sélectionnée, PMSISoft affiche la liste des 6 verbes possibles associés à une telle variable.</p>
+<p>Après la sélection du verbe, l’utilisateur saisie dans le champ <code>Expression</code> la valeur numérique voulue.</p>
+</div>
+</div>
+<p><strong>Choix des verbes de type logique</strong></p>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_variable_verbe_logical.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Quand une variable de type logique est sélectionnée, PMSISoft affiche la liste des 2 verbes possibles associés à une telle variable.</p>
+<p>Pour ces variables de type logique, le champ <code>Expression</code> n’est pas pris en compte.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="filtrage-en-ambulatoire" class="level2">
+<h2 class="anchored" data-anchor-id="filtrage-en-ambulatoire">Filtrage en ambulatoire</h2>
+<section id="finess-géographique" class="level3">
+<h3 class="anchored" data-anchor-id="finess-géographique">FINESS géographique</h3>
+<p>Voir Section&nbsp;2.1</p>
+</section>
+<section id="année" class="level3">
+<h3 class="anchored" data-anchor-id="année">Année</h3>
+<p>Voir Section&nbsp;2.2</p>
+</section>
+<section id="mois" class="level3">
+<h3 class="anchored" data-anchor-id="mois">Mois</h3>
+<p>Voir Section&nbsp;2.3</p>
+</section>
+<section id="um" class="level3">
+<h3 class="anchored" data-anchor-id="um">UM</h3>
+<p>Voir Section&nbsp;2.4</p>
+</section>
+<section id="forme-dactivité" class="level3">
+<h3 class="anchored" data-anchor-id="forme-dactivité">Forme d’activité</h3>
+<p>Voir Section&nbsp;2.5</p>
+</section>
+<section id="no-secteur" class="level3">
+<h3 class="anchored" data-anchor-id="no-secteur">No secteur</h3>
+<p>Voir Section&nbsp;2.6</p>
+</section>
+<section id="mode-légal-de-soins" class="level3">
+<h3 class="anchored" data-anchor-id="mode-légal-de-soins">Mode légal de soins</h3>
+<p>Voir Section&nbsp;2.7</p>
+</section>
+<section id="nature-de-lacte" class="level3">
+<h3 class="anchored" data-anchor-id="nature-de-lacte">Nature de l’acte</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_psy_ambulatoire_perimetre_type_acte_nature_acte.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Accessible via le méta-filtre de périmètre <code>Type d'acte</code></p>
+<p>Par défaut, le filtre n’est pas actif : toutes les natures d’acte sont sélectionnées</p>
+<p>Possibilité de sélectionner plusieurs natures d’acte</p>
+<p>Affichage des libellés associés aux natures d’acte</p>
+</div>
+</div>
+</section>
+<section id="lieu-de-lacte" class="level3">
+<h3 class="anchored" data-anchor-id="lieu-de-lacte">Lieu de l’acte</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_psy_ambulatoire_perimetre_type_acte_lieu_acte.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Accessible via le méta-filtre de périmètre <code>Type d'acte</code></p>
+<p>Par défaut, le filtre n’est pas actif : tous les lieux d’acte sont sélectionnés</p>
+<p>Possibilité de sélectionner plusieurs lieux d’acte</p>
+<p>Affichage des libellés associés aux lieux d’acte</p>
+</div>
+</div>
+</section>
+<section id="modalité-de-réalisation-de-lacte" class="level3">
+<h3 class="anchored" data-anchor-id="modalité-de-réalisation-de-lacte">Modalité de réalisation de l’acte</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_psy_ambulatoire_perimetre_type_acte_mode_realisation_acte.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Accessible via le méta-filtre de périmètre <code>Type d'acte</code></p>
+<p>Par défaut, le filtre n’est pas actif : toutes les modalités de réalisation de l’acte sont sélectionnées</p>
+<p>Possibilité de sélectionner plusieurs modalités de réalisation de l’acte</p>
+<p>Affichage des libellés associés aux modalités de réalisation de l’acte</p>
+</div>
+</div>
+</section>
+<section id="catégorie-professionnelle-de-lintervenant" class="level3">
+<h3 class="anchored" data-anchor-id="catégorie-professionnelle-de-lintervenant">Catégorie professionnelle de l’intervenant</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_psy_ambulatoire_perimetre_type_acte_categorie_intervenant_acte.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Accessible via le méta-filtre de périmètre <code>Type d'acte</code></p>
+<p>Par défaut, le filtre n’est pas actif : toutes les catégories professionnelles de l’intervenant sont sélectionnées</p>
+<p>Possibilité de sélectionner plusieurs catégories professionnelles de l’intervenant</p>
+<p>Affichage des libellés associés aux catégories professionnelles de l’intervenant</p>
+</div>
+</div>
+</section>
+<section id="filtrage-par-variable-1" class="level3">
+<h3 class="anchored" data-anchor-id="filtrage-par-variable-1">Filtrage par variable</h3>
+<p>Un filtrage par variable comprend 3 informations : la variable choisie, le verbe à appliquer à la variable et une expression.</p>
+<p>Avec ces 3 informations, on compose une “phrase” (sujet + verbe + complément) correspondant au filtrage voulu.</p>
+<p>Prenons l’exemple de l’écran “Base des RAA” et considérons la sélection des RAA avec le DP dans la famille F25 “Troubles schizo-affectifs”</p>
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_psy_ambulatoire_variable_dp_debute_F25.png" class="img-fluid"></p>
+<p>On a donc sélectionné la variable <code>dp</code>, on a ensuite appliqué le verbe <code>Débute par</code> puis on a codé l’expression <code>F25</code>. En cliquant sur le bouton <code>Filtrer</code>, PMSISoft PSY sélectionne donc les RPS avec un DP dont le code CIM-10 débute par F25.</p>
+<p>Il est possible d’enrichir ce filtrage en ajoutant une seconde “phrase” liée à la première soit avec l’opérateur <code>ET</code></p>
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_psy_ambulatoire_variable_dp_debute_F25_and_nb_da_supp_2.png" class="img-fluid"></p>
+<p>Dans cet exemple, on a sélectionné l’opérateur <code>ET</code> et ajouté la condition que le nombre de DA du RAA doit être supérieur ou égal à 2.</p>
+<p>Soit avec l’opérateur <code>OU</code></p>
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_psy_ambulatoire_variable_dp_debute_F25_or_dp_debute_F24.png" class="img-fluid"></p>
+<p>Dans cet exemple, on a sélectionné l’opérateur <code>OU</code> et ajouté la condition que le DP du RPS peut débuter aussi par F24 “Trouble délirant induit”.</p>
+<p><strong>Choix des variables :</strong></p>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_psy_ambulatoire_variable_variable.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>La liste des variables est fonction de l’écran. Ici on a les variables de l’écran “Base des RAA”</p>
+<p>Les variables sont regroupées par famille cohérente. Ici “RAA” et “Patient”</p>
+<p>Les variables sont nommées de manière standardisée.</p>
+<p>Une variable relève d’un type parmi les 3 types : character, numérique, logique</p>
+<p>A chaque type de variable correspond automatiquement une liste de verbes possibles.</p>
+</div>
+</div>
+<p><strong>Choix des verbes de type character</strong></p>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_variable_verbe_character.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Quand une variable de type character est sélectionnée, PMSISoft affiche la liste des 8 verbes possibles associés à une telle variable.</p>
+<p>Après la sélection du verbe, l’utilisateur saisie dans le champ <code>Expression</code> la chaîne de caractères voulue.</p>
+</div>
+</div>
+<p><strong>Choix des verbes de type numérique</strong></p>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_variable_verbe_numeric.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Quand une variable de type numérique est sélectionnée, PMSISoft affiche la liste des 6 verbes possibles associés à une telle variable.</p>
+<p>Après la sélection du verbe, l’utilisateur saisie dans le champ <code>Expression</code> la valeur numérique voulue.</p>
+</div>
+</div>
+<p><strong>Choix des verbes de type logique</strong></p>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="https://www.pmsisoft.com/posts/psy/psy_filtrage/filtre_variable_verbe_logical.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Quand une variable de type logique est sélectionnée, PMSISoft affiche la liste des 2 verbes possibles associés à une telle variable.</p>
+<p>Pour ces variables de type logique, le champ <code>Expression</code> n’est pas pris en compte.</p>
+</div>
+</div>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>PSY</category>
+  <category>Filtre</category>
+  <guid>https://www.pmsisoft.com/posts/psy/psy_filtrage/</guid>
+  <pubDate>Sun, 09 Jun 2024 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Simulation recettes activité SMR</title>
+  <dc:creator>denis G</dc:creator>
+  <link>https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Depuis le 1er janvier 2024, les établissements SMR voient leur activité classée via le modèle cible de la réforme de financement du SMR.</p>
+<p>Afin d’aider ces établissements à comprendre et simuler leurs recettes d’activité, nous avons développé un simulateur de comparaison de recettes d’activité par séjour et journée de présence en hospitalisation complète.</p>
+<p>Pour un groupe nosologique et une plage de journées de présence donnés, l’utilisateur choisit la position qu’il souhaite comparer (groupe de réadaptation, groupe de lourdeur ou sévérité) et filtre les 2 autres positions : le simulateur calcule alors, sur la base des règles de classification GME-GMT 2024 et des tarifs ex-DGF ou ex-OQN, les recettes d’activité cumulée du séjour et les recettes d’activité par journée de présence pour chacun des GMT sélectionnés.</p>
+<p>Les résultats sont présentés sous 3 formats : graphiques, tableau, exports (csv, json, png).</p>
+<p>La manipulation et l’exploitation des résultats du simulateur supposent la connaissance des principales règles de classification des séjours en PMSI SMR.</p>
+</section>
+<section id="fonctionnalités" class="level2">
+<h2 class="anchored" data-anchor-id="fonctionnalités">Fonctionnalités</h2>
+<ul>
+<li>Classification en GME et GMT, à partir d’une grille minimale optimisée de saisie d’un séjour virtuel, selon la classification 2024 <sup>1</sup><br>
+</li>
+<li>Calcul des recettes d’activité cumulées du séjour pour chaque GMT sélectionné<br>
+</li>
+<li>Calcul des recettes d’activité par journée de présence pour chaque GMT sélectionné<br>
+</li>
+<li>Tarifs ex-DGF ou ex-OQN selon l’établissement<br>
+</li>
+<li>Choix de la plage de journées de présence entre 0 JP et 300 JP<br>
+</li>
+<li>Graphique des recettes d’activité cumulée pour chaque GMT sélectionné<br>
+</li>
+<li>Graphique des recettes d’activité par journée de présence pour chaque GMT sélectionné<br>
+</li>
+<li>Tableau des recettes d’activité par journée pour chaque GMT sélectionné<br>
+</li>
+<li>Dans le tableau des recettes d’activité, identification via un code couleur des différentes zones forfaitaires et des journées post 90 JP<br>
+</li>
+<li>Dans le tableau, typage des plages de JP (bb_inf, tzf1, tzf2, tzf3, bh_supp_tzf31, bh_supp_tzf3, post_90_jp)<br>
+</li>
+<li>Assistance à la saisie en GN, GR, et GL<br>
+</li>
+<li>Export png des graphiques<br>
+</li>
+<li>Export csv du tableau des recettes d’activité par journée<br>
+</li>
+<li>Export JSON du tableau des recettes d’activité par journée<br>
+</li>
+<li>Gestion des erreurs de saisie<br>
+</li>
+<li>Hébergement en Hébergement de Santé Certifié (HDS) au <a href="https://www.mipih.fr/hebergement-infogerance" target="_blank">MIPIH</a></li>
+</ul>
+</section>
+<section id="simulateur-de-recettes-dactivités-hc" class="level2">
+<h2 class="anchored" data-anchor-id="simulateur-de-recettes-dactivités-hc">Simulateur de recettes d’activités HC</h2>
+<section id="créer-une-simulation2" class="level3">
+<h3 class="anchored" data-anchor-id="créer-une-simulation2">Créer une simulation<sup>2</sup></h3>
+<section id="au-départ" class="level4">
+<h4 class="anchored" data-anchor-id="au-départ">Au départ</h4>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_vide.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p>A l’ouverture de l’écran, aucun GN n’est sélectionné.</p>
+<p>La première étape va donc consister à sélectionner le GN sur lequel on souhaite travailler.</p>
+</div>
+</div>
+</section>
+<section id="choix-du-gn" class="level4">
+<h4 class="anchored" data-anchor-id="choix-du-gn">Choix du GN</h4>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_choix_gn.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p>Dans le filtre GN, on sélectionne un GN soit directement, soit via l’assistant en saisissant directement le code GN.</p>
+</div>
+</div>
+</section>
+<section id="filtres-gr-gl-et-sévérité" class="level4">
+<h4 class="anchored" data-anchor-id="filtres-gr-gl-et-sévérité">Filtres GR, GL et sévérité</h4>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_0841_filtre_gr.png" class="img-fluid"></p>
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_0841_filtre_gl.png" class="img-fluid"> <img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_0841_filtre_severite.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p>Une fois le filtre GN sélectionné (ici 0841), on sélectionne 2 parmi les 3 filtres GR code (groupe de réadaptation), GL code (groupe de lourdeur) ou sévérité.</p>
+</div>
+</div>
+</section>
+<section id="filtrage-gr-gl-sévérité" class="level4">
+<h4 class="anchored" data-anchor-id="filtrage-gr-gl-sévérité">Filtrage (GR, GL, sévérité)</h4>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_0841SX1_filtre.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p>Une fois, le GN sélectionné, parmi les 3 filtres GR code, Gl code et sévérité, <strong>on laisse vierge le filtre sur lequel on souhaite comparer les GME-GMT et on sélectionne la valeur voulue pour chacun des 2 autres filtres.</strong></p>
+<p>Ici, par exemple, après avoir sélectionné le GN 0841, on souhaite comparer les recettes d’activité des différents GME 0841Sx1 (donc 0841S<strong>A</strong>1, 0841S<strong>B</strong>1 et 0841S<strong>C</strong>1). On a donc sélectionné le GR code à S et la sévérité à 1 et on a laissé vierge le GL code.</p>
+<p>On n’a pas modifié la plage de journées de présence de 1 JP à 50 JP, mais on aurait pu la modifier.</p>
+<p>On clique sur le bouton “Filtrer” pour lancer les calculs.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="résultats-de-simulation" class="level3">
+<h3 class="anchored" data-anchor-id="résultats-de-simulation">Résultats de simulation</h3>
+<section id="simulation-sur-le-gl-code-0841sx1" class="level4">
+<h4 class="anchored" data-anchor-id="simulation-sur-le-gl-code-0841sx1">Simulation sur le GL code : 0841Sx1</h4>
+<p>Il s’agit de la simulation paramétrée ci-dessus.</p>
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_0841Sx1.png" class="img-fluid"></p>
+<p>Le tableau de la simulation 0841Sx1 avec une plage de 86 à 100 JP</p>
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_0841SX1_post_90.png" class="img-fluid"></p>
+</section>
+<section id="simulation-sur-le-gr-code-0127xc1" class="level4">
+<h4 class="anchored" data-anchor-id="simulation-sur-le-gr-code-0127xc1">Simulation sur le GR code : 0127xC1</h4>
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_0127XC1.png" class="img-fluid"></p>
+</section>
+<section id="simulation-sur-la-sévérité-10uax" class="level4">
+<h4 class="anchored" data-anchor-id="simulation-sur-la-sévérité-10uax">Simulation sur la sévérité : 10UAx</h4>
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_10UAX.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="exports" class="level3">
+<h3 class="anchored" data-anchor-id="exports">Exports</h3>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_download.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p>En dessous du tableau, 3 lignes de liens permettent d’exporter les résulats :<br>
+# le tableau au format JSON ou csv<br>
+# le graphique des recettes d’activité cumulées au format png<br>
+# le graphique des recettes d’activité par JP au format png</p>
+</div>
+</div>
+</section>
+</section>
+<section id="pour-aller-plus-loin" class="level2">
+<h2 class="anchored" data-anchor-id="pour-aller-plus-loin">Pour aller plus loin</h2>
+<p>A chaque GME est associé son GMT et éventuellement le GMT hebdomadaire associé au GMT.<br>
+Pour le cas particulier du GN 2303 de SP, on force le GMT correspondant au GME hors lit ou unité SP</p>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/ecran_gme_comparaison_0127XXX.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p>Le choix initial d’un groupe nosologique met à jour automatiquement les valeurs éligibles en GR code, GL code et sévérité.</p>
+<p>Ici, par exemple, le choix du GN 0127 n’autorise que le choix d’un GL code à B ou C.</p>
+</div>
+</div>
+<p>La palette de couleur est un extrait de 3 couleurs de la très classique et optimisée <a href="https://siegal.bio.nyu.edu/color-palette/" target="_blank">palette Okabe &amp; Ito</a><br>
+Le bleu est pour la valeur la plus basse de la comparaison (exemple : sévérité 1, groupe de lourdeur A), l’orange est pour la valeur intermédiaire ou la plus haute s’il n’y a que 2 alternatives et le vert est pour la valeur la plus haute s’il y a 3 alternatives.</p>
+</section>
+<section id="accès" class="level2">
+<h2 class="anchored" data-anchor-id="accès">Accès</h2>
+<p>L’écran est accessible dans <strong>PMSISoft Standard SMR, gratuit, illimité dans le temps, ouvert à tout établissement SMR.</strong></p>
+<p>Chemin PMSISoft : Référentiels SMR &gt; GME HC Comparaison</p>
+<p>Pour demander un accès, nous <a href="https://www.lespmsi.com/a-propos-2/#Formulaire_de_contact">contacter</a> (en sélectionnant l’objet “Demande accès PMSISoft Standard” et en précisant à minima “Simulateur SMR” dans le message)</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Notes de bas de page</h2>
+
+<ol>
+<li id="fn1"><p>la grille minimale pour classer est composée de 5 variables : groupe nosologie, groupe de réadaptation, groupe de loudeur, sévérité, plage de journées de présence↩︎</p></li>
+<li id="fn2"><p>les exemples de simulations sont calculés avec les tarifs ex-DGF↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>SMR</category>
+  <category>Recette activité SMR</category>
+  <guid>https://www.pmsisoft.com/posts/smr/smr_gme_comparaison/</guid>
+  <pubDate>Tue, 30 Jan 2024 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Ecran Cancérologie</title>
+  <dc:creator>denis G</dc:creator>
+  <link>https://www.pmsisoft.com/posts/mco/mco_ecran_cardiologie/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Depuis le 1er juin 2023 est entré en vigueur un nouveau dispositif d’autorisation de l’activité de soins de traitement du cancer, basé sur une logique de seuils minimaux d’activité, de gradation (mention A, B ou C) et de traitement curatif des traitements et pathologies cancéreuses.</p>
+<p>Pour chacune des chirurgies oncologiques (mammaire, thoracique, sphère oto-rhino-laryngée, cervico-faciale et maxillofaciale, urologique, digestive et viscérale, gynécologique), un algorithme est proposé pour déterminer si une hospitalisation est retenue ou pas pour la mesure d’activité soumise à seuil de la chirurgie oncologique concernée.<br>
+Ces algorithmes sont des arbres de décisions avec des noeuds constitués de variables PMSI du type “codage PMSI présent parmi une liste de codage”. Source <a href="https://www.lespmsi.com/2023/MESURE-DES-ACTIVITES-CANCER-SOUMISES-A-SEUILS_2022_Vdef.pdf" target="_blank">“NOTICE TECHNIQUE POUR LA MESURE DES ACTIVITÉS SOUMISES À SEUILS” (INCa)</a></p>
+<p>Pour les activités de radiothérapie externe et de de traitements médicamenteux systémiques du cancer chez l’adulte (TMSC), elles aussi soumise à seuil : analyses dans PMSISoft mises en ligne courant juillet 2023.</p>
+<p>Historique depuis 2019.</p>
+</section>
+<section id="chemin-de-lécran" class="level2">
+<h2 class="anchored" data-anchor-id="chemin-de-lécran">Chemin de l’écran</h2>
+<p>Analyses MCO &gt; Cancérologie</p>
+</section>
+<section id="filtres" class="level2">
+<h2 class="anchored" data-anchor-id="filtres">Filtres</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_cardiologie/mco_cardiologie_chirurgie_oncologie_filtre.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p>Liste des filtres :<br>
+- Année<br>
+- Mois<br>
+- UM<br>
+- Autorisation<br>
+- Mode d’hospitalisation<br>
+- NAS<br>
+- Classification des séjours (CMD, sous-CMD, CMKZ, GMHM, sévérité-durée)</p>
+<p><a href="../mco_ecran_filtre">Explication de chaque filtre MCO</a>.</p>
+</div>
+</div>
+</section>
+<section id="case-mix-chirurgie-oncologique-inca-2023" class="level2">
+<h2 class="anchored" data-anchor-id="case-mix-chirurgie-oncologique-inca-2023">Case-mix “Chirurgie oncologique INCa 2023”</h2>
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_cardiologie/mco_cardiologie_casemix_chirurgie_oncologie.png" class="img-fluid"> <font size="2"><em>(les nombres affichés dans ce case-mix, produits manuellement, sont sans signification, uniquement à visée illustrative)</em></font></p>
+<p>Le case-mix comprend 13 lignes correspondant aux 12 chirurgies oncologiques du cahier des charges et à une ligne <code>0_cancer</code> regroupant toutes les hospitalisations ne relevant d’aucune des 12 chirurgies oncologiques.</p>
+<p>La correspondance entre les intitulés normalisées des chirurgies et les intitulés du cahier des charges est transparente.<br>
+<em>Exemples : <code>digestif_visceral</code> est pour “Chirurgie oncologique digestive et viscérale (mentions A1-B1)”, <code>oesophage</code> est pour “Chirurgie oncologique de l’œsophage ou de la jonction œsophagienne”, etc… </em></p>
+<p>Les variables “Séjour” :<br>
+<strong>n</strong> = nombre de séjours <sup>1</sup> repérés par l’algorithme pour la chirurgie de la ligne<br>
+<strong>%</strong> = part des séjours avec la chirurgie de la ligne par rapport à l’ensemble des séjours<br>
+<strong>dms</strong> = durée moyenne de séjour (au sens PMSI : date fin séjour - date début séjour) des séjours de la ligne</p>
+<p>Les variables “Patient” :<br>
+<strong>age</strong> = moyenne des âges en entrée de séjour des séjours de la ligne<br>
+<strong>% H</strong> = part des séjours de la ligne avec sexe = 1</p>
+<p>Variable “Seuil” :<br>
+Les seuils annuels nb_jp_sej en nombre de séjours par chirurgie oncologique</p>
+<p>Export csv et JSON des informations du casemix via les liens <code>Télécharger casemix (format JSON)</code> et <code>Télécharger casemix (format CSV)</code></p>
+</section>
+<section id="accès-professionnel" class="level2">
+<h2 class="anchored" data-anchor-id="accès-professionnel">Accès Professionnel</h2>
+<p>Fonctionnalités uniquement dans l’accès Professionnel :<br>
+- Filtres NAS, sous-CMD, CMKZ, GHM, Sévérité-Durée<br>
+- Variables <strong>dms</strong> dans le case-mix<br>
+- Accès aux listes des séjours de chaque ligne du case-mix<br>
+- Export csv et JSON de la liste des séjours sélectionnés avec des variables caractérisant les séjours (<code>nas</code>, <code>dp_sej</code>, <code>annee_sortie_sej</code>, …) et les variables calculés par PMSISoft permettant la production du case-mix (<code>chirurgie_A1_B1</code> = variable logique indiquant si le séjour relève de la chirurgie oncologique digestive et viscérale, <code>chirurgie_B1_oesophage</code> = variable logique indiquant si le séjour relève de la chirurgie oncologique de l’œsophage ou de la jonction œsophagienne, …). Via les liens <code>Télécharger séjours (format JSON)</code> et <code>Télécharger séjours (format CSV)</code></p>
+</section>
+<section id="demande-daccès-standard" class="level2">
+<h2 class="anchored" data-anchor-id="demande-daccès-standard">Demande d’accès Standard</h2>
+<p>Pour demander un accès Standard à PMSISoft MCO pour votre établissement, nous <a href="https://www.lespmsi.com/a-propos-2/#Formulaire_de_contact">contacter</a> (en sélectionnant l’option “Demande accès PMSISoft Standard”)</p>
+</section>
+<section id="pour-aller-plus-loin" class="level2">
+<h2 class="anchored" data-anchor-id="pour-aller-plus-loin">Pour aller plus loin</h2>
+<ul>
+<li>article “”<br>
+</li>
+<li>code R</li>
+</ul>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Notes de bas de page</h2>
+
+<ol>
+<li id="fn1"><p>sous-entendu “nombre de séjours du périmètre des séjours sélectionnés via les filtres”.<br>
+Remarque valable pour toutes les variables du case-mix↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>MCO</category>
+  <category>Ecran</category>
+  <category>Cancérologie</category>
+  <guid>https://www.pmsisoft.com/posts/mco/mco_ecran_cardiologie/</guid>
+  <pubDate>Sun, 25 Jun 2023 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Ecran Mention SMR</title>
+  <dc:creator>denis GUS</dc:creator>
+  <link>https://www.pmsisoft.com/posts/smr/smr_ecran_mention/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Le décret <a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000044947234#:~:text=Objet%20%3A%20conditions%20techniques%20de%20fonctionnement,soins%20m%C3%A9dicaux%20et%20de%20r%C3%A9adaptation." target="_blank">n°2022-25 du 11 janvier 2022 relatif aux conditions techniques de fonctionnement de l’activité de SMR</a>, complété par l’instruction DGOS <a href="https://www.lareunion.ars.sante.fr/system/files/2023-01/Instruction%20DGOS%20n%C2%B0210%20du%2028-09-2022%20AS%20n%C2%B05.pdf" target="_blank">N°DGOS/R4/2022/210 du 28 septembre 2022 relative à la mise en oeuvre de la réforme des autorisations d’activité des soins médicaux et de réadaptation</a> définissent les pré-requis et conditions des futures mentions SMR.</p>
+<p>Une partie importante de ces caractéristiques peut être raisonnablement traduite en PMSI SMR afin de permettre aux établissements d’analyser et de travailler sur la <strong>cohérence à minima</strong> de leurs pratiques de soins, vues du PMSI SMR, avec les exigences des mentions SMR qui leur sont octroyées.</p>
+<p>L’attribution des mentions SMR à chaque séjour HC terminé et chaque semaine HP dans PMSISoft est cohérente avec les codes des autorisations actuelles. <sup>1</sup></p>
+<p>Ainsi, à chaque mention SMR sont associées :</p>
+<ul>
+<li><p>des <strong>pratiques thérapeutiques</strong> avec un nombre minimum de pratiques thérapeutiques à proposer à chaque patient, selon son état clinique, parmi une liste fermée de pratiques thérapeutiques spécifique à chaque mention.<br>
+<u>Traduction d’une pratique thérapeutique dans PMSISoft</u> : réalisation, au cours du séjour terminé du patient en HC ou au cours d’une semaine en HP, d’au moins 1 acte CSARR par un professionnel (identifié via la variable Type intervenant) correspondant à la pratique thérapeutique. <sup>2</sup><br>
+Puis, pour chaque séjour terminé en HC ou chaque semaine en HP, comparaison au seuil minimal de pratiques thérapeutiques attendues pour la mention du séjour HC ou de la semaine HP.</p></li>
+<li><p>des <strong>séquences de traitement</strong> à dispenser, chaque jour ouvré, à chaque patient, selon son état clinique.<br>
+Séquences de traitement possibles : indifférentées, individualisées, collectives, masso-kinésithérapie.<br>
+<u>Traduction d’une séquence de traitement dans PMSISoft</u> : pour chaque séjour terminé en HC ou pour chaque semaine en HP, pour chaque jour ouvré, repérage d’au moins une réalisation d’un acte CSARR correspondant aux séquences de traitement possibles.<br>
+Puis, pour chaque jour ouvré, comparaison du panier de séquences de traitement minimal attendu pour la mention du séjour en HC ou de la semaine en HP.</p></li>
+</ul>
+<p>3 axes d’analyses :<br>
+- <strong>Case-mix “Mention + Type d’hospitalisation”</strong> = analyse pour chaque couple “Mention + type d’hospitalisation”<br>
+- <strong>Case-mix “Mention + Intervenant”</strong> = analyse pour chaque couple “Mention + configuration de type d’intervenant réellement rencontrée”<br>
+- <strong>“Séjours et mention”</strong> = analyse, pour chaque séjour, avec possibilité de remonter aux informations détaillées des séjours</p>
+<p>Toutes les analyses ne concernent que les séjours <u>terminés</u> (HC ou HP) hors erreur de classification (CM 90) dans le périmètre sélectionné par les filtres.</p>
+<p>Historique depuis 2019.</p>
+</section>
+<section id="chemin-de-lécran" class="level2">
+<h2 class="anchored" data-anchor-id="chemin-de-lécran">Chemin de l’écran</h2>
+<p><strong>Analyse SMR &gt; Mentions</strong></p>
+</section>
+<section id="filtres" class="level2">
+<h2 class="anchored" data-anchor-id="filtres">Filtres</h2>
+<ul>
+<li>Année PMSI<br>
+</li>
+<li>Mois PMSI<br>
+</li>
+<li>UM<br>
+</li>
+<li>Autorisations de l’établissement<br>
+</li>
+<li>Type d’hospitalisation<br>
+</li>
+<li>Classification des séjours et RHS (CM, GN, GR, GL, GME, sévérité)</li>
+</ul>
+</section>
+<section id="case-mix-mention-type-dhospitalisation" class="level2">
+<h2 class="anchored" data-anchor-id="case-mix-mention-type-dhospitalisation">Case-mix “Mention + Type d’hospitalisation”</h2>
+<p>Le case-mix comprend 15 colonnes, correspondant à l’identification des couples “Mention + type hospitalisation” (2 premières colonnes) et à 13 analyses détaillées dans leur ordre de gauche à droite ci-dessous.</p>
+<p>Les analyses sont regroupées par famille cohérente.</p>
+<p>Export csv et JSON des informations du casemix via les liens <code>Télécharger</code></p>
+<section id="couple-mentiontype-hospitalisation" class="level3">
+<h3 class="anchored" data-anchor-id="couple-mentiontype-hospitalisation">Couple mention+type hospitalisation</h3>
+<div class="columns">
+<div class="column" style="width:28%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_type_hospitalisation_liste_mention.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:70%;">
+<p>Chaque couple “Mention + type hospitalisation” rencontré via au moins 1 séjour terminé dans le périmètre sélectionné est affiché.</p>
+<p>Chaque mention (tout type d’hospitalisation confondu) fait l’objet une ligne d’analyse consolidée, identifiée par l’intitulé “total mention”.</p>
+<p>La première ligne “etablissement” est la ligne d’analyse consolidée au niveau de l’établissement. <sup>3</sup></p>
+</div>
+</div>
+</section>
+<section id="séjour" class="level3">
+<h3 class="anchored" data-anchor-id="séjour">Séjour</h3>
+<div class="columns">
+<div class="column" style="width:38%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_type_hospitalisation_colonne_sejour.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:60%;">
+<p>Nombre de séjours terminés correspondant à la ligne analysée (établissement, couple “Mention + type hospitalisation”, mention).</p>
+</div>
+</div>
+</section>
+<section id="jour-ouvré-venue" class="level3">
+<h3 class="anchored" data-anchor-id="jour-ouvré-venue">Jour ouvré-venue</h3>
+<div class="columns">
+<div class="column" style="width:38%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_type_hospitalisation_jour_ouvre.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:60%;">
+<p>n = nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) pour la ligne analysée</p>
+<p>n csarr = nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) avec au moins 1 acte CSARR réalisé pour la ligne analysée</p>
+<p>% csarr = ratio n csarr / n</p>
+<p>0_csarr = nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) avec aucun acte CSARR réalisé pour la ligne analysée</p>
+</div>
+</div>
+</section>
+<section id="réalisation-csarr" class="level3">
+<h3 class="anchored" data-anchor-id="réalisation-csarr">Réalisation CSARR</h3>
+<div class="columns">
+<div class="column" style="width:28%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_type_hospitalisation_realisation.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:70%;">
+<p>n = nombre total de réalisations d’acte CSARR réalisés dans les JP en jour ouvré (HC) ou dans les venues en jour ouvré (HP)</p>
+<p>mean = moyenne de réalisations des actes CSARR par JP en jour ouvré (HC) ou par venue en jour ouvré (HP)</p>
+</div>
+</div>
+</section>
+<section id="intervenant" class="level3">
+<h3 class="anchored" data-anchor-id="intervenant">Intervenant</h3>
+<div class="columns">
+<div class="column" style="width:28%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_type_hospitalisation_intervenant.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:70%;">
+<p>mean = moyenne, pour les séjours de la ligne analysée, du nombre de type d’intervenant différent ayant réalisé au moins 1 acte CSARR dans un jour ouvré</p>
+<p>On peut traduire ce calcul par la phrase “Chaque jour ouvré des séjours relevant du couple”Mention + type hospitalisation” de la ligne analysée a eu <code>mean</code> type d’intervenant différent en moyenne.”</p>
+</div>
+</div>
+</section>
+<section id="pratique-thérapeutique" class="level3">
+<h3 class="anchored" data-anchor-id="pratique-thérapeutique">Pratique thérapeutique</h3>
+<div class="columns">
+<div class="column" style="width:38%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_type_hospitalisation_pratique_therapeutique.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:60%;">
+<p>mean = moyenne, pour les séjours de la ligne analysée, du nombre de pratiques thérapeutiques (vues du PMSI - voir Introduction) de la mention de la ligne</p>
+<p>séjour &gt; seuil = nombre de séjours avec un nombre de pratiques thérapeutiques de la mention de la ligne &gt; au nombre <u>minimal</u> attendu de pratiques thérapeutiques de la mention de la ligne</p>
+<p>% séjour &gt; seuil = ratio du nombre de séjours “séjour &gt; seuil” par rapport au nombre de séjours de la ligne analysée</p>
+</div>
+</div>
+</section>
+<section id="séquence-de-traitement" class="level3">
+<h3 class="anchored" data-anchor-id="séquence-de-traitement">Séquence de traitement</h3>
+<div class="columns">
+<div class="column" style="width:28%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_type_hospitalisation_sequence_traitement.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:70%;">
+<p>n = nombre de JP en jour ouvré (HC) ou de venues en jour ouvré (HP) pour lesquelles le panier de séquences de traitement réalisées est &gt; au minimum attendu, par jour ouvré, pour le panier de séquences de traitement de la mention de la ligne</p>
+<p>% = ratio entre le nombre de la colonne précédente et le nombre de JP en jour ouvré (HC) ou de venues en jour ouvré (HP) de la ligne analysée</p>
+</div>
+</div>
+</section>
+</section>
+<section id="case-mix-mention-intervenant" class="level2">
+<h2 class="anchored" data-anchor-id="case-mix-mention-intervenant">Case-mix “Mention + Intervenant”</h2>
+<p>Le case-mix comprend 16 colonnes, correspondant à l’identification des couples “Mention + intervenant” (2 premières colonnes) et 14 analyses détaillées dans leur ordre de gauche à droite ci-dessous.</p>
+<p>Pour chaque mention, PMSISoft identifie toutes les configurations de types d’intervenant rencontrées <sup>4</sup> dans les séjours terminés où une configuration de types d’intervenant = une liste unique des différents types d’intervenants ayant codé au moins 1 fois un acte CSARR dans le séjour, à l’exclusion de tous les autres types d’intervenant.<br>
+Exemple : “Locomoteur + (mk, ergo, psychologue)” = l’ensemble des séjours terminés de la mention “Locomoteur” où seuls les 3 types d’intervenant (mk, ergo, psychologue) sont intervenus à l’exclusion de tous les autres types d’intervenant.</p>
+<p>Chaque couple “mention + type d’intervenant” rencontré est affiché.</p>
+<p>La première ligne “etablissement” est la ligne d’analyse consolidée au niveau de l’établissement.</p>
+<p>Les analyses sont regroupées par famille cohérente.</p>
+<p>Export csv et JSON des informations du casemix via les liens <code>Télécharger</code></p>
+<p>Remarque : ce casemix est aussi intéressant, indépendamment du sujet des mentions SMR, pour analyser toutes les configurations rencontrées d’intervenants par séjour dans l’établissement.</p>
+<section id="couple-mentionintervenant" class="level3">
+<h3 class="anchored" data-anchor-id="couple-mentionintervenant">Couple mention+intervenant</h3>
+<div class="columns">
+<div class="column" style="width:38%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_intervenant_liste_mention.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:60%;">
+<p>n = nombre de types d’intervenants concernés par le couple de la ligne analysée.</p>
+</div>
+</div>
+</section>
+<section id="séjour-1" class="level3">
+<h3 class="anchored" data-anchor-id="séjour-1">Séjour</h3>
+<div class="columns">
+<div class="column" style="width:28%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_intervenant_sejour.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:70%;">
+<p>n = nombre de séjours avec la configuration “Mention + types d’intervenant” de la ligne</p>
+<p>% = ratio entre la colonne précédente et le nombre de séjours <u>de la mention de la ligne</u></p>
+</div>
+</div>
+</section>
+<section id="jour-ouvré-venue-1" class="level3">
+<h3 class="anchored" data-anchor-id="jour-ouvré-venue-1">Jour ouvré-venue</h3>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_intervenant_jour_ouvre.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:50%;">
+<p>n = nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) pour la ligne analysée</p>
+<p>% = ratio entre la colonne précédente et le nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) <u>de la mention de la ligne</u></p>
+<p>n csarr = nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) avec au moins 1 acte CSARR réalisé pour la ligne analysée</p>
+<p>% csarr = ratio n csarr / n</p>
+<p>0_csarr = nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) avec aucun acte CSARR réalisé pour la ligne analysée</p>
+</div>
+</div>
+</section>
+<section id="réalisation-csarr-1" class="level3">
+<h3 class="anchored" data-anchor-id="réalisation-csarr-1">Réalisation CSARR</h3>
+<div class="columns">
+<div class="column" style="width:38%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_intervenant_realisation.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:60%;">
+<p>n = nombre total de réalisations d’acte CSARR réalisées dans les JP en jour ouvré (HC) ou dans les venues en jour ouvré (HP)</p>
+<p>% = ratio entre la colonne précédente et le nombre de réalisations CSARR des journées de présence en jour ouvré (en HC) ou des venues en jour ouvré (en HP) <u>de la mention de la ligne</u></p>
+<p>mean = moyenne des réalisations des actes CSARR par JP en jour ouvré (HC) ou par venue en jour ouvré (HP)</p>
+</div>
+</div>
+</section>
+<section id="pratique-thérapeutique-1" class="level3">
+<h3 class="anchored" data-anchor-id="pratique-thérapeutique-1">Pratique thérapeutique</h3>
+<div class="columns">
+<div class="column" style="width:18%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_intervenant_pratique_therapeutique.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:80%;">
+<p>seuil = le nombre de types d’intervenant de la ligne éligibles aux pratiques thérapeutiques de la mention de la ligne est &lt; au seuil minimal de pratiques thérapeutiques attendues pour la mention (pastille orange) ou &gt;= à ce seuil minimal (pastille verte)</p>
+<p>Remarque : le nombre de types d’intervenant éligibles aux pratiques thérapeutiques de la mention peut être différent du nombre total de types d’intervenant total (cf intervenant non éligible)</p>
+</div>
+</div>
+</section>
+<section id="séquence-de-traitement-1" class="level3">
+<h3 class="anchored" data-anchor-id="séquence-de-traitement-1">Séquence de traitement</h3>
+<div class="columns">
+<div class="column" style="width:28%;">
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_casemix_intervenant_sequence_traitement.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:70%;">
+<p>n = nombre de JP en jour ouvré (HC) ou de venues en jour ouvré (HP) pour lesquelles le panier de séquences de traitement réalisées est &gt; au minimum attendu, par jour ouvré, pour le panier de séquences de traitement de la mention de la ligne</p>
+<p>% = ratio entre le nombre de la colonne précédente et le nombre de JP en jour ouvré (HC) ou de venues en jour ouvré (HP) de la ligne analysée</p>
+</div>
+</div>
+</section>
+</section>
+<section id="séjour-et-mention" class="level2">
+<h2 class="anchored" data-anchor-id="séjour-et-mention">Séjour et mention</h2>
+<p>Chaque séjour terminé du périmètre sélectionné est analysé avec les calculs des 2 casemix de l’écran.</p>
+<p>Chaque séjour est identifié par son nas (1ere colonne). En sélectionnant une ligne (donc un séjour), accès automatique à la liste des RHS du séjour et aux informations détaillées du séjour.</p>
+<p>Export csv et JSON de la liste des séjours via les liens <code>Télécharger</code></p>
+<p>Prenons un exemple fictif pour illustrer :</p>
+<p><img src="https://www.pmsisoft.com/posts/smr/smr_ecran_mention/mention_ssr_sejour_exemple.png" class="img-fluid"></p>
+<p>Ce séjour HC relève de la mention “Locomoteur”.<br>
+Ce séjour a 48 journées de présence (au sens PMSI SMR) en jour ouvré, dont 46 avec au moins 1 acte CSARR réalisé (ce qui représente 95,83% des jours de présence en jour ouvré) et 2 avec 0 acte CSARR codé.<br>
+Ce séjour a 104 réalisations CSARR cumulées en jour ouvré, ce qui correspond à une moyenne de réalisations CSARR par jour ouvré de 2,17<br>
+5 types d’intervenants différents (mk, ergo, apa, diet, psychologue) ont réalisés au moins 1 acte CSARR dans ce séjour.<br>
+Parmi ces 5 types d’intervenants, 4 sont pris en compte dans le calcul des pratiques thérapeutiques en “Locomoteur” (mk, ergo,apa,psychologue).<br>
+Le seuil minimal de pratiques thérapeutiques en mention “Locomoteur” étant fixé à 3, le séjour est indiqué avec un seuil OK (vert).<br>
+Le nombre de journées de présence en jour ouvré pour lesquelles le nombre minimal de séquences de traitement attendu en mention “Locomoteur” (à savoir “deux séquences de traitement dont au moins une séquence de soins individualisés”) est 26, soit 54,17% des jours de présence en jour ouvré du séjour.</p>
+</section>
+<section id="demande-daccès-standard" class="level2">
+<h2 class="anchored" data-anchor-id="demande-daccès-standard">Demande d’accès Standard</h2>
+<p>Pour demander un accès Standard à PMSISoft SSR pour votre établissement, nous <a href="https://www.lespmsi.com/a-propos-2/#Formulaire_de_contact">contacter</a> (en sélectionnant l’option “Demande accès PMSISoft Standard”)</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Notes de bas de page</h2>
+
+<ol>
+<li id="fn1"><p>la mention “Pédiatrie” est attribuée à tous séjours HC ou semaine HP d’un patient de moins de 18 ans↩︎</p></li>
+<li id="fn2"><p>le cas particulier de la pratique thérapeutique “Education thérapeutique” est repérée par au moins 1 codage CSARR du sous-chapitre CSARR 10.01 “Actes d’éducation, dans le cadre d’un programme d’éducation thérapeutique”↩︎</p></li>
+<li id="fn3"><p>l’analyse de la ligne “etablissement” est dédoublonnée (exemple : un séjour HP avec 2 mentions représentées ne compte que pour un dans l’analyse “etablissement”). Le nombre de séjours de la ligne “etablissement” correspond donc au nombre de séjours terminés hors CM 90 de la sélection.↩︎</p></li>
+<li id="fn4"><p>le cas particulier de la pratique thérapeutique “Education thérapeutique” est repérée par au moins 1 codage CSARR du sous-chapitre CSARR 10.01 “Actes d’éducation, dans le cadre d’un programme d’éducation thérapeutique”↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>SMR</category>
+  <category>Ecran</category>
+  <guid>https://www.pmsisoft.com/posts/smr/smr_ecran_mention/</guid>
+  <pubDate>Mon, 15 May 2023 22:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Simulateur GHM</title>
+  <dc:creator>denis G</dc:creator>
+  <link>https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Sur la base de la documentation officielle (<a href="https://www.atih.sante.fr/manuel-des-ghm-version-definitive-2022" target="_blank">manuels des GHM</a>, listes codes, référentiels PMSI), nous avons développé un algorithme permettant, à partir d’une grille minimale optimisée de saisie d’un séjour virtuel, d’<strong>expliciter les différentes étapes et caractéristiques de la classification en GHM et GHS et de la valorisation T2A d’un séjour MCO</strong>.</p>
+<p>Le simulateur GHM de PMSISoft s’adresse en priorité aux professionnels du PMSI intéressés par comprendre et visualiser les étapes de la classification en GHM et la valorisation T2A de séjours MCO dans toute leurs dimensions.</p>
+<p>Son utilisation suppose la connaissance des principaux mécanismes et règles de classifications des séjours en PMSI MCO.</p>
+</section>
+<section id="fonctionnalités" class="level2">
+<h2 class="anchored" data-anchor-id="fonctionnalités">Fonctionnalités</h2>
+<ul>
+<li>Classification en GHM, GHS et calcul valorisation T2A à partir d’une grille minimale optimisée de saisie d’un séjour virtuel <sup>1</sup>, <sup>2</sup><br>
+</li>
+<li>Pré-remplissage optimisée des variables <sup>3</sup></li>
+<li>Assistance à la saisie des codes CIM-10 et acte CCAM<br>
+</li>
+<li>Contrôles de saisie dans les bornes et valeurs autorisés<br>
+</li>
+<li>Affichage en temps réel des CMA des DAS</li>
+<li>Affichage en temps réel du caractère opératoire des actes CCAM<br>
+</li>
+<li>Calcul du niveau de sévérité du séjour par étapes (voir illustration ci-dessous) juqu’à la classification finale de la sévérité<br>
+</li>
+<li>Repérage des exclusions DP, DR, racine GHM de chaque CMA<br>
+</li>
+<li>Indication des listes en D et en A des codages CIM et actes CCAM<br>
+</li>
+<li>Suppression des informations d’une simulation en un clic<br>
+</li>
+<li>Rapatriement automatique des informations d’un séjour réel déjà importé via son NAS</li>
+<li>Archivage possible des simulations<br>
+</li>
+<li>Export PDF d’une simulation. <a href="simulation_08C492.pdf" target="_blank">Exemple</a></li>
+<li>Export csv ou JSON de toutes les simulations archivées<br>
+</li>
+<li>Choix tarif DGF ou OQN</li>
+<li>Annualisé à partir de l’année PMSI MCO 2022<br>
+</li>
+<li>Hébergement en Hébergement de Santé Certifié (HDS) au <a href="https://www.mipih.fr/hebergement-infogerance" target="_blank">MIPIH</a></li>
+</ul>
+</section>
+<section id="simulation" class="level2">
+<h2 class="anchored" data-anchor-id="simulation">Simulation</h2>
+<section id="grille-de-saisie" class="level3">
+<h3 class="anchored" data-anchor-id="grille-de-saisie">Grille de saisie</h3>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_vierge.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p><strong>Grille de saisie vierge</strong></p>
+<p>Par défaut :<br>
+- année PMSI MCO en cours<br>
+- durée de séjour (DS) <sup>4</sup> = 0<br>
+- pas de séance<br>
+- autorisation UM différente de 08, 19 et 21 <sup>5</sup><br>
+- mode de sortie différent de décès (code 9)<br>
+- destination différente de “vers une unité de MCO” (code 1)<br>
+- pas de lit dédié<br>
+- pas d’anesthésie générale</p>
+<p>Pour revenir à la grille de saisie, on clique sur le bouton <code>Reset</code></p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_aide_saisie_dp.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p><strong>Saisie DP et DR</strong></p>
+<p>A partir d’une position, tous les codes CIM-10 correspondant sont proposés.</p>
+<p>Seuls les codes CIM-10 autorisés en DP ou DR sont proposés dans chacun des filtres DP et DR.</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_aide_saisie_das.png" class="img-fluid"></p>
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_aide_saisie_das2.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p><strong>Saisie DAS</strong></p>
+<p>Seuls les codes CIM-10 autorisés en DAS sont proposés.</p>
+<p>Quand un DAS est une CMA, le niveau de CMA est indiqué.</p>
+<p>Quand un DAS a été sélectionné, il n’est plus proposé.</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_aide_saisie_ccam.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p><strong>Saisie CCAM</strong></p>
+<p>Proposition des actes CCAM à partir de la saisie des premières positions.</p>
+<p>Les actes CCAM opératoires sont identifiés par le suffixe “/0”</p>
+<p>Quand un acte CCAM a été sélectionné, il n’est plus proposé.</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_grille_08C492.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p><strong>Bouton “Grouper”</strong></p>
+<p>Quand la grille est saisie, on clique sur le bouton “Grouper” situé en haut à droite</p>
+<p>Le bouton “Grouper” ne devient cliquable et actif que si les 3 variables minimales (DS, DP séjour et âge) ont une saisie valide.</p>
+<p>Ici la grille du séjour virtuel à classer est :<br>
+- âge = 80 ans<br>
+- DS = 3<br>
+- DP = S7200<br>
+- DAS = (E440, I10)<br>
+- CCAM = (NBCA010/0, NEQK010/0)<br>
+- anesthésie générale = “Oui” <sup>6</sup></p>
+</div>
+</div>
+</section>
+<section id="résultats-de-simulation" class="level3">
+<h3 class="anchored" data-anchor-id="résultats-de-simulation">Résultats de simulation</h3>
+<p>Les résultats d’une simulation se présentent en 4 parties :<br>
+- les <strong>résutats de groupage</strong><br>
+- le rappel du <strong>codage adminsitratif</strong><br>
+- un tableau du <strong>codage CIM-10</strong><br>
+- un tableau du <strong>codage CCAM</strong></p>
+<p><strong>Résultats du groupage</strong></p>
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_grille_08C492_groupage.png" class="img-fluid"></p>
+<p><strong>GHM</strong><br>
+Code et libellé</p>
+<p><strong>Calcul sévérité</strong><br>
+Calcul après classification dans une racine de GHM éligible aux niveaux de sévérité et avec une DS autorisant une classification en niveau de sévérité.</p>
+<p>4 étapes successives calculées jusqu’à l’identification de la sévérité du GHM :</p>
+<p><code>severite_cma</code> = sévérité issue du codage des DAS CMA (= la sévérité maximale rencontrée)</p>
+<p><code>severite_post_dp_dr_racine</code> = pour chaque CMA, exclusion par DP, DR ou racine de GHM. On retient la sévérité maximale non exclue</p>
+<p><code>severite_post_dp_dr_racine_age</code> = prise en compte de l’effet âge s’il y a lieu, fonction de la racine GHM</p>
+<p><code>severite_post_dp_dr_racine_age_duree</code> = prise en compte de la durée de séjour. C’est la sévérité finale.<br>
+Dans notre exemple, c’est cette étape qui fait passer la sévérité de 3 à 2 (car DS = 3)</p>
+<p><strong>GHS</strong><br>
+Code et informations liées (valeur forfait, borne basse, borne haut, exb et exh)<br>
+Tient compte du paramétrage DGF ou OQN</p>
+<p><strong>T2A</strong><br>
+Valorisation T2A du séjour virtuel<br>
+Valorisation T2a par JP <sup>7</sup><br>
+Part de la valorisation EXB<br>
+Part de la Valorisation EXH</p>
+<p><strong>Codage CIM-10</strong></p>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_grille_08C492_codage_cim.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:33%;">
+<p><strong>Codage CIM-10</strong></p>
+<p>Dans un tableau, tous les codages CIM-10.</p>
+<p>Pour les DP et DR, indication du ou des CMD vers laquelle (lesquelles) oriente le DP et le DR et les listes en D associées</p>
+<p>Pour chaque DAS CMA, indication, via des variables logiques, de son exclusion par le DR, le DR ou la racine GHM + indication numéro des listes exclusions associées à la CMA</p>
+</div>
+</div>
+<p><strong>Codage CCAM</strong></p>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_grille_08C492_codage_ccam.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:33%;">
+<p><strong>Codage CCAM</strong></p>
+<p>Dans un tableau, tous les actes CCAM.</p>
+<p>Pour chaque acte opératoire, indication des listes en A associées</p>
+</div>
+</div>
+<p><strong>Codage administratif</strong></p>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_grille_08C492_administratif.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:33%;">
+<p><strong>Codage administratif</strong></p>
+<p>Rappel des codages administratifs de la grille de saisie du séjour virtuel.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="archivage" class="level2">
+<h2 class="anchored" data-anchor-id="archivage">Archivage</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_grille_08C492_enregistrement.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p>On a cliqué sur le bouton <strong>“Enregistrement”</strong> : une pop-up est apparue demandant la saisie d’un code ou d’un initulé pour archiver la simuation.</p>
+<p>Ici on saisie le code “id_001”</p>
+<p><u>Règle</u> : si une simulation archivée a déjà ce code, elle sera remplacée par la nouvelle simulation archivée.</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/simulation_mco_grille_08C492_archive.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:40%;">
+<p><strong>Ecran “Simulations archivées”</strong></p>
+<p>Liste des simulations archivées avec le rappel de ses principales informations.</p>
+<p><u>Règle</u> : une simulation archivée est rattachée à l’utilisateur qui l’a créée.</p>
+</div>
+</div>
+</section>
+<section id="accès" class="level2">
+<h2 class="anchored" data-anchor-id="accès">Accès</h2>
+<p>Le simulateur GHM PMSISoft est accessible dans l’accès Professionnel MCO.</p>
+<p>Il peut être proposé en accès dédié pour des établissements ou des sociétés intéressés uniquement par le simulateur GHM de PMSISoft.</p>
+<p>Pour plus d’informations ou une démonstration, nous <a href="https://www.lespmsi.com/a-propos-2/#Formulaire_de_contact">contacter</a> (en sélectionnant l’objet “Simulateur GHM de PMSISoft”)</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Notes de bas de page</h2>
+
+<ol>
+<li id="fn1"><p>la grille minimale pour classer est composée de 3 variables : durée de séjour (0 jour PMSI par défaut), l’âge et un DP séjour↩︎</p></li>
+<li id="fn2"><p>CMD non disponibles : CMD 14 et CMD 15↩︎</p></li>
+<li id="fn3"><p>exemple variable “Mode de décès” = “non_9” (non décès)↩︎</p></li>
+<li id="fn4"><p>durée au sens PMSI = date sortie - date entrée↩︎</p></li>
+<li id="fn5"><p>08 = “Soins et accompagnement des malades en phase terminale (unité de soins palliatifs)”, 19 = “Unité d’addictologie de recours et de référence” et 21 = “Hémodialyse en centre pour adulte”↩︎</p></li>
+<li id="fn6"><p>traduction codage PMSI = au moins 1 acte CCAM avec activité 4↩︎</p></li>
+<li id="fn7"><p>valorisation T2A / nombre de JP si DS &gt; 0 et valorisation T2A si DS = 0↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>MCO</category>
+  <category>Ecran</category>
+  <guid>https://www.pmsisoft.com/posts/mco/mco_simulation_ghm/</guid>
+  <pubDate>Tue, 07 Feb 2023 23:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Filtres des écrans MCO</title>
+  <dc:creator>denis G</dc:creator>
+  <link>https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Présentation des filtres communs à la plupart des écrans MCO.</p>
+<p>Chaque filtre est décrit par :</p>
+<ul>
+<li>son <a href="../type_filtre">type</a></li>
+<li>ses valeurs<br>
+</li>
+<li>son fonctionnement par rapport aux principaux items (RUM, séjours, actes CCAM, codage CIM, DMI, UCD, patient, entrée ACE, factures) sélectionnés dans les écrans MCO (tableaux, graphiques, exports csv, JSON ou .rds)<br>
+</li>
+<li>autres informations</li>
+</ul>
+<p>Pour des raisons d’affichage, certains filtres sont accessibles via un méta-filtre.<br>
+<em>Exemple : tous les filtres de classification des séjours (filtre “CMD”, filtre “sous_CMD”, filtre “GHM”, …) sont accessibles via le méta-filtre “Classification séjour”</em></p>
+<p>Les filtres MCO ou les usages d’un filtre MCO spécifiques à un écran sont décrits dans la documentation de l’écran concerné.</p>
+</section>
+<section id="filtre-année" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-année">Filtre “Année”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_year.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:78%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
+<p>Valeurs : 2019 à 2023</p>
+<p>Fonctionnement :<br>
+Avec les RUM = sélection des RUM avec la date de sortie du RUM dans l’année sélectionnée<br>
+Avec les séjours = sélection des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans l’année sélectionnée<br>
+Avec les actes CCAM = sélection des actes CCAM des RUM avec la date de sortie du RUM dans l’année sélectionnée<br>
+Avec les codages CIM = sélection des codages CIM des RUM avec la date de sortie du RUM dans l’année sélectionnée<br>
+Avec les DMI = sélection des DMI du FICHCOMP DMI avec l’année d’import correspondant à l’année sélectionnée<br>
+Avec les UCD = sélection des UCD du FICHCOMP LES et du FICHCOMP MED AP-AC avec l’année d’import correspondant à l’année sélectionnée<br>
+Avec les ACE = sélection des ACE du RSAF-ACE avec l’année d’import correspondant à l’année sélectionnée</p>
+<p>Autres informations :<br>
+Filtre présent dans tous les écrans en 1ere position de la 1ere ligne de filtres.<br>
+Filtre disponible en accès Standard.</p>
+</div>
+</div>
+</section>
+<section id="filtre-mois" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-mois">Filtre “Mois”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_mois.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:78%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
+<p>Valeurs : les 12 mois</p>
+<p>Fonctionnement :<br>
+Avec les RUM = sélection des RUM avec la date de sortie du RUM dans le ou les mois sélectionné(s)<br>
+Avec les séjours = sélection des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans le ou les mois sélectionné(s)<br>
+Avec les actes CCAM = sélection des actes CCAM des RUM avec la date de sortie du RUM dans le ou les mois sélectionné(s)<br>
+Avec les codages CIM = sélection des codages CIM des RUM avec la date de sortie du RUM dans le ou les mois sélectionné(s)<br>
+Avec les DMI = sélection des DMI des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans le ou les mois sélectionné(s)<br>
+Avec les UCD = sélection des UCD des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans le ou les mois sélectionné(s)<br>
+Avec les ACE = sélection des ACE dont la date du type ACE (A,B,C,L,M,H,P) dans le ou les mois sélectionné(s)</p>
+<p>Autres informations :<br>
+Filtre présent dans tous les écrans en 2eme position de la 1ere ligne de filtres.<br>
+Filtre disponible en accès Standard</p>
+</div>
+</div>
+</section>
+<section id="filtre-um" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-um">Filtre “UM”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_um.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:78%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
+<p>Valeurs : codes des UM représentées par au moins 1 RUM dans les imports PMSI de l’établissement.</p>
+<p>Autres informations :<br>
+Filtre présent dans tous les écrans en 3eme position de la 1ere ligne de filtres.<br>
+Filtre disponible en accès Standard</p>
+</div>
+</div>
+</section>
+<section id="filtre-autorisation" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-autorisation">Filtre “Autorisation”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_type_um.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_autorisation.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:56%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
+<p>Valeurs : codes des autorisations représentées au moins 1 fois dans les fichiers FICIUM de l’établissement.</p>
+<p>Autres informations :<br>
+Filtre affiché dans le méta-filtre “Type d’UM”<br>
+Filtre actif si au moins un FICIUM a été importé<br>
+Filtre disponible en accès Standard</p>
+</div>
+</div>
+</section>
+<section id="filtre-mode-dhospitalisation" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-mode-dhospitalisation">Filtre “Mode d’hospitalisation”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_type_um.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_mode_hospitalisation.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:56%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
+<p>Valeurs : les modes d’hospitalisation possibles en MCO.</p>
+<p>Autres informations :<br>
+Filtre affiché dans le méta-filtre “Type d’UM”<br>
+Filtre actif si au moins un FICIUM a été importé<br>
+Filtre disponible en accès Standard</p>
+</div>
+</div>
+</section>
+<section id="filtre-nas" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-nas">Filtre “NAS”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_nas.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:56%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-code">code</a>.</p>
+<p>Valeurs : saisie libre d’une suite alphanumérique</p>
+<p>Autres informations :<br>
+Filtre disponible uniquement en accès Professionnel</p>
+</div>
+</div>
+</section>
+<section id="filtre-cmd" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-cmd">Filtre “CMD”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_classification_sejour.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_cmd.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:56%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
+<p>Valeurs : codes + libellés CMD des CMD représentées par au moins 1 RUM dans les imports PMSI de l’établissement.</p>
+<p>Autres informations :<br>
+Filtre affiché en 1ere position du méta-filtre “Classification séjour”<br>
+Filtre disponible en accès Standard</p>
+</div>
+</div>
+</section>
+<section id="filtre-sous_cmd" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-sous_cmd">Filtre “Sous_CMD”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_classification_sejour.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_sous_cmd.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:56%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
+<p>Valeurs : codes + libellés des sous-CMD représentées par au moins 1 RUM dans les imports PMSI de l’établissement</p>
+<p>Autres informations :<br>
+Filtre affiché en 2ème position du méta-filtre “Classification séjour”<br>
+Filtre disponible en accès Professionnel</p>
+</div>
+</div>
+</section>
+<section id="filtre-cmkz" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-cmkz">Filtre “CMKZ”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_classification_sejour.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_cmkz.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:56%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
+<p>Valeurs : C, M, K, Z</p>
+<p>Autres informations :<br>
+Filtre affiché en 3ème position du méta-filtre “Classification séjour”<br>
+Filtre disponible en accès Professionnel</p>
+</div>
+</div>
+</section>
+<section id="filtre-ghm" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-ghm">Filtre “GHM”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_classification_sejour.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_ghm.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:56%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
+<p>Valeurs : codes + libellés des GHM des GHM représentés par au moins 1 RUM dans les imports PMSI de l’établissement</p>
+<p>Autres informations :<br>
+Filtre affiché dans le méta-filtre “Classification séjour”<br>
+Filtre disponible en accès Professionnel</p>
+</div>
+</div>
+</section>
+<section id="filtre-sévérité-durée" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-sévérité-durée">Filtre “Sévérité-Durée”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_classification_sejour.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_severite_duree.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:56%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-liste">liste</a>.</p>
+<p>Valeurs : 1, 2, 3, 4, J, T, Z, E, A, B, C, D</p>
+<p>Autres informations :<br>
+Filtre affiché dans le méta-filtre “Classification séjour”<br>
+Filtre disponible en accès Professionnel</p>
+</div>
+</div>
+</section>
+<section id="filtre-nombre-rum-par-séjour" class="level2">
+<h2 class="anchored" data-anchor-id="filtre-nombre-rum-par-séjour">Filtre “Nombre RUM par séjour”</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/filtre_mco_type_rum.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:78%;">
+<p>Type de filtre : <a href="../type_filtre/#filtre-intervalle">intervalle</a>.</p>
+<p>Valeurs : saisie numérique</p>
+<p>Autres informations :<br>
+Filtre affiché dans le méta-filtre “Type de RUM”<br>
+Filtre disponible en accès Professionnel</p>
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>MCO</category>
+  <category>Ecran</category>
+  <category>Filtre</category>
+  <guid>https://www.pmsisoft.com/posts/mco/mco_ecran_filtre/</guid>
+  <pubDate>Mon, 09 Jan 2023 23:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

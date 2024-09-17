@@ -1,7 +1,0 @@
----
-title: "Ecrans SMR"
-lang: fr
-page-layout: full
----
-
-# A venir

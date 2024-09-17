@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.551">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="denis G">
+<meta name="description" content="Filtrage de périmètre et filtrage par variables dans les écrans PSY">
+
+<title>Documentation PMSISoft - Filtrage PSY</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Documentation PMSISoft</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-accès" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Accès</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-accès">    
+        <li>
+    <a class="dropdown-item" href="../../../acces_pmsisoft_mco.html">
+ <span class="dropdown-text">PMSISoft MCO</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../acces_pmsisoft_ssr.html">
+ <span class="dropdown-text">PMSISoft SMR</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../acces_pmsisoft_psy.html">
+ <span class="dropdown-text">PMSISoft PSY</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../acces_pmsisoft_had.html">
+ <span class="dropdown-text">PMSISoft HAD</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.lespmsi.com/a-propos-2"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/denisGustin/datapmsi"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Filtrage PSY</li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../documentation_mco.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Documentation MCO</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../documentation_smr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Documentation SMR</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../documentation_psy.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Documentation PSY</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#filtrage-en-hospitalisation" id="toc-filtrage-en-hospitalisation" class="nav-link" data-scroll-target="#filtrage-en-hospitalisation">Filtrage en hospitalisation</a>
+  <ul class="collapse">
+  <li><a href="#sec-finess_geographique" id="toc-sec-finess_geographique" class="nav-link" data-scroll-target="#sec-finess_geographique">FINESS géographique</a></li>
+  <li><a href="#sec-annee" id="toc-sec-annee" class="nav-link" data-scroll-target="#sec-annee">Année</a></li>
+  <li><a href="#sec-mois" id="toc-sec-mois" class="nav-link" data-scroll-target="#sec-mois">Mois</a></li>
+  <li><a href="#sec-um" id="toc-sec-um" class="nav-link" data-scroll-target="#sec-um">UM</a></li>
+  <li><a href="#sec-forme_activite" id="toc-sec-forme_activite" class="nav-link" data-scroll-target="#sec-forme_activite">Forme d’activité</a></li>
+  <li><a href="#sec-no_secteur" id="toc-sec-no_secteur" class="nav-link" data-scroll-target="#sec-no_secteur">No secteur</a></li>
+  <li><a href="#sec-mode_legal_soins" id="toc-sec-mode_legal_soins" class="nav-link" data-scroll-target="#sec-mode_legal_soins">Mode légal de soins</a></li>
+  <li><a href="#filtrage-par-variable" id="toc-filtrage-par-variable" class="nav-link" data-scroll-target="#filtrage-par-variable">Filtrage par variable</a></li>
+  </ul></li>
+  <li><a href="#filtrage-en-ambulatoire" id="toc-filtrage-en-ambulatoire" class="nav-link" data-scroll-target="#filtrage-en-ambulatoire">Filtrage en ambulatoire</a>
+  <ul class="collapse">
+  <li><a href="#finess-géographique" id="toc-finess-géographique" class="nav-link" data-scroll-target="#finess-géographique">FINESS géographique</a></li>
+  <li><a href="#année" id="toc-année" class="nav-link" data-scroll-target="#année">Année</a></li>
+  <li><a href="#mois" id="toc-mois" class="nav-link" data-scroll-target="#mois">Mois</a></li>
+  <li><a href="#um" id="toc-um" class="nav-link" data-scroll-target="#um">UM</a></li>
+  <li><a href="#forme-dactivité" id="toc-forme-dactivité" class="nav-link" data-scroll-target="#forme-dactivité">Forme d’activité</a></li>
+  <li><a href="#no-secteur" id="toc-no-secteur" class="nav-link" data-scroll-target="#no-secteur">No secteur</a></li>
+  <li><a href="#mode-légal-de-soins" id="toc-mode-légal-de-soins" class="nav-link" data-scroll-target="#mode-légal-de-soins">Mode légal de soins</a></li>
+  <li><a href="#nature-de-lacte" id="toc-nature-de-lacte" class="nav-link" data-scroll-target="#nature-de-lacte">Nature de l’acte</a></li>
+  <li><a href="#lieu-de-lacte" id="toc-lieu-de-lacte" class="nav-link" data-scroll-target="#lieu-de-lacte">Lieu de l’acte</a></li>
+  <li><a href="#modalité-de-réalisation-de-lacte" id="toc-modalité-de-réalisation-de-lacte" class="nav-link" data-scroll-target="#modalité-de-réalisation-de-lacte">Modalité de réalisation de l’acte</a></li>
+  <li><a href="#catégorie-professionnelle-de-lintervenant" id="toc-catégorie-professionnelle-de-lintervenant" class="nav-link" data-scroll-target="#catégorie-professionnelle-de-lintervenant">Catégorie professionnelle de l’intervenant</a></li>
+  <li><a href="#filtrage-par-variable-1" id="toc-filtrage-par-variable-1" class="nav-link" data-scroll-target="#filtrage-par-variable-1">Filtrage par variable</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content column-page-right" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Filtrage PSY</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">PSY</div>
+    <div class="quarto-category">Filtre</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    <p>Filtrage de périmètre et filtrage par variables dans les écrans PSY</p>
+  </div>
+</div>
+
+
+<div class="quarto-title-meta column-page-right">
+
+    <div>
+    <div class="quarto-title-meta-heading">Auteur·rice</div>
+    <div class="quarto-title-meta-contents">
+             <p>denis G </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Date de publication</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">10 juin 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Le filtrage dans les écrans PMSISoft PSY comprend de 2 types de filtrage :</p>
+<ul>
+<li><strong>filtrage de périmètre</strong>, via une première ligne de filtres, permettant de filtrer sur les finess géographique, les années, les mois, les UM, les formes d’activité, les numéros de secteur ou des dispostif intersectoriel, les modes légaux de soins et, spécifiquement en ambulatoire, les natures, lieux, modalités de réalisation des actes et les catégories professionnelles de l’intervenant</li>
+</ul>
+<p>Le filtrage de périmètre est disponible en accès Standard.</p>
+<ul>
+<li><strong>filtrage par variable</strong>, via une seconde ligne de filtres, permettant de composer des requêtes à partir d’une sélection de variables propres à chaque écran, une série de verbes et le paramétrage éventuel de valeurs.</li>
+</ul>
+<p>Le filtrage par variable est disponible en accès Professionnel.</p>
+<p>En hospitalisation (complète ou à temps partiel), on a les 2 lignes de filtrages suivantes :</p>
+<p><img src="filtre_psy_hospitalisation_perimetre_variable_all.png" class="img-fluid"></p>
+<p>En ambulatoire, on a les 2 lignes de filtrages suivantes :</p>
+<p><img src="filtre_psy_ambulatoire_perimetre_variable_all.png" class="img-fluid"></p>
+<p>Quand au moins un filtrage a été sélectionné, le bouton <code>Filtrer</code> devient rouge</p>
+<p><img src="filtre_psy_hospitalisation_perimetre_variable_all_actif.png" class="img-fluid"></p>
+<p><img src="filtre_psy_ambulatoire_perimetre_variable_all_actif.png" class="img-fluid"></p>
+<p>Quand on clique sur le bouton <code>Reset</code>, tous les filtrages sont supprimés et l’écran revient dans son état par défaut.</p>
+</section>
+<section id="filtrage-en-hospitalisation" class="level2">
+<h2 class="anchored" data-anchor-id="filtrage-en-hospitalisation">Filtrage en hospitalisation</h2>
+<section id="sec-finess_geographique" class="level3">
+<h3 class="anchored" data-anchor-id="sec-finess_geographique">FINESS géographique</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_finess_geographique.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Par défaut, le filtre n’est pas actif : tous les FINESS géographique sont sélectionnés</p>
+<p>Possibilité de sélectionner un ou plusieurs FINESS géographiques</p>
+</div>
+</div>
+</section>
+<section id="sec-annee" class="level3">
+<h3 class="anchored" data-anchor-id="sec-annee">Année</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_year.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Par défaut, l’année en cours est sélectionnée</p>
+<p>Années disponibles : de 2020 à 2024</p>
+</div>
+</div>
+</section>
+<section id="sec-mois" class="level3">
+<h3 class="anchored" data-anchor-id="sec-mois">Mois</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_month.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Par défaut, le filtre n’est pas actif : tous les mois sont sélectionnés</p>
+<p>Possibilité de sélectionner plusieurs mois</p>
+</div>
+</div>
+</section>
+<section id="sec-um" class="level3">
+<h3 class="anchored" data-anchor-id="sec-um">UM</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_um_selected.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Par défaut, le filtre n’est pas actif : toutes les UM sont sélectionnées</p>
+<p>Possibilité de sélectionner plusieurs UM</p>
+<p>En accès Professionnel, possibilité d’importer une correspondance <code>no_um-um_libelle</code> permettant d’associer un libellé à chaque UM</p>
+</div>
+</div>
+</section>
+<section id="sec-forme_activite" class="level3">
+<h3 class="anchored" data-anchor-id="sec-forme_activite">Forme d’activité</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_psy_hospitalisation_perimetre_type_um_fa.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Accessible dans le méta-filtre de périmètre <code>Type UM</code></p>
+<p>Par défaut, le filtre n’est pas actif : toutes les formes d’activité sont sélectionnées</p>
+<p>Possibilité de sélectionner plusieurs formes d’activité</p>
+<p>Affichage des libellés associés aux codes des formes d’activité</p>
+</div>
+</div>
+</section>
+<section id="sec-no_secteur" class="level3">
+<h3 class="anchored" data-anchor-id="sec-no_secteur">No secteur</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_psy_hospitalisation_perimetre_type_um_no_secteur.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Accessible dans le méta-filtre de périmètre <code>Type UM</code></p>
+<p>Par défaut, le filtre n’est pas actif : tous les numéros de secteur ou de dispositif intersectoriel sont sélectionnés</p>
+<p>Possibilité de sélectionner plusieurs formes numéros de secteur</p>
+<p>Affichage des libellés associés aux numéros de secteur ou de dispositif intersectoriel</p>
+</div>
+</div>
+</section>
+<section id="sec-mode_legal_soins" class="level3">
+<h3 class="anchored" data-anchor-id="sec-mode_legal_soins">Mode légal de soins</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_psy_hospitalisation_perimetre_type_um_mode_legal_soins.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Accessible dans le méta-filtre de périmètre <code>Type UM</code></p>
+<p>Par défaut, le filtre n’est pas actif : tous les modes légaux de soins sont sélectionnés</p>
+<p>Possibilité de sélectionner plusieurs modes légaux de soins</p>
+<p>Affichage des libellés associés aux modes légaux de soins</p>
+</div>
+</div>
+</section>
+<section id="filtrage-par-variable" class="level3">
+<h3 class="anchored" data-anchor-id="filtrage-par-variable">Filtrage par variable</h3>
+<p>Un filtrage par variable comprend 3 informations : la variable choisie, le verbe à appliquer à la variable et une expression.</p>
+<p>Avec ces 3 informations, on compose une “phrase” (sujet + verbe + complément) correspondant au filtrage voulu.</p>
+<p>Prenons l’exemple de l’écran “Base des RPS” et considérons la sélection des RPS avec le DP dans la famille F32 “Episodes dépressifs”</p>
+<p><img src="filtre_psy_hospitalisation_variable_dp_debute_F32.png" class="img-fluid"></p>
+<p>On a donc sélectionné la variable <code>dp</code>, on a ensuite appliqué le verbe <code>Débute par</code> puis on a codé l’expression <code>F32</code>. En cliquant sur le bouton <code>Filtrer</code>, PMSISoft PSY sélectionne donc les RPS avec un DP dont le code CIM-10 débute par F32.</p>
+<p>Il est possible d’enrichir ce filtrage en ajoutant une seconde “phrase” liée à la première soit avec l’opérateur <code>ET</code></p>
+<p><img src="filtre_psy_hospitalisation_variable_dp_debute_F32_and_nb_da_supp_2.png" class="img-fluid"></p>
+<p>Dans cet exemple, on a sélectionné l’opérateur <code>ET</code> et ajouté la condition que le nombre de DA du RPS doit être supérieur ou égal à 2.</p>
+<p>Soit avec l’opérateur <code>OU</code></p>
+<p><img src="filtre_psy_hospitalisation_variable_dp_debute_F32_or_dp_debute_F33.png" class="img-fluid"><br>
+Dans cet exemple, on a sélectionné l’opérateur <code>OU</code> et ajouté la condition que le DP du RPS peut débuter aussi par F33 “Trouble dépressif récurrent”.</p>
+<p><strong>Choix des variables :</strong></p>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_psy_hospitalisation_variable_variable.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>La liste des variables est fonction de l’écran. Ici on a les variables de l’écran “Base des RPS”</p>
+<p>Les variables sont regroupées par famille cohérente. Ici “Séjour”, “Séquence” et “Patient”</p>
+<p>Les variables sont nommées de manière standardisée.</p>
+<p>Une variable relève d’un type parmi les 3 types : character, numérique, logique</p>
+<p>A chaque type de variable correspond automatiquement une liste de verbes possibles.</p>
+</div>
+</div>
+<p><strong>Choix des verbes de type character</strong></p>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_variable_verbe_character.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Quand une variable de type character est sélectionnée, PMSISoft affiche la liste des 8 verbes possibles associés à une telle variable.</p>
+<p>Après la sélection du verbe, l’utilisateur saisie dans le champ <code>Expression</code> la chaîne de caractères voulue.</p>
+</div>
+</div>
+<p><strong>Choix des verbes de type numérique</strong></p>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_variable_verbe_numeric.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Quand une variable de type numérique est sélectionnée, PMSISoft affiche la liste des 6 verbes possibles associés à une telle variable.</p>
+<p>Après la sélection du verbe, l’utilisateur saisie dans le champ <code>Expression</code> la valeur numérique voulue.</p>
+</div>
+</div>
+<p><strong>Choix des verbes de type logique</strong></p>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_variable_verbe_logical.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Quand une variable de type logique est sélectionnée, PMSISoft affiche la liste des 2 verbes possibles associés à une telle variable.</p>
+<p>Pour ces variables de type logique, le champ <code>Expression</code> n’est pas pris en compte.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="filtrage-en-ambulatoire" class="level2">
+<h2 class="anchored" data-anchor-id="filtrage-en-ambulatoire">Filtrage en ambulatoire</h2>
+<section id="finess-géographique" class="level3">
+<h3 class="anchored" data-anchor-id="finess-géographique">FINESS géographique</h3>
+<p>Voir <a href="#sec-finess_geographique" class="quarto-xref">Section&nbsp;2.1</a></p>
+</section>
+<section id="année" class="level3">
+<h3 class="anchored" data-anchor-id="année">Année</h3>
+<p>Voir <a href="#sec-annee" class="quarto-xref">Section&nbsp;2.2</a></p>
+</section>
+<section id="mois" class="level3">
+<h3 class="anchored" data-anchor-id="mois">Mois</h3>
+<p>Voir <a href="#sec-mois" class="quarto-xref">Section&nbsp;2.3</a></p>
+</section>
+<section id="um" class="level3">
+<h3 class="anchored" data-anchor-id="um">UM</h3>
+<p>Voir <a href="#sec-um" class="quarto-xref">Section&nbsp;2.4</a></p>
+</section>
+<section id="forme-dactivité" class="level3">
+<h3 class="anchored" data-anchor-id="forme-dactivité">Forme d’activité</h3>
+<p>Voir <a href="#sec-forme_activite" class="quarto-xref">Section&nbsp;2.5</a></p>
+</section>
+<section id="no-secteur" class="level3">
+<h3 class="anchored" data-anchor-id="no-secteur">No secteur</h3>
+<p>Voir <a href="#sec-no_secteur" class="quarto-xref">Section&nbsp;2.6</a></p>
+</section>
+<section id="mode-légal-de-soins" class="level3">
+<h3 class="anchored" data-anchor-id="mode-légal-de-soins">Mode légal de soins</h3>
+<p>Voir <a href="#sec-mode_legal_soins" class="quarto-xref">Section&nbsp;2.7</a></p>
+</section>
+<section id="nature-de-lacte" class="level3">
+<h3 class="anchored" data-anchor-id="nature-de-lacte">Nature de l’acte</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_psy_ambulatoire_perimetre_type_acte_nature_acte.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Accessible via le méta-filtre de périmètre <code>Type d'acte</code></p>
+<p>Par défaut, le filtre n’est pas actif : toutes les natures d’acte sont sélectionnées</p>
+<p>Possibilité de sélectionner plusieurs natures d’acte</p>
+<p>Affichage des libellés associés aux natures d’acte</p>
+</div>
+</div>
+</section>
+<section id="lieu-de-lacte" class="level3">
+<h3 class="anchored" data-anchor-id="lieu-de-lacte">Lieu de l’acte</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_psy_ambulatoire_perimetre_type_acte_lieu_acte.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Accessible via le méta-filtre de périmètre <code>Type d'acte</code></p>
+<p>Par défaut, le filtre n’est pas actif : tous les lieux d’acte sont sélectionnés</p>
+<p>Possibilité de sélectionner plusieurs lieux d’acte</p>
+<p>Affichage des libellés associés aux lieux d’acte</p>
+</div>
+</div>
+</section>
+<section id="modalité-de-réalisation-de-lacte" class="level3">
+<h3 class="anchored" data-anchor-id="modalité-de-réalisation-de-lacte">Modalité de réalisation de l’acte</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_psy_ambulatoire_perimetre_type_acte_mode_realisation_acte.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Accessible via le méta-filtre de périmètre <code>Type d'acte</code></p>
+<p>Par défaut, le filtre n’est pas actif : toutes les modalités de réalisation de l’acte sont sélectionnées</p>
+<p>Possibilité de sélectionner plusieurs modalités de réalisation de l’acte</p>
+<p>Affichage des libellés associés aux modalités de réalisation de l’acte</p>
+</div>
+</div>
+</section>
+<section id="catégorie-professionnelle-de-lintervenant" class="level3">
+<h3 class="anchored" data-anchor-id="catégorie-professionnelle-de-lintervenant">Catégorie professionnelle de l’intervenant</h3>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_psy_ambulatoire_perimetre_type_acte_categorie_intervenant_acte.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Filtre de périmètre</p>
+<p>Accessible via le méta-filtre de périmètre <code>Type d'acte</code></p>
+<p>Par défaut, le filtre n’est pas actif : toutes les catégories professionnelles de l’intervenant sont sélectionnées</p>
+<p>Possibilité de sélectionner plusieurs catégories professionnelles de l’intervenant</p>
+<p>Affichage des libellés associés aux catégories professionnelles de l’intervenant</p>
+</div>
+</div>
+</section>
+<section id="filtrage-par-variable-1" class="level3">
+<h3 class="anchored" data-anchor-id="filtrage-par-variable-1">Filtrage par variable</h3>
+<p>Un filtrage par variable comprend 3 informations : la variable choisie, le verbe à appliquer à la variable et une expression.</p>
+<p>Avec ces 3 informations, on compose une “phrase” (sujet + verbe + complément) correspondant au filtrage voulu.</p>
+<p>Prenons l’exemple de l’écran “Base des RAA” et considérons la sélection des RAA avec le DP dans la famille F25 “Troubles schizo-affectifs”</p>
+<p><img src="filtre_psy_ambulatoire_variable_dp_debute_F25.png" class="img-fluid"></p>
+<p>On a donc sélectionné la variable <code>dp</code>, on a ensuite appliqué le verbe <code>Débute par</code> puis on a codé l’expression <code>F25</code>. En cliquant sur le bouton <code>Filtrer</code>, PMSISoft PSY sélectionne donc les RPS avec un DP dont le code CIM-10 débute par F25.</p>
+<p>Il est possible d’enrichir ce filtrage en ajoutant une seconde “phrase” liée à la première soit avec l’opérateur <code>ET</code></p>
+<p><img src="filtre_psy_ambulatoire_variable_dp_debute_F25_and_nb_da_supp_2.png" class="img-fluid"></p>
+<p>Dans cet exemple, on a sélectionné l’opérateur <code>ET</code> et ajouté la condition que le nombre de DA du RAA doit être supérieur ou égal à 2.</p>
+<p>Soit avec l’opérateur <code>OU</code></p>
+<p><img src="filtre_psy_ambulatoire_variable_dp_debute_F25_or_dp_debute_F24.png" class="img-fluid"></p>
+<p>Dans cet exemple, on a sélectionné l’opérateur <code>OU</code> et ajouté la condition que le DP du RPS peut débuter aussi par F24 “Trouble délirant induit”.</p>
+<p><strong>Choix des variables :</strong></p>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_psy_ambulatoire_variable_variable.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>La liste des variables est fonction de l’écran. Ici on a les variables de l’écran “Base des RAA”</p>
+<p>Les variables sont regroupées par famille cohérente. Ici “RAA” et “Patient”</p>
+<p>Les variables sont nommées de manière standardisée.</p>
+<p>Une variable relève d’un type parmi les 3 types : character, numérique, logique</p>
+<p>A chaque type de variable correspond automatiquement une liste de verbes possibles.</p>
+</div>
+</div>
+<p><strong>Choix des verbes de type character</strong></p>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_variable_verbe_character.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Quand une variable de type character est sélectionnée, PMSISoft affiche la liste des 8 verbes possibles associés à une telle variable.</p>
+<p>Après la sélection du verbe, l’utilisateur saisie dans le champ <code>Expression</code> la chaîne de caractères voulue.</p>
+</div>
+</div>
+<p><strong>Choix des verbes de type numérique</strong></p>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_variable_verbe_numeric.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Quand une variable de type numérique est sélectionnée, PMSISoft affiche la liste des 6 verbes possibles associés à une telle variable.</p>
+<p>Après la sélection du verbe, l’utilisateur saisie dans le champ <code>Expression</code> la valeur numérique voulue.</p>
+</div>
+</div>
+<p><strong>Choix des verbes de type logique</strong></p>
+<div class="columns">
+<div class="column" style="width:23%;">
+<p><img src="filtre_variable_verbe_logical.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:75%;">
+<p>Quand une variable de type logique est sélectionnée, PMSISoft affiche la liste des 2 verbes possibles associés à une telle variable.</p>
+<p>Pour ces variables de type logique, le champ <code>Expression</code> n’est pas pris en compte.</p>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/www\.pmsisoft\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Blog codé avec <a href="https://quarto.org/">Quarto</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p><a href="../about.html">Mentions légales</a> | © Copyright 2023-2024 - DATAMIS</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

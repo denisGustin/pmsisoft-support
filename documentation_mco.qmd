@@ -1,0 +1,18 @@
+---
+title: "<span style='font-family: Boska; font-size: 2.75rem; font-weight: 800;'>Documentation MCO</span>"
+lang: fr
+listing:
+  type: default
+  contents: posts/mco/**/*.qmd
+  sort: "date desc"
+  date-format: full
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  fields: [date, title, categories]
+  feed: true
+toc: false
+---
+
+## Liste des posts PMSISoft MCO  
+

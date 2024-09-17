@@ -68,7 +68,7 @@ Le casemix est exportable en CSV.
 
 Variables supplémentaires exportées en **[P]** : liste des actes CSARR transcodés, caractère collectif ou plurofprofessionnel au sens CSAR  
 
-Une version PDF est disponible. [Exemple](https://www.pmsisoft.com/posts/smr/smr_csar_analyse/export_pdf_smr_csar_analyse_casemix.pdf){target="_blank"}  
+Une version PDF est disponible. [Exemple](https://github.com/denisGustin/pmsisoft-support/blob/main/posts/smr/smr_csar_analyse/export_pdf_smr_csar_analyse_casemix.pdf){target="_blank"}  
 
 ## Casemix Intervenant-CSAR   
 
@@ -80,7 +80,7 @@ En sélectionnant une ligne, accès à la liste des RHS concernés par au moins 
 
 Le casemix est exportable en CSV.  
 
-Une version PDF est disponible. [Exemple](https://www.pmsisoft.com/posts/smr/smr_csar_analyse/export_pdf_smr_csar_analyse_intervenant){target="_blank"}  
+Une version PDF est disponible. [Exemple](https://github.com/denisGustin/pmsisoft-support/blob/main/posts/smr/smr_csar_analyse/export_pdf_smr_csar_analyse_intervenant.pdf){target="_blank"}  
 
 ## Casemix acte CSAR exclusion  
 

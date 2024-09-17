@@ -1,0 +1,103 @@
+---
+title: "Casemix CSAR"
+description: |
+  Analyses CSAR - Casemix CSARR - Casemix Intervenant-CSARR - Exclusions inter-CSAR
+author: denis G
+date: "2024-09-16"
+categories: [SMR, CSAR]
+page-layout: full
+---
+
+## Introduction
+
+A partir de mars 2025, les établissements SMR pourront coder leur activité de RR via le nouveau référentiel CSAR qui remplacera l'actuelle CSARR.  
+[Guide de codage du CSAR (version provisoire) - ATIH](https://www.atih.sante.fr/simplification-du-csarr-guide-de-codage-csar-0){target="_blank"}  
+
+PMSISoft SMR transcode le codage CSARR en CSAR et l'analyse selon 3 approches :  
+- le casemix de l'activité RR vue en CSAR  
+- le casemix à double entrée Intervenant-CSAR  
+- le répérage des exclusions intra-CSAR  
+
+Sauf mention contraire, signalée par **[P]** (où P = accès Professionnel), ces fonctionnalités sont disponibles dans l'accès PMSISoft SMR Standard, gratuit, illimité dans le temps, ouvert à tout établissement SMR.  
+
+## Chemin de l'écran  
+
+**Codage CSARR - CSAR > Casemix CSAR**  
+
+## Filtrage  
+
+Filtres de périmètre :  
+- Année PMSI  
+- Mois PMSI  
+- UM  
+- Autorisations de l'établissement  
+- Type d'hospitalisation  
+- Classification des séjours et RHS (CM, GN, GR code, GL code, GME, sévérité)  
+
+Filtres par variables :  
+- nas  
+- no_sejour_smr  
+- mmp_sejour  
+- sejour_termine  
+- sejour_post_operatoire  
+- acte_csar_code  
+- acte_csar_libelle  
+- acte_csar_L1  
+- acte_csar_L2  
+- acte_csar_M1  
+- acte_csar_M2  
+- acte_csar_QM  
+- acte_csar_QI  
+- acte_csar_QF  
+- acte_csar_QS  
+- acte_csar_QQ  
+- acte_csar_QC  
+- sexe  
+- age  
+
+## Casemix CSAR   
+
+![](filtre_smr_csar_analyse_casemix.png)
+Pour chaque acte CSAR codé au moins une fois dans le périmètre sélectionné, PMSISoft SMR calcule les réalisations (en absolu et en relatif), les RHS (en absolu et en relatif), les séjours (en absolu et en relatif), la pondération (en absolu, en relatif et en moyenne) et le nombre d'actes CSARR différents transcodés dans l'acte CSAR de la ligne.  
+
+Le calcul des pondérations se fait sur la bases des pondérations CSARR sous-jacentes 2024. [^1]
+
+En sélectionnant une ligne, accès à la liste des RHS concernés par au moins un codage de l'acte CSAR **[P]**  
+
+Le casemix est exportable en CSV.  
+
+Variables supplémentaires exportées en **[P]** : liste des actes CSARR transcodés, caractère collectif ou plurofprofessionnel au sens CSAR  
+
+Une version PDF est disponible. [Exemple](https://www.pmsisoft.com/posts/smr/smr_csar_analyse/export_pdf_smr_csar_analyse_casemix.pdf){target="_blank"}  
+
+## Casemix Intervenant-CSAR   
+
+![](filtre_smr_csar_analyse_intervenant.png)
+
+Pour chaque couple (Intervenant, acte CSAR), PMSISoft SMR calcule les réalisations (en absolu et en relatif), les RHS (en absolu et en relatif), et les séjours (en absolu et en relatif).  
+
+En sélectionnant une ligne, accès à la liste des RHS concernés par au moins un codage de l'acte CSAR par l'intervenant **[P]**  
+
+Le casemix est exportable en CSV.  
+
+Une version PDF est disponible. [Exemple](https://www.pmsisoft.com/posts/smr/smr_csar_analyse/export_pdf_smr_csar_analyse_intervenant){target="_blank"}  
+
+## Casemix acte CSAR exclusion  
+
+![](filtre_smr_csar_analyse_exclusion.png)
+
+Sur la base du référentiel des exclusion intra-CSAR, PMSISoft SMR identifie les situations suivantes : "Pour une même date (au sens date de réalisation CSARR), dans un RHS donné, un acte CSAR est codé à la même date qu'un autre acte CSAR exclu par l'acte"  
+
+Souvent une exclusion entre 2 actes CSAR est symétrique (exemple ici dans le mini fake jeu de 3 situations avec les actes 07S07 et 07S15), mais ce n'est pas toujours le cas (exemple avec 02E06 qui exclut 07E04, mais pas l'inverse)
+
+Pour chaque couple (acte CSAR, acte CSAR exclu), PMSISoft SMR calcule les situations (en absolu et en relatif), les RHS (en absolu et en relatif), et les séjours (en absolu et en relatif). **[P]**  
+
+En sélectionnant une ligne, accès à la liste des RHS concernés **[P]**  
+
+Le casemix est exportable en CSV.  
+
+## Demande d'accès  
+
+Pour demander un accès **PMSISoft SMR Standard (gratuit, illimité dans le temps, ouvert à tout établissement SMR)**, nous [contacter](https://www.lespmsi.com/a-propos-2/#Formulaire_de_contact) (en sélectionnant l'objet "Demande accès PMSISoft Standard")  
+
+[^1]: le référentiel des pondérations CSAR 2025 est annoncée pour la fin d'année 2024 (information à fin juillet 2024)  

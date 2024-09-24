@@ -1,0 +1,89 @@
+---
+title: "Synthèse T2A MCO"
+description: |
+   Tableau des recettes T2A MCO comparées sur 2 années
+author: denis G
+date: "2024-09-23"
+categories: [MCO, Ecran, T2A]
+page-layout: full
+---
+
+## Introduction
+
+Cet écran traite les fichiers Visual Valo Séjours et RSS/RSA groupés pour produire un tableau d'analyse détaillée des recettes T2A MCO.  
+
+Pour chacune des 30 lignes possibles de recettes T2A, PMSISoft MCO calcule :  
+- le nombre d'unités (séjours, journées, actes) de la ligne  
+- le nombre de séjours concernés par au moins une unité  
+- le montant cumulé des recettes T2A en Base de Remboursement (BR)  
+- le montant cumulé des recettes T2A en Assurance Maladie (AM)  
+
+Les lignes de recettes sont regroupées en 5 familles cohérentes : "T2A GHS", "Suppléments", "Actes de dialyse en hospitalisation", "Autres", "MO, DMI, IVG, Transports"  
+
+PMSISoft MCO calcule pour chaque famille de recettes le cumul des lignes de recettes concernées.  
+
+PMSISoft MCO calcule le total des recettes BR et AM hors famille "MO, DMI, IVG, Transports" et avec toutes les familles de recettes.  
+
+![](synthese_recette_t2a_mco_mono_year.png)
+
+L'analyse peut être comparée sur un même périmètre entre 2 années (pas forcément consécutives).  
+
+Dans ce cas, PMSISoft MCO calcule, pour chacun des 4 axes d'analyses (unités, séjours, BR, AM), l'évolution absolue et l'évolution relative de chaque ligne de recettes et des familles de recettes.  
+
+![](synthese_recette_t2a_mco.png)
+
+
+Sauf mention contraire, signalée par **[P]** (où P = accès Professionnel), les calculs et fonctionnalités de l'écran sont disponibles dans l'accès PMSISoft MCO Standard, gratuit, illimité dans le temps, ouvert à tout établissement MCO.  
+
+## Chemin de l'écran  
+
+**Activité MCO -> Synthèse T2A**  
+
+## Filtrage  
+
+Filtres de périmètre :  
+- Année   
+- Mois  
+- UM  
+- Type d'hospitalisation  
+- Autorisation  
+- Classification des séjours (CMD, sous-CMD, CMKZ, RGHM, GHM, Complexité, DA, GA, GP)  
+
+Filtres par variables : **[P]**  
+- nas  
+- no_rss  
+- nb_rum_sejour  
+- duree_sejour  
+- nb_seances_sejour  
+- mode_entree_sejour  
+- provenance_sejour  
+- mode_sortie_sejour  
+- destination_sejour  
+- conversion_hc_sejour  
+- raac_sejour  
+- non_programme_sejour  
+- dp_sejour  
+- dp_sejour_libelle  
+- dp_rum_sejour  
+- dr_sejour  
+- dr_sejour_libelle  
+- dr_rum_sejour  
+- 21 variables issues du Visual Valo Séjours (valo GHS, motif non valo, les suppléments, ...)  
+- t2a_sejour_ghs_br  
+- t2a_sejour_ghs_am  
+- t2a_unite_ghs_br  
+- t2a_unite_ghs_am  
+- t2a_unite_br  
+- t2a_unite_am  
+- sexe  
+- age  
+
+## Synthèse T2A    
+
+Les données sous-jacentes au tableau d'analyse sont exportables en csv.  
+
+Nous renvoyons au cahier des charges Visual Valo Séjours pour la définition des variables concernées.  
+
+## Demande d'accès  
+
+Pour demander un accès **PMSISoft MCO Standard (gratuit, illimité dans le temps, ouvert à tout établissement MCO)**, nous [contacter](https://www.lespmsi.com/a-propos-2/#Formulaire_de_contact) (en sélectionnant l'objet "Demande accès PMSISoft Standard")  

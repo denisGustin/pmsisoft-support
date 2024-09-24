@@ -10,7 +10,94 @@
 <atom:link href="https://www.pmsisoft.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>Documentation et support du logiciel PMSISoft, analyse PMSI MCO, SMR, PSY et HAD</description>
 <generator>quarto-1.4.551</generator>
-<lastBuildDate>Sun, 15 Sep 2024 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 22 Sep 2024 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Synthèse T2A MCO</title>
+  <dc:creator>denis G</dc:creator>
+  <link>https://www.pmsisoft.com/posts/mco/mco_ecran_synthese_t2a/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Cet écran traite les fichiers Visual Valo Séjours et RSS/RSA groupés pour produire un tableau d’analyse détaillée des recettes T2A MCO.</p>
+<p>Pour chacune des 30 lignes possibles de recettes T2A, PMSISoft MCO calcule :<br>
+- le nombre d’unités (séjours, journées, actes) de la ligne<br>
+- le nombre de séjours concernés par au moins une unité<br>
+- le montant cumulé des recettes T2A en Base de Remboursement (BR)<br>
+- le montant cumulé des recettes T2A en Assurance Maladie (AM)</p>
+<p>Les lignes de recettes sont regroupées en 5 familles cohérentes : “T2A GHS”, “Suppléments”, “Actes de dialyse en hospitalisation”, “Autres”, “MO, DMI, IVG, Transports”</p>
+<p>PMSISoft MCO calcule pour chaque famille de recettes le cumul des lignes de recettes concernées.</p>
+<p>PMSISoft MCO calcule le total des recettes BR et AM hors famille “MO, DMI, IVG, Transports” et avec toutes les familles de recettes.</p>
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_synthese_t2a/synthese_recette_t2a_mco_mono_year.png" class="img-fluid"></p>
+<p>L’analyse peut être comparée sur un même périmètre entre 2 années (pas forcément consécutives).</p>
+<p>Dans ce cas, PMSISoft MCO calcule, pour chacun des 4 axes d’analyses (unités, séjours, BR, AM), l’évolution absolue et l’évolution relative de chaque ligne de recettes et des familles de recettes.</p>
+<p><img src="https://www.pmsisoft.com/posts/mco/mco_ecran_synthese_t2a/synthese_recette_t2a_mco.png" class="img-fluid"></p>
+<p>Sauf mention contraire, signalée par <strong>[P]</strong> (où P = accès Professionnel), les calculs et fonctionnalités de l’écran sont disponibles dans l’accès PMSISoft MCO Standard, gratuit, illimité dans le temps, ouvert à tout établissement MCO.</p>
+</section>
+<section id="chemin-de-lécran" class="level2">
+<h2 class="anchored" data-anchor-id="chemin-de-lécran">Chemin de l’écran</h2>
+<p><strong>Activité MCO -&gt; Synthèse T2A</strong></p>
+</section>
+<section id="filtrage" class="level2">
+<h2 class="anchored" data-anchor-id="filtrage">Filtrage</h2>
+<p>Filtres de périmètre :<br>
+- Année<br>
+- Mois<br>
+- UM<br>
+- Type d’hospitalisation<br>
+- Autorisation<br>
+- Classification des séjours (CMD, sous-CMD, CMKZ, RGHM, GHM, Complexité, DA, GA, GP)</p>
+<p>Filtres par variables : <strong>[P]</strong><br>
+- nas<br>
+- no_rss<br>
+- nb_rum_sejour<br>
+- duree_sejour<br>
+- nb_seances_sejour<br>
+- mode_entree_sejour<br>
+- provenance_sejour<br>
+- mode_sortie_sejour<br>
+- destination_sejour<br>
+- conversion_hc_sejour<br>
+- raac_sejour<br>
+- non_programme_sejour<br>
+- dp_sejour<br>
+- dp_sejour_libelle<br>
+- dp_rum_sejour<br>
+- dr_sejour<br>
+- dr_sejour_libelle<br>
+- dr_rum_sejour<br>
+- 21 variables issues du Visual Valo Séjours (valo GHS, motif non valo, les suppléments, …)<br>
+- t2a_sejour_ghs_br<br>
+- t2a_sejour_ghs_am<br>
+- t2a_unite_ghs_br<br>
+- t2a_unite_ghs_am<br>
+- t2a_unite_br<br>
+- t2a_unite_am<br>
+- sexe<br>
+- age</p>
+</section>
+<section id="synthèse-t2a" class="level2">
+<h2 class="anchored" data-anchor-id="synthèse-t2a">Synthèse T2A</h2>
+<p>Les données sous-jacentes au tableau d’analyse sont exportables en csv.</p>
+<p>Nous renvoyons au cahier des charges Visual Valo Séjours pour la définition des variables concernées.</p>
+</section>
+<section id="demande-daccès" class="level2">
+<h2 class="anchored" data-anchor-id="demande-daccès">Demande d’accès</h2>
+<p>Pour demander un accès <strong>PMSISoft MCO Standard (gratuit, illimité dans le temps, ouvert à tout établissement MCO)</strong>, nous <a href="https://www.lespmsi.com/a-propos-2/#Formulaire_de_contact">contacter</a> (en sélectionnant l’objet “Demande accès PMSISoft Standard”)</p>
+
+
+</section>
+
+ ]]></description>
+  <category>MCO</category>
+  <category>Ecran</category>
+  <category>T2A</category>
+  <guid>https://www.pmsisoft.com/posts/mco/mco_ecran_synthese_t2a/</guid>
+  <pubDate>Sun, 22 Sep 2024 22:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Casemix CSAR</title>
   <dc:creator>denis G</dc:creator>

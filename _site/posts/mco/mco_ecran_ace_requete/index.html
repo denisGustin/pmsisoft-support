@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="denis G">
-<meta name="description" content="Fonctionnalités du simulateur de recettes d’activité SMR HC par séjour et journée de présence de PMSISoft">
+<meta name="description" content="Requêtes de simulation de valorisation et contrôles qualité ACE MCO">
 
-<title>Documentation PMSISoft - Simulation recettes activité SMR</title>
+<title>Documentation PMSISoft - ACE MCO Requête</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -132,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Simulation recettes activité SMR</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">ACE MCO Requête</li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Basculer la barre latérale" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -169,15 +169,24 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#fonctionnalités" id="toc-fonctionnalités" class="nav-link" data-scroll-target="#fonctionnalités">Fonctionnalités</a></li>
-  <li><a href="#simulateur-de-recettes-dactivités-hc" id="toc-simulateur-de-recettes-dactivités-hc" class="nav-link" data-scroll-target="#simulateur-de-recettes-dactivités-hc">Simulateur de recettes d’activités HC</a>
+  <li><a href="#chemin-de-lécran" id="toc-chemin-de-lécran" class="nav-link" data-scroll-target="#chemin-de-lécran">Chemin de l’écran</a></li>
+  <li><a href="#simulation-valorisation" id="toc-simulation-valorisation" class="nav-link" data-scroll-target="#simulation-valorisation">Simulation valorisation</a>
   <ul class="collapse">
-  <li><a href="#créer-une-simulation2" id="toc-créer-une-simulation2" class="nav-link" data-scroll-target="#créer-une-simulation2">Créer une simulation</a></li>
-  <li><a href="#résultats-de-simulation" id="toc-résultats-de-simulation" class="nav-link" data-scroll-target="#résultats-de-simulation">Résultats de simulation</a></li>
-  <li><a href="#exports" id="toc-exports" class="nav-link" data-scroll-target="#exports">Exports</a></li>
+  <li><a href="#tableau" id="toc-tableau" class="nav-link" data-scroll-target="#tableau">Tableau</a></li>
+  <li><a href="#export" id="toc-export" class="nav-link" data-scroll-target="#export">Export</a></li>
   </ul></li>
-  <li><a href="#pour-aller-plus-loin" id="toc-pour-aller-plus-loin" class="nav-link" data-scroll-target="#pour-aller-plus-loin">Pour aller plus loin</a></li>
-  <li><a href="#accès" id="toc-accès" class="nav-link" data-scroll-target="#accès">Accès</a></li>
+  <li><a href="#contrôles-qualité" id="toc-contrôles-qualité" class="nav-link" data-scroll-target="#contrôles-qualité">Contrôles qualité</a>
+  <ul class="collapse">
+  <li><a href="#tableau-1" id="toc-tableau-1" class="nav-link" data-scroll-target="#tableau-1">Tableau</a></li>
+  <li><a href="#requêtes-cq" id="toc-requêtes-cq" class="nav-link" data-scroll-target="#requêtes-cq">Requêtes CQ</a></li>
+  <li><a href="#export-1" id="toc-export-1" class="nav-link" data-scroll-target="#export-1">Export</a></li>
+  </ul></li>
+  <li><a href="#filtrage" id="toc-filtrage" class="nav-link" data-scroll-target="#filtrage">Filtrage</a>
+  <ul class="collapse">
+  <li><a href="#filtrage-de-périmètre" id="toc-filtrage-de-périmètre" class="nav-link" data-scroll-target="#filtrage-de-périmètre">Filtrage de périmètre</a></li>
+  <li><a href="#filtrage-par-variable" id="toc-filtrage-par-variable" class="nav-link" data-scroll-target="#filtrage-par-variable">Filtrage par variable</a></li>
+  </ul></li>
+  <li><a href="#demande-daccès" id="toc-demande-daccès" class="nav-link" data-scroll-target="#demande-daccès">Demande d’accès</a></li>
   </ul>
 </nav>
 </nav>
@@ -190,16 +199,17 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Simulation recettes activité SMR</h1>
+<h1 class="title">ACE MCO Requête</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">SMR</div>
-    <div class="quarto-category">Recette activité SMR</div>
+    <div class="quarto-category">MCO</div>
+    <div class="quarto-category">Ecran</div>
+    <div class="quarto-category">ACE</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    <p>Fonctionnalités du simulateur de recettes d’activité SMR HC par séjour et journée de présence de PMSISoft</p>
+    <p>Requêtes de simulation de valorisation et contrôles qualité ACE MCO</p>
   </div>
 </div>
 
@@ -216,7 +226,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Date de publication</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">31 janvier 2024</p>
+      <p class="date">30 avril 2025</p>
     </div>
   </div>
   
@@ -230,162 +240,351 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Depuis le 1er janvier 2024, les établissements SMR voient leur activité classée via le modèle cible de la réforme de financement du SMR.</p>
-<p>Afin d’aider ces établissements à comprendre et simuler leurs recettes d’activité, nous avons développé un simulateur de comparaison de recettes d’activité par séjour et journée de présence en hospitalisation complète.</p>
-<p>Pour un groupe nosologique et une plage de journées de présence donnés, l’utilisateur choisit la position qu’il souhaite comparer (groupe de réadaptation, groupe de lourdeur ou sévérité) et filtre les 2 autres positions : le simulateur calcule alors, sur la base des règles de classification GME-GMT 2024 et des tarifs ex-DGF ou ex-OQN, les recettes d’activité cumulée du séjour et les recettes d’activité par journée de présence pour chacun des GMT sélectionnés.</p>
-<p>Les résultats sont présentés sous 3 formats : graphiques, tableau, exports (csv, json, png).</p>
-<p>La manipulation et l’exploitation des résultats du simulateur supposent la connaissance des principales règles de classification des séjours en PMSI SMR.</p>
+<p>Cet écran propose 2 listes de requêtes sur les ACE MCO : 30 requêtes dites de Simulation valorisation et 10 requêtes de Contrôles Qualité (CQ).</p>
+<p>Les requêtes Simulation valorisation ont pour principal objet de repérer les situations de sous-facturation dans l’établissement en FIDES (via filtrage par semaine) ou pas.</p>
+<p>Les requêtes CQ ont un double objectifs : repérer avant envoi des lots de facturation les situations de rejets (et ainsi faire baisser le taux de rejets des factures ACE de létablissement) et améliorer la qualité et l’exhaustivité du codage des ACE.</p>
+<p>Les CQ gérés à ce jour par les logiciels de production (exemple : présence d’un codage “âge urgence” en FU pour tout passage urgence) n’ont pas été développés ici, car sans intérêt. De nombreux CQ peuvent par ailleurs être requêtés via les 2 écrans “Base des ACE” et “Casemix ACE”.</p>
+<p>Les requêtes sont conçues et maintenues à dire d’expert, sur la base du fichier des RSF-ACE, des référentiels PMSI (NGAP, CCAM AMELI, NABM, …) et des algorithmes développés et maintenus par PMSISoft.</p>
+<p>La liste des requêtes a vocation à évoluer régulièrement en fonction des évolutions réglementaires, des retours et demandes des établissements.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Application des requêtes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>PMSISoft propose et calcule des algorithmes d’analyses PMSI, conçus à dire d’expert sur la base des cahiers des charges et des référentiels du PMSI. Ces algorithmes produisent des requêtes identifiées et documentées.</p>
+<p>Il est de la seule responsabilité de l’établissement de juger de l’opportunité et de la cohérence d’appliquer les résultats de ces requêtes au redressement des données de codage de l’établissement.</p>
+</div>
+</div>
 </section>
-<section id="fonctionnalités" class="level2">
-<h2 class="anchored" data-anchor-id="fonctionnalités">Fonctionnalités</h2>
+<section id="chemin-de-lécran" class="level2">
+<h2 class="anchored" data-anchor-id="chemin-de-lécran">Chemin de l’écran</h2>
+<p>ACE MCO -&gt; Requêtes ACE</p>
+</section>
+<section id="simulation-valorisation" class="level2">
+<h2 class="anchored" data-anchor-id="simulation-valorisation">Simulation valorisation</h2>
+<section id="tableau" class="level3">
+<h3 class="anchored" data-anchor-id="tableau">Tableau</h3>
+<p>Chaque requête est affichée avec son intitulé, sa famille (= le référentiel principal de la requête), le nomnbre cumulé d’ACE concerné par la requête et le cumuml des simulations valorisation de la requête.</p>
+<p>Tri descendant sur la colonne “Simulation valorisation”</p>
+<p>Exemple (fictif) de tableau des requêtes Simulation valorisation en accès Standard.</p>
+<p><img src="mco_ace_requete_simulation_table.png" class="img-fluid"></p>
+<p>Une requête :</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+forgot_mop
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Objectif : repérer les codages NGAP justifiant d’une MOP (Majoration personnes âgées) sans MOP codée.</p>
+<p>Algorithme : pour chaque entrée et chaque codage NGAP, (age &gt;= 80 ans) &amp; (codage NGAP dans la liste des codages éligibles MOP) &amp; (MOP non codée)</p>
+</div>
+</div>
+<p>Une autre requête :</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+forgot_ccam_modificateur_z
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Objectif : repérer les actes CCAM éligibles au modificateur Z (Majoration du tarif pour acte de radiographie réalisé par un radiologue) sans modificateur Z codé.</p>
+<p>Algorithme : pour chaque entrée et chaque acte CCAM, (acte CCAM éligible au modificateur Z) &amp; (tous les actes CCAM ADI de l’entrée codés avec la spécialité exécutant Radiologue) <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> &amp; (modificateur Z non codé).</p>
+<p>Calcul simulation valorisation par situation : 15,9% du prix unitaire de l’acte CCAM repéré.</p>
+</div>
+</div>
+</section>
+<section id="export" class="level3">
+<h3 class="anchored" data-anchor-id="export">Export</h3>
+<p>Via le bouton “Télécharger (csv)”, export de toutes les situations correspondant aux requêtes de Simulation valorisation.</p>
+<p>Pour l’exemple (fictif) ci-dessus, l’export comprendrait donc 515 lignes, dont 306 lignes pour les 306 lignes de la 1ere requête, etc…</p>
+<p>Chaque ligne est documentée via 8 colonnes :</p>
 <ul>
-<li>Classification en GME et GMT, à partir d’une grille minimale optimisée de saisie d’un séjour virtuel, selon la classification 2024 <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a><br>
-</li>
-<li>Calcul des recettes d’activité cumulées du séjour pour chaque GMT sélectionné<br>
-</li>
-<li>Calcul des recettes d’activité par journée de présence pour chaque GMT sélectionné<br>
-</li>
-<li>Tarifs ex-DGF ou ex-OQN selon l’établissement<br>
-</li>
-<li>Choix de la plage de journées de présence entre 0 JP et 300 JP<br>
-</li>
-<li>Graphique des recettes d’activité cumulée pour chaque GMT sélectionné<br>
-</li>
-<li>Graphique des recettes d’activité par journée de présence pour chaque GMT sélectionné<br>
-</li>
-<li>Tableau des recettes d’activité par journée pour chaque GMT sélectionné<br>
-</li>
-<li>Dans le tableau des recettes d’activité, identification via un code couleur des différentes zones forfaitaires et des journées post 90 JP<br>
-</li>
-<li>Dans le tableau, typage des plages de JP (bb_inf, tzf1, tzf2, tzf3, bh_supp_tzf31, bh_supp_tzf3, post_90_jp)<br>
-</li>
-<li>Assistance à la saisie en GN, GR, et GL<br>
-</li>
-<li>Export png des graphiques<br>
-</li>
-<li>Export csv du tableau des recettes d’activité par journée<br>
-</li>
-<li>Export JSON du tableau des recettes d’activité par journée<br>
-</li>
-<li>Gestion des erreurs de saisie<br>
-</li>
-<li>Hébergement en Hébergement de Santé Certifié (HDS) au <a href="https://www.mipih.fr/hebergement-infogerance" target="_blank">MIPIH</a></li>
+<li><p><code>finess_geographique</code></p></li>
+<li><p><code>no_entree</code></p></li>
+<li><p><code>no_ipp</code></p></li>
+<li><p><code>information</code></p></li>
 </ul>
+<p>Information complémentaire liée à la requête.</p>
+<p>Exemples :<br>
+Pour la requête <code>forgot_mop</code>, <code>information</code> est l’âge de l’entrée sélectionnée.<br>
+Pour la requête <code>forgot_ccam_modificateur_z</code>, <code>information</code> est le ou les codes CCAM AMELI de l’entrée sélectionnée qui supposent un modificateur Z non codé.</p>
+<ul>
+<li><code>analyse</code></li>
+</ul>
+<p>L’intitulé de la requête.</p>
+<p>Exemples : <code>forgot_mop</code>, <code>forgot_ccam_modificateur_z</code>, …</p>
+<ul>
+<li><code>famille</code></li>
+</ul>
+<p>Le référentiel principal concerné par la requête.</p>
+<p>Exemples : <code>ngap</code>pour la requête <code>forgot_mop</code>, <code>ccam</code> pour la requête <code>forgot_ccam_modificateur_z</code>, …</p>
+<ul>
+<li><code>nb</code></li>
+</ul>
+<p>Le nombre de codages concernés par la requête pour l’entrée sélectionnée</p>
+<ul>
+<li><code>simulation_valorisation</code></li>
+</ul>
+<p>Sur la base du tarif actif à ce jour du codage attendu non codé ou mal codé, calcul d’une simulation du gain de recettes brut pour l’établissement.</p>
+<p>Exemple pour la requête <code>forgot_mop</code> : 5€ pour chaque MOP attendu non codé</p>
 </section>
-<section id="simulateur-de-recettes-dactivités-hc" class="level2">
-<h2 class="anchored" data-anchor-id="simulateur-de-recettes-dactivités-hc">Simulateur de recettes d’activités HC</h2>
-<section id="créer-une-simulation2" class="level3">
-<h3 class="anchored" data-anchor-id="créer-une-simulation2">Créer une simulation<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h3>
-<section id="au-départ" class="level4">
-<h4 class="anchored" data-anchor-id="au-départ">Au départ</h4>
+</section>
+<section id="contrôles-qualité" class="level2">
+<h2 class="anchored" data-anchor-id="contrôles-qualité">Contrôles qualité</h2>
+<section id="tableau-1" class="level3">
+<h3 class="anchored" data-anchor-id="tableau-1">Tableau</h3>
+<p>Chaque requête CQ est affichée avec son intitulé, sa famille (= le référentiel principal de la requête) et le nomnbre cumulé d’ACE concerné par la requête.</p>
+<p>Tri descendant sur le nombre d’ACE</p>
+<p>Exemple (fictif) d’un tableau des requêtes CQ</p>
+<p><img src="mco_ace_requete_cq_table.png" class="img-fluid"></p>
+</section>
+<section id="requêtes-cq" class="level3">
+<h3 class="anchored" data-anchor-id="requêtes-cq">Requêtes CQ</h3>
+<p>Pour chaque requête CQ, documentation simplifiée de l’algorithme.</p>
+<p>On raisonne par entrée pour chacune de ces requêtes CQ.</p>
+<p>Nous renvoyons aux cahiers de charges et textes officiels pour les sous-jacents définitionnels.</p>
+<p>Certaines de ces requêtes CQ correspondent à des motifs de rejets des factures des entrées concernées.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+cq_psc_s_enfant
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>(age &lt; 16 ans) &amp; (indicateur_parcours_soins == “S”)</p>
+<p>S = Accès aux soins hors parcours</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+cq_atu_gynecologie_alone
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>CQ OVALIDE 2.Q.FAC - Tableau D</p>
+<p>(codage ligne b ATU) &amp; (pas de codage NGAP associé) é (pas de codage CCAM associé)</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+cq_ssn_sas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Possiblement codage SAS (supplément “avis spécialiste aux urgences”) en nuit profonde (22h-8h) sans codage SSN (supplément nuit “avis spécialiste et imagerie”) associé <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>(codage SUN) &amp; (codage SAS) &amp; !(codage SSN) &amp; !(codage SSF) &amp; !(codage SIC) &amp; !(codage SIM)</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+cq_ssn_sim
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Possiblement codage SIM (Supplément d’imagerie conventionnelle pour prise en charge complète au sein d’une structure des urgences 1) en nuit profonde (22h-8h) sans codage SSN (supplément nuit “avis spécialiste et imagerie”) associé <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p>(codage SUN) &amp; !(codage SAS) &amp; !(codage SSN) &amp; !(codage SSF) &amp; !(codage SIC) &amp; (codage SIM)</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+cq_ssn_sic
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Possiblement codage SIM ( Supplément d’imagerie en coupe pour prise en charge complète au sein d’une structure des urgences 2) en nuit profonde (22h-8h) sans codage SSN (supplément nuit “avis spécialiste et imagerie”) associé <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>(codage SUN) &amp; !(codage SAS) &amp; !(codage SSN) &amp; !(codage SSF) &amp; (codage SIC) &amp; !(codage SIM)</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+cq_su2_no_ccam
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>SU2 = Supplément prise en charge spécifique CCMU 2 +</p>
+<p>(codage SU2) &amp; (aucun acte CCAM autorisant SU2)</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+cq_acte_ccam_atypique
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>CQ OVALIDE 2.Q.AAE</p>
+<p>(codage CCAM avec ATEXT == “1”)</p>
+<p>ATEXT = variable OVALIDE CCAMINFO</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+cq_acte_ccam_effectif_atypique
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>CQ OVALIDE 2.Q.NAAE</p>
+<p>(nombre acte CCAM &gt; NBEXTAT)</p>
+<p>NBEXTAT = variable OVALIDE CCAMINFO</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+cq_nabm_nb_supp_ngap_b_nb
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>CQ OVALIDE 2.Q.CNABM</p>
+<p>(nombre lignes L &gt; nombre ligne B)</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+cq_nabm_incompatibilite
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>(couple codage NABM incompatible)</p>
+<p>Via le référentiel des actes NABM incompatibles.</p>
+</div>
+</div>
+</section>
+<section id="export-1" class="level3">
+<h3 class="anchored" data-anchor-id="export-1">Export</h3>
+<p>Via le bouton “Télécharger (csv)”, export de toutes les situations correspondant aux requêtes de Contrôles Qualité.</p>
+<p>Pour l’exemple (fictif) ci-dessus, l’export comprendrait donc 428 lignes, dont 200 lignes pour la requête <code>cq_nabm_nb_supp_ngap_b_nb</code>, …</p>
+<p>Chaque ligne est documentée via 7 colonnes :</p>
+<ul>
+<li><p><code>finess_geographique</code></p></li>
+<li><p><code>no_entree</code></p></li>
+<li><p><code>no_ipp</code></p></li>
+<li><p><code>information</code></p></li>
+</ul>
+<p>Information complémentaire liée à la requête.</p>
+<p>Exemples :<br>
+Pour la requête <code>cq_acte_ccam_atypique</code>, <code>information</code> est le code CCAM.<br>
+Pour la requête <code>cq_nabm_incompatibilite</code>, <code>information</code> est le couple de code NABM incompatible</p>
+<ul>
+<li><code>analyse</code></li>
+</ul>
+<p>L’intitulé de la requête.</p>
+<p>Exemples : <code>cq_psc_s_enfant</code>, <code>cq_nabm_incompatibilite</code>, …</p>
+<ul>
+<li><code>famille</code></li>
+</ul>
+<p>Le référentiel principal concerné par la requête.</p>
+<p>Exemples : <code>nabm</code>pour la requête <code>cq_nabm_incompatibilite</code>, <code>ccam</code> pour la requête <code>cq_acte_ccam_atypique</code>, …</p>
+<ul>
+<li><code>nb</code></li>
+</ul>
+<p>Le nombre de codages concernés par la requête pour l’entrée sélectionnée</p>
+</section>
+</section>
+<section id="filtrage" class="level2">
+<h2 class="anchored" data-anchor-id="filtrage">Filtrage</h2>
+<p>Le filtrage des 2 analyses (Simulation valorisation et Contrôles Qualité) se fait, à partir du fichier des RSF-ACE, via 2 lignes de filtres.</p>
+<p>La première ligne correspond au <code>filtrage de périmètre</code> et la seconde ligne au <code>filtrage par variable</code></p>
+<p><img src="mco_ace_requete_filtre.png" class="img-fluid"></p>
+<section id="filtrage-de-périmètre" class="level3">
+<h3 class="anchored" data-anchor-id="filtrage-de-périmètre">Filtrage de périmètre</h3>
+<p>Le <code>filtrage de périmètre</code> comprend 4 filtres.</p>
+<ol type="1">
+<li>Filtre “FINESS géographique”</li>
+</ol>
+<p>Sélection d’un ou plusieurs FINESS géographique liés au FINESS ePMSI de l’établissement.</p>
+<p>Par défaut, toutes les lignes du fichier RSF-ACE sont prises en compte.</p>
+<ol start="2" type="1">
+<li>Filtre “Année”</li>
+</ol>
+<p>Sélection d’une année d’import, à partir de 2022.</p>
+<ol start="3" type="1">
+<li>Filtre “Semaine”</li>
+</ol>
 <div class="columns">
-<div class="column" style="width:58%;">
-<p><img src="ecran_gme_comparaison_vide.png" class="img-fluid"></p>
+<div class="column" style="width:23%;">
+<p><img src="mco_ace_requete_filtre_week.png" class="img-fluid"></p>
 </div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:40%;">
-<p>A l’ouverture de l’écran, aucun GN n’est sélectionné.</p>
-<p>La première étape va donc consister à sélectionner le GN sur lequel on souhaite travailler.</p>
+</div><div class="column" style="width:75%;">
+<p>Sélection d’une ou plusieurs semaines sur la base de la date de soins (lignes en C, B), de la date de début de séjour (lignes en H, en P),de la date de l’acte (lignes en M, L), de la date de sortie (lignes en A).</p>
+<p>Les semaines sont les semaines ISO-8601 (semaines du lundi au dimanche) de l’année sélectionnée.</p>
 </div>
 </div>
+<ol start="4" type="1">
+<li>Filtre “Mensuel”</li>
+</ol>
+<p>Sélection d’un ou plusieurs mois sur la base des dates des différentes lignes (voir Filtre “Semaine”).</p>
+<p>Les mois sont les mois civils.</p>
+<p>Ces 4 filtres de périmètre sont disponibles en accès Standard.</p>
 </section>
-<section id="choix-du-gn" class="level4">
-<h4 class="anchored" data-anchor-id="choix-du-gn">Choix du GN</h4>
-<div class="columns">
-<div class="column" style="width:58%;">
-<p><img src="ecran_gme_comparaison_choix_gn.png" class="img-fluid"></p>
-</div><div class="column" style="width:2%;">
-
-</div><div class="column" style="width:40%;">
-<p>Dans le filtre GN, on sélectionne un GN soit directement, soit via l’assistant en saisissant directement le code GN.</p>
-</div>
-</div>
-</section>
-<section id="filtres-gr-gl-et-sévérité" class="level4">
-<h4 class="anchored" data-anchor-id="filtres-gr-gl-et-sévérité">Filtres GR, GL et sévérité</h4>
-<div class="columns">
-<div class="column" style="width:58%;">
-<p><img src="ecran_gme_comparaison_0841_filtre_gr.png" class="img-fluid"></p>
-<p><img src="ecran_gme_comparaison_0841_filtre_gl.png" class="img-fluid"> <img src="ecran_gme_comparaison_0841_filtre_severite.png" class="img-fluid"></p>
-</div><div class="column" style="width:2%;">
-
-</div><div class="column" style="width:40%;">
-<p>Une fois le filtre GN sélectionné (ici 0841), on sélectionne 2 parmi les 3 filtres GR code (groupe de réadaptation), GL code (groupe de lourdeur) ou sévérité.</p>
-</div>
-</div>
-</section>
-<section id="filtrage-gr-gl-sévérité" class="level4">
-<h4 class="anchored" data-anchor-id="filtrage-gr-gl-sévérité">Filtrage (GR, GL, sévérité)</h4>
-<div class="columns">
-<div class="column" style="width:58%;">
-<p><img src="ecran_gme_comparaison_0841SX1_filtre.png" class="img-fluid"></p>
-</div><div class="column" style="width:2%;">
-
-</div><div class="column" style="width:40%;">
-<p>Une fois, le GN sélectionné, parmi les 3 filtres GR code, Gl code et sévérité, <strong>on laisse vierge le filtre sur lequel on souhaite comparer les GME-GMT et on sélectionne la valeur voulue pour chacun des 2 autres filtres.</strong></p>
-<p>Ici, par exemple, après avoir sélectionné le GN 0841, on souhaite comparer les recettes d’activité des différents GME 0841Sx1 (donc 0841S<strong>A</strong>1, 0841S<strong>B</strong>1 et 0841S<strong>C</strong>1). On a donc sélectionné le GR code à S et la sévérité à 1 et on a laissé vierge le GL code.</p>
-<p>On n’a pas modifié la plage de journées de présence de 1 JP à 50 JP, mais on aurait pu la modifier.</p>
-<p>On clique sur le bouton “Filtrer” pour lancer les calculs.</p>
-</div>
-</div>
+<section id="filtrage-par-variable" class="level3">
+<h3 class="anchored" data-anchor-id="filtrage-par-variable">Filtrage par variable</h3>
+<p>Le filtrage par variable comprend 3 variables :</p>
+<p><img src="mco_ace_requete_filtre_variable.png" class="img-fluid"></p>
+<ul>
+<li><p><code>no_entree</code> pour sélectionner les lignes RSF-ACE correspondant au numéro d’entrée saisi.</p></li>
+<li><p><code>no_ipp</code> pour sélectionner les lignes RSF-ACE correspondant au numéro d’IPP saisi.</p></li>
+<li><p><code>is_urgence</code> pour sélectionner les lignes RSF-ACE liées via le numéro d’entrée à au moins un codage en FU (FU0, FU1, FU2, FU3, FU4) <a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p></li>
+</ul>
+<p>Exemple :<br>
+<img src="mco_ace_requete_filtre_is_urgence.png" class="img-fluid"></p>
+<p>Ce filtrage sélectionne toute l’activité ACE en urgence.</p>
+<p>Le filtrage par variable est disponible en accès Professionnel.</p>
 </section>
 </section>
-<section id="résultats-de-simulation" class="level3">
-<h3 class="anchored" data-anchor-id="résultats-de-simulation">Résultats de simulation</h3>
-<section id="simulation-sur-le-gl-code-0841sx1" class="level4">
-<h4 class="anchored" data-anchor-id="simulation-sur-le-gl-code-0841sx1">Simulation sur le GL code : 0841Sx1</h4>
-<p>Il s’agit de la simulation paramétrée ci-dessus.</p>
-<p><img src="ecran_gme_comparaison_0841Sx1.png" class="img-fluid"></p>
-<p>Le tableau de la simulation 0841Sx1 avec une plage de 86 à 100 JP</p>
-<p><img src="ecran_gme_comparaison_0841SX1_post_90.png" class="img-fluid"></p>
-</section>
-<section id="simulation-sur-le-gr-code-0127xc1" class="level4">
-<h4 class="anchored" data-anchor-id="simulation-sur-le-gr-code-0127xc1">Simulation sur le GR code : 0127xC1</h4>
-<p><img src="ecran_gme_comparaison_0127XC1.png" class="img-fluid"></p>
-</section>
-<section id="simulation-sur-la-sévérité-10uax" class="level4">
-<h4 class="anchored" data-anchor-id="simulation-sur-la-sévérité-10uax">Simulation sur la sévérité : 10UAx</h4>
-<p><img src="ecran_gme_comparaison_10UAX.png" class="img-fluid"></p>
-</section>
-</section>
-<section id="exports" class="level3">
-<h3 class="anchored" data-anchor-id="exports">Exports</h3>
-<div class="columns">
-<div class="column" style="width:58%;">
-<p><img src="ecran_gme_comparaison_download.png" class="img-fluid"></p>
-</div><div class="column" style="width:2%;">
-
-</div><div class="column" style="width:40%;">
-<p>En dessous du tableau, 3 lignes de liens permettent d’exporter les résulats :<br>
-# le tableau au format JSON ou csv<br>
-# le graphique des recettes d’activité cumulées au format png<br>
-# le graphique des recettes d’activité par JP au format png</p>
-</div>
-</div>
-</section>
-</section>
-<section id="pour-aller-plus-loin" class="level2">
-<h2 class="anchored" data-anchor-id="pour-aller-plus-loin">Pour aller plus loin</h2>
-<p>A chaque GME est associé son GMT et éventuellement le GMT hebdomadaire associé au GMT.<br>
-Pour le cas particulier du GN 2303 de SP, on force le GMT correspondant au GME hors lit ou unité SP</p>
-<div class="columns">
-<div class="column" style="width:58%;">
-<p><img src="ecran_gme_comparaison_0127XXX.png" class="img-fluid"></p>
-</div><div class="column" style="width:2%;">
-
-</div><div class="column" style="width:40%;">
-<p>Le choix initial d’un groupe nosologique met à jour automatiquement les valeurs éligibles en GR code, GL code et sévérité.</p>
-<p>Ici, par exemple, le choix du GN 0127 n’autorise que le choix d’un GL code à B ou C.</p>
-</div>
-</div>
-<p>La palette de couleur est un extrait de 3 couleurs de la très classique et optimisée <a href="https://siegal.bio.nyu.edu/color-palette/" target="_blank">palette Okabe &amp; Ito</a><br>
-Le bleu est pour la valeur la plus basse de la comparaison (exemple : sévérité 1, groupe de lourdeur A), l’orange est pour la valeur intermédiaire ou la plus haute s’il n’y a que 2 alternatives et le vert est pour la valeur la plus haute s’il y a 3 alternatives.</p>
-</section>
-<section id="accès" class="level2">
-<h2 class="anchored" data-anchor-id="accès">Accès</h2>
-<p>L’écran est accessible dans <strong>PMSISoft Standard SMR, gratuit, illimité dans le temps, ouvert à tout établissement SMR.</strong></p>
-<p>Chemin PMSISoft : Référentiels SMR &gt; GME HC Comparaison</p>
-<p>Pour demander un accès, nous <a href="https://www.lespmsi.com/a-propos-2/#Formulaire_de_contact">contacter</a> (en sélectionnant l’objet “Demande accès PMSISoft Standard” et en précisant à minima “Simulateur SMR” dans le message)</p>
+<section id="demande-daccès" class="level2">
+<h2 class="anchored" data-anchor-id="demande-daccès">Demande d’accès</h2>
+<p>Pour demander un accès <strong>PMSISoft ACE MCO Standard (gratuit, illimité dans le temps, ouvert à tout établissement MCO)</strong>, nous <a href="https://www.lespmsi.com/a-propos-2/#Formulaire_de_contact">contacter</a> (en sélectionnant l’objet “Demande accès PMSISoft Standard”)</p>
 
 
 </section>
@@ -394,8 +593,11 @@ Le bleu est pour la valeur la plus basse de la comparaison (exemple : sévérit�
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notes de bas de page</h2>
 
 <ol>
-<li id="fn1"><p>la grille minimale pour classer est composée de 5 variables : groupe nosologie, groupe de réadaptation, groupe de loudeur, sévérité, plage de journées de présence<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>les exemples de simulations sont calculés avec les tarifs ex-DGF<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>ce critère permet de s’assurer que l’acte CCAM éligible au modificateur Z est codé par un Radiologue.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>le RSF-ACE ne permet toutefois pas de repérer si le SAS, le SIC ou le SIM a été réalisé avant ou après 8h. A vérifier, au cas par cas dans le logiciel concerné de l’établissement.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>le RSF-ACE ne permet toutefois pas de repérer si le SAS, le SIC ou le SIM a été réalisé avant ou après 8h. A vérifier, au cas par cas dans le logiciel concerné de l’établissement.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>le RSF-ACE ne permet toutefois pas de repérer si le SAS, le SIC ou le SIM a été réalisé avant ou après 8h. A vérifier, au cas par cas dans le logiciel concerné de l’établissement.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>on fait l’hypothèse que tout passage aux urgences est identifié via le codage d’un forfait “âge urgence” en FU<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

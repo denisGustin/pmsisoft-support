@@ -1,189 +1,252 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "posts/smr/smr_gme_comparaison/index.html",
+    "href": "posts/smr/smr_gme_comparaison/index.html",
+    "title": "Simulation recettes activité SMR",
     "section": "",
-    "text": "About this blog test"
+    "text": "Depuis le 1er janvier 2024, les établissements SMR voient leur activité classée via le modèle cible de la réforme de financement du SMR.\nAfin d’aider ces établissements à comprendre et simuler leurs recettes d’activité, nous avons développé un simulateur de comparaison de recettes d’activité par séjour et journée de présence en hospitalisation complète.\nPour un groupe nosologique et une plage de journées de présence donnés, l’utilisateur choisit la position qu’il souhaite comparer (groupe de réadaptation, groupe de lourdeur ou sévérité) et filtre les 2 autres positions : le simulateur calcule alors, sur la base des règles de classification GME-GMT 2024 et des tarifs ex-DGF ou ex-OQN, les recettes d’activité cumulée du séjour et les recettes d’activité par journée de présence pour chacun des GMT sélectionnés.\nLes résultats sont présentés sous 3 formats : graphiques, tableau, exports (csv, json, png).\nLa manipulation et l’exploitation des résultats du simulateur supposent la connaissance des principales règles de classification des séjours en PMSI SMR."
+  },
+  {
+    "objectID": "posts/smr/smr_gme_comparaison/index.html#introduction",
+    "href": "posts/smr/smr_gme_comparaison/index.html#introduction",
+    "title": "Simulation recettes activité SMR",
+    "section": "",
+    "text": "Depuis le 1er janvier 2024, les établissements SMR voient leur activité classée via le modèle cible de la réforme de financement du SMR.\nAfin d’aider ces établissements à comprendre et simuler leurs recettes d’activité, nous avons développé un simulateur de comparaison de recettes d’activité par séjour et journée de présence en hospitalisation complète.\nPour un groupe nosologique et une plage de journées de présence donnés, l’utilisateur choisit la position qu’il souhaite comparer (groupe de réadaptation, groupe de lourdeur ou sévérité) et filtre les 2 autres positions : le simulateur calcule alors, sur la base des règles de classification GME-GMT 2024 et des tarifs ex-DGF ou ex-OQN, les recettes d’activité cumulée du séjour et les recettes d’activité par journée de présence pour chacun des GMT sélectionnés.\nLes résultats sont présentés sous 3 formats : graphiques, tableau, exports (csv, json, png).\nLa manipulation et l’exploitation des résultats du simulateur supposent la connaissance des principales règles de classification des séjours en PMSI SMR."
+  },
+  {
+    "objectID": "posts/smr/smr_gme_comparaison/index.html#fonctionnalités",
+    "href": "posts/smr/smr_gme_comparaison/index.html#fonctionnalités",
+    "title": "Simulation recettes activité SMR",
+    "section": "Fonctionnalités",
+    "text": "Fonctionnalités\n\nClassification en GME et GMT, à partir d’une grille minimale optimisée de saisie d’un séjour virtuel, selon la classification 2024 1\n\nCalcul des recettes d’activité cumulées du séjour pour chaque GMT sélectionné\n\nCalcul des recettes d’activité par journée de présence pour chaque GMT sélectionné\n\nTarifs ex-DGF ou ex-OQN selon l’établissement\n\nChoix de la plage de journées de présence entre 0 JP et 300 JP\n\nGraphique des recettes d’activité cumulée pour chaque GMT sélectionné\n\nGraphique des recettes d’activité par journée de présence pour chaque GMT sélectionné\n\nTableau des recettes d’activité par journée pour chaque GMT sélectionné\n\nDans le tableau des recettes d’activité, identification via un code couleur des différentes zones forfaitaires et des journées post 90 JP\n\nDans le tableau, typage des plages de JP (bb_inf, tzf1, tzf2, tzf3, bh_supp_tzf31, bh_supp_tzf3, post_90_jp)\n\nAssistance à la saisie en GN, GR, et GL\n\nExport png des graphiques\n\nExport csv du tableau des recettes d’activité par journée\n\nExport JSON du tableau des recettes d’activité par journée\n\nGestion des erreurs de saisie\n\nHébergement en Hébergement de Santé Certifié (HDS) au MIPIH"
+  },
+  {
+    "objectID": "posts/smr/smr_gme_comparaison/index.html#simulateur-de-recettes-dactivités-hc",
+    "href": "posts/smr/smr_gme_comparaison/index.html#simulateur-de-recettes-dactivités-hc",
+    "title": "Simulation recettes activité SMR",
+    "section": "Simulateur de recettes d’activités HC",
+    "text": "Simulateur de recettes d’activités HC\n\nCréer une simulation2\n\nAu départ\n\n\n\n\n\n\nA l’ouverture de l’écran, aucun GN n’est sélectionné.\nLa première étape va donc consister à sélectionner le GN sur lequel on souhaite travailler.\n\n\n\n\nChoix du GN\n\n\n\n\n\n\nDans le filtre GN, on sélectionne un GN soit directement, soit via l’assistant en saisissant directement le code GN.\n\n\n\n\nFiltres GR, GL et sévérité\n\n\n\n \n\n\n\nUne fois le filtre GN sélectionné (ici 0841), on sélectionne 2 parmi les 3 filtres GR code (groupe de réadaptation), GL code (groupe de lourdeur) ou sévérité.\n\n\n\n\nFiltrage (GR, GL, sévérité)\n\n\n\n\n\n\nUne fois, le GN sélectionné, parmi les 3 filtres GR code, Gl code et sévérité, on laisse vierge le filtre sur lequel on souhaite comparer les GME-GMT et on sélectionne la valeur voulue pour chacun des 2 autres filtres.\nIci, par exemple, après avoir sélectionné le GN 0841, on souhaite comparer les recettes d’activité des différents GME 0841Sx1 (donc 0841SA1, 0841SB1 et 0841SC1). On a donc sélectionné le GR code à S et la sévérité à 1 et on a laissé vierge le GL code.\nOn n’a pas modifié la plage de journées de présence de 1 JP à 50 JP, mais on aurait pu la modifier.\nOn clique sur le bouton “Filtrer” pour lancer les calculs.\n\n\n\n\n\nRésultats de simulation\n\nSimulation sur le GL code : 0841Sx1\nIl s’agit de la simulation paramétrée ci-dessus.\n\nLe tableau de la simulation 0841Sx1 avec une plage de 86 à 100 JP\n\n\n\nSimulation sur le GR code : 0127xC1\n\n\n\nSimulation sur la sévérité : 10UAx\n\n\n\n\nExports\n\n\n\n\n\n\nEn dessous du tableau, 3 lignes de liens permettent d’exporter les résulats :\n# le tableau au format JSON ou csv\n# le graphique des recettes d’activité cumulées au format png\n# le graphique des recettes d’activité par JP au format png"
+  },
+  {
+    "objectID": "posts/smr/smr_gme_comparaison/index.html#pour-aller-plus-loin",
+    "href": "posts/smr/smr_gme_comparaison/index.html#pour-aller-plus-loin",
+    "title": "Simulation recettes activité SMR",
+    "section": "Pour aller plus loin",
+    "text": "Pour aller plus loin\nA chaque GME est associé son GMT et éventuellement le GMT hebdomadaire associé au GMT.\nPour le cas particulier du GN 2303 de SP, on force le GMT correspondant au GME hors lit ou unité SP\n\n\n\n\n\n\nLe choix initial d’un groupe nosologique met à jour automatiquement les valeurs éligibles en GR code, GL code et sévérité.\nIci, par exemple, le choix du GN 0127 n’autorise que le choix d’un GL code à B ou C.\n\n\nLa palette de couleur est un extrait de 3 couleurs de la très classique et optimisée palette Okabe & Ito\nLe bleu est pour la valeur la plus basse de la comparaison (exemple : sévérité 1, groupe de lourdeur A), l’orange est pour la valeur intermédiaire ou la plus haute s’il n’y a que 2 alternatives et le vert est pour la valeur la plus haute s’il y a 3 alternatives."
+  },
+  {
+    "objectID": "posts/smr/smr_gme_comparaison/index.html#accès",
+    "href": "posts/smr/smr_gme_comparaison/index.html#accès",
+    "title": "Simulation recettes activité SMR",
+    "section": "Accès",
+    "text": "Accès\nL’écran est accessible dans PMSISoft Standard SMR, gratuit, illimité dans le temps, ouvert à tout établissement SMR.\nChemin PMSISoft : Référentiels SMR &gt; GME HC Comparaison\nPour demander un accès, nous contacter (en sélectionnant l’objet “Demande accès PMSISoft Standard” et en précisant à minima “Simulateur SMR” dans le message)"
+  },
+  {
+    "objectID": "posts/smr/smr_gme_comparaison/index.html#footnotes",
+    "href": "posts/smr/smr_gme_comparaison/index.html#footnotes",
+    "title": "Simulation recettes activité SMR",
+    "section": "Notes de bas de page",
+    "text": "Notes de bas de page\n\n\nla grille minimale pour classer est composée de 5 variables : groupe nosologie, groupe de réadaptation, groupe de loudeur, sévérité, plage de journées de présence↩︎\nles exemples de simulations sont calculés avec les tarifs ex-DGF↩︎"
+  },
+  {
+    "objectID": "posts/smr/smr_csar_analyse/index.html",
+    "href": "posts/smr/smr_csar_analyse/index.html",
+    "title": "Casemix CSAR",
+    "section": "",
+    "text": "A partir de mars 2025, les établissements SMR pourront coder leur activité de RR via le nouveau référentiel CSAR qui remplacera l’actuelle CSARR.\nGuide de codage du CSAR (version provisoire) - ATIH\nPMSISoft SMR transcode le codage CSARR en CSAR et l’analyse selon 3 approches :\n- le casemix de l’activité RR vue en CSAR\n- le casemix à double entrée Intervenant-CSAR\n- le répérage des exclusions intra-CSAR\nSauf mention contraire, signalée par [P] (où P = accès Professionnel), ces fonctionnalités sont disponibles dans l’accès PMSISoft SMR Standard, gratuit, illimité dans le temps, ouvert à tout établissement SMR."
+  },
+  {
+    "objectID": "posts/smr/smr_csar_analyse/index.html#introduction",
+    "href": "posts/smr/smr_csar_analyse/index.html#introduction",
+    "title": "Casemix CSAR",
+    "section": "",
+    "text": "A partir de mars 2025, les établissements SMR pourront coder leur activité de RR via le nouveau référentiel CSAR qui remplacera l’actuelle CSARR.\nGuide de codage du CSAR (version provisoire) - ATIH\nPMSISoft SMR transcode le codage CSARR en CSAR et l’analyse selon 3 approches :\n- le casemix de l’activité RR vue en CSAR\n- le casemix à double entrée Intervenant-CSAR\n- le répérage des exclusions intra-CSAR\nSauf mention contraire, signalée par [P] (où P = accès Professionnel), ces fonctionnalités sont disponibles dans l’accès PMSISoft SMR Standard, gratuit, illimité dans le temps, ouvert à tout établissement SMR."
+  },
+  {
+    "objectID": "posts/smr/smr_csar_analyse/index.html#chemin-de-lécran",
+    "href": "posts/smr/smr_csar_analyse/index.html#chemin-de-lécran",
+    "title": "Casemix CSAR",
+    "section": "Chemin de l’écran",
+    "text": "Chemin de l’écran\nCodage CSARR - CSAR &gt; Casemix CSAR"
+  },
+  {
+    "objectID": "posts/smr/smr_csar_analyse/index.html#filtrage",
+    "href": "posts/smr/smr_csar_analyse/index.html#filtrage",
+    "title": "Casemix CSAR",
+    "section": "Filtrage",
+    "text": "Filtrage\nFiltres de périmètre :\n- Année PMSI\n- Mois PMSI\n- UM\n- Autorisations de l’établissement\n- Type d’hospitalisation\n- Classification des séjours et RHS (CM, GN, GR code, GL code, GME, sévérité)\nFiltres par variables :\n- nas\n- no_sejour_smr\n- mmp_sejour\n- sejour_termine\n- sejour_post_operatoire\n- acte_csar_code\n- acte_csar_libelle\n- acte_csar_L1\n- acte_csar_L2\n- acte_csar_M1\n- acte_csar_M2\n- acte_csar_QM\n- acte_csar_QI\n- acte_csar_QF\n- acte_csar_QS\n- acte_csar_QQ\n- acte_csar_QC\n- sexe\n- age"
+  },
+  {
+    "objectID": "posts/smr/smr_csar_analyse/index.html#casemix-csar",
+    "href": "posts/smr/smr_csar_analyse/index.html#casemix-csar",
+    "title": "Casemix CSAR",
+    "section": "Casemix CSAR",
+    "text": "Casemix CSAR\n Pour chaque acte CSAR codé au moins une fois dans le périmètre sélectionné, PMSISoft SMR calcule les réalisations (en absolu et en relatif), les RHS (en absolu et en relatif), les séjours (en absolu et en relatif), la pondération (en absolu, en relatif et en moyenne) et le nombre d’actes CSARR différents transcodés dans l’acte CSAR de la ligne.\nLe calcul des pondérations se fait sur la bases des pondérations CSARR sous-jacentes 2024. 1\nEn sélectionnant une ligne, accès à la liste des RHS concernés par au moins un codage de l’acte CSAR [P]\nLe casemix est exportable en CSV.\nVariables supplémentaires exportées en [P] : liste des actes CSARR transcodés, caractère collectif ou plurofprofessionnel au sens CSAR\nUne version PDF est disponible. Exemple"
+  },
+  {
+    "objectID": "posts/smr/smr_csar_analyse/index.html#casemix-intervenant-csar",
+    "href": "posts/smr/smr_csar_analyse/index.html#casemix-intervenant-csar",
+    "title": "Casemix CSAR",
+    "section": "Casemix Intervenant-CSAR",
+    "text": "Casemix Intervenant-CSAR\n\nPour chaque couple (Intervenant, acte CSAR), PMSISoft SMR calcule les réalisations (en absolu et en relatif), les RHS (en absolu et en relatif), et les séjours (en absolu et en relatif).\nEn sélectionnant une ligne, accès à la liste des RHS concernés par au moins un codage de l’acte CSAR par l’intervenant [P]\nLe casemix est exportable en CSV.\nUne version PDF est disponible. Exemple"
+  },
+  {
+    "objectID": "posts/smr/smr_csar_analyse/index.html#casemix-acte-csar-exclusion",
+    "href": "posts/smr/smr_csar_analyse/index.html#casemix-acte-csar-exclusion",
+    "title": "Casemix CSAR",
+    "section": "Casemix acte CSAR exclusion",
+    "text": "Casemix acte CSAR exclusion\n\nSur la base du référentiel des exclusion intra-CSAR, PMSISoft SMR identifie les situations suivantes : “Pour une même date (au sens date de réalisation CSARR), dans un RHS donné, un acte CSAR est codé à la même date qu’un autre acte CSAR exclu par l’acte”\nSouvent une exclusion entre 2 actes CSAR est symétrique (exemple ici dans le mini fake jeu de 3 situations avec les actes 07S07 et 07S15), mais ce n’est pas toujours le cas (exemple avec 02E06 qui exclut 07E04, mais pas l’inverse)\nPour chaque couple (acte CSAR, acte CSAR exclu), PMSISoft SMR calcule les situations (en absolu et en relatif), les RHS (en absolu et en relatif), et les séjours (en absolu et en relatif). [P]\nEn sélectionnant une ligne, accès à la liste des RHS concernés [P]\nLe casemix est exportable en CSV."
+  },
+  {
+    "objectID": "posts/smr/smr_csar_analyse/index.html#demande-daccès",
+    "href": "posts/smr/smr_csar_analyse/index.html#demande-daccès",
+    "title": "Casemix CSAR",
+    "section": "Demande d’accès",
+    "text": "Demande d’accès\nPour demander un accès PMSISoft SMR Standard (gratuit, illimité dans le temps, ouvert à tout établissement SMR), nous contacter (en sélectionnant l’objet “Demande accès PMSISoft Standard”)"
+  },
+  {
+    "objectID": "posts/smr/smr_csar_analyse/index.html#footnotes",
+    "href": "posts/smr/smr_csar_analyse/index.html#footnotes",
+    "title": "Casemix CSAR",
+    "section": "Notes de bas de page",
+    "text": "Notes de bas de page\n\n\nle référentiel des pondérations CSAR 2025 est annoncée pour la fin d’année 2024 (information à fin juillet 2024)↩︎"
+  },
+  {
+    "objectID": "posts/mco/mco_simulation_ghm/index.html",
+    "href": "posts/mco/mco_simulation_ghm/index.html",
+    "title": "Simulateur GHM",
+    "section": "",
+    "text": "Sur la base de la documentation officielle (manuels des GHM, listes codes, référentiels PMSI), nous avons développé un algorithme permettant, à partir d’une grille minimale optimisée de saisie d’un séjour virtuel, d’expliciter les différentes étapes et caractéristiques de la classification en GHM et GHS et de la valorisation T2A d’un séjour MCO.\nLe simulateur GHM de PMSISoft s’adresse en priorité aux professionnels du PMSI intéressés par comprendre et visualiser les étapes de la classification en GHM et la valorisation T2A de séjours MCO dans toute leurs dimensions.\nSon utilisation suppose la connaissance des principaux mécanismes et règles de classifications des séjours en PMSI MCO."
+  },
+  {
+    "objectID": "posts/mco/mco_simulation_ghm/index.html#introduction",
+    "href": "posts/mco/mco_simulation_ghm/index.html#introduction",
+    "title": "Simulateur GHM",
+    "section": "",
+    "text": "Sur la base de la documentation officielle (manuels des GHM, listes codes, référentiels PMSI), nous avons développé un algorithme permettant, à partir d’une grille minimale optimisée de saisie d’un séjour virtuel, d’expliciter les différentes étapes et caractéristiques de la classification en GHM et GHS et de la valorisation T2A d’un séjour MCO.\nLe simulateur GHM de PMSISoft s’adresse en priorité aux professionnels du PMSI intéressés par comprendre et visualiser les étapes de la classification en GHM et la valorisation T2A de séjours MCO dans toute leurs dimensions.\nSon utilisation suppose la connaissance des principaux mécanismes et règles de classifications des séjours en PMSI MCO."
+  },
+  {
+    "objectID": "posts/mco/mco_simulation_ghm/index.html#fonctionnalités",
+    "href": "posts/mco/mco_simulation_ghm/index.html#fonctionnalités",
+    "title": "Simulateur GHM",
+    "section": "Fonctionnalités",
+    "text": "Fonctionnalités\n\nClassification en GHM, GHS et calcul valorisation T2A à partir d’une grille minimale optimisée de saisie d’un séjour virtuel 1, 2\n\nPré-remplissage optimisée des variables 3\nAssistance à la saisie des codes CIM-10 et acte CCAM\n\nContrôles de saisie dans les bornes et valeurs autorisés\n\nAffichage en temps réel des CMA des DAS\nAffichage en temps réel du caractère opératoire des actes CCAM\n\nCalcul du niveau de sévérité du séjour par étapes (voir illustration ci-dessous) juqu’à la classification finale de la sévérité\n\nRepérage des exclusions DP, DR, racine GHM de chaque CMA\n\nIndication des listes en D et en A des codages CIM et actes CCAM\n\nSuppression des informations d’une simulation en un clic\n\nRapatriement automatique des informations d’un séjour réel déjà importé via son NAS\nArchivage possible des simulations\n\nExport PDF d’une simulation. Exemple\nExport csv ou JSON de toutes les simulations archivées\n\nChoix tarif DGF ou OQN\nAnnualisé à partir de l’année PMSI MCO 2022\n\nHébergement en Hébergement de Santé Certifié (HDS) au MIPIH"
+  },
+  {
+    "objectID": "posts/mco/mco_simulation_ghm/index.html#simulation",
+    "href": "posts/mco/mco_simulation_ghm/index.html#simulation",
+    "title": "Simulateur GHM",
+    "section": "Simulation",
+    "text": "Simulation\n\nGrille de saisie\n\n\n\n\n\n\nGrille de saisie vierge\nPar défaut :\n- année PMSI MCO en cours\n- durée de séjour (DS) 4 = 0\n- pas de séance\n- autorisation UM différente de 08, 19 et 21 5\n- mode de sortie différent de décès (code 9)\n- destination différente de “vers une unité de MCO” (code 1)\n- pas de lit dédié\n- pas d’anesthésie générale\nPour revenir à la grille de saisie, on clique sur le bouton Reset\n\n\n\n\n\n\n\n\nSaisie DP et DR\nA partir d’une position, tous les codes CIM-10 correspondant sont proposés.\nSeuls les codes CIM-10 autorisés en DP ou DR sont proposés dans chacun des filtres DP et DR.\n\n\n\n\n\n\n\n\n\nSaisie DAS\nSeuls les codes CIM-10 autorisés en DAS sont proposés.\nQuand un DAS est une CMA, le niveau de CMA est indiqué.\nQuand un DAS a été sélectionné, il n’est plus proposé.\n\n\n\n\n\n\n\n\nSaisie CCAM\nProposition des actes CCAM à partir de la saisie des premières positions.\nLes actes CCAM opératoires sont identifiés par le suffixe “/0”\nQuand un acte CCAM a été sélectionné, il n’est plus proposé.\n\n\n\n\n\n\n\n\nBouton “Grouper”\nQuand la grille est saisie, on clique sur le bouton “Grouper” situé en haut à droite\nLe bouton “Grouper” ne devient cliquable et actif que si les 3 variables minimales (DS, DP séjour et âge) ont une saisie valide.\nIci la grille du séjour virtuel à classer est :\n- âge = 80 ans\n- DS = 3\n- DP = S7200\n- DAS = (E440, I10)\n- CCAM = (NBCA010/0, NEQK010/0)\n- anesthésie générale = “Oui” 6\n\n\n\n\nRésultats de simulation\nLes résultats d’une simulation se présentent en 4 parties :\n- les résutats de groupage\n- le rappel du codage adminsitratif\n- un tableau du codage CIM-10\n- un tableau du codage CCAM\nRésultats du groupage\n\nGHM\nCode et libellé\nCalcul sévérité\nCalcul après classification dans une racine de GHM éligible aux niveaux de sévérité et avec une DS autorisant une classification en niveau de sévérité.\n4 étapes successives calculées jusqu’à l’identification de la sévérité du GHM :\nseverite_cma = sévérité issue du codage des DAS CMA (= la sévérité maximale rencontrée)\nseverite_post_dp_dr_racine = pour chaque CMA, exclusion par DP, DR ou racine de GHM. On retient la sévérité maximale non exclue\nseverite_post_dp_dr_racine_age = prise en compte de l’effet âge s’il y a lieu, fonction de la racine GHM\nseverite_post_dp_dr_racine_age_duree = prise en compte de la durée de séjour. C’est la sévérité finale.\nDans notre exemple, c’est cette étape qui fait passer la sévérité de 3 à 2 (car DS = 3)\nGHS\nCode et informations liées (valeur forfait, borne basse, borne haut, exb et exh)\nTient compte du paramétrage DGF ou OQN\nT2A\nValorisation T2A du séjour virtuel\nValorisation T2a par JP 7\nPart de la valorisation EXB\nPart de la Valorisation EXH\nCodage CIM-10\n\n\n\n\n\n\nCodage CIM-10\nDans un tableau, tous les codages CIM-10.\nPour les DP et DR, indication du ou des CMD vers laquelle (lesquelles) oriente le DP et le DR et les listes en D associées\nPour chaque DAS CMA, indication, via des variables logiques, de son exclusion par le DR, le DR ou la racine GHM + indication numéro des listes exclusions associées à la CMA\n\n\nCodage CCAM\n\n\n\n\n\n\nCodage CCAM\nDans un tableau, tous les actes CCAM.\nPour chaque acte opératoire, indication des listes en A associées\n\n\nCodage administratif\n\n\n\n\n\n\nCodage administratif\nRappel des codages administratifs de la grille de saisie du séjour virtuel."
+  },
+  {
+    "objectID": "posts/mco/mco_simulation_ghm/index.html#archivage",
+    "href": "posts/mco/mco_simulation_ghm/index.html#archivage",
+    "title": "Simulateur GHM",
+    "section": "Archivage",
+    "text": "Archivage\n\n\n\n\n\n\nOn a cliqué sur le bouton “Enregistrement” : une pop-up est apparue demandant la saisie d’un code ou d’un initulé pour archiver la simuation.\nIci on saisie le code “id_001”\nRègle : si une simulation archivée a déjà ce code, elle sera remplacée par la nouvelle simulation archivée.\n\n\n\n\n\n\n\n\nEcran “Simulations archivées”\nListe des simulations archivées avec le rappel de ses principales informations.\nRègle : une simulation archivée est rattachée à l’utilisateur qui l’a créée."
+  },
+  {
+    "objectID": "posts/mco/mco_simulation_ghm/index.html#accès",
+    "href": "posts/mco/mco_simulation_ghm/index.html#accès",
+    "title": "Simulateur GHM",
+    "section": "Accès",
+    "text": "Accès\nLe simulateur GHM PMSISoft est accessible dans l’accès Professionnel MCO.\nIl peut être proposé en accès dédié pour des établissements ou des sociétés intéressés uniquement par le simulateur GHM de PMSISoft.\nPour plus d’informations ou une démonstration, nous contacter (en sélectionnant l’objet “Simulateur GHM de PMSISoft”)"
+  },
+  {
+    "objectID": "posts/mco/mco_simulation_ghm/index.html#footnotes",
+    "href": "posts/mco/mco_simulation_ghm/index.html#footnotes",
+    "title": "Simulateur GHM",
+    "section": "Notes de bas de page",
+    "text": "Notes de bas de page\n\n\nla grille minimale pour classer est composée de 3 variables : durée de séjour (0 jour PMSI par défaut), l’âge et un DP séjour↩︎\nCMD non disponibles : CMD 14 et CMD 15↩︎\nexemple variable “Mode de décès” = “non_9” (non décès)↩︎\ndurée au sens PMSI = date sortie - date entrée↩︎\n08 = “Soins et accompagnement des malades en phase terminale (unité de soins palliatifs)”, 19 = “Unité d’addictologie de recours et de référence” et 21 = “Hémodialyse en centre pour adulte”↩︎\ntraduction codage PMSI = au moins 1 acte CCAM avec activité 4↩︎\nvalorisation T2A / nombre de JP si DS &gt; 0 et valorisation T2A si DS = 0↩︎"
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_cardiologie/index.html",
+    "href": "posts/mco/mco_ecran_cardiologie/index.html",
+    "title": "Ecran Cancérologie",
+    "section": "",
+    "text": "Depuis le 1er juin 2023 est entré en vigueur un nouveau dispositif d’autorisation de l’activité de soins de traitement du cancer, basé sur une logique de seuils minimaux d’activité, de gradation (mention A, B ou C) et de traitement curatif des traitements et pathologies cancéreuses.\nPour chacune des chirurgies oncologiques (mammaire, thoracique, sphère oto-rhino-laryngée, cervico-faciale et maxillofaciale, urologique, digestive et viscérale, gynécologique), un algorithme est proposé pour déterminer si une hospitalisation est retenue ou pas pour la mesure d’activité soumise à seuil de la chirurgie oncologique concernée.\nCes algorithmes sont des arbres de décisions avec des noeuds constitués de variables PMSI du type “codage PMSI présent parmi une liste de codage”. Source “NOTICE TECHNIQUE POUR LA MESURE DES ACTIVITÉS SOUMISES À SEUILS” (INCa)\nPour les activités de radiothérapie externe et de de traitements médicamenteux systémiques du cancer chez l’adulte (TMSC), elles aussi soumise à seuil : analyses dans PMSISoft mises en ligne courant juillet 2023.\nHistorique depuis 2019."
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_cardiologie/index.html#introduction",
+    "href": "posts/mco/mco_ecran_cardiologie/index.html#introduction",
+    "title": "Ecran Cancérologie",
+    "section": "",
+    "text": "Depuis le 1er juin 2023 est entré en vigueur un nouveau dispositif d’autorisation de l’activité de soins de traitement du cancer, basé sur une logique de seuils minimaux d’activité, de gradation (mention A, B ou C) et de traitement curatif des traitements et pathologies cancéreuses.\nPour chacune des chirurgies oncologiques (mammaire, thoracique, sphère oto-rhino-laryngée, cervico-faciale et maxillofaciale, urologique, digestive et viscérale, gynécologique), un algorithme est proposé pour déterminer si une hospitalisation est retenue ou pas pour la mesure d’activité soumise à seuil de la chirurgie oncologique concernée.\nCes algorithmes sont des arbres de décisions avec des noeuds constitués de variables PMSI du type “codage PMSI présent parmi une liste de codage”. Source “NOTICE TECHNIQUE POUR LA MESURE DES ACTIVITÉS SOUMISES À SEUILS” (INCa)\nPour les activités de radiothérapie externe et de de traitements médicamenteux systémiques du cancer chez l’adulte (TMSC), elles aussi soumise à seuil : analyses dans PMSISoft mises en ligne courant juillet 2023.\nHistorique depuis 2019."
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_cardiologie/index.html#chemin-de-lécran",
+    "href": "posts/mco/mco_ecran_cardiologie/index.html#chemin-de-lécran",
+    "title": "Ecran Cancérologie",
+    "section": "Chemin de l’écran",
+    "text": "Chemin de l’écran\nAnalyses MCO &gt; Cancérologie"
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_cardiologie/index.html#filtres",
+    "href": "posts/mco/mco_ecran_cardiologie/index.html#filtres",
+    "title": "Ecran Cancérologie",
+    "section": "Filtres",
+    "text": "Filtres\n\n\n\n\n\n\nListe des filtres :\n- Année\n- Mois\n- UM\n- Autorisation\n- Mode d’hospitalisation\n- NAS\n- Classification des séjours (CMD, sous-CMD, CMKZ, GMHM, sévérité-durée)\nExplication de chaque filtre MCO."
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_cardiologie/index.html#case-mix-chirurgie-oncologique-inca-2023",
+    "href": "posts/mco/mco_ecran_cardiologie/index.html#case-mix-chirurgie-oncologique-inca-2023",
+    "title": "Ecran Cancérologie",
+    "section": "Case-mix “Chirurgie oncologique INCa 2023”",
+    "text": "Case-mix “Chirurgie oncologique INCa 2023”\n (les nombres affichés dans ce case-mix, produits manuellement, sont sans signification, uniquement à visée illustrative)\nLe case-mix comprend 13 lignes correspondant aux 12 chirurgies oncologiques du cahier des charges et à une ligne 0_cancer regroupant toutes les hospitalisations ne relevant d’aucune des 12 chirurgies oncologiques.\nLa correspondance entre les intitulés normalisées des chirurgies et les intitulés du cahier des charges est transparente.\nExemples : digestif_visceral est pour “Chirurgie oncologique digestive et viscérale (mentions A1-B1)”, oesophage est pour “Chirurgie oncologique de l’œsophage ou de la jonction œsophagienne”, etc… \nLes variables “Séjour” :\nn = nombre de séjours 1 repérés par l’algorithme pour la chirurgie de la ligne\n% = part des séjours avec la chirurgie de la ligne par rapport à l’ensemble des séjours\ndms = durée moyenne de séjour (au sens PMSI : date fin séjour - date début séjour) des séjours de la ligne\nLes variables “Patient” :\nage = moyenne des âges en entrée de séjour des séjours de la ligne\n% H = part des séjours de la ligne avec sexe = 1\nVariable “Seuil” :\nLes seuils annuels nb_jp_sej en nombre de séjours par chirurgie oncologique\nExport csv et JSON des informations du casemix via les liens Télécharger casemix (format JSON) et Télécharger casemix (format CSV)"
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_cardiologie/index.html#accès-professionnel",
+    "href": "posts/mco/mco_ecran_cardiologie/index.html#accès-professionnel",
+    "title": "Ecran Cancérologie",
+    "section": "Accès Professionnel",
+    "text": "Accès Professionnel\nFonctionnalités uniquement dans l’accès Professionnel :\n- Filtres NAS, sous-CMD, CMKZ, GHM, Sévérité-Durée\n- Variables dms dans le case-mix\n- Accès aux listes des séjours de chaque ligne du case-mix\n- Export csv et JSON de la liste des séjours sélectionnés avec des variables caractérisant les séjours (nas, dp_sej, annee_sortie_sej, …) et les variables calculés par PMSISoft permettant la production du case-mix (chirurgie_A1_B1 = variable logique indiquant si le séjour relève de la chirurgie oncologique digestive et viscérale, chirurgie_B1_oesophage = variable logique indiquant si le séjour relève de la chirurgie oncologique de l’œsophage ou de la jonction œsophagienne, …). Via les liens Télécharger séjours (format JSON) et Télécharger séjours (format CSV)"
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_cardiologie/index.html#demande-daccès-standard",
+    "href": "posts/mco/mco_ecran_cardiologie/index.html#demande-daccès-standard",
+    "title": "Ecran Cancérologie",
+    "section": "Demande d’accès Standard",
+    "text": "Demande d’accès Standard\nPour demander un accès Standard à PMSISoft MCO pour votre établissement, nous contacter (en sélectionnant l’option “Demande accès PMSISoft Standard”)"
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_cardiologie/index.html#pour-aller-plus-loin",
+    "href": "posts/mco/mco_ecran_cardiologie/index.html#pour-aller-plus-loin",
+    "title": "Ecran Cancérologie",
+    "section": "Pour aller plus loin",
+    "text": "Pour aller plus loin\n\narticle “”\n\ncode R"
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_cardiologie/index.html#footnotes",
+    "href": "posts/mco/mco_ecran_cardiologie/index.html#footnotes",
+    "title": "Ecran Cancérologie",
+    "section": "Notes de bas de page",
+    "text": "Notes de bas de page\n\n\nsous-entendu “nombre de séjours du périmètre des séjours sélectionnés via les filtres”.\nRemarque valable pour toutes les variables du case-mix↩︎"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Documentation PMSISoft",
     "section": "",
-    "text": "Simulateur GHM\n\n\n\n\n\n\n\nMCO\n\n\nEcran\n\n\n\n\nFonctionnalités du simulateur GHM de PMSISoft\n\n\n\n\n\n\n8 févr. 2023\n\n\n\n\n\n\n\n\nFiltres des écrans MCO\n\n\n\n\n\n\n\nMCO\n\n\nEcran\n\n\nFiltre\n\n\n\n\nListe des filtres présents dans les écrans MCO\n\n\n\n\n\n\n10 janv. 2023\n\n\n\n\n\n\n\n\nLes types de filtres\n\n\n\n\n\n\n\nEcran\n\n\nFiltre\n\n\n\n\nFiltres de type liste, code et numérique\n\n\n\n\n\n\n10 janv. 2023\n\n\n\n\n\n\n\n\nPrésentation des écrans\n\n\n\n\n\n\n\nEcran\n\n\n\n\nDescriptif des écrans des familles “Bases”, “Analyses” et “ACE”\n\n\n\n\n\n\n5 janv. 2023\n\n\n\n\n\n\nAucun article correspondant"
+    "text": "Recevoir les posts documentaires PMSISoft par email\n\n\n\nCliquer ici en sélectionnant l’option “Recevoir les posts documentaires PMSISoft”."
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "1 + 1\n\n[1] 2"
+    "objectID": "index.html#liste-des-posts-pmsisoft",
+    "href": "index.html#liste-des-posts-pmsisoft",
+    "title": "Documentation PMSISoft",
+    "section": "Liste des posts PMSISoft",
+    "text": "Liste des posts PMSISoft"
   },
   {
-    "objectID": "posts/ssr_referentiel_cim/index.html",
-    "href": "posts/ssr_referentiel_cim/index.html",
-    "title": "Référentiel CIM-10 SSR",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "posts/ssr_referentiel_cim/index.html#la-suite",
-    "href": "posts/ssr_referentiel_cim/index.html#la-suite",
-    "title": "Référentiel CIM-10 SSR",
-    "section": "La suite",
-    "text": "La suite\nsfsfdsf\n\ndfsfd\n\n\n\n\n\n\nNote\n\n\n\nfff\ntip et important\n\n\n\n\nQuery and print\nff\n\nff\nff\n\nff\n\nsdsfsd\n\n\ntoto\nsdfsf\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\n\n\n\n\nMazda RX4\n21.0\n6\n160\n\n\nMazda RX4 Wag\n21.0\n6\n160\n\n\nDatsun 710\n22.8\n4\n108\n\n\nHornet 4 Drive\n21.4\n6\n258\n\n\nHornet Sportabout\n18.7\n8\n360\n\n\nValiant\n18.1\n6\n225\n\n\n\n\n\nddff\n\n\nfff\n\n\nhgjgjg\n\nmtcars %>% select(1:2)\n\n                     mpg cyl\nMazda RX4           21.0   6\nMazda RX4 Wag       21.0   6\nDatsun 710          22.8   4\nHornet 4 Drive      21.4   6\nHornet Sportabout   18.7   8\nValiant             18.1   6\nDuster 360          14.3   8\nMerc 240D           24.4   4\nMerc 230            22.8   4\nMerc 280            19.2   6\nMerc 280C           17.8   6\nMerc 450SE          16.4   8\nMerc 450SL          17.3   8\nMerc 450SLC         15.2   8\nCadillac Fleetwood  10.4   8\nLincoln Continental 10.4   8\nChrysler Imperial   14.7   8\nFiat 128            32.4   4\nHonda Civic         30.4   4\nToyota Corolla      33.9   4\nToyota Corona       21.5   4\nDodge Challenger    15.5   8\nAMC Javelin         15.2   8\nCamaro Z28          13.3   8\nPontiac Firebird    19.2   8\nFiat X1-9           27.3   4\nPorsche 914-2       26.0   4\nLotus Europa        30.4   4\nFord Pantera L      15.8   8\nFerrari Dino        19.7   6\nMaserati Bora       15.0   8\nVolvo 142E          21.4   4\n\n\n\n\n\nffsfsfd\nsdf1\n\niris %>% head(6)"
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
+    "objectID": "brouillon/welcome/index.html",
+    "href": "brouillon/welcome/index.html",
     "title": "Welcome To My Blog",
     "section": "",
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
-    "objectID": "posts/welcome/index.html#la-suite",
-    "href": "posts/welcome/index.html#la-suite",
-    "title": "Welcome To My Blog",
-    "section": "La suite",
-    "text": "La suite\nsfsfdsf"
-  },
-  {
-    "objectID": "posts/ssr_referentiel_cim_10/index.html",
-    "href": "posts/ssr_referentiel_cim_10/index.html",
-    "title": "Référentiel CIM-10 SSR",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "posts/ssr_referentiel_cim_10/index.html#la-suite",
-    "href": "posts/ssr_referentiel_cim_10/index.html#la-suite",
-    "title": "Référentiel CIM-10 SSR",
-    "section": "La suite",
-    "text": "La suite\nsfsfdsf\n\n\nffff\n\nccc\n\n\n\ndfsfd\n\n\n\n\n\n\nNote\n\n\n\nfff\ntip et important\n\n\n\n\nQuery and print\nff\nff\n\nsdsfsd\n\n\ntoto\nsdfsf\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\n\n\n\n\nMazda RX4\n21.0\n6\n160\n\n\nMazda RX4 Wag\n21.0\n6\n160\n\n\nDatsun 710\n22.8\n4\n108\n\n\nHornet 4 Drive\n21.4\n6\n258\n\n\nHornet Sportabout\n18.7\n8\n360\n\n\nValiant\n18.1\n6\n225\n\n\n\n\n\nddff\n\n\nfff\n\n\nhgjgjg\n\nmtcars %>% select(1:2)\n\n                     mpg cyl\nMazda RX4           21.0   6\nMazda RX4 Wag       21.0   6\nDatsun 710          22.8   4\nHornet 4 Drive      21.4   6\nHornet Sportabout   18.7   8\nValiant             18.1   6\nDuster 360          14.3   8\nMerc 240D           24.4   4\nMerc 230            22.8   4\nMerc 280            19.2   6\nMerc 280C           17.8   6\nMerc 450SE          16.4   8\nMerc 450SL          17.3   8\nMerc 450SLC         15.2   8\nCadillac Fleetwood  10.4   8\nLincoln Continental 10.4   8\nChrysler Imperial   14.7   8\nFiat 128            32.4   4\nHonda Civic         30.4   4\nToyota Corolla      33.9   4\nToyota Corona       21.5   4\nDodge Challenger    15.5   8\nAMC Javelin         15.2   8\nCamaro Z28          13.3   8\nPontiac Firebird    19.2   8\nFiat X1-9           27.3   4\nPorsche 914-2       26.0   4\nLotus Europa        30.4   4\nFord Pantera L      15.8   8\nFerrari Dino        19.7   6\nMaserati Bora       15.0   8\nVolvo 142E          21.4   4\n\n\n\n\n\nffsfsfd\n\niris %>% head(6)\n\n\n\n{ggplot2} is a powerful library for reproducible graphic design\nthe components follow a consistent syntax\neach ggplot needs at least data, some aesthetics, and a layer\nwe set constant propeties outside aes()\n… and map data-related properties inside aes()\nlocal settings and mappings override global properties\ngrouping allows applying layers for subsets\nwe can store a ggplot object and extend it afterwards\nwe can change the appearance for all plots with theme_set() and theme_update()"
-  },
-  {
-    "objectID": "ecrans_mco.html",
-    "href": "ecrans_mco.html",
-    "title": "Ecrans MCO",
-    "section": "",
-    "text": "Les écrans sont accessibles via les menus suivants :\nBases MCO : les différents types de données PMSI brutes, enrichies de variables calculées ou rapatriées des référentiels PMSI.\nAnalyses MCO : case-mix, graphiques et algorithmes d’analyses PMSI MCO.\nT2A MCO : valorisation T2A, case-mix GHS, suppléments.\nRequêtes MCO : requêteur métier PMSI MCO, bibliothèque de requêtes MCO “toute faites”. A venir (mi-février 2023)\nSimulation GHM : classification en GHM/GHS et valorisation T2A à partir d’une grille minimale de codage séjour. Documentation\nRapports MCO : rapports d’activité et d’analyse PMSI MCO téléchargeables en PDF avec données des tableaux et graphiques exportables (csv). A venir (mi-février 2023)\nRéférentiels MCO : référentiels PMSI enrichis à partir du package de données refpmsi\nCes écrans se présentent tous de la même façon : explications"
-  },
-  {
-    "objectID": "formules_pmsisoft.html",
-    "href": "formules_pmsisoft.html",
-    "title": "Formules PMSISoft",
-    "section": "",
-    "text": "Accès Standard\n\nLess work than using <div> tags\n\n\nAccès Professionnel\n\nCustomizable in terms of layouts"
-  },
-  {
-    "objectID": "formules_pmsisoft_mco.html",
-    "href": "formules_pmsisoft_mco.html",
-    "title": "Accès à PMSISoft",
-    "section": "",
-    "text": "Accès Standard\n\nPour tout établissement de santé sanitaire\nGratuit, sans limite de durée\nAccès sous 48 heures sur simple demande du médecin DIM de l’établissement\nContact pour demande d’accès\n\n\n\nAccès Professionnel\n\nCustomizable in terms of layouts\n\nNous contacter pour plus d’information"
-  },
-  {
-    "objectID": "formules_pmsisoft_mco.html#hébergement-de-santé-certifié",
-    "href": "formules_pmsisoft_mco.html#hébergement-de-santé-certifié",
-    "title": "Accès à PMSISoft",
-    "section": "Hébergement de Santé Certifié",
-    "text": "Hébergement de Santé Certifié\net opéré par Protocoles d’accès par double authentification Accès https"
-  },
-  {
-    "objectID": "acces_pmsisoft_mco.html",
-    "href": "acces_pmsisoft_mco.html",
-    "title": "Accès PMSISoft",
-    "section": "",
-    "text": "Caractéristiques\n\nAccès proposé à tout établissement de santé sanitaire\nGratuit, sans limite de durée\nAccès en ligne en HDS\nMulti-accès sous la responsabilité du médecin DIM de l’établissement (max 10 professionnels)\nAccès sous 48 heures sur simple demande du médecin DIM de l’établissement après procédure d’authentification\n\nDemander un accès PMSISoft Standard\n\nPrincipales fonctionnalités\n\nExport des données PMSI MCO au format JSON ou csv sous forme de tables dédiées (rss, das, dad, ccam, dmi, ucd, rsa, vidhosp, anohosp, ficium, …) et pour chaque résultat d’analyses\nDonnées retraitées1 et mises en forme permettant leur exploitation en R/Python en routine\nAccès aux bases d’activité avec zoom aux rum 2\nAccès à de nombreux case mix et analyses 3,4\nFiltrables par UM, périodes et classification GME (CMD, C-K-M-Z, racines GME, niveau)\nAccès à un requêteur métier PMSI MCO 5\nAccès à une bibliothèques de requêtes PMSI MCO 6\nRapports d’activité PMSI MCO basiques téléchargeables\n\nRéférentiels PMSI à jour\nHistorique depuis 2019"
-  },
-  {
-    "objectID": "acces_pmsisoft_mco.html#hébergement-de-santé-certifié",
-    "href": "acces_pmsisoft_mco.html#hébergement-de-santé-certifié",
-    "title": "Accès PMSISoft MCO",
-    "section": "Hébergement de Santé Certifié",
-    "text": "Hébergement de Santé Certifié\nPMSISoft est hébergé au MIPIH, hébergeur français certifié HDS et intègre les protocoles et dispostifs afférents (données PMSI cryptées, DMZ, authentification forte avec SMS, log accès, https, cryptage renforcé et irréversible des mots de passes, politique de rappel, gestion des accès par médecin DIM, monitoring, ….).\n\n  Notes\n  \n  \n    gestion des valeurs manquantes, \"nettoyage\" des 0 à gauche, ....\n    avec les seules variables des formats PMSI MCO. Accès aux variables calculées ou enrichies dans l'accès Professionnel\n    versions simplifiées par rapport aux versions de l'accès Professionnel\n    requêtes en langage naturel \n    libellés, variables calculées (DP et DR séjour, nombre de journées rum et séjour par rum, ...), variables complémentaires (mode d'entrée séjour, année PMSI du séjour, CMA, ...)\n    accès dédié possible pour ce seul simulateur GHM\n    nous nous réservons le droit de ne pas donner suite à la demande d'un établissement, sans explication."
-  },
-  {
-    "objectID": "acces_pmsisoft_mco.html#accès-professionnel",
-    "href": "acces_pmsisoft_mco.html#accès-professionnel",
-    "title": "Accès PMSISoft MCO",
-    "section": "Accès Professionnel",
-    "text": "Accès Professionnel\n\n\nCaractéristiques\n\nAccès proposé à tout établissement de santé sanitaire MCO\nAccès en ligne en HDS\nMulti-accès, multi-finess, multi-champs PMSI\nAccès DIM sous la responsabilité du médecin DIM de l’établissement\nAccès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)\nSupport par email et téléphone\n\nSéance de formation en ligne (option)\nTarif annuel unique tout compris par établissement selon le périmètre de l’établissement\n\n\n\n\nPrincipales fonctionnalités\n\nToutes les fonctionnalités de l’accès Standard\nDonnées PMSI MCO enrichies 5\nAccès aux listes de rum, de séjours et de codage pour tous les casemix, requêtes et analyses\nFiltres dédiés (famille de code, thésaurus, anesthésie, …)\nAccès aux calculs avancés dans les casemix et analyses\nRequêteur métier PMSI MCO 4\nSimulateur de classification des séjours MCO en GHM/GHS et valorisation T2A 6\nRapports avancés en pdf avec accès aux données des tableaux et graphiques des rapports en csv et JSON\nRapports personnalisés à l’établissement"
-  },
-  {
-    "objectID": "acces_pmsisoft_mco.html#accès-standard",
-    "href": "acces_pmsisoft_mco.html#accès-standard",
-    "title": "Accès PMSISoft MCO",
-    "section": "Accès Standard",
-    "text": "Accès Standard\n\n\nCaractéristiques\n\nAccès proposé à tout établissement de santé sanitaire MCO 7\nGratuit, sans limite de durée\nAccès en ligne en HDS\nMulti-accès, multi-finess, multi-champs PMSI\nAccès DIM sous la responsabilité du médecin DIM de l’établissement\nAccès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)\nSupport : blog documentaire\nAccès sous 48 heures sur demande du médecin DIM de l’établissement\n\nDemander un accès PMSISoft Standard\n\n\n\nPrincipales fonctionnalités\n\nDonnées PMSI MCO retraitées 1\nBases d’activité avec zoom aux rum 2\nCase-mix et analyses 2, 3\nFiltres UM, hospitalisation, autorisation, périodes et classification GHM (CMD, C-K-M-Z, racines GHM, GHM, niveau, GA, GP, DA)\nBibliothèque de requêtes PMSI MCO\nRapports d’activité PMSI MCO basiques, téléchargeables en pdf\nExports (formats JSON ou csv)\nRéférentiels PMSI à jour\nHistorique depuis 2019"
-  },
-  {
-    "objectID": "acces_pmsisoft_ssr.html#accès-standard",
-    "href": "acces_pmsisoft_ssr.html#accès-standard",
-    "title": "Accès PMSISoft SSR",
-    "section": "Accès Standard",
-    "text": "Accès Standard\n\n\nCaractéristiques\n\nAccès proposé à tout établissement de santé sanitaire SMR (ex SSR) 6\nGratuit, sans limite de durée\nAccès en ligne en HDS\nMulti-accès, multi-finess, multi-champs PMSI\nAccès DIM sous la responsabilité du médecin DIM de l’établissement\nAccès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)\nSupport : blog documentaire\nAccès sous 48 heures sur demande du médecin DIM de l’établissement\n\nDemander un accès PMSISoft Standard\n\n\n\nPrincipales fonctionnalités\n\nDonnées PMSI SSR retraitées 1\nBases d’activité avec zoom aux rhs 2\nCase-mix et analyses 2, 3\nFiltres UM, hospitalisation, autorisation, périodes et classification GME (CM, GN, GR, GL, GME, niveau)\nBibliothèque de requêtes PMSI SSR\nRapports d’activité PMSI SSR basiques, téléchargeables en pdf\nExports (formats JSON ou csv)\nRéférentiels PMSI à jour\nHistorique depuis 2019"
-  },
-  {
-    "objectID": "acces_pmsisoft_ssr.html#accès-professionnel",
-    "href": "acces_pmsisoft_ssr.html#accès-professionnel",
-    "title": "Accès PMSISoft SSR",
-    "section": "Accès Professionnel",
-    "text": "Accès Professionnel\n\n\nCaractéristiques\n\nAccès proposé à tout établissement de santé sanitaire SSR 6\nAccès en ligne en HDS\nMulti-accès, multi-finess, multi-champs PMSI\nAccès DIM sous la responsabilité du médecin DIM de l’établissement\nAccès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)\nSupport par email et téléphone\n\nSéance de formation en ligne (option)\nTarif annuel unique tout compris par établissement selon le périmètre de l’établissement\n\n\n\n\nPrincipales fonctionnalités\n\nToutes les fonctionnalités de l’accès Standard\nDonnées PMSI SSR enrichies5\nAccès aux listes de rhs, de séjours et de codage pour tous les casemix, requêtes et analyses\nFiltres dédiés (famille de code, thésaurus, PTS, type d’actes CSARR, …)\nAccès aux calculs avancés dans les casemix et analyses\nRequêteur métier PMSI SSR 4\nRapports avancés en pdf avec accès aux données des tableaux et graphiques des rapports en csv et JSON\nRapports personnalisés à l’établissement"
-  },
-  {
-    "objectID": "acces_pmsisoft_ssr.html#hébergement-de-santé-certifié",
-    "href": "acces_pmsisoft_ssr.html#hébergement-de-santé-certifié",
-    "title": "Accès PMSISoft SSR",
-    "section": "Hébergement de Santé Certifié",
-    "text": "Hébergement de Santé Certifié\nPMSISoft est hébergé au MIPIH, hébergeur français certifié HDS et intègre les protocoles et dispostifs afférents (données PMSI cryptées, DMZ, authentification forte avec SMS, log accès, https, cryptage renforcé et irréversible des mots de passes, politique de rappel, gestion des accès par médecin DIM, monitoring, ….).\n\n  Notes\n  \n  \n    gestion des valeurs manquantes, \"nettoyage\" des 0 à gauche, ....\n    avec les seules variables des formats PMSI SSR. Accès aux variables calculées ou enrichies dans l'accès Professionnel\n    versions simplifiées par rapport aux versions de l'accès Professionnel\n    construction des requêtes en langage naturel \n    libellés, variables calculées (scores RR rhs et séjour, nombre de journées rhs et séjour par rhs, pondérations RR, ...), variables complémentaires (mode d'entrée séjour, date de fin du séjour par rhs, année PMSI du séjour ou du rhs, CMA, ...)\n    nous nous réservons le droit de ne pas donner suite à la demande d'un établissement, sans explication."
-  },
-  {
-    "objectID": "posts/ssr_referentiel_cim_10/index.html#exercise-1",
-    "href": "posts/ssr_referentiel_cim_10/index.html#exercise-1",
-    "title": "Référentiel CIM-10 SSR",
-    "section": "Exercise 1",
-    "text": "Exercise 1\n\n\nOpen the script exercises/02_concepts_pt1_ex1.qmd (or the .rmd).\nExplore the TfL bike share data visually:create a timeseries of reported bike shares on weekend days\n\nHighlight day and night encoded by colors and shapes.\nConnect the points of each period with lines.\nQuestion: What is the difference between geom_line() and geom_path()?\nApply your favorite theme to the plot.\nAdd meaningful labels.\n\nSave the plot as a vector graphic with a decent plot size."
-  },
-  {
-    "objectID": "ecrans_psy.html",
-    "href": "ecrans_psy.html",
-    "title": "Ecrans PSY",
-    "section": "",
-    "text": "Les écrans sont accessibles via les menus suivants :\nBases PSY : les différents types de données PMSI brutes, enrichies de variables calculées ou rapatriées des référentiels PMSI.\nAnalyses PSY RAA : case-mix, graphiques et algorithmes d’analyses PMSI PSY RAA.\nRequêtes PSY : requêteur métier PMSI PSY, bibliothèque de requêtes MCO “toute faites”.\nRapports PSY : rapports d’activité et d’analyse PMSI MCO téléchargeables en PDF avec données des tableaux et graphiques exportables (csv). A venir (mi-février 2023)\nRéférentiels PSY : référentiels PMSI enrichis à partir du package de données refpmsi\nCes écrans se présentent tous de la même façon : explications"
-  },
-  {
-    "objectID": "ecrans_mco.html#menu-bases-mco",
-    "href": "ecrans_mco.html#menu-bases-mco",
-    "title": "Ecrans MCO",
-    "section": "Menu “Bases MCO”",
-    "text": "Menu “Bases MCO”\nCe menu comprend 6 sous-menus avec 1 écran par sous-menu.\n\n\nListe des écrans\n“Base des RUM”\nListe des RUM avec remontée aux informations de chaque RUM. Documentation\n“Base des séjours\nListe des séjours (RSS) avec remontée aux informations de chaque RUM du séjour.\n“Base des codes CIM” Liste des codes CIM-10 codés avec remontée aux informations du RUM du code.\n“Base des actes CCAM” Liste des actes CCAM codés avec remontée aux informations du RUM de l’acte.\n“Base VID-HOSP”\nListe des VID-HOSP\n“Base FICIUM”\nListe des unités médicales (UM) avec informations enrichies issues du FICIUM."
-  },
-  {
-    "objectID": "ecrans_mco.html#menu-analyses-mco",
-    "href": "ecrans_mco.html#menu-analyses-mco",
-    "title": "Ecrans MCO",
-    "section": "Menu “Analyses MCO”",
-    "text": "Menu “Analyses MCO”\nCe menu comprend 5 sous-menus avec le plus souvent plusieurs écrans par sous-menu.\n\n\n\n\n\n\nSous-menu Analyses CIM\n\nSous-menu Analyses CMA\n\nSous-menu Analyses CCAM\n\nSous-menu Analyses GHM\n\nSous-menu Analyses code retour\n\n\n\n\nListe des écrans\nCase-mix code CIM\nListe des codes CIM-10 codés au moins une fois avec remontée aux RUM concernés.\nCase-mix chapitre CIM\nListe des chapitres CIM-10 représentés par au moins un codage CIM avec remontée aux RUM concernés.\nCase-mix groupe CIM\nListe des groupes CIM-10 représentés par au moins un codage CIM avec remontée aux RUM concernés.\nCase-mix DP\nListe des Diagnostics Principaux codés au moins une fois avec remontée aux RUM concernés.\nCase-mix CMA\nListe des CMA codées au moins une fois avec remontée aux RUM concernés.\nProposition CMA\nAlgorithme de type force brute pour séjours niveau 1, 2 et 3 sur la base des codages CMA de leur racine GHM.\nCase-mix CCAM\nListe des actes CCAM codés au moins une fois avec remontée aux RUM concernés.\nCase-mix GHM\nListe des GHM représentés par au moins un RUM avec remontée aux RUM concernés.\nCase-mix CMD\nListe des CMD représentées par au moins un RUM avec remontée aux RUM concernés.\nCase-mix GA\nListe des Groupe d’Activité représentés par au moins un RUM avec remontée aux RUM concernés.\nCase-mix GP\nListe des Groupes de Planification représentés par au moins un RUM avec remontée aux RUM concernés.\nCase-mix DA\nListe des Domaines d’Activité représentés par au moins un RUM avec remontée aux RUM concernés.\nCase-mix code retour\nListe des codes retours représentés par au moins un RUM avec remontée aux RUM concernés."
-  },
-  {
-    "objectID": "ecrans_ssr.html",
-    "href": "ecrans_ssr.html",
-    "title": "Ecrans MCO",
-    "section": "",
-    "text": "sdfsf\n\n\n\ndsfs"
-  },
-  {
-    "objectID": "brouillon/post-with-code/index.html",
-    "href": "brouillon/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "brouillon/welcome/index.html",
-    "href": "brouillon/welcome/index.html",
+    "objectID": "brouillon/welcome/index.html#début",
+    "href": "brouillon/welcome/index.html#début",
     "title": "Welcome To My Blog",
     "section": "",
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
@@ -196,403 +259,116 @@
     "text": "La suite\nsfsfdsf"
   },
   {
-    "objectID": "ecrans_mco.html#menu-requêtes-mco",
-    "href": "ecrans_mco.html#menu-requêtes-mco",
-    "title": "Ecrans MCO",
-    "section": "Menu “Requêtes MCO”",
-    "text": "Menu “Requêtes MCO”\nAccès au requêteur métier PMSI MCO et à la bibliothèque de requêtes PMSI MCO “toutes faites”."
-  },
-  {
-    "objectID": "ecrans_mco.html#menu-t2a-mco",
-    "href": "ecrans_mco.html#menu-t2a-mco",
-    "title": "Ecrans MCO",
-    "section": "Menu “T2A MCO”",
-    "text": "Menu “T2A MCO”\nEcrans d’analyses de l’activité en terme de recettes T2A (GHS, T2A, suppléments)."
-  },
-  {
-    "objectID": "ecrans_mco.html#menu-simulation-ghm",
-    "href": "ecrans_mco.html#menu-simulation-ghm",
-    "title": "Ecrans MCO",
-    "section": "Menu “Simulation GHM”",
-    "text": "Menu “Simulation GHM”\nAccès au module autonome de simulation de classification en GHM et GHS. Documentation"
-  },
-  {
-    "objectID": "ecrans_mco.html#menu-rapports-mco",
-    "href": "ecrans_mco.html#menu-rapports-mco",
-    "title": "Ecrans MCO",
-    "section": "Menu “Rapports MCO”",
-    "text": "Menu “Rapports MCO”\nAccès à une bibliothèque de rapports filtrables d’activité et d’analyses PMSI MCO en pdf avec récupération en csv des données brutes des tableaux et graphiques des rapports.\nAccès aux rapports personnalisés de l’établissement."
-  },
-  {
-    "objectID": "ecrans_mco.html#menu-référentiels-mco",
-    "href": "ecrans_mco.html#menu-référentiels-mco",
-    "title": "Ecrans MCO",
-    "section": "Menu “Référentiels MCO”",
-    "text": "Menu “Référentiels MCO”"
-  },
-  {
-    "objectID": "ecrans_mco.html#menu-fichiers-mco",
-    "href": "ecrans_mco.html#menu-fichiers-mco",
-    "title": "Ecrans MCO",
-    "section": "Menu “Fichiers MCO”",
-    "text": "Menu “Fichiers MCO”\nGestion des imports de données PMSI (import, suppression, verrouilage, suivi)."
-  },
-  {
-    "objectID": "ecrans_mco.html#menu-mon-compte",
-    "href": "ecrans_mco.html#menu-mon-compte",
-    "title": "Ecrans MCO",
-    "section": "Menu “Mon compte”",
-    "text": "Menu “Mon compte”\nParamétrages PMSISoft, gestion mot de passe, informations de compte."
-  },
-  {
-    "objectID": "posts/mco_ecran_base_rum/index.html",
-    "href": "posts/mco_ecran_base_rum/index.html",
-    "title": "Base des RUM",
+    "objectID": "acces_pmsisoft_ssr.html",
+    "href": "acces_pmsisoft_ssr.html",
+    "title": "Accès PMSISoft SMR",
     "section": "",
-    "text": "Accès : Menu “Bases MCO” > “RUM”\nOrganisation de l’écran\nLes filtres et colonnes disponibles en accès Standard sont précisés avec l’indication (standard)"
+    "text": "Caractéristiques\n\nAccès proposé à tout établissement de santé sanitaire SMR (ex SSR) 6\nGratuit, sans limite de durée\nAccès en ligne en HDS\nMulti-accès, multi-finess, multi-champs PMSI\nAccès DIM sous la responsabilité du médecin DIM de l’établissement\nAccès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)\nSupport : blog documentaire\nAccès sous 48 heures sur demande du médecin DIM de l’établissement\n\nDemander un accès PMSISoft Standard\n\n\n\nFonctionnalités\n\nDonnées PMSI SMR retraitées 1\nBases d’activité rhs, séjour, fichcomp, vidhosp, anohosp avec zoom aux items 2\nCase-mix et analyses SMR 2, 3\nFiltres UM, hospitalisation, autorisation, périodes et classification GME (CM, GN, GR, GL, GME, niveau)\nBibliothèque de requêtes PMSI SMR\nRapports d’activité PMSI SMR basiques, téléchargeables en pdf\nExports (formats JSON ou csv)\nRéférentiels PMSI à jour\nHistorique depuis 2019"
   },
   {
-    "objectID": "posts/mco_ecran_base_rum/index.html#la-suite",
-    "href": "posts/mco_ecran_base_rum/index.html#la-suite",
-    "title": "Base des RUM",
-    "section": "La suite",
-    "text": "La suite\nsfsfdsf\n\n\nffff\n\nccc\n\n\n\ndfsfd\n\n\n\n\n\n\nNote\n\n\n\nfff\ntip et important\n\n\n\n\nQuery and print\nff\nff\n\nsdsfsd\n\n\ntoto\nsdfsf\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\n\n\n\n\nMazda RX4\n21.0\n6\n160\n\n\nMazda RX4 Wag\n21.0\n6\n160\n\n\nDatsun 710\n22.8\n4\n108\n\n\nHornet 4 Drive\n21.4\n6\n258\n\n\nHornet Sportabout\n18.7\n8\n360\n\n\nValiant\n18.1\n6\n225\n\n\n\n\n\nddff\n\n\nfff\n\n\nhgjgjg\n\nmtcars %>% select(1:2)\n\n                     mpg cyl\nMazda RX4           21.0   6\nMazda RX4 Wag       21.0   6\nDatsun 710          22.8   4\nHornet 4 Drive      21.4   6\nHornet Sportabout   18.7   8\nValiant             18.1   6\nDuster 360          14.3   8\nMerc 240D           24.4   4\nMerc 230            22.8   4\nMerc 280            19.2   6\nMerc 280C           17.8   6\nMerc 450SE          16.4   8\nMerc 450SL          17.3   8\nMerc 450SLC         15.2   8\nCadillac Fleetwood  10.4   8\nLincoln Continental 10.4   8\nChrysler Imperial   14.7   8\nFiat 128            32.4   4\nHonda Civic         30.4   4\nToyota Corolla      33.9   4\nToyota Corona       21.5   4\nDodge Challenger    15.5   8\nAMC Javelin         15.2   8\nCamaro Z28          13.3   8\nPontiac Firebird    19.2   8\nFiat X1-9           27.3   4\nPorsche 914-2       26.0   4\nLotus Europa        30.4   4\nFord Pantera L      15.8   8\nFerrari Dino        19.7   6\nMaserati Bora       15.0   8\nVolvo 142E          21.4   4\n\n\n\n\n\nffsfsfd\n\niris %>% head(6)\n\n\n\n{ggplot2} is a powerful library for reproducible graphic design\nthe components follow a consistent syntax\neach ggplot needs at least data, some aesthetics, and a layer\nwe set constant propeties outside aes()\n… and map data-related properties inside aes()\nlocal settings and mappings override global properties\ngrouping allows applying layers for subsets\nwe can store a ggplot object and extend it afterwards\nwe can change the appearance for all plots with theme_set() and theme_update()"
-  },
-  {
-    "objectID": "posts/mco_ecran_base_rum/index.html#exercise-1",
-    "href": "posts/mco_ecran_base_rum/index.html#exercise-1",
-    "title": "Base des RUM",
-    "section": "Exercise 1",
-    "text": "Exercise 1\n\n\nOpen the script exercises/02_concepts_pt1_ex1.qmd (or the .rmd).\nExplore the TfL bike share data visually:create a timeseries of reported bike shares on weekend days\n\nHighlight day and night encoded by colors and shapes.\nConnect the points of each period with lines.\nQuestion: What is the difference between geom_line() and geom_path()?\nApply your favorite theme to the plot.\nAdd meaningful labels.\n\nSave the plot as a vector graphic with a decent plot size."
-  },
-  {
-    "objectID": "posts/mco_ecran_base_rum/index.html#filtres",
-    "href": "posts/mco_ecran_base_rum/index.html#filtres",
-    "title": "Base des RUM",
-    "section": "Filtres",
-    "text": "Filtres\nLes filtres"
-  },
-  {
-    "objectID": "posts/mco_ecran_base_rum/index.html#tableau",
-    "href": "posts/mco_ecran_base_rum/index.html#tableau",
-    "title": "Base des RUM",
-    "section": "Tableau",
-    "text": "Tableau\nLes"
-  },
-  {
-    "objectID": "posts/mco_ecran_base_rum/index.html#export",
-    "href": "posts/mco_ecran_base_rum/index.html#export",
-    "title": "Base des RUM",
-    "section": "Export",
-    "text": "Export"
-  },
-  {
-    "objectID": "posts/mco_ecran_base_rum/index.html#exports",
-    "href": "posts/mco_ecran_base_rum/index.html#exports",
-    "title": "Base des RUM",
-    "section": "Exports",
-    "text": "Exports"
-  },
-  {
-    "objectID": "posts/mco_ecran_base_rum/index.html#usages",
-    "href": "posts/mco_ecran_base_rum/index.html#usages",
-    "title": "Base des RUM",
-    "section": "Usages",
-    "text": "Usages\nQuelques propositions d’usages :\n\nAccès proposé à tout établissement de santé sanitaire MCO\nAccès proposé à tout établissement de santé sanitaire MCO"
-  },
-  {
-    "objectID": "posts/ecran_layout/index.html",
-    "href": "posts/ecran_layout/index.html",
-    "title": "Présentation des écrans",
+    "objectID": "acces_pmsisoft_ssr.html#accès-standard",
+    "href": "acces_pmsisoft_ssr.html#accès-standard",
+    "title": "Accès PMSISoft SMR",
     "section": "",
-    "text": "Pour tous les champs PMSI, les écrans des familles “Bases”, “Analyses” et “ACE” se présentent tous de la même façon.\nChacun de ces écrans comprend 4 parties :\n\nDes filtres\n\nUn tableau ou un graphique\nDes liens pour exporter les données du tableau en csv/excel ou JSON\n\nUn lien pour accéder à la documentation en ligne de l’écran"
+    "text": "Caractéristiques\n\nAccès proposé à tout établissement de santé sanitaire SMR (ex SSR) 6\nGratuit, sans limite de durée\nAccès en ligne en HDS\nMulti-accès, multi-finess, multi-champs PMSI\nAccès DIM sous la responsabilité du médecin DIM de l’établissement\nAccès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)\nSupport : blog documentaire\nAccès sous 48 heures sur demande du médecin DIM de l’établissement\n\nDemander un accès PMSISoft Standard\n\n\n\nFonctionnalités\n\nDonnées PMSI SMR retraitées 1\nBases d’activité rhs, séjour, fichcomp, vidhosp, anohosp avec zoom aux items 2\nCase-mix et analyses SMR 2, 3\nFiltres UM, hospitalisation, autorisation, périodes et classification GME (CM, GN, GR, GL, GME, niveau)\nBibliothèque de requêtes PMSI SMR\nRapports d’activité PMSI SMR basiques, téléchargeables en pdf\nExports (formats JSON ou csv)\nRéférentiels PMSI à jour\nHistorique depuis 2019"
   },
   {
-    "objectID": "posts/ecran_layout/index.html#les-filtres",
-    "href": "posts/ecran_layout/index.html#les-filtres",
-    "title": "Description d’un écran type PMSISoft",
-    "section": "Les filtres",
-    "text": "Les filtres\nExemple des filtres de l’écran “Base des RUM”"
+    "objectID": "acces_pmsisoft_ssr.html#accès-professionnel",
+    "href": "acces_pmsisoft_ssr.html#accès-professionnel",
+    "title": "Accès PMSISoft SMR",
+    "section": "Accès Professionnel",
+    "text": "Accès Professionnel\n\n\nCaractéristiques\n\nAccès proposé à tout établissement de santé sanitaire SMR 6\nAccès en ligne en HDS\nMulti-accès, multi-finess, multi-champs PMSI\nAccès DIM sous la responsabilité du médecin DIM de l’établissement\nAccès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)\nSupport fonctionnel et PMSI par email et téléphone\n\nMise à disposition de scripts R PMSI\n\nSéance de formation en ligne (option)\nTarif annuel unique tout compris par établissement selon le périmètre de l’établissement\n\n\n\n\nFonctionnalités\n\nToutes les fonctionnalités de l’accès Standard\nDonnées PMSI SMR enrichies5\nAccès aux listes de rhs, de séjours et de codage pour tous les casemix, requêtes et analyses\nFiltres dédiés (famille de code, thésaurus, PTS, type d’actes CSARR, …)\nAccès aux calculs avancés dans les casemix et analyses\nRequêteur métier PMSI SMR 4\nRapports avancés en pdf avec accès aux données des tableaux et graphiques des rapports en csv et JSON\nRapports personnalisés à l’établissement"
   },
   {
-    "objectID": "posts/ecran_layout/index.html#tableaux",
-    "href": "posts/ecran_layout/index.html#tableaux",
-    "title": "Présentation des écrans",
-    "section": "Tableaux",
-    "text": "Tableaux\nLes tableaux se présentent de la même façon dans tous les écrans :\n\nune suite de colonnes\n\nUne colonne a un intitulé explicite\nLe contenu des cellules peut être simple (une valeur, un code, un pourcentage) ou complexe (un code + son libellé, un mini graphique, plusieurs valeurs affichées les unes en dessous des autres).\nLes informations qui composent les cellules se retrouvent, sous forme de variables simples, dans l’export.\nDans l’accès Standard, des colonnes peuvent ne pas être affichées (voir la documentation de chaque écran).\n\nles colonnes sont triables par ordre alphabétique ou numérique, en cliquant sur l’intitulé de la colonne 1\nen sélectionnant une ligne, l’utilisateur est automatiquement redirigé vers l’écran présentant la liste des items de la ligne (liste de RUM, RHS, séjours, codes CIM, détail d’un RUM, d’un RHS, d’un RPS, etc….)\n\nPour sélectionner une ligne, cliquer sur la ligne.\nEn recliquant sur la ligne, la ligne est désélectionnée.\nFonctionnalité de l’accès Professionnel.\n\nles tableaux s’affichent sous forme de pages (20 lignes par défaut) qu’il est possible de feuilleter dans les 2 sens.\n\nIl est possible de modifier le paramétrage du nombre de lignes par page : 10, 20, 50 ou 100\n\nen dessous du tableau, une ligne affiche le nombre total de lignes du tableau, le paramétrage du nombre de lignes par page et le numéro de la page.\n\n\nIllustrations\n\n\n\n\n\n\nColonnes de l’écran “Base des RUM”\n\n\n\n\n\n\n\n\n\n\n\n\n2 colonnes de l’écran “Base des RUM”\nColonne “DAS” = colonne simple avec une seule valeur (ici le nombre de DAS du RUM)\nColonne “GHM” = colonne complexe avec 2 informations (le code GHM du RUM et le libellé correspondant du GHM)\n\n\n\n\n\n\n\n\n\nPremières colonnes d’une ligne de l’écran “Case-mix GHM”\n1ere image : la ligne n’est pas sélectionnée\n2eme image : la ligne est sélectionnée.\nEn la sélectionnant, l’utilisateur a été automatiquement redirigé vers l’écran “Liste séjour” avec la liste des séjours classés dans le GHM de la ligne (ici 2 fake séjours du jeu de données MCO de la formation DataPMSI)."
+    "objectID": "acces_pmsisoft_ssr.html#hébergement-de-santé-certifié",
+    "href": "acces_pmsisoft_ssr.html#hébergement-de-santé-certifié",
+    "title": "Accès PMSISoft SMR",
+    "section": "Hébergement de Santé Certifié",
+    "text": "Hébergement de Santé Certifié\nPMSISoft est hébergé au MIPIH, hébergeur français certifié HDS et intègre les protocoles et dispostifs afférents (données PMSI cryptées, DMZ, authentification forte avec SMS, log accès, https, cryptage renforcé et irréversible des mots de passes, politique de rappel, gestion des accès par médecin DIM, monitoring, ….).\n\n  Notes\n  \n  \n    gestion des valeurs manquantes, \"nettoyage\" des 0 à gauche, ....\n    avec les seules variables des formats PMSI SMR. Accès aux variables calculées ou enrichies dans l'accès Professionnel\n    versions simplifiées par rapport aux versions de l'accès Professionnel\n    construction des requêtes en langage naturel \n    libellés, variables calculées (scores RR rhs et séjour, nombre de journées rhs et séjour par rhs, pondérations RR, ...), variables complémentaires (mode d'entrée séjour, date de fin du séjour par rhs, année PMSI du séjour ou du rhs, CMA, ...)\n    nous nous réservons le droit de ne pas donner suite à la demande d'un établissement, sans explication."
   },
   {
-    "objectID": "posts/ecran_layout/index.html#graphiques",
-    "href": "posts/ecran_layout/index.html#graphiques",
-    "title": "Présentation des écrans",
-    "section": "Graphiques",
-    "text": "Graphiques\nLe type de graphique est fonction de l’analyse de l’écran.\nA chaque graphique est associé en export ses données ."
-  },
-  {
-    "objectID": "posts/ecran_layout/index.html#exports",
-    "href": "posts/ecran_layout/index.html#exports",
-    "title": "Présentation des écrans",
-    "section": "Exports",
-    "text": "Exports\nEn dessous des tableaux, 2 liens pour exporter les mêmes données, l’un au format csv, l’autre au format JSON\n\nDans les exports, toutes les variables sont déployées de manière individualisées.\nExemple : les informations de la colonne “GHM” de l’écran “Base des RUM” (voir illustration ci-dessus) sont exportées via 2 variables (“ghm” et “ghm_lib”)\nPar défaut, le titre du fichier exporté (csv ou JSON) est de la forme “nom_analyse_AAAA-MM-JJ.extension”\nExemple : “casemix_ghm_2023-02-08.json”"
-  },
-  {
-    "objectID": "posts/ecran_layout/index.html#documentation",
-    "href": "posts/ecran_layout/index.html#documentation",
-    "title": "Présentation des écrans",
-    "section": "Documentation",
-    "text": "Documentation\nAccès en ligne via le lien “Documentation” situé en bas de l’écran, en dessous du tableau ou du graphique."
-  },
-  {
-    "objectID": "posts/mco_ecran_filtre/index.html#année",
-    "href": "posts/mco_ecran_filtre/index.html#année",
-    "title": "Filtres des écrans MCO",
-    "section": "“Année”",
-    "text": "“Année”"
-  },
-  {
-    "objectID": "posts/mco_simulation_ghm/index.html#fonctionnalités",
-    "href": "posts/mco_simulation_ghm/index.html#fonctionnalités",
-    "title": "Simulateur GHM",
-    "section": "Fonctionnalités",
-    "text": "Fonctionnalités\n\nClassification en GHM, GHS et calcul valorisation T2A à partir d’une grille minimale optimisée de saisie d’un séjour virtuel 1, 2\n\nPré-remplissage optimisée des variables 3\nAssistance à la saisie des codes CIM-10 et acte CCAM\n\nContrôles de saisie dans les bornes et valeurs autorisés\n\nAffichage en temps réel des CMA des DAS\nAffichage en temps réel du caractère opératoire des actes CCAM\n\nCalcul du niveau de sévérité du séjour par étapes (voir illustration ci-dessous) juqu’à la classification finale de la sévérité\n\nRepérage des exclusions DP, DR, racine GHM de chaque CMA\n\nIndication des listes en D et en A des codages CIM et actes CCAM\n\nSuppression des informations d’une simulation en un clic\n\nRapatriement automatique des informations d’un séjour réel déjà importé via son NAS\nArchivage possible des simulations\n\nExport PDF d’une simulation. Exemple\nExport csv ou JSON de toutes les simulations archivées\n\nChoix tarif DGF ou OQN\nAnnualisé à partir de l’année PMSI MCO 2022\n\nHébergement en Hébergement de Santé Certifié (HDS) au MIPIH"
-  },
-  {
-    "objectID": "posts/mco_simulation_ghm/index.html#ecran",
-    "href": "posts/mco_simulation_ghm/index.html#ecran",
-    "title": "Simulateur GHM",
-    "section": "Ecran",
-    "text": "Ecran\nSaisie anesthésie"
-  },
-  {
-    "objectID": "posts/mco_simulation_ghm/index.html#archivage",
-    "href": "posts/mco_simulation_ghm/index.html#archivage",
-    "title": "Simulateur GHM",
-    "section": "Archivage",
-    "text": "Archivage\n\n\n\n\n\n\nOn a cliqué sur le bouton “Enregistrement” : une pop-up est apparue demandant la saisie d’un code ou d’un initulé pour archiver la simuation.\nIci on saisie le code “id_001”\nRègle : si une simulation archivée a déjà ce code, elle sera remplacée par la nouvelle simulation archivée.\n\n\n\n\n\n\n\n\nEcran “Simulations archivées”\nListe des simulations archivées avec le rappel de ses principales informations.\nRègle : une simulation archivée est rattachée à l’utilisateur qui l’a créée."
-  },
-  {
-    "objectID": "posts/mco_simulation_ghm/index.html#accès",
-    "href": "posts/mco_simulation_ghm/index.html#accès",
-    "title": "Simulateur GHM",
-    "section": "Accès",
-    "text": "Accès\nLe simulateur GHM PMSISoft est accessible dans l’accès Professionnel MCO.\nIl peut être proposé en accès dédié pour des établissements ou des sociétés intéressés uniquement par le simulateur GHM de PMSISoft.\nPour plus d’informations ou une démonstration, nous contacter (en sélectionnant l’objet “Simulateur GHM de PMSISoft”)"
-  },
-  {
-    "objectID": "posts/mco_simulation_ghm/index.html",
-    "href": "posts/mco_simulation_ghm/index.html",
-    "title": "Simulateur GHM",
+    "objectID": "acces_pmsisoft_mco.html",
+    "href": "acces_pmsisoft_mco.html",
+    "title": "Accès PMSISoft MCO",
     "section": "",
-    "text": "Sur la base de la documentation officielle (manuels des GHM, listes codes, référentiels PMSI), nous avons développé un algorithme permettant, à partir d’une grille minimale optimisée de saisie d’un séjour virtuel, d’expliciter les différentes étapes et caractéristiques de la classification en GHM et GHS et de la valorisation T2A d’un séjour MCO.\nLe simulateur GHM de PMSISoft s’adresse en priorité aux professionnels du PMSI intéressés par comprendre et visualiser les étapes de la classification en GHM et la valorisation T2A de séjours MCO dans toute leurs dimensions.\nSon utilisation suppose la connaissance des principaux mécanismes et règles de classifications des séjours en PMSI MCO."
+    "text": "Caractéristiques\n\nAccès proposé à tout établissement de santé sanitaire MCO 7\nGratuit, sans limite de durée\nAccès en ligne en HDS\nMulti-accès, multi-finess, multi-champs PMSI\nAccès DIM sous la responsabilité du médecin DIM de l’établissement\nAccès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)\nSupport : blog documentaire\nAccès sous 48 heures sur demande du médecin DIM de l’établissement\n\nDemander un accès PMSISoft Standard\n\n\n\nFonctionnalités\n\nDonnées PMSI MCO retraitées 1\nBases d’activité rum, ss, fichcomp (dmi, ucd, …), ficium, vidhosp, anohosp, rsa, ace avec zoom aux items2\nCase-mix et analyses 2, 3\nFiltres UM, hospitalisation, autorisation, périodes et classification GHM (CMD, C-K-M-Z, racines GHM, GHM, niveau, GA, GP, DA)\nBibliothèque de requêtes PMSI MCO\nRapports d’activité PMSI MCO basiques, téléchargeables en pdf\nExports (formats JSON ou csv)\nRéférentiels PMSI à jour\nHistorique depuis 2019"
   },
   {
-    "objectID": "posts/type_filtre/index.html#année",
-    "href": "posts/type_filtre/index.html#année",
-    "title": "Les types de filtres",
-    "section": "“Année”",
-    "text": "“Année”"
-  },
-  {
-    "objectID": "posts/ecran_layout/index.html#filtres",
-    "href": "posts/ecran_layout/index.html#filtres",
-    "title": "Présentation des écrans",
-    "section": "Filtres",
-    "text": "Filtres\nVoir Les types de filtres\nUn même filtre est toujours affiché au même endroit dans tous les écrans ayant ce filtre.\nLa 1ere ligne de filtres correspond aux filtres génériques classiques du champ PMSI de l’écran (année, mois, um, autorisation, mode ou type d’hospitalisation, nas).\nExemple des filtres de l’écran “Base des RUM”"
-  },
-  {
-    "objectID": "ecrans_psy.html#menu-bases-psy",
-    "href": "ecrans_psy.html#menu-bases-psy",
-    "title": "Ecrans PSY",
-    "section": "Menu “Bases PSY”",
-    "text": "Menu “Bases PSY”\nCe menu comprend 3 sous-menus avec 1 écran par sous-menu.\n\n\nListe des écrans\n“Base des RPS”\nListe des RPS avec remontée aux informations de chaque RPS.\n“Base des RAA\nListe des RAA.\n“Base des codes CIM (RAA)”\nListe des codes CIM-10 codés dans les RAA."
-  },
-  {
-    "objectID": "ecrans_psy.html#menu-analyses-psy-raa",
-    "href": "ecrans_psy.html#menu-analyses-psy-raa",
-    "title": "Ecrans PSY",
-    "section": "Menu “Analyses PSY RAA”",
-    "text": "Menu “Analyses PSY RAA”\nCe menu comprend 3 sous-menus avec le plus souvent plusieurs écrans par sous-menu.\n\n\n\n\n\n\nSous-menu Analyses CIM RAA\n\nSous-menu Analyses intervenant\n\nSous-menu Analyses EDGARX\n\n\n\n\nListe des écrans\nCase-mix code CIM RAA\nListe des codes CIM-10 codés au moins avec remontée aux RAA concernés.\nCase-mix intervenant\nListe des intervenants représentés par au moins un codage avec remontée aux RAA concernés.\nCase-mix EDGARX\nActivité pour chaque cotation de la grille EDGARX avec remontée aux RAA concernés.\nIPP EDGARX\nPour chaque IPP, répartition des cotations de la grille EDGARX avec remontée aux RAA concernés."
-  },
-  {
-    "objectID": "ecrans_psy.html#menu-rapports-psy",
-    "href": "ecrans_psy.html#menu-rapports-psy",
-    "title": "Ecrans PSY",
-    "section": "Menu “Rapports PSY”",
-    "text": "Menu “Rapports PSY”\nAccès à une bibliothèque de rapports filtrables d’activité et d’analyses PMSI PSY en pdf avec récupération en csv des données brutes des tableaux et graphiques des rapports.\nAccès aux rapports personnalisés de l’établissement. A venir (fin février 2023)"
-  },
-  {
-    "objectID": "ecrans_psy.html#menu-référentiels-psy",
-    "href": "ecrans_psy.html#menu-référentiels-psy",
-    "title": "Ecrans PSY",
-    "section": "Menu “Référentiels PSY”",
-    "text": "Menu “Référentiels PSY”"
-  },
-  {
-    "objectID": "ecrans_psy.html#menu-fichiers-psy",
-    "href": "ecrans_psy.html#menu-fichiers-psy",
-    "title": "Ecrans PSY",
-    "section": "Menu “Fichiers PSY”",
-    "text": "Menu “Fichiers PSY”\nGestion des imports de données PMSI (import, suppression, verrouilage, suivi)."
-  },
-  {
-    "objectID": "ecrans_psy.html#menu-mon-compte",
-    "href": "ecrans_psy.html#menu-mon-compte",
-    "title": "Ecrans PSY",
-    "section": "Menu “Mon compte”",
-    "text": "Menu “Mon compte”\nParamétrages PMSISoft, gestion mot de passe, informations de compte."
-  },
-  {
-    "objectID": "posts/type_filtre/index.html",
-    "href": "posts/type_filtre/index.html",
-    "title": "Les types de filtres",
+    "objectID": "acces_pmsisoft_mco.html#accès-standard",
+    "href": "acces_pmsisoft_mco.html#accès-standard",
+    "title": "Accès PMSISoft MCO",
     "section": "",
-    "text": "3 types de filtres sont disponibles dans les écrans PMSISoft :\n\nfiltres de type liste\nfiltres de type code\nfiltres de type intervalle\n\nA la première ouverture d’un écran, tous les filtres de l’écran sont inactifs.\nUn filtre devient actif si l’utilisateur sélectionne au mois un item (pour les filtres de type liste) ou entre une saisie valide (filtres de type code et de type intervalle).\nUn filtre redevient inactif si sa sélection est annulée.\nLes filtres actifs sont pris en compte en cliquant sur le bouton “Filtrer” situé en haut à droite des écrans.\nLa prise en compte d’un filtre actif signifie que les données PMSI du tableau ou du graphique de l’écran sont filtrées en tenant compte du filtre actif.\nVoir la documentation de chaque écran pour les explications détaillées sur la prise en compte des filtres dans l’analyse de l’écran."
+    "text": "Caractéristiques\n\nAccès proposé à tout établissement de santé sanitaire MCO 7\nGratuit, sans limite de durée\nAccès en ligne en HDS\nMulti-accès, multi-finess, multi-champs PMSI\nAccès DIM sous la responsabilité du médecin DIM de l’établissement\nAccès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)\nSupport : blog documentaire\nAccès sous 48 heures sur demande du médecin DIM de l’établissement\n\nDemander un accès PMSISoft Standard\n\n\n\nFonctionnalités\n\nDonnées PMSI MCO retraitées 1\nBases d’activité rum, ss, fichcomp (dmi, ucd, …), ficium, vidhosp, anohosp, rsa, ace avec zoom aux items2\nCase-mix et analyses 2, 3\nFiltres UM, hospitalisation, autorisation, périodes et classification GHM (CMD, C-K-M-Z, racines GHM, GHM, niveau, GA, GP, DA)\nBibliothèque de requêtes PMSI MCO\nRapports d’activité PMSI MCO basiques, téléchargeables en pdf\nExports (formats JSON ou csv)\nRéférentiels PMSI à jour\nHistorique depuis 2019"
   },
   {
-    "objectID": "posts/type_filtre/index.html#filtre-liste",
-    "href": "posts/type_filtre/index.html#filtre-liste",
-    "title": "Les types de filtres",
-    "section": "Filtre liste",
-    "text": "Filtre liste\n\nDéfinition\nLes filtres de type liste permettent de sélectionner un ou plusieurs items au sein d’une liste finie d’items (mois, UM, types d’hospitalisation, GHM, CMD, GME, types d’intervenant CSARR, etc…)\nLes listes sont définies à priori (liste des mois, liste des types d’hospitalisation, …) ou issues des données PMSI de l’établissement (liste des UM, liste des GHM qui est la liste des GHM représentés dans l’établissement, …).\nLes listes de codes sont systématiquement enrichies avec les libellés correspondant (liste des codes GHM avec leur libellé, liste des types intervenants CSARR avec leur libellé, …).\nLes listes sont multi-choix 1.\nLa sélection du ou des items peut toujours s’effectuer, item par item, en cliquant sur l’item : une coche s’affiche alors en face de chaque item sélectionné.\nPour désactiver une sélection, il suffit de décocher la ligne de l’item concerné.\nUne sélection activée reste active tant que l’utilisateur ne la désactive pas, y compris si l’utilisateur sort de l’écran et y revient.\nQuand la liste des items est importante, 2 aides à la sélection s’affichent en tête de la liste :\n\nSélect tous = sélection de tous les items de la liste\nRéinit = désélection de tous les items de la liste\n\nPour les filtres pour lesquels cela a du sens, (voir exemple illustré ci-dessous), il est aussi possible de réaliser une sélection d’items à partir de mots clés.\nL’initulé du filtre est affiché par défaut à l’ouverture de l’écran.\n\n\nExemples\n\n\n\n\n\n\n\n\n\n\nUn exemple classique : le filtre des mois\nLa 1ere image correspond au filtre qui vient juste d’être appelé : aucun mois n’est sélectionné\nLa 2eme image correspond au filtre après sélection manuelle des mois de janvier et février.\n\n\n\n\n\n\n\n\n\n\n\n\nFiltre des mois (suite)\nLa 1ere image correspond au filtre après sélection de tous les mois après avoir cliqué sur Sélect tous\nLa 2eme image correspond au filtre entièrement désélectionné après avoir cliqué sur Réinit\n\n\n\n\n\n\n\n\n\n\n\n\nFiltre GHM\nLa 1ere image correspond au filtre qui vient juste d’être appelé\nLa 2eme image correspond au filtre après avoir saisi “genou” : seuls les GHM avec le mot “genou” dans leur intitulé sont affichés"
+    "objectID": "acces_pmsisoft_mco.html#accès-professionnel",
+    "href": "acces_pmsisoft_mco.html#accès-professionnel",
+    "title": "Accès PMSISoft MCO",
+    "section": "Accès Professionnel",
+    "text": "Accès Professionnel\n\n\nCaractéristiques\n\nAccès proposé à tout établissement de santé sanitaire MCO 6\nAccès en ligne en HDS\nMulti-accès, multi-finess, multi-champs PMSI\nAccès DIM sous la responsabilité du médecin DIM de l’établissement\nAccès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)\nSupport fonctionnel et métier PMSI par email et téléphone\n\nMise à disposition de scripts R PMSI\n\nSéance de formation en ligne (option)\nTarif annuel unique tout compris par établissement selon le périmètre de l’établissement\n\n\n\n\nFonctionnalités\n\nToutes les fonctionnalités de l’accès Standard\nDonnées PMSI MCO enrichies 5\nAccès aux listes de rum, de séjours et de codage pour tous les casemix, requêtes et analyses\nFiltres dédiés (famille de code, thésaurus, anesthésie, …)\nAccès aux calculs avancés dans les casemix et analyses\nRequêteur métier PMSI MCO 4\nSimulateur de classification des séjours MCO en GHM/GHS et valorisation T2A 6\nSimulateur de campagne tarifaire (depuis 2022)\n\nRapports avancés en pdf avec accès aux données des tableaux et graphiques des rapports en csv et JSON\nRapports personnalisés à l’établissement"
   },
   {
-    "objectID": "posts/type_filtre/index.html#filtre-code",
-    "href": "posts/type_filtre/index.html#filtre-code",
-    "title": "Les types de filtres",
-    "section": "Filtre code",
-    "text": "Filtre code\n\nDéfinition\nLes filtres de type code permettent de rechercher la présence d’un code ou d’une liste de codes u code saisi dans la base de l’écran.\nExemples classiques : filtre “CIM-10” pour repérer la présence d’un codage CIM-10 dans des RUM ou des séjours (voir ci-dessous), filtre “NAS”\nLa recherche devient effective à partir de 2 positions saisies (voir illustration ci-dessous).\nUn code saisi reste actif tant que l’utilisateur ne le supprime par dans le filtre, y compris si l’utilisateur sort de l’écran et y revient.\nL’initulé du filtre est affiché par défaut à l’ouverture de l’écran.\nDans les requêteurs métier, des options plus sophistiquées existent pour ce type de filtre (exemple : exclusion du code saisi)\n\n\nExemples\n\n\n\n\n\n\n\n\nFiltre “CIM-10” permettant de repérer la présence d’un codage CIM-10\nLa 1ere image correspond au filtre qui vient juste d’être appelé.\nLa 2eme image correspond au filtre avec la saisie du code E43 (Malnutrition protéino-énergétique grave, sans précision) : sélection de toutes les lignes de la base de l’écran avec au moins 1 codage E43, indépendamment de sa position de codage.\nLa 3eme image correspondant au filtre avec la saisie d’un codage sur 2 positions : sélection de toutes les lignes de la base de l’écran avec au moins 1 codage CIM commençant par E4 (donc E40 ou E41 ou E42 ou E43 ou E44 ou E440 ou E441 ou E45 ou E46), indépendamment de sa position de codage."
+    "objectID": "acces_pmsisoft_mco.html#hébergement-de-santé-certifié",
+    "href": "acces_pmsisoft_mco.html#hébergement-de-santé-certifié",
+    "title": "Accès PMSISoft MCO",
+    "section": "Hébergement de Santé Certifié",
+    "text": "Hébergement de Santé Certifié\nPMSISoft est hébergé au MIPIH, hébergeur français certifié HDS et intègre les protocoles et dispostifs afférents (données PMSI cryptées, DMZ, authentification forte avec SMS, log accès, https, cryptage renforcé et irréversible des mots de passes, politique de rappel, gestion des accès par médecin DIM, monitoring, ….).\n\n  Notes\n  \n  \n    gestion des valeurs manquantes, \"nettoyage\" des 0 à gauche, ....\n    avec les seules variables des formats PMSI MCO. Accès aux variables calculées ou enrichies dans l'accès Professionnel\n    versions simplifiées par rapport aux versions de l'accès Professionnel\n    requêtes en langage naturel \n    libellés, variables calculées (DP et DR séjour, nombre de journées rum et séjour par rum, ...), variables complémentaires (mode d'entrée séjour, année PMSI du séjour, CMA, ...)\n    accès dédié possible pour ce seul simulateur GHM\n    nous nous réservons le droit de ne pas donner suite à la demande d'un établissement, sans explication."
   },
   {
-    "objectID": "posts/type_filtre/index.html#filtre-numérique",
-    "href": "posts/type_filtre/index.html#filtre-numérique",
-    "title": "Les types de filtres",
-    "section": "Filtre numérique",
-    "text": "Filtre numérique\n\nDéfinition\nLes filtres de type numérique permettent de sélectionner un intervalle entier.\nOn distingue 4 intervalles possibles :\n\nun unique entier 2 = sélection de la variable concernée avec exactement la valeur saisie\n\nun intervalle fermé avec une borne inférieure et une borne supérieure, séparée par une virgule = sélection de la variable concernée avec une valeur comprise entre la borne inférieure et la borne supérieure\n\nun intervalle semi-ouvert avec seulement une borne inférieure et le séparateur virgule = sélection de la variable concernée avec une valeur supérieure ou égale à la borne inférieure\n\nun intervalle semi-ouvert avec seulement le séparateur virgule et une borne supérieure = sélection de la variable concernée avec une valeur inférieure ou égale à la borne supérieure\n\nExemple classique : le nombre de RUM par séjour (voir exemple ci-dessous)\nUn intervalle saisi reste actif tant que l’utilisateur ne le supprime par dans le filtre, y compris si l’utilisateur sort de l’écran et y revient.\nL’initulé du filtre est affiché par défaut à l’ouverture de l’écran.\n\n\nExemples\n\n\n\n\n\n\n\n\n\n\nFiltre “Nombre de RUM par séjour” permettant de sélectionner les séjours en fonction de leur nombre de RUM\nLa 1ere image correspond au filtre qui vient juste d’être appelé.\nLa 2eme image correspond au filtre avec la valeur 2 : sélection des séjours avec 2 et uniquement 2 RUM.\nLa 3eme image correspond au filtre avec la valeur 2,3 : sélection des séjours avec un nombre de RUM compris entre 2 et 3.\nLa 4eme image correspond au filtre avec la valeur 2, : sélection des séjours avec au moins 2 RUM.\nLa 5eme image correspond au filtre avec la valeur ,3 : sélection des séjours avec au plus 3 RUM."
-  },
-  {
-    "objectID": "posts/type_filtre/index.html#filtre",
-    "href": "posts/type_filtre/index.html#filtre",
-    "title": "Les types de filtres",
-    "section": "Filtre “”",
-    "text": "Filtre “”"
-  },
-  {
-    "objectID": "posts/ecran_layout/index.html#fonctionnalités",
-    "href": "posts/ecran_layout/index.html#fonctionnalités",
-    "title": "Présentation des écrans",
-    "section": "Fonctionnalités",
-    "text": "Fonctionnalités\nreprendre avec couleur\nchoix tarif DGF ou OQN annualisé à partir de 2022"
-  },
-  {
-    "objectID": "posts/mco_ecran_filtre/index.html",
-    "href": "posts/mco_ecran_filtre/index.html",
-    "title": "Filtres des écrans MCO",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Qui sommes-nous ?",
     "section": "",
-    "text": "Présentation des filtres communs à la plupart des écrans MCO.\nChaque filtre est décrit par :\n\nson type\nson fonctionnement par rapport aux tableaux ou graphiques dans les écrans MCO (RUM, séjours, actes CCAM, codes CIM)\ndiverses remarques\n\nPour des raisons d’affichage, certains filtres sont accessibles dans un méta-filtre.\nExemple : tous les filtres de classification GHM dans le méta-filtre “Classification séjour”\nLes filtres MCO spécifiques à un écran sont décrits dans la documentation de l’écran concerné."
+    "text": "PMSISoft est édité par DATAMIS\nHébergement HDS au MIPIH\nMentions légales :\nDATAMIS\nN° SIRET : 843 777 509 00012\nCoordonnées : 31, avenue de Ségur 75007 PARIS\nNous contacter"
   },
   {
-    "objectID": "posts/mco_ecran_filtre/index.html#introduction",
-    "href": "posts/mco_ecran_filtre/index.html#introduction",
-    "title": "Filtres des écrans MCO",
-    "section": "Introduction",
-    "text": "Introduction\nfff"
+    "objectID": "acces_pmsisoft_had.html",
+    "href": "acces_pmsisoft_had.html",
+    "title": "Accès PMSISoft HAD",
+    "section": "",
+    "text": "Caractéristiques\n\nAccès proposé à tout établissement de santé sanitaire HAD 6\nGratuit, sans limite de durée\nAccès en ligne en HDS\nMulti-accès, multi-finess, multi-champs PMSI\nAccès DIM sous la responsabilité du médecin DIM de l’établissement\nAccès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)\nSupport : blog documentaire\nAccès sous 48 heures sur demande du médecin DIM de l’établissement\n\nDemander un accès PMSISoft Standard\n\n\n\nFonctionnalités\n\nDonnées PMSI HAD retraitées 1\nBases d’activité rpss, vidhosp, fichcomp, anohosp, rapss avec zoom aux items 2\nCase-mix et analyses 2, 3\nFiltres périodes, MPP, MPA, nature du séjour, GHPC, GHT, codage CIM, codage CCAM, dépendance, …\nBibliothèque de requêtes PMSI HAD\nRapports d’activité PMSI HAD basiques, téléchargeables en pdf\nExports (formats JSON ou csv)\nRéférentiels PMSI à jour\nHistorique depuis 2019"
   },
   {
-    "objectID": "posts/mco_ecran_filtre/index.html#filtre-année",
-    "href": "posts/mco_ecran_filtre/index.html#filtre-année",
-    "title": "Filtres des écrans MCO",
-    "section": "Filtre “Année”",
-    "text": "Filtre “Année”\n\n\n\n\n\n\nType de filtre : liste.\nValeurs : 2019 à 2023\nTableau de RUM : sélection des RUM avec la date de sortie de l’UM du RUM dans l’année sélectionnée\nTableau de séjours : sélection des séjours avec la date de sortie du séjour (= la date de sortie du dernier RUM du séjour) dans l’année sélectionnée\nTableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM avec la date de sortie de l’UM du RUM dans l’année sélectionnée\nFiltre présent dans tous les écrans en 1ere position de la 1ere ligne de filtres."
+    "objectID": "acces_pmsisoft_had.html#accès-standard",
+    "href": "acces_pmsisoft_had.html#accès-standard",
+    "title": "Accès PMSISoft HAD",
+    "section": "",
+    "text": "Caractéristiques\n\nAccès proposé à tout établissement de santé sanitaire HAD 6\nGratuit, sans limite de durée\nAccès en ligne en HDS\nMulti-accès, multi-finess, multi-champs PMSI\nAccès DIM sous la responsabilité du médecin DIM de l’établissement\nAccès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)\nSupport : blog documentaire\nAccès sous 48 heures sur demande du médecin DIM de l’établissement\n\nDemander un accès PMSISoft Standard\n\n\n\nFonctionnalités\n\nDonnées PMSI HAD retraitées 1\nBases d’activité rpss, vidhosp, fichcomp, anohosp, rapss avec zoom aux items 2\nCase-mix et analyses 2, 3\nFiltres périodes, MPP, MPA, nature du séjour, GHPC, GHT, codage CIM, codage CCAM, dépendance, …\nBibliothèque de requêtes PMSI HAD\nRapports d’activité PMSI HAD basiques, téléchargeables en pdf\nExports (formats JSON ou csv)\nRéférentiels PMSI à jour\nHistorique depuis 2019"
   },
   {
-    "objectID": "posts/mco_ecran_filtre/index.html#filtre-mois",
-    "href": "posts/mco_ecran_filtre/index.html#filtre-mois",
-    "title": "Filtres des écrans MCO",
-    "section": "Filtre “Mois”",
-    "text": "Filtre “Mois”\n\n\n\n\n\n\nType de filtre : liste.\nValeurs : les 12 mois\nTableau de RUM : sélection des RUM avec la date de sortie de l’UM du RUM comprise dans un mois sélectionné\nTableau de séjours : sélection des séjours avec la de date de sortie du séjour (= la date de sortie du dernier RUM du séjour) comprise dans un mois sélectionné\nTableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM avec la date de sortie de l’UM du RUM comprise dans un mois sélectionné\nFiltre présent dans tous les écrans en 2eme position de la 1ere ligne de filtres."
+    "objectID": "acces_pmsisoft_had.html#accès-professionnel",
+    "href": "acces_pmsisoft_had.html#accès-professionnel",
+    "title": "Accès PMSISoft HAD",
+    "section": "Accès Professionnel",
+    "text": "Accès Professionnel\n\n\nCaractéristiques\n\nAccès proposé à tout établissement de santé sanitaire HAD 6\nAccès en ligne en HDS\nMulti-accès, multi-finess, multi-champs PMSI\nAccès DIM sous la responsabilité du médecin DIM de l’établissement\nAccès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)\nSupport fonctionnel et métier PMSI par email et téléphone\n\nMise à disposition de scripts R PMSI\n\nSéance de formation en ligne (option)\nTarif annuel unique tout compris par établissement selon le périmètre de l’établissement\n\n\n\n\nFonctionnalités\n\nToutes les fonctionnalités et services de l’accès Standard\nDonnées PMSI HAD enrichies5\nAccès aux listes de rpss, de séjours et de codage pour tous les casemix, requêtes et analyses\nAccès aux calculs avancés dans les casemix et analyses\nRequêteur métier PMSI HAD 4\nRapports avancés en pdf avec accès aux données des tableaux et graphiques des rapports en csv et JSON\nRapports personnalisés à l’établissement"
   },
   {
-    "objectID": "posts/mco_ecran_filtre/index.html#filtre-um",
-    "href": "posts/mco_ecran_filtre/index.html#filtre-um",
-    "title": "Filtres des écrans MCO",
-    "section": "Filtre “UM”",
-    "text": "Filtre “UM”\n\n\n\n\n\n\nType de filtre : liste.\nValeurs : codes des UM représentées par au moins 1 RUM dans les imports PMSI de l’établissement.\nTableau de RUM : sélection des RUM avec une UM sélectionnée\nTableau de séjours : sélection des séjours avec au moins 1 RUM relevant d’une UM sélectionnée\nTableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM relevant d’une UM sélectionnée\nFiltre présent dans tous les écrans en 3eme position de la 1ere ligne de filtres."
+    "objectID": "acces_pmsisoft_had.html#hébergement-de-santé-certifié",
+    "href": "acces_pmsisoft_had.html#hébergement-de-santé-certifié",
+    "title": "Accès PMSISoft HAD",
+    "section": "Hébergement de Santé Certifié",
+    "text": "Hébergement de Santé Certifié\nPMSISoft est hébergé au MIPIH, hébergeur français certifié HDS et intègre les protocoles et dispostifs afférents (données PMSI cryptées, DMZ, authentification forte avec SMS, log accès, https, cryptage renforcé et irréversible des mots de passes, politique de rappel, gestion des accès par médecin DIM, monitoring, ….).\n\n  Notes\n  \n  \n    gestion des valeurs manquantes, \"nettoyage\" des 0 à gauche, ....\n    avec les seules variables des formats PMSI HAD. Accès aux variables calculées ou enrichies dans l'accès Professionnel\n    versions simplifiées par rapport aux versions de l'accès Professionnel\n    construction des requêtes en langage naturel \n    libellés, variables calculées (nombre d'actes par séquence, ...), variables complémentaires (nombre de DA différents par séjour, ...)\n    nous nous réservons le droit de ne pas donner suite à la demande d'un établissement, sans explication."
   },
   {
-    "objectID": "posts/mco_ecran_filtre/index.html#filtre-autorisation",
-    "href": "posts/mco_ecran_filtre/index.html#filtre-autorisation",
-    "title": "Filtres des écrans MCO",
-    "section": "Filtre “Autorisation”",
-    "text": "Filtre “Autorisation”\n\n\n\n\n\n\n\n\n\n\nType de filtre : liste.\nValeurs : codes des autorisations représentées au moins 1 fois dans les fichiers FICIUM de l’établissement.\nFiltre actif si FICIUM de l’année sélectionnée est importé.\nTableau de RUM : sélection des RUM relevant d’une UM avec une autorisation sélectionnée\nTableau de séjours : sélection des séjours avec au moins 1 RUM dont l’UM est avec une autorisation sélectionnée\nTableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM dont l’UM est avec une autorisation sélectionnée\nFiltre affiché dans le méta-filtre “Type d’UM”"
-  },
-  {
-    "objectID": "posts/mco_ecran_filtre/index.html#filtre-mode-dhospitalisation",
-    "href": "posts/mco_ecran_filtre/index.html#filtre-mode-dhospitalisation",
-    "title": "Filtres des écrans MCO",
-    "section": "Filtre “Mode d’hospitalisation”",
-    "text": "Filtre “Mode d’hospitalisation”\n\n\n\n\n\n\n\n\n\n\nType de filtre : liste.\nValeurs : les modes d’hospitalisation possibles en MCO.\nFiltre actif si FICIUM de l’année sélectionnée est importé.\nTableau de RUM : sélection des RUM dans une UM avec un mode d’hospitalisation sélectionné\nTableau de séjours : sélection des séjours avec au moins 1 RUM dont l’UM a un mode d’hospitalisation sélectionné\nTableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM dont l’UM a un mode d’hospitalisation sélectionné.\nFiltre affiché dans le méta-filtre “Type d’UM”"
-  },
-  {
-    "objectID": "posts/mco_ecran_filtre/index.html#filtre-nas",
-    "href": "posts/mco_ecran_filtre/index.html#filtre-nas",
-    "title": "Filtres des écrans MCO",
-    "section": "Filtre “NAS”",
-    "text": "Filtre “NAS”\n\n\n\n\n\n\nType de filtre : code.\nValeurs : saisie libre\nTableau de RUM : sélection des RUM avec le NAS saisi\nTableau de séjours : sélection des séjours avec le NAS saisi\nTableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM avec le NAS saisi"
-  },
-  {
-    "objectID": "posts/mco_ecran_filtre/index.html#filtre-cmd",
-    "href": "posts/mco_ecran_filtre/index.html#filtre-cmd",
-    "title": "Filtres des écrans MCO",
-    "section": "Filtre “CMD”",
-    "text": "Filtre “CMD”\n\n\n\n\n\n\n\n\n\n\nType de filtre : liste.\nValeurs : codes + libellés CMD des CMD représentées par au moins 1 RUM dans les imports PMSI de l’établissement.\nTableau de RUM : sélection des RUM classés dans une CMD sélectionnée\nTableau de séjours : sélection des séjours classés dans une CMD sélectionnée\nTableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM classés dans une CMD sélectionnée\nFiltre affiché dans le méta-filtre “Classification séjour”"
-  },
-  {
-    "objectID": "posts/mco_ecran_filtre/index.html#filtre-sous_cmd",
-    "href": "posts/mco_ecran_filtre/index.html#filtre-sous_cmd",
-    "title": "Filtres des écrans MCO",
-    "section": "Filtre “Sous_CMD”",
-    "text": "Filtre “Sous_CMD”\n\n\n\n\n\n\n\n\n\n\nType de filtre : liste.\nValeurs : codes + libellés des sous-CMD représentées par au moins 1 RUM dans les imports PMSI de l’établissement\nTableau de RUM : sélection des RUM classés dans une sous-CMD sélectionnée\nTableau de séjours : sélection des séjours classés dans une sous-CMD sélectionnée\nTableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM classés dans une sous-CMD sélectionnée\nFiltre affiché dans le méta-filtre “Classification séjour”"
-  },
-  {
-    "objectID": "posts/mco_ecran_filtre/index.html#filtre-cmkz",
-    "href": "posts/mco_ecran_filtre/index.html#filtre-cmkz",
-    "title": "Filtres des écrans MCO",
-    "section": "Filtre “CMKZ”",
-    "text": "Filtre “CMKZ”\n\n\n\n\n\n\n\n\n\n\nType de filtre : liste.\nValeurs : C, M, K, Z\nTableau de RUM : sélection des RUM classés avec un des codes (C,M,K,Z) sélectionné\nTableau de séjours : sélection des séjours classés avec un des codes (C,M,K,Z) sélectionné\nTableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM classés avec un des codes (C,M,K,Z) sélectionné\nFiltre affiché dans le méta-filtre “Classification séjour”"
-  },
-  {
-    "objectID": "posts/mco_ecran_filtre/index.html#filtre-ghm",
-    "href": "posts/mco_ecran_filtre/index.html#filtre-ghm",
-    "title": "Filtres des écrans MCO",
-    "section": "Filtre “GHM”",
-    "text": "Filtre “GHM”\n\n\n\n\n\n\n\n\n\n\nType de filtre : liste.\nValeurs : codes + libellés des GHM représentés par au moins 1 RUM dans les imports PMSI de l’établissement\nTableau de RUM : sélection des RUM classés dans un GHM sélectionné\nTableau de séjours : sélection des séjours classés dans un GHM sélectionné\nTableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM classés dans un GHM sélectionné\nFiltre affiché dans le méta-filtre “Classification séjour”"
-  },
-  {
-    "objectID": "posts/mco_ecran_filtre/index.html#filtre-sévérité-durée",
-    "href": "posts/mco_ecran_filtre/index.html#filtre-sévérité-durée",
-    "title": "Filtres des écrans MCO",
-    "section": "Filtre “Sévérité-Durée”",
-    "text": "Filtre “Sévérité-Durée”\n\n\n\n\n\n\n\n\n\n\nType de filtre : liste.\nValeurs : 1, 2, 3, 4, J, T, Z, E, A, B, C, D\nTableau de RUM : sélection des RUM classés avec un code de sévérité/durée sélectionné\nTableau de séjours : sélection des séjours classés avec un code de sévérité/durée sélectionné\nTableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM classés avec un code de sévérité/durée sélectionné\nFiltre affiché dans le méta-filtre “Classification séjour”"
-  },
-  {
-    "objectID": "posts/mco_ecran_filtre/index.html#filtre-nombre-rum-par-séjour",
-    "href": "posts/mco_ecran_filtre/index.html#filtre-nombre-rum-par-séjour",
-    "title": "Filtres des écrans MCO",
-    "section": "Filtre “Nombre RUM par séjour”",
-    "text": "Filtre “Nombre RUM par séjour”\n\n\n\n\n\n\nType de filtre : intervalle.\nValeurs : saisie numérique\nTableau de RUM : sélection des RUM des séjours avec un nombre de RUM dans l’intervalle numérique sélectionné\nTableau de séjours : sélection des séjours avec un nombre de RUM dans l’intervalle numérique sélectionné\nTableau d’actes CCAM ou de codes CIM : sélection des actes CCAM ou codes CIM des RUM des séjours avec un nombre de RUM dans l’intervalle numérique sélectionné\nFiltre affiché dans le méta-filtre “Type de RUM”"
+    "objectID": "acces_pmsisoft_psy.html",
+    "href": "acces_pmsisoft_psy.html",
+    "title": "Accès PMSISoft PSY",
+    "section": "",
+    "text": "Caractéristiques\n\nAccès proposé à tout établissement de santé sanitaire PSY 6\nGratuit, sans limite de durée\nAccès en ligne en HDS\nMulti-accès, multi-finess, multi-champs PMSI\nAccès DIM sous la responsabilité du médecin DIM de l’établissement\nAccès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)\nSupport : blog documentaire\nAccès sous 48 heures sur demande du médecin DIM de l’établissement\n\nDemander un accès PMSISoft Standard\n\n\n\nFonctionnalités\n\nDonnées PMSI PSY retraitées 1\nBases d’activité rps, raa avec zoom aux items 2\nCase-mix et analyses 2, 3\nFiltres UM, périodes, forme d’activité, mode légal de soins, grille EDGARX, lieu de l’acte, catégorie professionnelle de l’intervenant, …\nBibliothèque de requêtes PMSI PSY\nRapports d’activité PMSI PSY basiques, téléchargeables en pdf\nExports (formats JSON ou csv)\nRéférentiels PMSI à jour\nHistorique depuis 2019"
   },
   {
     "objectID": "acces_pmsisoft_psy.html#accès-standard",
     "href": "acces_pmsisoft_psy.html#accès-standard",
     "title": "Accès PMSISoft PSY",
-    "section": "Accès Standard",
-    "text": "Accès Standard\n\n\nCaractéristiques\n\nAccès proposé à tout établissement de santé sanitaire PSY 6\nGratuit, sans limite de durée\nAccès en ligne en HDS\nMulti-accès, multi-finess, multi-champs PMSI\nAccès DIM sous la responsabilité du médecin DIM de l’établissement\nAccès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)\nSupport : blog documentaire\nAccès sous 48 heures sur demande du médecin DIM de l’établissement\n\nDemander un accès PMSISoft Standard\n\n\n\nPrincipales fonctionnalités\n\nDonnées PMSI PSY retraitées 1\nBases d’activité avec zoom aux rps et raa 2\nCase-mix et analyses 2, 3\nFiltres UM, périodes, forme d’activité, mode légal de soins, grille EDGARX, lieu de l’acte, catégorie professionnelle de l’intervenant, …\nBibliothèque de requêtes PMSI PSY\nRapports d’activité PMSI PSY basiques, téléchargeables en pdf\nExports (formats JSON ou csv)\nRéférentiels PMSI à jour\nHistorique depuis 2019"
+    "section": "",
+    "text": "Caractéristiques\n\nAccès proposé à tout établissement de santé sanitaire PSY 6\nGratuit, sans limite de durée\nAccès en ligne en HDS\nMulti-accès, multi-finess, multi-champs PMSI\nAccès DIM sous la responsabilité du médecin DIM de l’établissement\nAccès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)\nSupport : blog documentaire\nAccès sous 48 heures sur demande du médecin DIM de l’établissement\n\nDemander un accès PMSISoft Standard\n\n\n\nFonctionnalités\n\nDonnées PMSI PSY retraitées 1\nBases d’activité rps, raa avec zoom aux items 2\nCase-mix et analyses 2, 3\nFiltres UM, périodes, forme d’activité, mode légal de soins, grille EDGARX, lieu de l’acte, catégorie professionnelle de l’intervenant, …\nBibliothèque de requêtes PMSI PSY\nRapports d’activité PMSI PSY basiques, téléchargeables en pdf\nExports (formats JSON ou csv)\nRéférentiels PMSI à jour\nHistorique depuis 2019"
   },
   {
     "objectID": "acces_pmsisoft_psy.html#accès-professionnel",
     "href": "acces_pmsisoft_psy.html#accès-professionnel",
     "title": "Accès PMSISoft PSY",
     "section": "Accès Professionnel",
-    "text": "Accès Professionnel\n\n\nCaractéristiques\n\nAccès proposé à tout établissement de santé sanitaire PSY\nAccès en ligne en HDS\nMulti-accès, multi-finess, multi-champs PMSI\nAccès DIM sous la responsabilité du médecin DIM de l’établissement\nAccès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)\nSupport par email et téléphone\n\nSéance de formation en ligne (option)\nTarif annuel unique tout compris par établissement selon le périmètre de l’établissement\n\n\n\n\nPrincipales fonctionnalités\n\nToutes les fonctionnalités de l’accès Standard\nDonnées PMSI PSY enrichies5\nAccès aux listes de rps, de raa, de séjours et de codage pour tous les casemix, requêtes et analyses\nFiltres dédiés (famille de code, thésaurus, forme d’activité, catégorie d’intervenant, grille EDGARX, …)\nAccès aux calculs avancés dans les casemix et analyses\nRequêteur métier PMSI PSY 4\nRapports avancés en pdf avec accès aux données des tableaux et graphiques des rapports en csv et JSON\nRapports personnalisés à l’établissement"
+    "text": "Accès Professionnel\n\n\nCaractéristiques\n\nAccès proposé à tout établissement de santé sanitaire PSY 6\nAccès en ligne en HDS\nMulti-accès, multi-finess, multi-champs PMSI\nAccès DIM sous la responsabilité du médecin DIM de l’établissement\nAccès Administratif (données consolidées, sans accès à des données PMSI individualisées ou indirectement individualisées)\nSupport fonctionnel et PMSI par email et téléphone\n\nMise à disposition de scripts R PMSI\n\nSéance de formation en ligne (option)\nTarif annuel unique tout compris par établissement selon le périmètre de l’établissement\n\n\n\n\nFonctionnalités\n\nToutes les fonctionnalités de l’accès Standard\nDonnées PMSI PSY enrichies5\nAccès aux listes de rps, de raa, de séjours et de codage pour tous les casemix, requêtes et analyses\nFiltres dédiés (famille de code, thésaurus, forme d’activité, catégorie d’intervenant, grille EDGARX, …)\nAccès aux calculs avancés dans les casemix et analyses\nRequêteur métier PMSI PSY 4\nRapports avancés en pdf avec accès aux données des tableaux et graphiques des rapports en csv et JSON\nRapports personnalisés à l’établissement"
   },
   {
     "objectID": "acces_pmsisoft_psy.html#hébergement-de-santé-certifié",
@@ -602,38 +378,255 @@
     "text": "Hébergement de Santé Certifié\nPMSISoft est hébergé au MIPIH, hébergeur français certifié HDS et intègre les protocoles et dispostifs afférents (données PMSI cryptées, DMZ, authentification forte avec SMS, log accès, https, cryptage renforcé et irréversible des mots de passes, politique de rappel, gestion des accès par médecin DIM, monitoring, ….).\n\n  Notes\n  \n  \n    gestion des valeurs manquantes, \"nettoyage\" des 0 à gauche, ....\n    avec les seules variables des formats PMSI PSY. Accès aux variables calculées ou enrichies dans l'accès Professionnel\n    versions simplifiées par rapport aux versions de l'accès Professionnel\n    construction des requêtes en langage naturel \n    libellés, variables calculées (nombre d'actes par ipp, ...), variables complémentaires (nombre de DA différents par séjour, date de fin du séjour par rps, ...)\n    nous nous réservons le droit de ne pas donner suite à la demande d'un établissement, sans explication."
   },
   {
-    "objectID": "posts/type_filtre/index.html#filtre-intervalle",
-    "href": "posts/type_filtre/index.html#filtre-intervalle",
-    "title": "Les types de filtres",
-    "section": "Filtre intervalle",
-    "text": "Filtre intervalle\n\nDéfinition\nLes filtres de type intervalle permettent de sélectionner un intervalle entier de valeurs entières.\nOn distingue 4 intervalles possibles :\n\nun unique entier = sélection de la variable concernée avec exactement la valeur saisie 2\nun intervalle fermé avec une borne inférieure et une borne supérieure, séparée par une virgule = sélection de la variable concernée avec une valeur comprise entre la borne inférieure et la borne supérieure\n\nun intervalle semi-ouvert avec seulement une borne inférieure et le séparateur virgule = sélection de la variable concernée avec une valeur supérieure ou égale à la borne inférieure\n\nun intervalle semi-ouvert avec seulement le séparateur virgule et une borne supérieure = sélection de la variable concernée avec une valeur inférieure ou égale à la borne supérieure\n\nExemple classique : le nombre de RUM par séjour (voir exemple ci-dessous)\nUn intervalle saisi reste actif tant que l’utilisateur ne le supprime par dans le filtre, y compris si l’utilisateur sort de l’écran et y revient.\nL’initulé du filtre est affiché par défaut à l’ouverture de l’écran.\n\n\nExemples\n\n\n\n\n\n\n\n\n\n\nFiltre “Nombre de RUM par séjour” permettant de sélectionner les séjours en fonction de leur nombre de RUM\nLa 1ere image correspond au filtre qui vient juste d’être appelé.\nLa 2eme image correspond au filtre avec la valeur 1 : sélection des séjours avec 1 et uniquement 1 RUM.\nLa 3eme image correspond au filtre avec l’intervalle 2,3 : sélection des séjours avec un nombre de RUM compris entre 2 et 3.\nLa 4eme image correspond au filtre avec l’intervalle 2, : sélection des séjours avec au moins 2 RUM.\nLa 5eme image correspond au filtre avec l’intervalle ,3 : sélection des séjours avec au plus 3 RUM."
+    "objectID": "brouillon/post-with-code/index.html",
+    "href": "brouillon/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
   },
   {
-    "objectID": "posts/type_filtre/index.html#filtres-de-type-liste",
-    "href": "posts/type_filtre/index.html#filtres-de-type-liste",
-    "title": "Les types de filtres",
-    "section": "Filtres de type liste",
-    "text": "Filtres de type liste\n\nDéfinition\nLes filtres de type liste permettent de sélectionner un ou plusieurs items au sein d’une liste finie d’items (mois, UM, types d’hospitalisation, GHM, CMD, GME, types d’intervenant CSARR, etc…)\nLes listes sont définies à priori (liste des mois, liste des types d’hospitalisation, …) ou issues des données PMSI de l’établissement (liste des UM de l’établissement, liste des GHM représentés dans l’établissement, …).\nLes listes de codes sont très généralement enrichies avec les libellés PMSI correspondant aux codes.\nExemples : libellés GHM pour les codes GHM, intitulés des types d’intervenants correspondant aux codes intervenants CSARR\nLes listes sont multi-choix 1.\nLa sélection du ou des items peut toujours s’effectuer, item par item, en cliquant sur l’item : une coche s’affiche alors en face de chaque item sélectionné.\nPour désactiver une sélection, il suffit de décocher la ligne de l’item concerné.\nUne sélection activée reste active tant que l’utilisateur ne la désactive pas, y compris si l’utilisateur sort de l’écran et y revient.\nQuand la liste des items est importante, 2 aides à la sélection s’affichent en tête de la liste :\n\nSélect tous = sélection de tous les items de la liste\nRéinit = désélection de tous les items de la liste\n\nPour les filtres pour lesquels cela a du sens, (voir exemple illustré ci-dessous), il est aussi possible de réaliser une sélection d’items à partir de mots clés.\nL’initulé du filtre est affiché par défaut à l’ouverture de l’écran.\n\n\nExemples\n\n\n\n\n\n\n\n\n\n\nUn exemple classique : le filtre des mois\nLa 1ere image correspond au filtre qui vient juste d’être appelé : aucun mois n’est sélectionné\nLa 2eme image correspond au filtre après sélection manuelle des mois de janvier et février.\n\n\n\n\n\n\n\n\n\n\n\n\nFiltre des mois (suite)\nLa 1ere image correspond au filtre après sélection de tous les mois après avoir cliqué sur Sélect tous\nLa 2eme image correspond au filtre entièrement désélectionné après avoir cliqué sur Réinit\n\n\n\n\n\n\n\n\n\n\n\n\nFiltre GHM\nLa 1ere image correspond au filtre qui vient juste d’être appelé\nLa 2eme image correspond au filtre après avoir saisi “genou” : seuls les GHM avec le mot “genou” dans leur intitulé sont affichés"
+    "objectID": "posts/mco/mco_ecran_ace_requete/index.html",
+    "href": "posts/mco/mco_ecran_ace_requete/index.html",
+    "title": "ACE MCO Requête",
+    "section": "",
+    "text": "Cet écran propose 2 listes de requêtes sur les ACE MCO : 30 requêtes dites de Simulation valorisation et 10 requêtes de Contrôles Qualité (CQ).\nLes requêtes Simulation valorisation ont pour principal objet de repérer les situations de sous-facturation dans l’établissement en FIDES (via filtrage par semaine) ou pas.\nLes requêtes CQ ont un double objectifs : repérer avant envoi des lots de facturation les situations de rejets (et ainsi faire baisser le taux de rejets des factures ACE de létablissement) et améliorer la qualité et l’exhaustivité du codage des ACE.\nLes CQ gérés à ce jour par les logiciels de production (exemple : présence d’un codage “âge urgence” en FU pour tout passage urgence) n’ont pas été développés ici, car sans intérêt. De nombreux CQ peuvent par ailleurs être requêtés via les 2 écrans “Base des ACE” et “Casemix ACE”.\nLes requêtes sont conçues et maintenues à dire d’expert, sur la base du fichier des RSF-ACE, des référentiels PMSI (NGAP, CCAM AMELI, NABM, …) et des algorithmes développés et maintenus par PMSISoft.\nLa liste des requêtes a vocation à évoluer régulièrement en fonction des évolutions réglementaires, des retours et demandes des établissements.\n\n\n\n\n\n\nApplication des requêtes\n\n\n\nPMSISoft propose et calcule des algorithmes d’analyses PMSI, conçus à dire d’expert sur la base des cahiers des charges et des référentiels du PMSI. Ces algorithmes produisent des requêtes identifiées et documentées.\nIl est de la seule responsabilité de l’établissement de juger de l’opportunité et de la cohérence d’appliquer les résultats de ces requêtes au redressement des données de codage de l’établissement."
   },
   {
-    "objectID": "posts/type_filtre/index.html#filtres-de-type-code",
-    "href": "posts/type_filtre/index.html#filtres-de-type-code",
-    "title": "Les types de filtres",
-    "section": "Filtres de type code",
-    "text": "Filtres de type code\n\nDéfinition\nLes filtres de type code permettent de rechercher la présence d’un code ou d’une liste de codes.\nExemples classiques : filtre “CIM-10” pour repérer la présence d’un codage CIM-10 dans des RUM ou des séjours (voir ci-dessous), filtre “NAS”\nLa recherche devient effective à partir de 2 positions saisies (voir illustration ci-dessous).\nUn code saisi reste actif tant que l’utilisateur ne le supprime par dans le filtre, y compris si l’utilisateur sort de l’écran et y revient.\nL’initulé du filtre est affiché par défaut à l’ouverture de l’écran.\nDans les requêteurs métier, des options plus sophistiquées existent pour ce type de filtre (exemple : exclusion du code saisi)\n\n\nExemples\n\n\n\n\n\n\n\n\nFiltre “CIM-10” permettant de repérer la présence d’un codage CIM-10\nLa 1ere image correspond au filtre qui vient juste d’être appelé.\nLa 2eme image correspond au filtre avec la saisie du code E43 “Malnutrition protéino-énergétique grave, sans précision” : sélection de toutes les lignes de la base de l’écran avec au moins 1 codage E43, indépendamment de sa position de codage.\nLa 3eme image correspondant au filtre avec la saisie d’un codage sur 2 positions : sélection de toutes les lignes de la base de l’écran avec au moins 1 codage CIM commençant par E4 (donc E40 ou E41 ou E42 ou E43 ou E44 ou E440 ou E441 ou E45 ou E46), indépendamment de sa position de codage."
+    "objectID": "posts/mco/mco_ecran_ace_requete/index.html#introduction",
+    "href": "posts/mco/mco_ecran_ace_requete/index.html#introduction",
+    "title": "ACE MCO Requête",
+    "section": "",
+    "text": "Cet écran propose 2 listes de requêtes sur les ACE MCO : 30 requêtes dites de Simulation valorisation et 10 requêtes de Contrôles Qualité (CQ).\nLes requêtes Simulation valorisation ont pour principal objet de repérer les situations de sous-facturation dans l’établissement en FIDES (via filtrage par semaine) ou pas.\nLes requêtes CQ ont un double objectifs : repérer avant envoi des lots de facturation les situations de rejets (et ainsi faire baisser le taux de rejets des factures ACE de létablissement) et améliorer la qualité et l’exhaustivité du codage des ACE.\nLes CQ gérés à ce jour par les logiciels de production (exemple : présence d’un codage “âge urgence” en FU pour tout passage urgence) n’ont pas été développés ici, car sans intérêt. De nombreux CQ peuvent par ailleurs être requêtés via les 2 écrans “Base des ACE” et “Casemix ACE”.\nLes requêtes sont conçues et maintenues à dire d’expert, sur la base du fichier des RSF-ACE, des référentiels PMSI (NGAP, CCAM AMELI, NABM, …) et des algorithmes développés et maintenus par PMSISoft.\nLa liste des requêtes a vocation à évoluer régulièrement en fonction des évolutions réglementaires, des retours et demandes des établissements.\n\n\n\n\n\n\nApplication des requêtes\n\n\n\nPMSISoft propose et calcule des algorithmes d’analyses PMSI, conçus à dire d’expert sur la base des cahiers des charges et des référentiels du PMSI. Ces algorithmes produisent des requêtes identifiées et documentées.\nIl est de la seule responsabilité de l’établissement de juger de l’opportunité et de la cohérence d’appliquer les résultats de ces requêtes au redressement des données de codage de l’établissement."
   },
   {
-    "objectID": "posts/type_filtre/index.html#filtres-de-type-intervalle",
-    "href": "posts/type_filtre/index.html#filtres-de-type-intervalle",
-    "title": "Les types de filtres",
-    "section": "Filtres de type intervalle",
-    "text": "Filtres de type intervalle\n\nDéfinition\nLes filtres de type intervalle permettent de sélectionner un intervalle entier de valeurs entières.\nOn distingue 4 intervalles possibles :\n\nun unique entier = sélection de la variable concernée avec exactement la valeur saisie 2\nun intervalle fermé avec une borne inférieure et une borne supérieure, séparée par une virgule = sélection de la variable concernée avec une valeur comprise entre la borne inférieure et la borne supérieure\n\nun intervalle semi-ouvert avec seulement une borne inférieure et le séparateur virgule = sélection de la variable concernée avec une valeur supérieure ou égale à la borne inférieure\n\nun intervalle semi-ouvert avec seulement le séparateur virgule et une borne supérieure = sélection de la variable concernée avec une valeur inférieure ou égale à la borne supérieure\n\nExemple classique : le nombre de RUM par séjour (voir exemple ci-dessous)\nUn intervalle saisi reste actif tant que l’utilisateur ne le supprime par dans le filtre, y compris si l’utilisateur sort de l’écran et y revient.\nL’initulé du filtre est affiché par défaut à l’ouverture de l’écran.\n\n\nExemples\n\n\n\n\n\n\n\n\n\n\nFiltre “Nombre de RUM par séjour” permettant de sélectionner les séjours en fonction de leur nombre de RUM\nLa 1ere image correspond au filtre qui vient juste d’être appelé.\nLa 2eme image correspond au filtre avec la valeur 1 : sélection des séjours avec 1 et uniquement 1 RUM.\nLa 3eme image correspond au filtre avec l’intervalle 2,3 : sélection des séjours avec un nombre de RUM compris entre 2 et 3.\nLa 4eme image correspond au filtre avec l’intervalle 2, : sélection des séjours avec au moins 2 RUM.\nLa 5eme image correspond au filtre avec l’intervalle ,3 : sélection des séjours avec au plus 3 RUM."
+    "objectID": "posts/mco/mco_ecran_ace_requete/index.html#chemin-de-lécran",
+    "href": "posts/mco/mco_ecran_ace_requete/index.html#chemin-de-lécran",
+    "title": "ACE MCO Requête",
+    "section": "Chemin de l’écran",
+    "text": "Chemin de l’écran\nACE MCO -&gt; Requêtes ACE"
   },
   {
-    "objectID": "posts/mco_simulation_ghm/index.html#simulation",
-    "href": "posts/mco_simulation_ghm/index.html#simulation",
-    "title": "Simulateur GHM",
-    "section": "Simulation",
-    "text": "Simulation\n\nGrille de saisie\n\n\n\n\n\n\nGrille de saisie vierge\nPar défaut :\n- année PMSI MCO en cours\n- durée de séjour (DS) 4 = 0\n- pas de séance\n- autorisation UM différente de 08, 19 et 21 5\n- mode de sortie différent de décès (code 9)\n- destination différente de “vers une unité de MCO” (code 1)\n- pas de lit dédié\n- pas d’anesthésie générale\nPour revenir à la grille de saisie, on clique sur le bouton Reset\n\n\n\n\n\n\n\n\nSaisie DP et DR\nA partir d’une position, tous les codes CIM-10 correspondant sont proposés.\nSeuls les codes CIM-10 autorisés en DP ou DR sont proposés dans chacun des filtres DP et DR.\n\n\n\n\n\n\n\n\n\nSaisie DAS\nSeuls les codes CIM-10 autorisés en DAS sont proposés.\nQuand un DAS est une CMA, le niveau de CMA est indiqué.\nQuand un DAS a été sélectionné, il n’est plus proposé.\n\n\n\n\n\n\n\n\nSaisie CCAM\nProposition des actes CCAM à partir de la saisie des premières positions.\nLes actes CCAM opératoires sont identifiés par le suffixe “/0”\nQuand un acte CCAM a été sélectionné, il n’est plus proposé.\n\n\n\n\n\n\n\n\nBouton “Grouper”\nQuand la grille est saisie, on clique sur le bouton “Grouper” situé en haut à droite\nLe bouton “Grouper” ne devient cliquable et actif que si les 3 variables minimales (DS, DP séjour et âge) ont une saisie valide.\nIci la grille du séjour virtuel à classer est :\n- âge = 80 ans\n- DS = 3\n- DP = S7200\n- DAS = (E440, I10)\n- CCAM = (NBCA010/0, NEQK010/0)\n- anesthésie générale = “Oui” 6\n\n\n\n\nRésultats de simulation\nLes résultats d’une simulation se présentent en 4 parties :\n- les résutats de groupage\n- le rappel du codage adminsitratif\n- un tableau du codage CIM-10\n- un tableau du codage CCAM\nRésultats du groupage\n\nGHM\nCode et libellé\nCalcul sévérité\nCalcul après classification dans une racine de GHM éligible aux niveaux de sévérité et avec une DS autorisant une classification en niveau de sévérité.\n4 étapes successives calculées jusqu’à l’identification de la sévérité du GHM :\nseverite_cma = sévérité issue du codage des DAS CMA (= la sévérité maximale rencontrée)\nseverite_post_dp_dr_racine = pour chaque CMA, exclusion par DP, DR ou racine de GHM. On retient la sévérité maximale non exclue\nseverite_post_dp_dr_racine_age = prise en compte de l’effet âge s’il y a lieu, fonction de la racine GHM\nseverite_post_dp_dr_racine_age_duree = prise en compte de la durée de séjour. C’est la sévérité finale.\nDans notre exemple, c’est cette étape qui fait passer la sévérité de 3 à 2 (car DS = 3)\nGHS\nCode et informations liées (valeur forfait, borne basse, borne haut, exb et exh)\nTient compte du paramétrage DGF ou OQN\nT2A\nValorisation T2A du séjour virtuel\nValorisation T2a par JP 7\nPart de la valorisation EXB\nPart de la Valorisation EXH\nCodage CIM-10\n\n\n\n\n\n\nCodage CIM-10\nDans un tableau, tous les codages CIM-10.\nPour les DP et DR, indication du ou des CMD vers laquelle (lesquelles) oriente le DP et le DR et les listes en D associées\nPour chaque DAS CMA, indication, via des variables logiques, de son exclusion par le DR, le DR ou la racine GHM + indication numéro des listes exclusions associées à la CMA\n\n\nCodage CCAM\n\n\n\n\n\n\nCodage CCAM\nDans un tableau, tous les actes CCAM.\nPour chaque acte opératoire, indication des listes en A associées\n\n\nCodage administratif\n\n\n\n\n\n\nCodage administratif\nRappel des codages administratifs de la grille de saisie du séjour virtuel."
+    "objectID": "posts/mco/mco_ecran_ace_requete/index.html#simulation-valorisation",
+    "href": "posts/mco/mco_ecran_ace_requete/index.html#simulation-valorisation",
+    "title": "ACE MCO Requête",
+    "section": "Simulation valorisation",
+    "text": "Simulation valorisation\n\nTableau\nChaque requête est affichée avec son intitulé, sa famille (= le référentiel principal de la requête), le nomnbre cumulé d’ACE concerné par la requête et le cumuml des simulations valorisation de la requête.\nTri descendant sur la colonne “Simulation valorisation”\nExemple (fictif) de tableau des requêtes Simulation valorisation en accès Standard.\n\nUne requête :\n\n\n\n\n\n\nforgot_mop\n\n\n\nObjectif : repérer les codages NGAP justifiant d’une MOP (Majoration personnes âgées) sans MOP codée.\nAlgorithme : pour chaque entrée et chaque codage NGAP, (age &gt;= 80 ans) & (codage NGAP dans la liste des codages éligibles MOP) & (MOP non codée)\n\n\nUne autre requête :\n\n\n\n\n\n\nforgot_ccam_modificateur_z\n\n\n\nObjectif : repérer les actes CCAM éligibles au modificateur Z (Majoration du tarif pour acte de radiographie réalisé par un radiologue) sans modificateur Z codé.\nAlgorithme : pour chaque entrée et chaque acte CCAM, (acte CCAM éligible au modificateur Z) & (tous les actes CCAM ADI de l’entrée codés avec la spécialité exécutant Radiologue) 1 & (modificateur Z non codé).\nCalcul simulation valorisation par situation : 15,9% du prix unitaire de l’acte CCAM repéré.\n\n\n\n\nExport\nVia le bouton “Télécharger (csv)”, export de toutes les situations correspondant aux requêtes de Simulation valorisation.\nPour l’exemple (fictif) ci-dessus, l’export comprendrait donc 515 lignes, dont 306 lignes pour les 306 lignes de la 1ere requête, etc…\nChaque ligne est documentée via 8 colonnes :\n\nfiness_geographique\nno_entree\nno_ipp\ninformation\n\nInformation complémentaire liée à la requête.\nExemples :\nPour la requête forgot_mop, information est l’âge de l’entrée sélectionnée.\nPour la requête forgot_ccam_modificateur_z, information est le ou les codes CCAM AMELI de l’entrée sélectionnée qui supposent un modificateur Z non codé.\n\nanalyse\n\nL’intitulé de la requête.\nExemples : forgot_mop, forgot_ccam_modificateur_z, …\n\nfamille\n\nLe référentiel principal concerné par la requête.\nExemples : ngappour la requête forgot_mop, ccam pour la requête forgot_ccam_modificateur_z, …\n\nnb\n\nLe nombre de codages concernés par la requête pour l’entrée sélectionnée\n\nsimulation_valorisation\n\nSur la base du tarif actif à ce jour du codage attendu non codé ou mal codé, calcul d’une simulation du gain de recettes brut pour l’établissement.\nExemple pour la requête forgot_mop : 5€ pour chaque MOP attendu non codé"
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_ace_requete/index.html#contrôles-qualité",
+    "href": "posts/mco/mco_ecran_ace_requete/index.html#contrôles-qualité",
+    "title": "ACE MCO Requête",
+    "section": "Contrôles qualité",
+    "text": "Contrôles qualité\n\nTableau\nChaque requête CQ est affichée avec son intitulé, sa famille (= le référentiel principal de la requête) et le nomnbre cumulé d’ACE concerné par la requête.\nTri descendant sur le nombre d’ACE\nExemple (fictif) d’un tableau des requêtes CQ\n\n\n\nRequêtes CQ\nPour chaque requête CQ, documentation simplifiée de l’algorithme.\nOn raisonne par entrée pour chacune de ces requêtes CQ.\nNous renvoyons aux cahiers de charges et textes officiels pour les sous-jacents définitionnels.\nCertaines de ces requêtes CQ correspondent à des motifs de rejets des factures des entrées concernées.\n\n\n\n\n\n\ncq_psc_s_enfant\n\n\n\n(age &lt; 16 ans) & (indicateur_parcours_soins == “S”)\nS = Accès aux soins hors parcours\n\n\n\n\n\n\n\n\ncq_atu_gynecologie_alone\n\n\n\nCQ OVALIDE 2.Q.FAC - Tableau D\n(codage ligne b ATU) & (pas de codage NGAP associé) é (pas de codage CCAM associé)\n\n\n\n\n\n\n\n\ncq_ssn_sas\n\n\n\nPossiblement codage SAS (supplément “avis spécialiste aux urgences”) en nuit profonde (22h-8h) sans codage SSN (supplément nuit “avis spécialiste et imagerie”) associé 2\n(codage SUN) & (codage SAS) & !(codage SSN) & !(codage SSF) & !(codage SIC) & !(codage SIM)\n\n\n\n\n\n\n\n\ncq_ssn_sim\n\n\n\nPossiblement codage SIM (Supplément d’imagerie conventionnelle pour prise en charge complète au sein d’une structure des urgences 1) en nuit profonde (22h-8h) sans codage SSN (supplément nuit “avis spécialiste et imagerie”) associé 3\n(codage SUN) & !(codage SAS) & !(codage SSN) & !(codage SSF) & !(codage SIC) & (codage SIM)\n\n\n\n\n\n\n\n\ncq_ssn_sic\n\n\n\nPossiblement codage SIM ( Supplément d’imagerie en coupe pour prise en charge complète au sein d’une structure des urgences 2) en nuit profonde (22h-8h) sans codage SSN (supplément nuit “avis spécialiste et imagerie”) associé 4\n(codage SUN) & !(codage SAS) & !(codage SSN) & !(codage SSF) & (codage SIC) & !(codage SIM)\n\n\n\n\n\n\n\n\ncq_su2_no_ccam\n\n\n\nSU2 = Supplément prise en charge spécifique CCMU 2 +\n(codage SU2) & (aucun acte CCAM autorisant SU2)\n\n\n\n\n\n\n\n\ncq_acte_ccam_atypique\n\n\n\nCQ OVALIDE 2.Q.AAE\n(codage CCAM avec ATEXT == “1”)\nATEXT = variable OVALIDE CCAMINFO\n\n\n\n\n\n\n\n\ncq_acte_ccam_effectif_atypique\n\n\n\nCQ OVALIDE 2.Q.NAAE\n(nombre acte CCAM &gt; NBEXTAT)\nNBEXTAT = variable OVALIDE CCAMINFO\n\n\n\n\n\n\n\n\ncq_nabm_nb_supp_ngap_b_nb\n\n\n\nCQ OVALIDE 2.Q.CNABM\n(nombre lignes L &gt; nombre ligne B)\n\n\n\n\n\n\n\n\ncq_nabm_incompatibilite\n\n\n\n(couple codage NABM incompatible)\nVia le référentiel des actes NABM incompatibles.\n\n\n\n\nExport\nVia le bouton “Télécharger (csv)”, export de toutes les situations correspondant aux requêtes de Contrôles Qualité.\nPour l’exemple (fictif) ci-dessus, l’export comprendrait donc 428 lignes, dont 200 lignes pour la requête cq_nabm_nb_supp_ngap_b_nb, …\nChaque ligne est documentée via 7 colonnes :\n\nfiness_geographique\nno_entree\nno_ipp\ninformation\n\nInformation complémentaire liée à la requête.\nExemples :\nPour la requête cq_acte_ccam_atypique, information est le code CCAM.\nPour la requête cq_nabm_incompatibilite, information est le couple de code NABM incompatible\n\nanalyse\n\nL’intitulé de la requête.\nExemples : cq_psc_s_enfant, cq_nabm_incompatibilite, …\n\nfamille\n\nLe référentiel principal concerné par la requête.\nExemples : nabmpour la requête cq_nabm_incompatibilite, ccam pour la requête cq_acte_ccam_atypique, …\n\nnb\n\nLe nombre de codages concernés par la requête pour l’entrée sélectionnée"
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_ace_requete/index.html#filtrage",
+    "href": "posts/mco/mco_ecran_ace_requete/index.html#filtrage",
+    "title": "ACE MCO Requête",
+    "section": "Filtrage",
+    "text": "Filtrage\nLe filtrage des 2 analyses (Simulation valorisation et Contrôles Qualité) se fait, à partir du fichier des RSF-ACE, via 2 lignes de filtres.\nLa première ligne correspond au filtrage de périmètre et la seconde ligne au filtrage par variable\n\n\nFiltrage de périmètre\nLe filtrage de périmètre comprend 4 filtres.\n\nFiltre “FINESS géographique”\n\nSélection d’un ou plusieurs FINESS géographique liés au FINESS ePMSI de l’établissement.\nPar défaut, toutes les lignes du fichier RSF-ACE sont prises en compte.\n\nFiltre “Année”\n\nSélection d’une année d’import, à partir de 2022.\n\nFiltre “Semaine”\n\n\n\n\n\n\n\nSélection d’une ou plusieurs semaines sur la base de la date de soins (lignes en C, B), de la date de début de séjour (lignes en H, en P),de la date de l’acte (lignes en M, L), de la date de sortie (lignes en A).\nLes semaines sont les semaines ISO-8601 (semaines du lundi au dimanche) de l’année sélectionnée.\n\n\n\nFiltre “Mensuel”\n\nSélection d’un ou plusieurs mois sur la base des dates des différentes lignes (voir Filtre “Semaine”).\nLes mois sont les mois civils.\nCes 4 filtres de périmètre sont disponibles en accès Standard.\n\n\nFiltrage par variable\nLe filtrage par variable comprend 3 variables :\n\n\nno_entree pour sélectionner les lignes RSF-ACE correspondant au numéro d’entrée saisi.\nno_ipp pour sélectionner les lignes RSF-ACE correspondant au numéro d’IPP saisi.\nis_urgence pour sélectionner les lignes RSF-ACE liées via le numéro d’entrée à au moins un codage en FU (FU0, FU1, FU2, FU3, FU4) 5\n\nExemple :\n\nCe filtrage sélectionne toute l’activité ACE en urgence.\nLe filtrage par variable est disponible en accès Professionnel."
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_ace_requete/index.html#demande-daccès",
+    "href": "posts/mco/mco_ecran_ace_requete/index.html#demande-daccès",
+    "title": "ACE MCO Requête",
+    "section": "Demande d’accès",
+    "text": "Demande d’accès\nPour demander un accès PMSISoft ACE MCO Standard (gratuit, illimité dans le temps, ouvert à tout établissement MCO), nous contacter (en sélectionnant l’objet “Demande accès PMSISoft Standard”)"
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_ace_requete/index.html#footnotes",
+    "href": "posts/mco/mco_ecran_ace_requete/index.html#footnotes",
+    "title": "ACE MCO Requête",
+    "section": "Notes de bas de page",
+    "text": "Notes de bas de page\n\n\nce critère permet de s’assurer que l’acte CCAM éligible au modificateur Z est codé par un Radiologue.↩︎\nle RSF-ACE ne permet toutefois pas de repérer si le SAS, le SIC ou le SIM a été réalisé avant ou après 8h. A vérifier, au cas par cas dans le logiciel concerné de l’établissement.↩︎\nle RSF-ACE ne permet toutefois pas de repérer si le SAS, le SIC ou le SIM a été réalisé avant ou après 8h. A vérifier, au cas par cas dans le logiciel concerné de l’établissement.↩︎\nle RSF-ACE ne permet toutefois pas de repérer si le SAS, le SIC ou le SIM a été réalisé avant ou après 8h. A vérifier, au cas par cas dans le logiciel concerné de l’établissement.↩︎\non fait l’hypothèse que tout passage aux urgences est identifié via le codage d’un forfait “âge urgence” en FU↩︎"
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_filtre/index.html",
+    "href": "posts/mco/mco_ecran_filtre/index.html",
+    "title": "Filtres des écrans MCO",
+    "section": "",
+    "text": "Présentation des filtres communs à la plupart des écrans MCO.\nChaque filtre est décrit par :\n\nson type\nses valeurs\n\nson fonctionnement par rapport aux principaux items (RUM, séjours, actes CCAM, codage CIM, DMI, UCD, patient, entrée ACE, factures) sélectionnés dans les écrans MCO (tableaux, graphiques, exports csv, JSON ou .rds)\n\nautres informations\n\nPour des raisons d’affichage, certains filtres sont accessibles via un méta-filtre.\nExemple : tous les filtres de classification des séjours (filtre “CMD”, filtre “sous_CMD”, filtre “GHM”, …) sont accessibles via le méta-filtre “Classification séjour”\nLes filtres MCO ou les usages d’un filtre MCO spécifiques à un écran sont décrits dans la documentation de l’écran concerné."
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_filtre/index.html#introduction",
+    "href": "posts/mco/mco_ecran_filtre/index.html#introduction",
+    "title": "Filtres des écrans MCO",
+    "section": "",
+    "text": "Présentation des filtres communs à la plupart des écrans MCO.\nChaque filtre est décrit par :\n\nson type\nses valeurs\n\nson fonctionnement par rapport aux principaux items (RUM, séjours, actes CCAM, codage CIM, DMI, UCD, patient, entrée ACE, factures) sélectionnés dans les écrans MCO (tableaux, graphiques, exports csv, JSON ou .rds)\n\nautres informations\n\nPour des raisons d’affichage, certains filtres sont accessibles via un méta-filtre.\nExemple : tous les filtres de classification des séjours (filtre “CMD”, filtre “sous_CMD”, filtre “GHM”, …) sont accessibles via le méta-filtre “Classification séjour”\nLes filtres MCO ou les usages d’un filtre MCO spécifiques à un écran sont décrits dans la documentation de l’écran concerné."
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_filtre/index.html#filtre-année",
+    "href": "posts/mco/mco_ecran_filtre/index.html#filtre-année",
+    "title": "Filtres des écrans MCO",
+    "section": "Filtre “Année”",
+    "text": "Filtre “Année”\n\n\n\n\n\n\nType de filtre : liste.\nValeurs : 2019 à 2023\nFonctionnement :\nAvec les RUM = sélection des RUM avec la date de sortie du RUM dans l’année sélectionnée\nAvec les séjours = sélection des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans l’année sélectionnée\nAvec les actes CCAM = sélection des actes CCAM des RUM avec la date de sortie du RUM dans l’année sélectionnée\nAvec les codages CIM = sélection des codages CIM des RUM avec la date de sortie du RUM dans l’année sélectionnée\nAvec les DMI = sélection des DMI du FICHCOMP DMI avec l’année d’import correspondant à l’année sélectionnée\nAvec les UCD = sélection des UCD du FICHCOMP LES et du FICHCOMP MED AP-AC avec l’année d’import correspondant à l’année sélectionnée\nAvec les ACE = sélection des ACE du RSAF-ACE avec l’année d’import correspondant à l’année sélectionnée\nAutres informations :\nFiltre présent dans tous les écrans en 1ere position de la 1ere ligne de filtres.\nFiltre disponible en accès Standard."
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_filtre/index.html#filtre-mois",
+    "href": "posts/mco/mco_ecran_filtre/index.html#filtre-mois",
+    "title": "Filtres des écrans MCO",
+    "section": "Filtre “Mois”",
+    "text": "Filtre “Mois”\n\n\n\n\n\n\nType de filtre : liste.\nValeurs : les 12 mois\nFonctionnement :\nAvec les RUM = sélection des RUM avec la date de sortie du RUM dans le ou les mois sélectionné(s)\nAvec les séjours = sélection des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans le ou les mois sélectionné(s)\nAvec les actes CCAM = sélection des actes CCAM des RUM avec la date de sortie du RUM dans le ou les mois sélectionné(s)\nAvec les codages CIM = sélection des codages CIM des RUM avec la date de sortie du RUM dans le ou les mois sélectionné(s)\nAvec les DMI = sélection des DMI des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans le ou les mois sélectionné(s)\nAvec les UCD = sélection des UCD des séjours dont la date de sortie (= la date de sortie du dernier RUM du séjour) dans le ou les mois sélectionné(s)\nAvec les ACE = sélection des ACE dont la date du type ACE (A,B,C,L,M,H,P) dans le ou les mois sélectionné(s)\nAutres informations :\nFiltre présent dans tous les écrans en 2eme position de la 1ere ligne de filtres.\nFiltre disponible en accès Standard"
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_filtre/index.html#filtre-um",
+    "href": "posts/mco/mco_ecran_filtre/index.html#filtre-um",
+    "title": "Filtres des écrans MCO",
+    "section": "Filtre “UM”",
+    "text": "Filtre “UM”\n\n\n\n\n\n\nType de filtre : liste.\nValeurs : codes des UM représentées par au moins 1 RUM dans les imports PMSI de l’établissement.\nAutres informations :\nFiltre présent dans tous les écrans en 3eme position de la 1ere ligne de filtres.\nFiltre disponible en accès Standard"
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_filtre/index.html#filtre-autorisation",
+    "href": "posts/mco/mco_ecran_filtre/index.html#filtre-autorisation",
+    "title": "Filtres des écrans MCO",
+    "section": "Filtre “Autorisation”",
+    "text": "Filtre “Autorisation”\n\n\n\n\n\n\n\n\n\n\nType de filtre : liste.\nValeurs : codes des autorisations représentées au moins 1 fois dans les fichiers FICIUM de l’établissement.\nAutres informations :\nFiltre affiché dans le méta-filtre “Type d’UM”\nFiltre actif si au moins un FICIUM a été importé\nFiltre disponible en accès Standard"
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_filtre/index.html#filtre-mode-dhospitalisation",
+    "href": "posts/mco/mco_ecran_filtre/index.html#filtre-mode-dhospitalisation",
+    "title": "Filtres des écrans MCO",
+    "section": "Filtre “Mode d’hospitalisation”",
+    "text": "Filtre “Mode d’hospitalisation”\n\n\n\n\n\n\n\n\n\n\nType de filtre : liste.\nValeurs : les modes d’hospitalisation possibles en MCO.\nAutres informations :\nFiltre affiché dans le méta-filtre “Type d’UM”\nFiltre actif si au moins un FICIUM a été importé\nFiltre disponible en accès Standard"
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_filtre/index.html#filtre-nas",
+    "href": "posts/mco/mco_ecran_filtre/index.html#filtre-nas",
+    "title": "Filtres des écrans MCO",
+    "section": "Filtre “NAS”",
+    "text": "Filtre “NAS”\n\n\n\n\n\n\nType de filtre : code.\nValeurs : saisie libre d’une suite alphanumérique\nAutres informations :\nFiltre disponible uniquement en accès Professionnel"
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_filtre/index.html#filtre-cmd",
+    "href": "posts/mco/mco_ecran_filtre/index.html#filtre-cmd",
+    "title": "Filtres des écrans MCO",
+    "section": "Filtre “CMD”",
+    "text": "Filtre “CMD”\n\n\n\n\n\n\n\n\n\n\nType de filtre : liste.\nValeurs : codes + libellés CMD des CMD représentées par au moins 1 RUM dans les imports PMSI de l’établissement.\nAutres informations :\nFiltre affiché en 1ere position du méta-filtre “Classification séjour”\nFiltre disponible en accès Standard"
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_filtre/index.html#filtre-sous_cmd",
+    "href": "posts/mco/mco_ecran_filtre/index.html#filtre-sous_cmd",
+    "title": "Filtres des écrans MCO",
+    "section": "Filtre “Sous_CMD”",
+    "text": "Filtre “Sous_CMD”\n\n\n\n\n\n\n\n\n\n\nType de filtre : liste.\nValeurs : codes + libellés des sous-CMD représentées par au moins 1 RUM dans les imports PMSI de l’établissement\nAutres informations :\nFiltre affiché en 2ème position du méta-filtre “Classification séjour”\nFiltre disponible en accès Professionnel"
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_filtre/index.html#filtre-cmkz",
+    "href": "posts/mco/mco_ecran_filtre/index.html#filtre-cmkz",
+    "title": "Filtres des écrans MCO",
+    "section": "Filtre “CMKZ”",
+    "text": "Filtre “CMKZ”\n\n\n\n\n\n\n\n\n\n\nType de filtre : liste.\nValeurs : C, M, K, Z\nAutres informations :\nFiltre affiché en 3ème position du méta-filtre “Classification séjour”\nFiltre disponible en accès Professionnel"
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_filtre/index.html#filtre-ghm",
+    "href": "posts/mco/mco_ecran_filtre/index.html#filtre-ghm",
+    "title": "Filtres des écrans MCO",
+    "section": "Filtre “GHM”",
+    "text": "Filtre “GHM”\n\n\n\n\n\n\n\n\n\n\nType de filtre : liste.\nValeurs : codes + libellés des GHM des GHM représentés par au moins 1 RUM dans les imports PMSI de l’établissement\nAutres informations :\nFiltre affiché dans le méta-filtre “Classification séjour”\nFiltre disponible en accès Professionnel"
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_filtre/index.html#filtre-sévérité-durée",
+    "href": "posts/mco/mco_ecran_filtre/index.html#filtre-sévérité-durée",
+    "title": "Filtres des écrans MCO",
+    "section": "Filtre “Sévérité-Durée”",
+    "text": "Filtre “Sévérité-Durée”\n\n\n\n\n\n\n\n\n\n\nType de filtre : liste.\nValeurs : 1, 2, 3, 4, J, T, Z, E, A, B, C, D\nAutres informations :\nFiltre affiché dans le méta-filtre “Classification séjour”\nFiltre disponible en accès Professionnel"
+  },
+  {
+    "objectID": "posts/mco/mco_ecran_filtre/index.html#filtre-nombre-rum-par-séjour",
+    "href": "posts/mco/mco_ecran_filtre/index.html#filtre-nombre-rum-par-séjour",
+    "title": "Filtres des écrans MCO",
+    "section": "Filtre “Nombre RUM par séjour”",
+    "text": "Filtre “Nombre RUM par séjour”\n\n\n\n\n\n\nType de filtre : intervalle.\nValeurs : saisie numérique\nAutres informations :\nFiltre affiché dans le méta-filtre “Type de RUM”\nFiltre disponible en accès Professionnel"
+  },
+  {
+    "objectID": "posts/psy/psy_filtrage/index.html",
+    "href": "posts/psy/psy_filtrage/index.html",
+    "title": "Filtrage PSY",
+    "section": "",
+    "text": "Le filtrage dans les écrans PMSISoft PSY comprend de 2 types de filtrage :\n\nfiltrage de périmètre, via une première ligne de filtres, permettant de filtrer sur les finess géographique, les années, les mois, les UM, les formes d’activité, les numéros de secteur ou des dispostif intersectoriel, les modes légaux de soins et, spécifiquement en ambulatoire, les natures, lieux, modalités de réalisation des actes et les catégories professionnelles de l’intervenant\n\nLe filtrage de périmètre est disponible en accès Standard.\n\nfiltrage par variable, via une seconde ligne de filtres, permettant de composer des requêtes à partir d’une sélection de variables propres à chaque écran, une série de verbes et le paramétrage éventuel de valeurs.\n\nLe filtrage par variable est disponible en accès Professionnel.\nEn hospitalisation (complète ou à temps partiel), on a les 2 lignes de filtrages suivantes :\n\nEn ambulatoire, on a les 2 lignes de filtrages suivantes :\n\nQuand au moins un filtrage a été sélectionné, le bouton Filtrer devient rouge\n\n\nQuand on clique sur le bouton Reset, tous les filtrages sont supprimés et l’écran revient dans son état par défaut."
+  },
+  {
+    "objectID": "posts/psy/psy_filtrage/index.html#introduction",
+    "href": "posts/psy/psy_filtrage/index.html#introduction",
+    "title": "Filtrage PSY",
+    "section": "",
+    "text": "Le filtrage dans les écrans PMSISoft PSY comprend de 2 types de filtrage :\n\nfiltrage de périmètre, via une première ligne de filtres, permettant de filtrer sur les finess géographique, les années, les mois, les UM, les formes d’activité, les numéros de secteur ou des dispostif intersectoriel, les modes légaux de soins et, spécifiquement en ambulatoire, les natures, lieux, modalités de réalisation des actes et les catégories professionnelles de l’intervenant\n\nLe filtrage de périmètre est disponible en accès Standard.\n\nfiltrage par variable, via une seconde ligne de filtres, permettant de composer des requêtes à partir d’une sélection de variables propres à chaque écran, une série de verbes et le paramétrage éventuel de valeurs.\n\nLe filtrage par variable est disponible en accès Professionnel.\nEn hospitalisation (complète ou à temps partiel), on a les 2 lignes de filtrages suivantes :\n\nEn ambulatoire, on a les 2 lignes de filtrages suivantes :\n\nQuand au moins un filtrage a été sélectionné, le bouton Filtrer devient rouge\n\n\nQuand on clique sur le bouton Reset, tous les filtrages sont supprimés et l’écran revient dans son état par défaut."
+  },
+  {
+    "objectID": "posts/psy/psy_filtrage/index.html#filtrage-en-hospitalisation",
+    "href": "posts/psy/psy_filtrage/index.html#filtrage-en-hospitalisation",
+    "title": "Filtrage PSY",
+    "section": "Filtrage en hospitalisation",
+    "text": "Filtrage en hospitalisation\n\nFINESS géographique\n\n\n\n\n\n\nFiltre de périmètre\nPar défaut, le filtre n’est pas actif : tous les FINESS géographique sont sélectionnés\nPossibilité de sélectionner un ou plusieurs FINESS géographiques\n\n\n\n\nAnnée\n\n\n\n\n\n\nFiltre de périmètre\nPar défaut, l’année en cours est sélectionnée\nAnnées disponibles : de 2020 à 2024\n\n\n\n\nMois\n\n\n\n\n\n\nFiltre de périmètre\nPar défaut, le filtre n’est pas actif : tous les mois sont sélectionnés\nPossibilité de sélectionner plusieurs mois\n\n\n\n\nUM\n\n\n\n\n\n\nFiltre de périmètre\nPar défaut, le filtre n’est pas actif : toutes les UM sont sélectionnées\nPossibilité de sélectionner plusieurs UM\nEn accès Professionnel, possibilité d’importer une correspondance no_um-um_libelle permettant d’associer un libellé à chaque UM\n\n\n\n\nForme d’activité\n\n\n\n\n\n\nFiltre de périmètre\nAccessible dans le méta-filtre de périmètre Type UM\nPar défaut, le filtre n’est pas actif : toutes les formes d’activité sont sélectionnées\nPossibilité de sélectionner plusieurs formes d’activité\nAffichage des libellés associés aux codes des formes d’activité\n\n\n\n\nNo secteur\n\n\n\n\n\n\nFiltre de périmètre\nAccessible dans le méta-filtre de périmètre Type UM\nPar défaut, le filtre n’est pas actif : tous les numéros de secteur ou de dispositif intersectoriel sont sélectionnés\nPossibilité de sélectionner plusieurs formes numéros de secteur\nAffichage des libellés associés aux numéros de secteur ou de dispositif intersectoriel\n\n\n\n\nMode légal de soins\n\n\n\n\n\n\nFiltre de périmètre\nAccessible dans le méta-filtre de périmètre Type UM\nPar défaut, le filtre n’est pas actif : tous les modes légaux de soins sont sélectionnés\nPossibilité de sélectionner plusieurs modes légaux de soins\nAffichage des libellés associés aux modes légaux de soins\n\n\n\n\nFiltrage par variable\nUn filtrage par variable comprend 3 informations : la variable choisie, le verbe à appliquer à la variable et une expression.\nAvec ces 3 informations, on compose une “phrase” (sujet + verbe + complément) correspondant au filtrage voulu.\nPrenons l’exemple de l’écran “Base des RPS” et considérons la sélection des RPS avec le DP dans la famille F32 “Episodes dépressifs”\n\nOn a donc sélectionné la variable dp, on a ensuite appliqué le verbe Débute par puis on a codé l’expression F32. En cliquant sur le bouton Filtrer, PMSISoft PSY sélectionne donc les RPS avec un DP dont le code CIM-10 débute par F32.\nIl est possible d’enrichir ce filtrage en ajoutant une seconde “phrase” liée à la première soit avec l’opérateur ET\n\nDans cet exemple, on a sélectionné l’opérateur ET et ajouté la condition que le nombre de DA du RPS doit être supérieur ou égal à 2.\nSoit avec l’opérateur OU\n\nDans cet exemple, on a sélectionné l’opérateur OU et ajouté la condition que le DP du RPS peut débuter aussi par F33 “Trouble dépressif récurrent”.\nChoix des variables :\n\n\n\n\n\n\nLa liste des variables est fonction de l’écran. Ici on a les variables de l’écran “Base des RPS”\nLes variables sont regroupées par famille cohérente. Ici “Séjour”, “Séquence” et “Patient”\nLes variables sont nommées de manière standardisée.\nUne variable relève d’un type parmi les 3 types : character, numérique, logique\nA chaque type de variable correspond automatiquement une liste de verbes possibles.\n\n\nChoix des verbes de type character\n\n\n\n\n\n\nQuand une variable de type character est sélectionnée, PMSISoft affiche la liste des 8 verbes possibles associés à une telle variable.\nAprès la sélection du verbe, l’utilisateur saisie dans le champ Expression la chaîne de caractères voulue.\n\n\nChoix des verbes de type numérique\n\n\n\n\n\n\nQuand une variable de type numérique est sélectionnée, PMSISoft affiche la liste des 6 verbes possibles associés à une telle variable.\nAprès la sélection du verbe, l’utilisateur saisie dans le champ Expression la valeur numérique voulue.\n\n\nChoix des verbes de type logique\n\n\n\n\n\n\nQuand une variable de type logique est sélectionnée, PMSISoft affiche la liste des 2 verbes possibles associés à une telle variable.\nPour ces variables de type logique, le champ Expression n’est pas pris en compte."
+  },
+  {
+    "objectID": "posts/psy/psy_filtrage/index.html#filtrage-en-ambulatoire",
+    "href": "posts/psy/psy_filtrage/index.html#filtrage-en-ambulatoire",
+    "title": "Filtrage PSY",
+    "section": "Filtrage en ambulatoire",
+    "text": "Filtrage en ambulatoire\n\nFINESS géographique\nVoir Section 2.1\n\n\nAnnée\nVoir Section 2.2\n\n\nMois\nVoir Section 2.3\n\n\nUM\nVoir Section 2.4\n\n\nForme d’activité\nVoir Section 2.5\n\n\nNo secteur\nVoir Section 2.6\n\n\nMode légal de soins\nVoir Section 2.7\n\n\nNature de l’acte\n\n\n\n\n\n\nFiltre de périmètre\nAccessible via le méta-filtre de périmètre Type d'acte\nPar défaut, le filtre n’est pas actif : toutes les natures d’acte sont sélectionnées\nPossibilité de sélectionner plusieurs natures d’acte\nAffichage des libellés associés aux natures d’acte\n\n\n\n\nLieu de l’acte\n\n\n\n\n\n\nFiltre de périmètre\nAccessible via le méta-filtre de périmètre Type d'acte\nPar défaut, le filtre n’est pas actif : tous les lieux d’acte sont sélectionnés\nPossibilité de sélectionner plusieurs lieux d’acte\nAffichage des libellés associés aux lieux d’acte\n\n\n\n\nModalité de réalisation de l’acte\n\n\n\n\n\n\nFiltre de périmètre\nAccessible via le méta-filtre de périmètre Type d'acte\nPar défaut, le filtre n’est pas actif : toutes les modalités de réalisation de l’acte sont sélectionnées\nPossibilité de sélectionner plusieurs modalités de réalisation de l’acte\nAffichage des libellés associés aux modalités de réalisation de l’acte\n\n\n\n\nCatégorie professionnelle de l’intervenant\n\n\n\n\n\n\nFiltre de périmètre\nAccessible via le méta-filtre de périmètre Type d'acte\nPar défaut, le filtre n’est pas actif : toutes les catégories professionnelles de l’intervenant sont sélectionnées\nPossibilité de sélectionner plusieurs catégories professionnelles de l’intervenant\nAffichage des libellés associés aux catégories professionnelles de l’intervenant\n\n\n\n\nFiltrage par variable\nUn filtrage par variable comprend 3 informations : la variable choisie, le verbe à appliquer à la variable et une expression.\nAvec ces 3 informations, on compose une “phrase” (sujet + verbe + complément) correspondant au filtrage voulu.\nPrenons l’exemple de l’écran “Base des RAA” et considérons la sélection des RAA avec le DP dans la famille F25 “Troubles schizo-affectifs”\n\nOn a donc sélectionné la variable dp, on a ensuite appliqué le verbe Débute par puis on a codé l’expression F25. En cliquant sur le bouton Filtrer, PMSISoft PSY sélectionne donc les RPS avec un DP dont le code CIM-10 débute par F25.\nIl est possible d’enrichir ce filtrage en ajoutant une seconde “phrase” liée à la première soit avec l’opérateur ET\n\nDans cet exemple, on a sélectionné l’opérateur ET et ajouté la condition que le nombre de DA du RAA doit être supérieur ou égal à 2.\nSoit avec l’opérateur OU\n\nDans cet exemple, on a sélectionné l’opérateur OU et ajouté la condition que le DP du RPS peut débuter aussi par F24 “Trouble délirant induit”.\nChoix des variables :\n\n\n\n\n\n\nLa liste des variables est fonction de l’écran. Ici on a les variables de l’écran “Base des RAA”\nLes variables sont regroupées par famille cohérente. Ici “RAA” et “Patient”\nLes variables sont nommées de manière standardisée.\nUne variable relève d’un type parmi les 3 types : character, numérique, logique\nA chaque type de variable correspond automatiquement une liste de verbes possibles.\n\n\nChoix des verbes de type character\n\n\n\n\n\n\nQuand une variable de type character est sélectionnée, PMSISoft affiche la liste des 8 verbes possibles associés à une telle variable.\nAprès la sélection du verbe, l’utilisateur saisie dans le champ Expression la chaîne de caractères voulue.\n\n\nChoix des verbes de type numérique\n\n\n\n\n\n\nQuand une variable de type numérique est sélectionnée, PMSISoft affiche la liste des 6 verbes possibles associés à une telle variable.\nAprès la sélection du verbe, l’utilisateur saisie dans le champ Expression la valeur numérique voulue.\n\n\nChoix des verbes de type logique\n\n\n\n\n\n\nQuand une variable de type logique est sélectionnée, PMSISoft affiche la liste des 2 verbes possibles associés à une telle variable.\nPour ces variables de type logique, le champ Expression n’est pas pris en compte."
+  },
+  {
+    "objectID": "posts/smr/smr_ecran_mention/index.html",
+    "href": "posts/smr/smr_ecran_mention/index.html",
+    "title": "Ecran Mention SMR",
+    "section": "",
+    "text": "Le décret n°2022-25 du 11 janvier 2022 relatif aux conditions techniques de fonctionnement de l’activité de SMR, complété par l’instruction DGOS N°DGOS/R4/2022/210 du 28 septembre 2022 relative à la mise en oeuvre de la réforme des autorisations d’activité des soins médicaux et de réadaptation définissent les pré-requis et conditions des futures mentions SMR.\nUne partie importante de ces caractéristiques peut être raisonnablement traduite en PMSI SMR afin de permettre aux établissements d’analyser et de travailler sur la cohérence à minima de leurs pratiques de soins, vues du PMSI SMR, avec les exigences des mentions SMR qui leur sont octroyées.\nL’attribution des mentions SMR à chaque séjour HC terminé et chaque semaine HP dans PMSISoft est cohérente avec les codes des autorisations actuelles. 1\nAinsi, à chaque mention SMR sont associées :\n\ndes pratiques thérapeutiques avec un nombre minimum de pratiques thérapeutiques à proposer à chaque patient, selon son état clinique, parmi une liste fermée de pratiques thérapeutiques spécifique à chaque mention.\nTraduction d’une pratique thérapeutique dans PMSISoft : réalisation, au cours du séjour terminé du patient en HC ou au cours d’une semaine en HP, d’au moins 1 acte CSARR par un professionnel (identifié via la variable Type intervenant) correspondant à la pratique thérapeutique. 2\nPuis, pour chaque séjour terminé en HC ou chaque semaine en HP, comparaison au seuil minimal de pratiques thérapeutiques attendues pour la mention du séjour HC ou de la semaine HP.\ndes séquences de traitement à dispenser, chaque jour ouvré, à chaque patient, selon son état clinique.\nSéquences de traitement possibles : indifférentées, individualisées, collectives, masso-kinésithérapie.\nTraduction d’une séquence de traitement dans PMSISoft : pour chaque séjour terminé en HC ou pour chaque semaine en HP, pour chaque jour ouvré, repérage d’au moins une réalisation d’un acte CSARR correspondant aux séquences de traitement possibles.\nPuis, pour chaque jour ouvré, comparaison du panier de séquences de traitement minimal attendu pour la mention du séjour en HC ou de la semaine en HP.\n\n3 axes d’analyses :\n- Case-mix “Mention + Type d’hospitalisation” = analyse pour chaque couple “Mention + type d’hospitalisation”\n- Case-mix “Mention + Intervenant” = analyse pour chaque couple “Mention + configuration de type d’intervenant réellement rencontrée”\n- “Séjours et mention” = analyse, pour chaque séjour, avec possibilité de remonter aux informations détaillées des séjours\nToutes les analyses ne concernent que les séjours terminés (HC ou HP) hors erreur de classification (CM 90) dans le périmètre sélectionné par les filtres.\nHistorique depuis 2019."
+  },
+  {
+    "objectID": "posts/smr/smr_ecran_mention/index.html#introduction",
+    "href": "posts/smr/smr_ecran_mention/index.html#introduction",
+    "title": "Ecran Mention SMR",
+    "section": "",
+    "text": "Le décret n°2022-25 du 11 janvier 2022 relatif aux conditions techniques de fonctionnement de l’activité de SMR, complété par l’instruction DGOS N°DGOS/R4/2022/210 du 28 septembre 2022 relative à la mise en oeuvre de la réforme des autorisations d’activité des soins médicaux et de réadaptation définissent les pré-requis et conditions des futures mentions SMR.\nUne partie importante de ces caractéristiques peut être raisonnablement traduite en PMSI SMR afin de permettre aux établissements d’analyser et de travailler sur la cohérence à minima de leurs pratiques de soins, vues du PMSI SMR, avec les exigences des mentions SMR qui leur sont octroyées.\nL’attribution des mentions SMR à chaque séjour HC terminé et chaque semaine HP dans PMSISoft est cohérente avec les codes des autorisations actuelles. 1\nAinsi, à chaque mention SMR sont associées :\n\ndes pratiques thérapeutiques avec un nombre minimum de pratiques thérapeutiques à proposer à chaque patient, selon son état clinique, parmi une liste fermée de pratiques thérapeutiques spécifique à chaque mention.\nTraduction d’une pratique thérapeutique dans PMSISoft : réalisation, au cours du séjour terminé du patient en HC ou au cours d’une semaine en HP, d’au moins 1 acte CSARR par un professionnel (identifié via la variable Type intervenant) correspondant à la pratique thérapeutique. 2\nPuis, pour chaque séjour terminé en HC ou chaque semaine en HP, comparaison au seuil minimal de pratiques thérapeutiques attendues pour la mention du séjour HC ou de la semaine HP.\ndes séquences de traitement à dispenser, chaque jour ouvré, à chaque patient, selon son état clinique.\nSéquences de traitement possibles : indifférentées, individualisées, collectives, masso-kinésithérapie.\nTraduction d’une séquence de traitement dans PMSISoft : pour chaque séjour terminé en HC ou pour chaque semaine en HP, pour chaque jour ouvré, repérage d’au moins une réalisation d’un acte CSARR correspondant aux séquences de traitement possibles.\nPuis, pour chaque jour ouvré, comparaison du panier de séquences de traitement minimal attendu pour la mention du séjour en HC ou de la semaine en HP.\n\n3 axes d’analyses :\n- Case-mix “Mention + Type d’hospitalisation” = analyse pour chaque couple “Mention + type d’hospitalisation”\n- Case-mix “Mention + Intervenant” = analyse pour chaque couple “Mention + configuration de type d’intervenant réellement rencontrée”\n- “Séjours et mention” = analyse, pour chaque séjour, avec possibilité de remonter aux informations détaillées des séjours\nToutes les analyses ne concernent que les séjours terminés (HC ou HP) hors erreur de classification (CM 90) dans le périmètre sélectionné par les filtres.\nHistorique depuis 2019."
+  },
+  {
+    "objectID": "posts/smr/smr_ecran_mention/index.html#chemin-de-lécran",
+    "href": "posts/smr/smr_ecran_mention/index.html#chemin-de-lécran",
+    "title": "Ecran Mention SMR",
+    "section": "Chemin de l’écran",
+    "text": "Chemin de l’écran\nAnalyse SMR &gt; Mentions"
+  },
+  {
+    "objectID": "posts/smr/smr_ecran_mention/index.html#filtres",
+    "href": "posts/smr/smr_ecran_mention/index.html#filtres",
+    "title": "Ecran Mention SMR",
+    "section": "Filtres",
+    "text": "Filtres\n\nAnnée PMSI\n\nMois PMSI\n\nUM\n\nAutorisations de l’établissement\n\nType d’hospitalisation\n\nClassification des séjours et RHS (CM, GN, GR, GL, GME, sévérité)"
+  },
+  {
+    "objectID": "posts/smr/smr_ecran_mention/index.html#case-mix-mention-type-dhospitalisation",
+    "href": "posts/smr/smr_ecran_mention/index.html#case-mix-mention-type-dhospitalisation",
+    "title": "Ecran Mention SMR",
+    "section": "Case-mix “Mention + Type d’hospitalisation”",
+    "text": "Case-mix “Mention + Type d’hospitalisation”\nLe case-mix comprend 15 colonnes, correspondant à l’identification des couples “Mention + type hospitalisation” (2 premières colonnes) et à 13 analyses détaillées dans leur ordre de gauche à droite ci-dessous.\nLes analyses sont regroupées par famille cohérente.\nExport csv et JSON des informations du casemix via les liens Télécharger\n\nCouple mention+type hospitalisation\n\n\n\n\n\n\nChaque couple “Mention + type hospitalisation” rencontré via au moins 1 séjour terminé dans le périmètre sélectionné est affiché.\nChaque mention (tout type d’hospitalisation confondu) fait l’objet une ligne d’analyse consolidée, identifiée par l’intitulé “total mention”.\nLa première ligne “etablissement” est la ligne d’analyse consolidée au niveau de l’établissement. 3\n\n\n\n\nSéjour\n\n\n\n\n\n\nNombre de séjours terminés correspondant à la ligne analysée (établissement, couple “Mention + type hospitalisation”, mention).\n\n\n\n\nJour ouvré-venue\n\n\n\n\n\n\nn = nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) pour la ligne analysée\nn csarr = nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) avec au moins 1 acte CSARR réalisé pour la ligne analysée\n% csarr = ratio n csarr / n\n0_csarr = nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) avec aucun acte CSARR réalisé pour la ligne analysée\n\n\n\n\nRéalisation CSARR\n\n\n\n\n\n\nn = nombre total de réalisations d’acte CSARR réalisés dans les JP en jour ouvré (HC) ou dans les venues en jour ouvré (HP)\nmean = moyenne de réalisations des actes CSARR par JP en jour ouvré (HC) ou par venue en jour ouvré (HP)\n\n\n\n\nIntervenant\n\n\n\n\n\n\nmean = moyenne, pour les séjours de la ligne analysée, du nombre de type d’intervenant différent ayant réalisé au moins 1 acte CSARR dans un jour ouvré\nOn peut traduire ce calcul par la phrase “Chaque jour ouvré des séjours relevant du couple”Mention + type hospitalisation” de la ligne analysée a eu mean type d’intervenant différent en moyenne.”\n\n\n\n\nPratique thérapeutique\n\n\n\n\n\n\nmean = moyenne, pour les séjours de la ligne analysée, du nombre de pratiques thérapeutiques (vues du PMSI - voir Introduction) de la mention de la ligne\nséjour &gt; seuil = nombre de séjours avec un nombre de pratiques thérapeutiques de la mention de la ligne &gt; au nombre minimal attendu de pratiques thérapeutiques de la mention de la ligne\n% séjour &gt; seuil = ratio du nombre de séjours “séjour &gt; seuil” par rapport au nombre de séjours de la ligne analysée\n\n\n\n\nSéquence de traitement\n\n\n\n\n\n\nn = nombre de JP en jour ouvré (HC) ou de venues en jour ouvré (HP) pour lesquelles le panier de séquences de traitement réalisées est &gt; au minimum attendu, par jour ouvré, pour le panier de séquences de traitement de la mention de la ligne\n% = ratio entre le nombre de la colonne précédente et le nombre de JP en jour ouvré (HC) ou de venues en jour ouvré (HP) de la ligne analysée"
+  },
+  {
+    "objectID": "posts/smr/smr_ecran_mention/index.html#case-mix-mention-intervenant",
+    "href": "posts/smr/smr_ecran_mention/index.html#case-mix-mention-intervenant",
+    "title": "Ecran Mention SMR",
+    "section": "Case-mix “Mention + Intervenant”",
+    "text": "Case-mix “Mention + Intervenant”\nLe case-mix comprend 16 colonnes, correspondant à l’identification des couples “Mention + intervenant” (2 premières colonnes) et 14 analyses détaillées dans leur ordre de gauche à droite ci-dessous.\nPour chaque mention, PMSISoft identifie toutes les configurations de types d’intervenant rencontrées 4 dans les séjours terminés où une configuration de types d’intervenant = une liste unique des différents types d’intervenants ayant codé au moins 1 fois un acte CSARR dans le séjour, à l’exclusion de tous les autres types d’intervenant.\nExemple : “Locomoteur + (mk, ergo, psychologue)” = l’ensemble des séjours terminés de la mention “Locomoteur” où seuls les 3 types d’intervenant (mk, ergo, psychologue) sont intervenus à l’exclusion de tous les autres types d’intervenant.\nChaque couple “mention + type d’intervenant” rencontré est affiché.\nLa première ligne “etablissement” est la ligne d’analyse consolidée au niveau de l’établissement.\nLes analyses sont regroupées par famille cohérente.\nExport csv et JSON des informations du casemix via les liens Télécharger\nRemarque : ce casemix est aussi intéressant, indépendamment du sujet des mentions SMR, pour analyser toutes les configurations rencontrées d’intervenants par séjour dans l’établissement.\n\nCouple mention+intervenant\n\n\n\n\n\n\nn = nombre de types d’intervenants concernés par le couple de la ligne analysée.\n\n\n\n\nSéjour\n\n\n\n\n\n\nn = nombre de séjours avec la configuration “Mention + types d’intervenant” de la ligne\n% = ratio entre la colonne précédente et le nombre de séjours de la mention de la ligne\n\n\n\n\nJour ouvré-venue\n\n\n\n\n\n\nn = nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) pour la ligne analysée\n% = ratio entre la colonne précédente et le nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) de la mention de la ligne\nn csarr = nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) avec au moins 1 acte CSARR réalisé pour la ligne analysée\n% csarr = ratio n csarr / n\n0_csarr = nombre de journées de présence en jour ouvré (en HC) ou de venues en jour ouvré (en HP) avec aucun acte CSARR réalisé pour la ligne analysée\n\n\n\n\nRéalisation CSARR\n\n\n\n\n\n\nn = nombre total de réalisations d’acte CSARR réalisées dans les JP en jour ouvré (HC) ou dans les venues en jour ouvré (HP)\n% = ratio entre la colonne précédente et le nombre de réalisations CSARR des journées de présence en jour ouvré (en HC) ou des venues en jour ouvré (en HP) de la mention de la ligne\nmean = moyenne des réalisations des actes CSARR par JP en jour ouvré (HC) ou par venue en jour ouvré (HP)\n\n\n\n\nPratique thérapeutique\n\n\n\n\n\n\nseuil = le nombre de types d’intervenant de la ligne éligibles aux pratiques thérapeutiques de la mention de la ligne est &lt; au seuil minimal de pratiques thérapeutiques attendues pour la mention (pastille orange) ou &gt;= à ce seuil minimal (pastille verte)\nRemarque : le nombre de types d’intervenant éligibles aux pratiques thérapeutiques de la mention peut être différent du nombre total de types d’intervenant total (cf intervenant non éligible)\n\n\n\n\nSéquence de traitement\n\n\n\n\n\n\nn = nombre de JP en jour ouvré (HC) ou de venues en jour ouvré (HP) pour lesquelles le panier de séquences de traitement réalisées est &gt; au minimum attendu, par jour ouvré, pour le panier de séquences de traitement de la mention de la ligne\n% = ratio entre le nombre de la colonne précédente et le nombre de JP en jour ouvré (HC) ou de venues en jour ouvré (HP) de la ligne analysée"
+  },
+  {
+    "objectID": "posts/smr/smr_ecran_mention/index.html#séjour-et-mention",
+    "href": "posts/smr/smr_ecran_mention/index.html#séjour-et-mention",
+    "title": "Ecran Mention SMR",
+    "section": "Séjour et mention",
+    "text": "Séjour et mention\nChaque séjour terminé du périmètre sélectionné est analysé avec les calculs des 2 casemix de l’écran.\nChaque séjour est identifié par son nas (1ere colonne). En sélectionnant une ligne (donc un séjour), accès automatique à la liste des RHS du séjour et aux informations détaillées du séjour.\nExport csv et JSON de la liste des séjours via les liens Télécharger\nPrenons un exemple fictif pour illustrer :\n\nCe séjour HC relève de la mention “Locomoteur”.\nCe séjour a 48 journées de présence (au sens PMSI SMR) en jour ouvré, dont 46 avec au moins 1 acte CSARR réalisé (ce qui représente 95,83% des jours de présence en jour ouvré) et 2 avec 0 acte CSARR codé.\nCe séjour a 104 réalisations CSARR cumulées en jour ouvré, ce qui correspond à une moyenne de réalisations CSARR par jour ouvré de 2,17\n5 types d’intervenants différents (mk, ergo, apa, diet, psychologue) ont réalisés au moins 1 acte CSARR dans ce séjour.\nParmi ces 5 types d’intervenants, 4 sont pris en compte dans le calcul des pratiques thérapeutiques en “Locomoteur” (mk, ergo,apa,psychologue).\nLe seuil minimal de pratiques thérapeutiques en mention “Locomoteur” étant fixé à 3, le séjour est indiqué avec un seuil OK (vert).\nLe nombre de journées de présence en jour ouvré pour lesquelles le nombre minimal de séquences de traitement attendu en mention “Locomoteur” (à savoir “deux séquences de traitement dont au moins une séquence de soins individualisés”) est 26, soit 54,17% des jours de présence en jour ouvré du séjour."
+  },
+  {
+    "objectID": "posts/smr/smr_ecran_mention/index.html#demande-daccès-standard",
+    "href": "posts/smr/smr_ecran_mention/index.html#demande-daccès-standard",
+    "title": "Ecran Mention SMR",
+    "section": "Demande d’accès Standard",
+    "text": "Demande d’accès Standard\nPour demander un accès Standard à PMSISoft SSR pour votre établissement, nous contacter (en sélectionnant l’option “Demande accès PMSISoft Standard”)"
+  },
+  {
+    "objectID": "posts/smr/smr_ecran_mention/index.html#footnotes",
+    "href": "posts/smr/smr_ecran_mention/index.html#footnotes",
+    "title": "Ecran Mention SMR",
+    "section": "Notes de bas de page",
+    "text": "Notes de bas de page\n\n\nla mention “Pédiatrie” est attribuée à tous séjours HC ou semaine HP d’un patient de moins de 18 ans↩︎\nle cas particulier de la pratique thérapeutique “Education thérapeutique” est repérée par au moins 1 codage CSARR du sous-chapitre CSARR 10.01 “Actes d’éducation, dans le cadre d’un programme d’éducation thérapeutique”↩︎\nl’analyse de la ligne “etablissement” est dédoublonnée (exemple : un séjour HP avec 2 mentions représentées ne compte que pour un dans l’analyse “etablissement”). Le nombre de séjours de la ligne “etablissement” correspond donc au nombre de séjours terminés hors CM 90 de la sélection.↩︎\nle cas particulier de la pratique thérapeutique “Education thérapeutique” est repérée par au moins 1 codage CSARR du sous-chapitre CSARR 10.01 “Actes d’éducation, dans le cadre d’un programme d’éducation thérapeutique”↩︎"
   }
 ]

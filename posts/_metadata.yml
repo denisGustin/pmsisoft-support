@@ -19,9 +19,9 @@ page-layout: article
 
 # Paramétrage des posts
 execute:
-  eval: false
-  echo: true
+  eval: true
+  echo: false
+  warning: false
 code-block-bg: "#faffff"
 code-block-margin-bottom: "20px"
 code-block-border-left: "#4D8DC9"
-code-line-numbers: true

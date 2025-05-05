@@ -2,7 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/mco/mco_ecran_synthese_t2a/index.html",
+      "/posts/mco/mco_ecran_ace_requete/index.html",
       "/posts/smr/smr_csar_analyse/index.html",
       "/posts/psy/psy_filtrage/index.html",
       "/posts/smr/smr_gme_comparaison/index.html",
@@ -13,9 +13,15 @@
     ]
   },
   {
+    "listing": "/documentation_psy.html",
+    "items": [
+      "/posts/psy/psy_filtrage/index.html"
+    ]
+  },
+  {
     "listing": "/documentation_mco.html",
     "items": [
-      "/posts/mco/mco_ecran_synthese_t2a/index.html",
+      "/posts/mco/mco_ecran_ace_requete/index.html",
       "/posts/mco/mco_ecran_cardiologie/index.html",
       "/posts/mco/mco_simulation_ghm/index.html",
       "/posts/mco/mco_ecran_filtre/index.html"
@@ -27,12 +33,6 @@
       "/posts/smr/smr_csar_analyse/index.html",
       "/posts/smr/smr_gme_comparaison/index.html",
       "/posts/smr/smr_ecran_mention/index.html"
-    ]
-  },
-  {
-    "listing": "/documentation_psy.html",
-    "items": [
-      "/posts/psy/psy_filtrage/index.html"
     ]
   }
 ]

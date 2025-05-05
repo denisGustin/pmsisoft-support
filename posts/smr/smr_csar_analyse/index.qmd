@@ -4,7 +4,7 @@ description: |
   Analyses CSAR - Casemix CSARR - Casemix Intervenant-CSARR - Exclusions inter-CSAR
 author: denis G
 date: "2024-09-16"
-categories: [SMR, CSAR]
+categories: [SMR, Ecran, CSAR]
 page-layout: full
 ---
 
